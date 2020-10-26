@@ -32,8 +32,6 @@ jobs:
         git branch -l
         git checkout -b gh-pages
         git branch -l
-        npm install
-        npm run build
         mv dist/* .
     - name: info
       run: |
