@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.13.0]
+    env:
+      NODE_OPTIONS: "--max_old_space_size=4096"
+    steps:
+    - uses: actions/checkout@master
+    - name: Node version
+      run: node -v
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: info
+      run: |
+        ls -al
+        git --version
+        git branch -l
+        git status
+    - name: Create local changes
+      run: |
+        git branch -l
+        git checkout -b gh-pages
+        git branch -l
+        npm install
+        npm run build
+        mv dist/* .
+    - name: info
+      run: |
+        ls -al
+        git --version
+        git status
+    - name: Commit files
+      run: |
+        git config --local user.email "ilyaflare@gmail.com"
+        git config --local user.name "EVERYDAYHERO2000"
+        git add -Af
+        git commit -m "Add changes"
+    - name: info
+      run: |
+        ls -al
+        git --version
+        git status
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.5.0
+      with:
+        github_token: ${{ secrets.SECRET }}
+        branch: 'gh-pages'
+        force: true
