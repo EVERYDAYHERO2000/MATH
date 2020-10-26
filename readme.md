@@ -5,3 +5,8 @@ https://www.figma.com/file/piKS3JL4gncfAbEP9gQWf7/MATH?node-id=0%3A1 — design
 npm install
 npm run dev
 ```
+
+Storybook: 
+```
+npm run storybook
+```
