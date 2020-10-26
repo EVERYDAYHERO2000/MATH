@@ -3,16 +3,28 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@andoshin11/storybook-vue3": "0.0.5",
     "es6-promise": "^4.2.8",
-    "vue": "^3.0.0-rc.1",
+    "vue": "^3.0.2",
+    "vue-loader-v16": "^16.0.0-beta.5.4",
     "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.27",
+    "@storybook/addon-essentials": "^6.0.27",
+    "@storybook/addon-links": "^6.0.27",
+    "@storybook/vue": "^6.0.27",
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "babel-loader": "^8.1.0",
+    "react-is": "^17.0.1",
     "vite": "^1.0.0-rc.1",
-    "@vue/compiler-sfc": "^3.0.0-rc.1"
+    "vue-loader": "^15.9.3"
   },
   "main": "index.js",
   "keywords": [],
