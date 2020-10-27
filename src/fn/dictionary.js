@@ -159,5 +159,5 @@ export const MathSign = function(n){
             break;           
     }
 
-    return sign
+    return sign;
 }
