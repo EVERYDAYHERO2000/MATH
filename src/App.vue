@@ -26,4 +26,5 @@ export default {
     height: 100vh;
     background-color: $color-light;
   }  
+  
 </style>

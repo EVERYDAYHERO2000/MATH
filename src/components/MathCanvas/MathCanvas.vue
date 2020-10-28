@@ -1,5 +1,7 @@
 <template>
-
+    <div class="math-canvas">
+        y = f(x) = 2a + 3x π
+    </div>
 </template>
 
 <script>
@@ -11,5 +13,13 @@
 </script>
 
 <style lang="scss">
+    @import '../../css/main.scss';
 
+    .math-canvas {
+        font-family: $font-family-sans;
+        font-size: 32px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 </style>
