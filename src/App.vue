@@ -1,19 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div class="app">
+    <MathCanvas />
+    <MathUi />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import MathCanvas from './components/MathCanvas/MathCanvas.vue';
+import MathUi from './components/MathUi/MathUi.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MathCanvas,
+    MathUi
   }
 }
 </script>
 
 <style lang="scss">
   @import './css/main.scss';
+
+  .app {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-light;
+  }  
 </style>
