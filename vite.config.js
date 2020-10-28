@@ -1,4 +1,5 @@
 module.exports = {
     root: '.',
-    base: './'
+    base: './',
+    assetsDir: 'bin'
 }
