@@ -22,7 +22,11 @@
     "@storybook/vue": "^6.0.27",
     "@vue/compiler-sfc": "^3.0.0-rc.1",
     "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "node-sass": "^4.14.1",
     "react-is": "^17.0.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
     "vite": "^1.0.0-rc.1",
     "vue-loader": "^15.9.3"
   },
