@@ -8,13 +8,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@andoshin11/storybook-vue3": "0.0.5",
     "es6-promise": "^4.2.8",
     "vue": "^3.0.2",
     "vue-loader-v16": "^16.0.0-beta.5.4",
     "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
+    "@andoshin11/storybook-vue3": "0.0.5",
     "@babel/core": "^7.12.3",
     "@storybook/addon-actions": "^6.0.27",
     "@storybook/addon-essentials": "^6.0.27",
@@ -28,7 +28,10 @@
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
     "vite": "^1.0.0-rc.1",
-    "vue-loader": "^15.9.3"
+    "vite-plugin-svg": "^0.7.0",
+    "vue-loader": "^15.9.3",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "main": "index.js",
   "keywords": [],

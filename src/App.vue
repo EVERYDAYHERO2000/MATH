@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <Icon />
     <MathCanvas />
     <MathUi />
   </div>
@@ -8,12 +9,14 @@
 <script>
 import MathCanvas from './components/MathCanvas/MathCanvas.vue';
 import MathUi from './components/MathUi/MathUi.vue';
+import Icon from './components/Icon/Icon.vue';
 
 export default {
   name: 'App',
   components: {
     MathCanvas,
-    MathUi
+    MathUi,
+    Icon
   }
 }
 </script>
