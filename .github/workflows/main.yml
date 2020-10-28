@@ -15,6 +15,10 @@ jobs:
       NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
     - uses: actions/checkout@master
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
     - name: Node version
       run: node -v
     - name: Use Node.js ${{ matrix.node-version }}
@@ -32,6 +36,8 @@ jobs:
         git branch -l
         git checkout -b gh-pages
         git branch -l
+        npm install
+        npm run build
     - name: info
       run: |
         ls -al
