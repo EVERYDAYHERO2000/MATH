@@ -54,9 +54,8 @@
     .sidebar-tools_visible {
         transform: translateX(0px);
         transition: all .2s ease-in-out;
-        background-color: rgba($color-white, 0.8);
+        background-color: rgba($color-white, 1);
         box-shadow: 0 0 0 1px rgba($color-black, 0.03);
-        backdrop-filter: blur(20px);
 
         .sidebar-tools__header {
             border-bottom: $border-sidebar-tools;
