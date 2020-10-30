@@ -13,10 +13,10 @@
             Icon
         },
         props: {
-            icon : {
+            icon: {
                 type: String
             }
-        }    
+        }
     }    
 </script>
 
@@ -25,7 +25,16 @@
 
     .button-icon {
         display: inline-flex;
-        padding: $grid-2;
+        padding: $grid-1;
         cursor: pointer;
+        border-radius: $grid-1;
+        background: rgba(0, 0, 0, 0);
+        transition: background-color .2s;
+
+    }
+
+    .button-icon:hover {
+        background: rgba(0, 0, 0, 0.1);
+
     }
 </style>

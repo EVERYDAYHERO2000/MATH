@@ -1,5 +1,5 @@
 <template>
-    <div class="icon">
+    <div class="icon" v-bind:class="[classColor]">
         <IconAdd v-if="name === 'add'" />
         <IconRemove v-else-if="name === 'remove'" />
         <IconClose v-else-if="name === 'close'" />
@@ -23,6 +23,15 @@
             name: {
                 type: String
             },
+            color: {
+                type: String,
+                default: 'black'
+            }
+        },
+        computed: {
+            classColor: function(){
+                return `icon_color-${this.color}`
+            }
         },
         components: {
             IconAdd,
@@ -42,8 +51,36 @@
         display: inline-flex;
         transform-origin: center;
 
-        & svg {
+        svg {
+            rect, path {
+            
+            } 
+        }
 
+        &_color-black {
+            rect, path {
+                fill: $color-black;
+            }
+        }
+        &_color-active {
+            rect, path {
+                fill: $color-active;
+            }
+        }
+        &_color-content {
+            rect, path {
+                fill: $color-content;
+            }
+        }
+        &_color-danger {
+            rect, path {
+                fill: $color-danger;
+            }
+        }
+        &_color-success {
+            rect, path {
+                fill: $color-success;
+            }
         }
     }
 </style>

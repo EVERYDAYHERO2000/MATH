@@ -1,16 +1,23 @@
 <template>
     <div v-bind:class="{ 'sidebar-tools_visible': isVisible }" class="sidebar-tools">
-        <ButtonIcon v-on:click="toggleVisible" icon="add" />
+        <div class="sidebar-tools__header">
+            <ButtonIcon v-on:click="toggleVisible" icon="add" />
+        </div>
+        <div class="sidebar-tools__body">
+            <SidebarToolsEntities />
+        </div>
     </div>
 </template>
 
 <script>
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
+    import SidebarToolsEntities from './__Entities.vue';
 
     export default {
         name: 'SidebarTools',
         components: {
-            ButtonIcon
+            ButtonIcon,
+            SidebarToolsEntities
         },
         data: function() {
             return {
@@ -41,6 +48,8 @@
         transform: translateX(224px);
         transition: all .3s ease-in-out;
         box-shadow: 0 0 0 1px rgba($color-black, 0);
+        display: flex;
+        flex-direction: column;
     }
     .sidebar-tools_visible {
         transform: translateX(0px);
@@ -48,5 +57,19 @@
         background-color: rgba($color-white, 0.8);
         box-shadow: 0 0 0 1px rgba($color-black, 0.03);
         backdrop-filter: blur(20px);
+
+        .sidebar-tools__header {
+            border-bottom: $border-sidebar-tools;
+        }
+    }
+    .sidebar-tools__header {
+        padding: $grid-1;
+        border-bottom: none;
+        box-sizing: border-box;
+    }
+
+    .sidebar-tools__body {
+        flex-grow: 1;
+        height: calc(100% - 50px);
     }
 </style>
