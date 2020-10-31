@@ -59,16 +59,4 @@
         align-items: center;
         justify-content: center;
     }
-
-    .sidebar-tools {
-        .sidebar-tools__entities-item {
-            opacity: 0;
-        }
-    }
-
-    .sidebar-tools_visible {
-        .sidebar-tools__entities-item {
-            opacity: 1;
-        }
-    }
 </style>

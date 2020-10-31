@@ -4,7 +4,7 @@
             <ButtonIcon v-on:click="toggleVisible" icon="add" title="Add Element" />
         </div>
         <div class="sidebar-tools__body">
-            <SidebarToolsEntities />
+            <SidebarToolsEntities v-if="isVisible" />
         </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
-    <div class="button-icon" v-bind:title="title">
+    <button class="button-icon" v-bind:title="title">
         <Icon v-bind:name="icon" color="primary" />
-    </div>
+    </button>
 </template>
 
 <script>
@@ -33,7 +33,11 @@
         border-radius: $grid-1;
         background: rgba(0, 0, 0, 0);
         transition: background-color .2s;
+        border: none;
+    }
 
+    .button-icon:focus {
+        outline: none;
     }
 
     .button-icon:hover {
