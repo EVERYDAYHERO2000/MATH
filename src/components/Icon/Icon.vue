@@ -6,6 +6,8 @@
         <IconConsole v-else-if="name === 'console'" />
         <IconLayers v-else-if="name === 'layers'" />
         <IconMenu v-else-if="name === 'menu'" />
+        <IconMath v-else-if="name === 'math'" />
+        <IconConst v-else-if="name === 'constant'" />
     </div>
 </template>
 
@@ -16,6 +18,8 @@
     import { VueComponent as IconLayers } from './svg/icon_layers_24.svg';
     import { VueComponent as IconMenu } from './svg/icon_menu_24.svg';
     import { VueComponent as IconRemove } from './svg/icon_remove_24.svg';
+    import { VueComponent as IconMath } from './svg/icon_math_24.svg';
+    import { VueComponent as IconConst } from './svg/icon_const_24.svg';
 
     export default {
         name: 'Icon',
@@ -39,7 +43,9 @@
             IconConsole,
             IconLayers,
             IconMenu,
-            IconRemove
+            IconRemove,
+            IconMath,
+            IconConst
         }
     }    
 </script>
@@ -60,6 +66,11 @@
         &_color-black {
             rect, path {
                 fill: $color-black;
+            }
+        }
+        &_color-primary {
+            rect, path {
+                fill: $color-primary;
             }
         }
         &_color-active {

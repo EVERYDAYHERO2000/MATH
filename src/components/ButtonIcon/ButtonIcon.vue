@@ -1,6 +1,6 @@
 <template>
-    <div class="button-icon">
-        <Icon v-bind:name="icon" />
+    <div class="button-icon" v-bind:title="title">
+        <Icon v-bind:name="icon" color="primary" />
     </div>
 </template>
 
@@ -14,6 +14,9 @@
         },
         props: {
             icon: {
+                type: String
+            },
+            title: {
                 type: String
             }
         }

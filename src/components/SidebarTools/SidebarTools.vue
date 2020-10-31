@@ -1,7 +1,7 @@
 <template>
     <div v-bind:class="{ 'sidebar-tools_visible': isVisible }" class="sidebar-tools">
         <div class="sidebar-tools__header">
-            <ButtonIcon v-on:click="toggleVisible" icon="add" />
+            <ButtonIcon v-on:click="toggleVisible" icon="add" title="Add Element" />
         </div>
         <div class="sidebar-tools__body">
             <SidebarToolsEntities />

@@ -6,14 +6,24 @@
 
         </div>
         <div class="sidebar-tools__entities-menu">
-            <div class="sidebar-tools__menu-item" v-for="n in 5"></div>
+            <div class="sidebar-tools__menu-item">
+                <ButtonIcon icon="math" title="Math" />
+            </div>
+            <div class="sidebar-tools__menu-item">
+                <ButtonIcon icon="constant" title="Constant" />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+    import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
+
     export default {
         name: 'SidebarToolsEntities',
+        components: {
+            ButtonIcon
+        },
         props: {
         }    
     }    
@@ -35,7 +45,7 @@
         border-left: $border-sidebar-tools
     }
     .sidebar-tools__entities-item {
-        height: 100px;
+        height: 64px;
         box-sizing: border-box;
         padding: $grid-2;
         color: $color-content;
@@ -43,9 +53,11 @@
         user-select: none;
     }
     .sidebar-tools__menu-item {
-        height: 64px;
+        height: 52px;
         box-sizing: border-box;
-        border-bottom: $border-sidebar-tools;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .sidebar-tools {
