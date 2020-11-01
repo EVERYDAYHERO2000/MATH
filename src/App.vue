@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <Icon />
     <MathCanvas />
     <MathUi />
   </div>
@@ -26,6 +25,6 @@ export default {
     width: 100%;
     height: 100vh;
     background-color: $color-light;
-  }  
-  
+  }
+
 </style>
