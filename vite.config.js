@@ -1,9 +1,10 @@
 const svgPlugin = require('vite-plugin-svg');
 
 module.exports = {
-    root: '.',
+    root: process.cwd(),
     base: './',
-    assetsDir: 'bin',
+    outDir: 'dist',
+    assetsDir: '../bin',
     plugins: [
         svgPlugin(),
     ],
