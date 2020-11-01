@@ -43,9 +43,15 @@
 
     .math-canvas {
         font-family: $font-family-sans;
-        font-size: 72px;
+        font-size: 32px;
+        padding: $grid-5;
+        box-sizing: border-box;
         position: absolute;
         width: 100%;
         height: 100%;
+
+        &::selection {
+            background-color: rgba($color-primary,0.6);
+        }
     }
 </style>
