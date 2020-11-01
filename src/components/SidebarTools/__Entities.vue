@@ -2,8 +2,47 @@
     <div class="sidebar-tools__entities">
         <div class="sidebar-tools__entities-list">
 
-            <div class="sidebar-tools__entities-item" v-for="n in 100">{{ n }} </div>
+            <MethToolsEntity name="addition" />
+            <MethToolsEntity name="subtraction" />
+            <MethToolsEntity name="plus_minus" />
+            <MethToolsEntity name="multiplication" />
+            <MethToolsEntity name="division" />
 
+            <MethToolsEntity name="parentheses" />
+
+            <MethToolsEntity name="equality" />
+            <MethToolsEntity name="inequality" />
+            <MethToolsEntity name="approximation" />
+            <MethToolsEntity name="inequality_less" />
+            <MethToolsEntity name="inequality_great" />
+            <MethToolsEntity name="less" />
+            <MethToolsEntity name="great" />
+
+            <MethToolsEntity name="exponent" />
+            <MethToolsEntity name="radical" />
+
+            <MethToolsEntity name="percent" />
+            <MethToolsEntity name="per_mile" />
+
+            <MethToolsEntity name="fraction" />
+            <MethToolsEntity name="fraction_mixed" />
+
+            <MethToolsEntity name="cos" />
+            <MethToolsEntity name="sin" />
+
+            <MethToolsEntity name="tan" />
+            <MethToolsEntity name="cot" />
+
+            <MethToolsEntity name="sec" />
+            <MethToolsEntity name="csc" />
+            
+            <MethToolsEntity name="abs" />
+            <MethToolsEntity name="log" />
+            <MethToolsEntity name="mod" />
+            
+            <MethToolsEntity name="system_and" />
+            <MethToolsEntity name="integral" />
+            
         </div>
         <div class="sidebar-tools__entities-menu">
             <div class="sidebar-tools__menu-item">
@@ -18,11 +57,13 @@
 
 <script>
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
+    import MethToolsEntity from '../MathToolsEntity/MathToolsEntity.vue';
 
     export default {
         name: 'SidebarToolsEntities',
         components: {
-            ButtonIcon
+            ButtonIcon,
+            MethToolsEntity
         },
         props: {
         }    
@@ -39,18 +80,11 @@
     .sidebar-tools__entities-list {
         flex-grow: 1;
         overflow: auto;
+        padding-bottom: $grid-4;
     }
     .sidebar-tools__entities-menu {
         flex-basis: 52px;
         border-left: $border-sidebar-tools
-    }
-    .sidebar-tools__entities-item {
-        height: 64px;
-        box-sizing: border-box;
-        padding: $grid-2;
-        color: $color-content;
-        border-bottom: $border-sidebar-tools;
-        user-select: none;
     }
     .sidebar-tools__menu-item {
         height: 52px;

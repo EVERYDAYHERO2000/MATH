@@ -17,7 +17,7 @@
 
     .math-canvas {
         font-family: $font-family-sans;
-        font-size: 272px;
+        font-size: 32px;
         position: absolute;
         width: 100%;
         height: 100%;
