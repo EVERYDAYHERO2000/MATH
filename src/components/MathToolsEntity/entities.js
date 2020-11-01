@@ -37,7 +37,7 @@ export default {
     division: {
         cover: ['ent_division_default.svg','ent_division_option.svg'],
         title: 'Division',
-        key: '/'
+        key: ':'
     },
     equality: {
         cover: ['ent_equality.svg'],
@@ -52,7 +52,7 @@ export default {
     fraction: {
         cover: ['ent_fraction_1.svg'],
         title: 'Fraction',
-        key: ''
+        key: '/'
     },
     fraction_mixed: {
         cover: ['ent_fraction_2.svg'],
@@ -86,7 +86,7 @@ export default {
     },
     system_and: {
         cover: ['ent_group.svg'],
-        title: 'System AND',
+        title: 'System',
         key: ''
     },
     integral: {
