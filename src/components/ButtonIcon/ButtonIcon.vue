@@ -41,7 +41,7 @@
     }
 
     .button-icon:hover {
-        background: rgba(0, 0, 0, 0.1);
+        background-color: rgba($color-black, 0.1);
 
     }
 </style>
