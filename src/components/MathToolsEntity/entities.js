@@ -86,7 +86,7 @@ export default {
     },
     system_and: {
         cover: ['ent_group.svg'],
-        title: 'System',
+        title: 'System AND',
         key: ''
     },
     integral: {
