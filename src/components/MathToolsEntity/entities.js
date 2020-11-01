@@ -51,7 +51,7 @@ export default {
     },
     fraction: {
         cover: ['ent_fraction_1.svg'],
-        fraction: 'Fraction',
+        title: 'Fraction',
         key: ''
     },
     fraction_mixed: {
@@ -126,7 +126,7 @@ export default {
     },
     plus_minus: {
         cover: ['ent_plus-minus.svg'],
-        title: 'Both plus and minus operations',
+        title: 'Both plus and minus',
         key: ''
     },
     radical: {

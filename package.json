@@ -29,7 +29,7 @@
     "sass-loader": "^10.0.4",
     "vite": "^1.0.0-rc.1",
     "vite-plugin-svg": "^0.7.0",
-    "vue-loader": "^15.9.3",
+    "vue-loader": "^15.9.4",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.12"
   },
