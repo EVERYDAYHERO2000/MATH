@@ -38,7 +38,6 @@ jobs:
         git branch -l
         npm install
         npm run build
-        mv dist/* .
     - name: info
       run: |
         ls -al
