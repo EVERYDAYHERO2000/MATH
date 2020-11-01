@@ -2,46 +2,46 @@
     <div class="sidebar-tools__entities">
         <div class="sidebar-tools__entities-list">
 
-            <MethToolsEntity name="addition" />
-            <MethToolsEntity name="subtraction" />
-            <MethToolsEntity name="plus_minus" />
-            <MethToolsEntity name="multiplication" />
-            <MethToolsEntity name="division" />
+            <MathToolsEntity name="addition" />
+            <MathToolsEntity name="subtraction" />
+            <MathToolsEntity name="plus_minus" />
+            <MathToolsEntity name="multiplication" />
+            <MathToolsEntity name="division" />
 
-            <MethToolsEntity name="parentheses" />
+            <MathToolsEntity name="parentheses" />
 
-            <MethToolsEntity name="equality" />
-            <MethToolsEntity name="inequality" />
-            <MethToolsEntity name="approximation" />
-            <MethToolsEntity name="inequality_less" />
-            <MethToolsEntity name="inequality_great" />
-            <MethToolsEntity name="less" />
-            <MethToolsEntity name="great" />
+            <MathToolsEntity name="equality" />
+            <MathToolsEntity name="inequality" />
+            <MathToolsEntity name="approximation" />
+            <MathToolsEntity name="inequality_less" />
+            <MathToolsEntity name="inequality_great" />
+            <MathToolsEntity name="less" />
+            <MathToolsEntity name="great" />
 
-            <MethToolsEntity name="exponent" />
-            <MethToolsEntity name="radical" />
+            <MathToolsEntity name="exponent" />
+            <MathToolsEntity name="radical" />
 
-            <MethToolsEntity name="percent" />
-            <MethToolsEntity name="per_mile" />
+            <MathToolsEntity name="percent" />
+            <MathToolsEntity name="per_mile" />
 
-            <MethToolsEntity name="fraction" />
-            <MethToolsEntity name="fraction_mixed" />
+            <MathToolsEntity name="fraction" />
+            <MathToolsEntity name="fraction_mixed" />
 
-            <MethToolsEntity name="cos" />
-            <MethToolsEntity name="sin" />
+            <MathToolsEntity name="cos" />
+            <MathToolsEntity name="sin" />
 
-            <MethToolsEntity name="tan" />
-            <MethToolsEntity name="cot" />
+            <MathToolsEntity name="tan" />
+            <MathToolsEntity name="cot" />
 
-            <MethToolsEntity name="sec" />
-            <MethToolsEntity name="csc" />
+            <MathToolsEntity name="sec" />
+            <MathToolsEntity name="csc" />
             
-            <MethToolsEntity name="abs" />
-            <MethToolsEntity name="log" />
-            <MethToolsEntity name="mod" />
+            <MathToolsEntity name="abs" />
+            <MathToolsEntity name="log" />
+            <MathToolsEntity name="mod" />
             
-            <MethToolsEntity name="system_and" />
-            <MethToolsEntity name="integral" />
+            <MathToolsEntity name="system_and" />
+            <MathToolsEntity name="integral" />
             
         </div>
         <div class="sidebar-tools__entities-menu">
@@ -57,13 +57,13 @@
 
 <script>
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
-    import MethToolsEntity from '../MathToolsEntity/MathToolsEntity.vue';
+    import MathToolsEntity from '../MathToolsEntity/MathToolsEntity.vue';
 
     export default {
         name: 'SidebarToolsEntities',
         components: {
             ButtonIcon,
-            MethToolsEntity
+            MathToolsEntity
         },
         props: {
         }    
