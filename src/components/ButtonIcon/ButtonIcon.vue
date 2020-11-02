@@ -1,6 +1,9 @@
 <template>
-    <button class="button-icon" v-bind:title="title">
-        <Icon v-bind:name="icon" color="primary" />
+    <button 
+        class="button-icon" 
+        v-bind:class="{'button-icon_pressed' : pressed}"
+        v-bind:title="title">
+        <Icon v-bind:name="icon" v-bind:color="iconColor" />
     </button>
 </template>
 
@@ -18,6 +21,18 @@
             },
             title: {
                 type: String
+            },
+            pressed: {
+                type: Boolean
+            },
+            color: {
+                rype: String,
+                default: 'primary'
+            }
+        },
+        computed: {
+            iconColor: function(){
+                return (this.pressed) ? 'black' : this.color;
             }
         }
     }    
@@ -34,6 +49,12 @@
         background: rgba(0, 0, 0, 0);
         transition: background-color .2s;
         border: none;
+    }
+
+    .button-icon_pressed {
+        fill: $color-content;
+        background-color: rgba($color-black, 0.05);
+        pointer-events: none;
     }
 
     .button-icon:focus {

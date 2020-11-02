@@ -166,6 +166,22 @@
         &_tan {
             background-image: url('assets/ent_tan.svg');
         }
+
+        &_pi {
+            background-image: url('assets/ent_pi.svg');
+        }
+
+        &_tau {
+            background-image: url('assets/ent_tau.svg');
+        }
+
+        &_phi {
+            background-image: url('assets/ent_phi.svg');
+        }
+
+        &_gamma {
+            background-image: url('assets/ent_gamma.svg');
+        }
     }
 
     .math-tools-entity:hover {

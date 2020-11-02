@@ -1,10 +1,20 @@
 <template>
-    <div v-bind:class="{ 'sidebar-tools_visible': isVisible }" class="sidebar-tools">
+    <div  
+        v-bind:class="{ 'sidebar-tools_visible': isVisible }" 
+        class="sidebar-tools">
         <div class="sidebar-tools__header">
-            <ButtonIcon v-on:click="toggleVisible" icon="add" title="Add Element" />
+            <ButtonIcon 
+                v-on:click="toggleVisible" 
+                icon="add" 
+                title="Add Element" />
         </div>
         <div class="sidebar-tools__body">
-            <SidebarToolsEntities v-if="isVisible" />
+            <SidebarToolsEntities 
+                v-on:updateScroll="scroll = $event"
+                v-on:changeTab="activeTab = $event" 
+                v-bind:scrollTop="scroll" 
+                v-bind:activeTab="activeTab"
+                v-if="isVisible" />
         </div>
     </div>
 </template>
@@ -21,7 +31,9 @@
         },
         data: function() {
             return {
-                isVisible: false
+                isVisible: false,
+                activeTab: 'math',
+                scroll: 100
             }    
         },
         props: {

@@ -1,6 +1,11 @@
 <template>
     <div class="sidebar-tools__entities">
-        <div class="sidebar-tools__entities-list">
+        
+        <div 
+            v-if="currentTab == 'math'"
+            v-on:scroll="getScrollPosition" 
+            ref="list" 
+            class="sidebar-tools__entities-list">
 
             <MathToolsEntity name="addition" />
             <MathToolsEntity name="subtraction" />
@@ -44,12 +49,26 @@
             <MathToolsEntity name="integral" />
             
         </div>
+
+        <div 
+            v-else-if="currentTab == 'constant'"
+            v-on:scroll="getScrollPosition" 
+            ref="list" 
+            class="sidebar-tools__entities-list">
+
+            <MathToolsEntity name="pi" />
+            <MathToolsEntity name="tau" />
+            <MathToolsEntity name="phi" />
+            <MathToolsEntity name="gamma" />
+
+        </div>    
+
         <div class="sidebar-tools__entities-menu">
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon icon="math" title="Math" />
+                <ButtonIcon icon="math" title="Math" ref="buttonMath" v-bind:pressed="currentTab == 'math'" v-on:click="setActiveTab('math')" />
             </div>
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon icon="constant" title="Constant" />
+                <ButtonIcon icon="constant" title="Constant" ref="buttonConstant" v-bind:pressed="currentTab == 'constant'" v-on:click="setActiveTab('constant')" />
             </div>
         </div>
     </div>
@@ -66,6 +85,36 @@
             MathToolsEntity
         },
         props: {
+            scrollTop: {
+                type: Number,
+                default: 0
+            },
+            activeTab: String
+        },
+        data: function(){
+            return {
+                currentTab: null  
+            }
+        },
+        mounted: function () {
+            this.setActiveTab();
+
+            setTimeout(() => {
+                this.setScrollPosition();
+            }, 100);
+            
+        },
+        methods: {
+            setScrollPosition: function(){
+                if (this.$refs.list) this.$refs.list.scrollTop = this.scrollTop;
+            },
+            getScrollPosition: function(event) {
+                this.$emit('updateScroll', event.target.scrollTop);
+            },
+            setActiveTab: function(tabName){
+                this.currentTab = tabName || this.activeTab;
+                this.$emit('changeTab', this.currentTab);
+            }
         }    
     }    
 </script>
@@ -81,6 +130,7 @@
         flex-grow: 1;
         overflow: auto;
         padding-bottom: $grid-4;
+        scroll-snap-type: both proximity;
     }
     .sidebar-tools__entities-menu {
         flex-basis: 52px;

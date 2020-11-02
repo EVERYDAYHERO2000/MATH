@@ -149,4 +149,24 @@ export default {
         title: 'Tangent',
         key: 'tan'
     },
+    pi: {
+        cover: ['ent_pi.svg'],
+        title: 'Pi 3.141592653589793',
+        key: ''
+    },
+    tau: {
+        cover: ['ent_tau.svg'],
+        title: 'Tau 6.283185307179586',
+        key: ''
+    },
+    phi: {
+        cover: ['ent_phi.svg'],
+        title: 'Phi 1.618033988749894',
+        key: ''
+    },
+    gamma: {
+        cover: ['ent_gamma.svg'],
+        title: 'Gamma 0.577215664901532',
+        key: ''
+    },
 }
