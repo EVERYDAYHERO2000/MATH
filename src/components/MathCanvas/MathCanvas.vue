@@ -44,7 +44,7 @@
     .math-canvas {
         font-family: $font-family-sans;
         font-size: 32px;
-        padding: $grid-5;
+        padding: 100px;
         box-sizing: border-box;
         position: absolute;
         width: 100%;

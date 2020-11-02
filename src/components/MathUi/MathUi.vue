@@ -1,16 +1,19 @@
 <template>
     <div class="math-ui">
         <SidebarTools />
+        <MainMenu />
     </div>
 </template>
 
 <script>
     import SidebarTools from '../SidebarTools/SidebarTools.vue';
+    import MainMenu from '../MainMenu/MainMenu.vue';
 
     export default {
         name: 'MathUi',
         components: {
-            SidebarTools
+            SidebarTools,
+            MainMenu
         },
         props: {
         }

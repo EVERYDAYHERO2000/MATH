@@ -49,6 +49,8 @@
         background: rgba(0, 0, 0, 0);
         transition: background-color .2s;
         border: none;
+        min-width: 40px;
+        max-width: 40px;
     }
 
     .button-icon_pressed {

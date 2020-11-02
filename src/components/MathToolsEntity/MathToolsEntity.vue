@@ -185,6 +185,10 @@
         &_gamma {
             background-image: url('assets/ent_gamma.svg');
         }
+
+        &_e {
+            background-image: url('assets/ent_e.svg');
+        }
     }
 
     .math-tools-entity:hover {

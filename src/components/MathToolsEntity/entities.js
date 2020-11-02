@@ -169,4 +169,9 @@ export default {
         title: 'Gamma 0.577215664901532',
         key: ''
     },
+    e: {
+        cover: ['ent_e.svg'],
+        title: 'Euler`s number 2.71828182',
+        key: ''
+    },
 }

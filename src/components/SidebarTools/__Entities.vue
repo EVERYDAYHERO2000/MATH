@@ -59,7 +59,7 @@
             <MathToolsEntity name="pi" />
             <MathToolsEntity name="tau" />
             <MathToolsEntity name="phi" />
-            <MathToolsEntity name="gamma" />
+            <MathToolsEntity name="e" />
 
         </div>    
 
@@ -130,7 +130,6 @@
         flex-grow: 1;
         overflow: auto;
         padding-bottom: $grid-4;
-        scroll-snap-type: both proximity;
     }
     .sidebar-tools__entities-menu {
         flex-basis: 52px;
