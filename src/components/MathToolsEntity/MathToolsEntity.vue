@@ -1,5 +1,8 @@
 <template>
-    <div class="math-tools-entity" v-bind:class="[classCover]">
+    <div 
+        v-ripple="'rgba(0, 0, 0, 0.02)'"
+        class="math-tools-entity" 
+        v-bind:class="[classCover]">
         <span class="math-tools-entity__title">{{title}}</span>
         <span class="math-tools-entity__code">{{code}}</span>
     </div>

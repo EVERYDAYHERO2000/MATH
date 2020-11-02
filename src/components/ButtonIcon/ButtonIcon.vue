@@ -1,6 +1,7 @@
 <template>
     <button 
         class="button-icon" 
+        v-ripple="'rgba(255, 255, 255, 0.35)'"
         v-bind:class="{'button-icon_pressed' : pressed}"
         v-bind:title="title">
         <Icon v-bind:name="icon" v-bind:color="iconColor" />
@@ -44,7 +45,6 @@
     .button-icon {
         display: inline-flex;
         padding: $grid-1;
-        cursor: pointer;
         border-radius: $grid-1;
         background: rgba(0, 0, 0, 0);
         transition: background-color .2s;
