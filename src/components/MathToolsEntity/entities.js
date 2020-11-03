@@ -39,7 +39,7 @@ export default {
         cover: ['ent_csc.svg'],
         title: 'Cosecant',
         key: 'csc',
-        keywords: 'cosecant'
+        keywords: 'cosecant csc'
     },
     division: {
         cover: ['ent_division_default.svg','ent_division_option.svg'],

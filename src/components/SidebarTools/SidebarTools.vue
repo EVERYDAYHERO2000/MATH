@@ -85,6 +85,7 @@
         border-bottom: none;
         box-sizing: border-box;
         display: flex;
+        min-height: 57px;
 
         .input-search {
             flex-grow: 1;

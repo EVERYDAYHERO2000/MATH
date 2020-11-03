@@ -76,6 +76,7 @@
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
+        min-height: 57px;
     }
 
     .main-menu__body {
