@@ -2,7 +2,7 @@
     <div class="sidebar-tools__entities">
         
         <div 
-            v-if="currentTab == 'math'"
+            v-if="currentTab == 'math' && !searchValue"
             v-on:scroll="getScrollPosition" 
             ref="list" 
             class="sidebar-tools__entities-list">
@@ -51,7 +51,7 @@
         </div>
 
         <div 
-            v-else-if="currentTab == 'constant'"
+            v-else-if="currentTab == 'constant' && !searchValue"
             v-on:scroll="getScrollPosition" 
             ref="list" 
             class="sidebar-tools__entities-list">
@@ -61,14 +61,37 @@
             <MathToolsEntity name="phi" />
             <MathToolsEntity name="e" />
 
-        </div>    
+        </div> 
+        
+        <div 
+            v-else-if="searchValue"
+            class="sidebar-tools__entities-list">
+            <div v-for="(eValue, eName) in MathEntities">
+                <MathToolsEntity 
+                    v-if="isFind(eValue.keywords, searchValue)"
+                    v-bind:name="eName" />
+            </div>
+            
+        </div>
 
-        <div class="sidebar-tools__entities-menu">
+        <div 
+            v-if="!searchValue"
+            class="sidebar-tools__entities-menu">
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon icon="math" title="Math" ref="buttonMath" v-bind:pressed="currentTab == 'math'" v-on:click="setActiveTab('math')" />
+                <ButtonIcon 
+                    icon="math" 
+                    title="Math" 
+                    ref="buttonMath" 
+                    v-bind:pressed="currentTab == 'math'" 
+                    v-on:click="setActiveTab('math')" />
             </div>
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon icon="constant" title="Constant" ref="buttonConstant" v-bind:pressed="currentTab == 'constant'" v-on:click="setActiveTab('constant')" />
+                <ButtonIcon 
+                    icon="constant" 
+                    title="Constant" 
+                    ref="buttonConstant" 
+                    v-bind:pressed="currentTab == 'constant'" 
+                    v-on:click="setActiveTab('constant')" />
             </div>
         </div>
     </div>
@@ -77,6 +100,7 @@
 <script>
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
     import MathToolsEntity from '../MathToolsEntity/MathToolsEntity.vue';
+    import MathEntities from '../MathToolsEntity/entities.js';
 
     export default {
         name: 'SidebarToolsEntities',
@@ -89,11 +113,13 @@
                 type: Number,
                 default: 0
             },
-            activeTab: String
+            activeTab: String,
+            searchValue: String
         },
         data: function(){
             return {
-                currentTab: null  
+                currentTab: null,
+                MathEntities: MathEntities   
             }
         },
         mounted: function () {
@@ -114,6 +140,9 @@
             setActiveTab: function(tabName){
                 this.currentTab = tabName || this.activeTab;
                 this.$emit('changeTab', this.currentTab);
+            },
+            isFind: function(entryStr, str){
+                return (entryStr) ? entryStr.toLowerCase().includes(str.toLowerCase()) : '';
             }
         }    
     }    

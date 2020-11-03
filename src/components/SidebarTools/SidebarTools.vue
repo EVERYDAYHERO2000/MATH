@@ -5,8 +5,11 @@
         <div class="sidebar-tools__header">
             <ButtonIcon 
                 v-on:click="toggleVisible" 
-                icon="add" 
-                title="Add Element" />
+                icon="search" 
+                title="Elements" />    
+            <InputSearch 
+                v-on:updateSearch="searchValue = $event"
+                v-bind:value="searchValue" />    
         </div>
         <div class="sidebar-tools__body">
             <SidebarToolsEntities 
@@ -14,6 +17,7 @@
                 v-on:changeTab="activeTab = $event" 
                 v-bind:scrollTop="scroll" 
                 v-bind:activeTab="activeTab"
+                v-bind:searchValue="searchValue"
                 v-if="isVisible" />
         </div>
     </div>
@@ -22,17 +26,20 @@
 <script>
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
     import SidebarToolsEntities from './__Entities.vue';
+    import InputSearch from '../InputSearch/InputSearch.vue';
 
     export default {
         name: 'SidebarTools',
         components: {
             ButtonIcon,
-            SidebarToolsEntities
+            SidebarToolsEntities,
+            InputSearch
         },
         data: function() {
             return {
                 isVisible: false,
                 activeTab: 'math',
+                searchValue: '',
                 scroll: 100
             }    
         },
@@ -77,6 +84,12 @@
         padding: $grid-1;
         border-bottom: none;
         box-sizing: border-box;
+        display: flex;
+
+        .input-search {
+            flex-grow: 1;
+            margin-left: $grid-1;
+        }
     }
 
     .sidebar-tools__body {

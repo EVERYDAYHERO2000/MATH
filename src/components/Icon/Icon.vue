@@ -8,6 +8,7 @@
         <IconMenu v-else-if="name === 'menu'" />
         <IconMath v-else-if="name === 'math'" />
         <IconConst v-else-if="name === 'constant'" />
+        <IconSearch v-else-if="name === 'search'" />
     </div>
 </template>
 
@@ -20,6 +21,7 @@
     import { VueComponent as IconRemove } from './assets/icon_remove_24.svg';
     import { VueComponent as IconMath } from './assets/icon_math_24.svg';
     import { VueComponent as IconConst } from './assets/icon_const_24.svg';
+    import { VueComponent as IconSearch } from './assets/icon_search_24.svg';
 
     export default {
         name: 'Icon',
@@ -45,7 +47,8 @@
             IconMenu,
             IconRemove,
             IconMath,
-            IconConst
+            IconConst,
+            IconSearch
         }
     }    
 </script>
