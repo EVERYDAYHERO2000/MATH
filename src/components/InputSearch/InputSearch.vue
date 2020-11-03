@@ -4,7 +4,7 @@
             class="input-search__input"
             type="text" 
             v-model="searchValue"
-            v-on:keyup="update"
+            v-on:input="update"
             placeholder="Element name" />
         <ButtonIcon 
             class="input-search__clear-button"
