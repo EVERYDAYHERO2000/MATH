@@ -1,5 +1,5 @@
 <template>
-    <div class="input-search">
+    <div class="input-search" v-ripple="'rgba(0, 0, 0, 0.03)'">
         <input 
             class="input-search__input"
             type="text" 
@@ -52,6 +52,7 @@
     .input-search {
         display: flex;
         position: relative;
+        border-radius: $grid-1;
     }
 
     .input-search__input {
@@ -60,6 +61,7 @@
         display: block;
         width: 100%;
         padding-right: 40px;
+        padding-left: $grid-1;
         box-sizing: border-box;
         font-family: $font-family-sans-serif;
 
