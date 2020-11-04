@@ -1,15 +1,15 @@
 <template>
     <div class="math-canvas">
         <MathCanvasPivot>
-            
+
                 y = f(x) = 2a + 3x π
 
                 <component :is="entity" v-bind:val="value"
                 v-on:isempty="entity='empty'"
                 v-on:isnumber="onIsNumber">
                 </component>
-            
-        </MathCanvasFrame>
+
+        </MathCanvasPivot>
     </div>
 </template>
 

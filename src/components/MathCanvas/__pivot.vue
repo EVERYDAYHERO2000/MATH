@@ -5,11 +5,15 @@
         v-on:gesturechange="onGesturechange"
         v-on:gestureend="onGestureend"
         class="math-canvas__pivot">
+
         <div
             ref="frame" 
             class="math-canvas__frame">
-            <slot></slot>
+            <slot>
+                
+            </slot>
         </div>
+
     </div>
 </template>
 
