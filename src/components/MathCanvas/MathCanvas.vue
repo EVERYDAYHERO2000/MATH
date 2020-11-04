@@ -1,21 +1,27 @@
 <template>
     <div class="math-canvas">
-        y = f(x) = 2a + 3x π
+        <MathCanvasPivot>
+            
+                y = f(x) = 2a + 3x π
 
-        <component :is="entity" v-bind:val="value"
-          v-on:isempty="entity='empty'"
-          v-on:isnumber="onIsNumber">
-        </component>
+                <component :is="entity" v-bind:val="value"
+                v-on:isempty="entity='empty'"
+                v-on:isnumber="onIsNumber">
+                </component>
+            
+        </MathCanvasFrame>
     </div>
 </template>
 
 <script>
+    import MathCanvasPivot from './__pivot.vue';
     import Empty from '../MathEntities/Empty/Empty.vue';
     import Number from '../MathEntities/Number/Number.vue';
 
     export default {
         name: 'MathCanvas',
         components: {
+            MathCanvasPivot,
             Empty,
             Number
         },
