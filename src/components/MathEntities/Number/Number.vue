@@ -44,6 +44,9 @@
 </script>
 
 <style lang="scss">
+  @import '../../../css/main.scss';
+  @import '../MathEntities.scss';
+
   .atom {
     padding: 10px;
     border: 1px solid green;
