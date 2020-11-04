@@ -10,7 +10,7 @@
             ref="frame" 
             class="math-canvas__frame">
             <slot>
-                
+
             </slot>
         </div>
 
@@ -19,7 +19,7 @@
 
 <script>
     export default {
-        name: 'Button',
+        name: 'MathCanvasPivot',
         props: {
         },
         data: function(){
@@ -37,7 +37,7 @@
         methods: {
             render: function() {
                 window.requestAnimationFrame(() => {
-                    let val = `translate3D(${this.posX}px, ${this.posY}px, 0px) rotate(${this.rotation}deg) scale(${this.scale})`;
+                    let val = `translate3D(${this.posX}px, ${this.posY}px, 0px) rotate(${this.rotation}deg) scale(${( this.scale > 0 ) ? this.scale : 0})`;
                     this.$refs.frame.style.transform = val;
                 });
             },

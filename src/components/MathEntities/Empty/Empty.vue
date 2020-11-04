@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'Empty',
+        name: 'EntityEmpty',
         mounted: function () {
           this.focus();
         },

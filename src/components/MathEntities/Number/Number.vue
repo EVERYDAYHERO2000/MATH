@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'Number',
+        name: 'EntityNumber',
         mounted: function () {
           this.focus();
         },
