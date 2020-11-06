@@ -31,15 +31,6 @@
 
             <MathToolsEntity name="fraction" />
             <MathToolsEntity name="fraction_mixed" />
-
-            <MathToolsEntity name="cos" />
-            <MathToolsEntity name="sin" />
-
-            <MathToolsEntity name="tan" />
-            <MathToolsEntity name="cot" />
-
-            <MathToolsEntity name="sec" />
-            <MathToolsEntity name="csc" />
             
             <MathToolsEntity name="abs" />
             <MathToolsEntity name="log" />
@@ -49,6 +40,26 @@
             <MathToolsEntity name="integral" />
             
         </div>
+
+        <div 
+            v-else-if="currentTab == 'trigonometry' && !searchValue"
+            v-on:scroll="getScrollPosition" 
+            ref="list" 
+            class="sidebar-tools__entities-list">
+
+            <MathToolsEntity name="cos" />
+            <MathToolsEntity name="sin" />
+
+            <MathToolsEntity name="tan" />
+            <MathToolsEntity name="cot" />
+
+            <MathToolsEntity name="sec" />
+            <MathToolsEntity name="csc" />
+
+            <MathToolsEntity name="pi" />
+            <MathToolsEntity name="tau" />
+
+        </div> 
 
         <div 
             v-else-if="currentTab == 'constant' && !searchValue"
@@ -62,6 +73,39 @@
             <MathToolsEntity name="e" />
 
         </div> 
+
+        <div 
+            v-else-if="currentTab == 'variable' && !searchValue"
+            v-on:scroll="getScrollPosition" 
+            ref="list" 
+            class="sidebar-tools__entities-list">
+
+            <MathToolsEntity name="g_alpha" />
+            <MathToolsEntity name="g_beta" />
+            <MathToolsEntity name="g_gamma" />
+            <MathToolsEntity name="g_delta" />
+            <MathToolsEntity name="g_epsilon" />
+            <MathToolsEntity name="g_zeta" />
+            <MathToolsEntity name="g_eta" />
+            <MathToolsEntity name="g_theta" />
+            <MathToolsEntity name="g_iota" />
+            <MathToolsEntity name="g_kappa" />
+            <MathToolsEntity name="g_lambda" />
+            <MathToolsEntity name="g_mu" />
+            <MathToolsEntity name="g_nu" />
+            <MathToolsEntity name="g_xi" />
+            <MathToolsEntity name="g_omicron" />
+            <MathToolsEntity name="g_pi" />
+            <MathToolsEntity name="g_rho" />
+            <MathToolsEntity name="g_sigma" />
+            <MathToolsEntity name="g_tau" />
+            <MathToolsEntity name="g_upsilon" />
+            <MathToolsEntity name="g_phi" />
+            <MathToolsEntity name="g_chi" />
+            <MathToolsEntity name="g_psi" />
+            <MathToolsEntity name="g_omega" />
+
+        </div>    
         
         <div 
             v-else-if="searchValue"
@@ -87,11 +131,27 @@
             </div>
             <div class="sidebar-tools__menu-item">
                 <ButtonIcon 
+                    icon="trigonometry" 
+                    title="Trigonometry" 
+                    ref="buttonConstant" 
+                    v-bind:pressed="currentTab == 'trigonometry'" 
+                    v-on:click="setActiveTab('trigonometry')" />
+            </div>
+            <div class="sidebar-tools__menu-item">
+                <ButtonIcon 
                     icon="constant" 
                     title="Constant" 
                     ref="buttonConstant" 
                     v-bind:pressed="currentTab == 'constant'" 
                     v-on:click="setActiveTab('constant')" />
+            </div>
+            <div class="sidebar-tools__menu-item">
+                <ButtonIcon 
+                    icon="variable" 
+                    title="Variable" 
+                    ref="buttonConstant" 
+                    v-bind:pressed="currentTab == 'variable'" 
+                    v-on:click="setActiveTab('variable')" />
             </div>
         </div>
     </div>

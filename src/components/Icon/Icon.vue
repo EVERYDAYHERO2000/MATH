@@ -9,6 +9,8 @@
         <IconMath v-else-if="name === 'math'" />
         <IconConst v-else-if="name === 'constant'" />
         <IconSearch v-else-if="name === 'search'" />
+        <IconVar v-else-if="name === 'variable'" />
+        <IconTrigonometry v-else-if="name === 'trigonometry'" />
     </div>
 </template>
 
@@ -22,6 +24,8 @@
     import { VueComponent as IconMath } from './assets/icon_math_24.svg';
     import { VueComponent as IconConst } from './assets/icon_const_24.svg';
     import { VueComponent as IconSearch } from './assets/icon_search_24.svg';
+    import { VueComponent as IconVar } from './assets/icon_var_24.svg';
+    import { VueComponent as IconTrigonometry } from './assets/icon_trigonometry_24.svg';
 
     export default {
         name: 'Icon',
@@ -48,7 +52,9 @@
             IconRemove,
             IconMath,
             IconConst,
-            IconSearch
+            IconSearch,
+            IconVar,
+            IconTrigonometry
         }
     }    
 </script>
@@ -61,38 +67,38 @@
         transform-origin: center;
 
         svg {
-            rect, path {
+            rect, path, circle {
             
             } 
         }
 
         &_color-black {
-            rect, path {
+            rect, path, circle {
                 fill: $color-black;
             }
         }
         &_color-primary {
-            rect, path {
+            rect, path, circle {
                 fill: $color-primary;
             }
         }
         &_color-active {
-            rect, path {
+            rect, path, circle {
                 fill: $color-active;
             }
         }
         &_color-content {
-            rect, path {
+            rect, path, circle {
                 fill: $color-content;
             }
         }
         &_color-danger {
-            rect, path {
+            rect, path, circle {
                 fill: $color-danger;
             }
         }
         &_color-success {
-            rect, path {
+            rect, path, circle {
                 fill: $color-success;
             }
         }

@@ -1,8 +1,5 @@
 <template>
-    <div 
-        v-ripple="'rgba(0, 0, 0, 0.02)'"
-        class="math-tools-entity" 
-        v-bind:class="[classCover]">
+    <div v-ripple="'rgba(0, 0, 0, 0.02)'" class="math-tools-entity" v-bind:class="[classCover]">
         <span class="math-tools-entity__title">{{title}}</span>
         <span class="math-tools-entity__code">{{code}}</span>
     </div>
@@ -21,7 +18,7 @@
         },
         computed: {
             classCover: function () {
-                return (this.name) ? `math-tools-entity_cover_${this.name.replace('_','-')}` : '';
+                return (this.name) ? `math-tools-entity_cover_${this.name.replace('_', '-')}` : '';
             },
             title: function () {
                 return (this.name) ? entities[this.name].title : '';
@@ -189,6 +186,102 @@
 
         &_e {
             background-image: url('assets/ent_e.svg');
+        }
+
+        &_g-alpha {
+            background-image: url('assets/ent_sign-g-alpha.svg');
+        }
+
+        &_g-beta {
+            background-image: url('assets/ent_sign-g-beta.svg');
+        }
+
+        &_g-gamma {
+            background-image: url('assets/ent_sign-g-gamma.svg');
+        }
+
+        &_g-delta {
+            background-image: url('assets/ent_sign-g-delta.svg');
+        }
+
+        &_g-epsilon {
+            background-image: url('assets/ent_sign-g-epsilon.svg');
+        }
+
+        &_g-zeta {
+            background-image: url('assets/ent_sign-g-zeta.svg');
+        }
+
+        &_g-eta {
+            background-image: url('assets/ent_sign-g-eta.svg');
+        }
+
+        &_g-theta {
+            background-image: url('assets/ent_sign-g-theta.svg');
+        }
+
+        &_g-iota {
+            background-image: url('assets/ent_sign-g-iota.svg');
+        }
+
+        &_g-kappa {
+            background-image: url('assets/ent_sign-g-kappa.svg');
+        }
+
+        &_g-lambda {
+            background-image: url('assets/ent_sign-g-lambda.svg');
+        }
+
+        &_g-mu {
+            background-image: url('assets/ent_sign-g-mu.svg');
+        }
+
+        &_g-nu {
+            background-image: url('assets/ent_sign-g-nu.svg');
+        }
+
+        &_g-xi {
+            background-image: url('assets/ent_sign-g-xi.svg');
+        }
+
+        &_g-omicron {
+            background-image: url('assets/ent_sign-g-omicron.svg');
+        }
+
+        &_g-pi {
+            background-image: url('assets/ent_sign-g-pi.svg');
+        }
+
+        &_g-rho {
+            background-image: url('assets/ent_sign-g-rho.svg');
+        }
+
+        &_g-sigma {
+            background-image: url('assets/ent_sign-g-sigma.svg');
+        }
+
+        &_g-tau {
+            background-image: url('assets/ent_sign-g-tau.svg');
+        }
+
+        &_g-upsilon {
+            background-image: url('assets/ent_sign-g-upsilon.svg');
+        }
+
+        &_g-phi {
+            background-image: url('assets/ent_sign-g-phi.svg');
+        }
+
+        &_g-chi {
+            background-image: url('assets/ent_sign-g-chi.svg');
+        }
+
+        &_g-psi {
+            background-image: url('assets/ent_sign-g-psi.svg');
+        }
+
+        &_g-omega {
+            background-image: url('assets/ent_sign-g-omega.svg');
         }
     }
 

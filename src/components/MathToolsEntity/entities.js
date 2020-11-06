@@ -209,4 +209,149 @@ export default {
         key: '',
         keywords: 'constant eular`s number 2.7182'
     },
+
+    g_alpha: {
+        cover: ['ent_sign_g_alpha.svg'],
+        title: 'Alpha',
+        key: '',
+        keywords: ''
+    },
+    g_beta: {
+        cover: ['ent_sign_g_beta.svg'],
+        title: 'Beta',
+        key: '',
+        keywords: ''
+    },
+    g_gamma: {
+        cover: ['ent_sign_g_gamma.svg'],
+        title: 'Gamma',
+        key: '',
+        keywords: ''
+    },
+    g_delta: {
+        cover: ['ent_sign_g_delta.svg'],
+        title: 'Delta',
+        key: '',
+        keywords: ''
+    },
+    g_epsilon: {
+        cover: ['ent_sign_g_epsilon.svg'],
+        title: 'Epsilon',
+        key: '',
+        keywords: ''
+    },
+    g_zeta: {
+        cover: ['ent_sign_g_zeta.svg'],
+        title: 'Zeta',
+        key: '',
+        keywords: ''
+    },
+    g_eta: {
+        cover: ['ent_sign_g_eta.svg'],
+        title: 'Eta',
+        key: '',
+        keywords: ''
+    },
+    g_theta: {
+        cover: ['ent_sign_g_theta.svg'],
+        title: 'Theta',
+        key: '',
+        keywords: ''
+    },
+    g_iota: {
+        cover: ['ent_sign_g_iota.svg'],
+        title: 'Iota',
+        key: '',
+        keywords: ''
+    },
+    g_kappa: {
+        cover: ['ent_sign_g_kappa.svg'],
+        title: 'Kappa',
+        key: '',
+        keywords: ''
+    },
+    g_lambda: {
+        cover: ['ent_sign_g_lambda.svg'],
+        title: 'Lambda',
+        key: '',
+        keywords: ''
+    },
+    g_mu: {
+        cover: ['ent_sign_g_mu.svg'],
+        title: 'Mu',
+        key: '',
+        keywords: ''
+    },
+    g_nu: {
+        cover: ['ent_sign_g_nu.svg'],
+        title: 'Nu',
+        key: '',
+        keywords: ''
+    },
+    g_xi: {
+        cover: ['ent_sign_g_xi.svg'],
+        title: 'Xi',
+        key: '',
+        keywords: ''
+    },
+    g_omicron: {
+        cover: ['ent_sign_g_omicron.svg'],
+        title: 'Omicron',
+        key: '',
+        keywords: ''
+    },
+    g_pi: {
+        cover: ['ent_sign_g_pi.svg'],
+        title: 'Pi',
+        key: '',
+        keywords: ''
+    },
+    g_rho: {
+        cover: ['ent_sign_g_rho.svg'],
+        title: 'Rho',
+        key: '',
+        keywords: ''
+    },
+    g_sigma: {
+        cover: ['ent_sign_g_sigma.svg'],
+        title: 'Sigma',
+        key: '',
+        keywords: ''
+    },
+    g_tau: {
+        cover: ['ent_sign_g_tau.svg'],
+        title: 'Tau',
+        key: '',
+        keywords: ''
+    },
+    g_upsilon: {
+        cover: ['ent_sign_upsilon.svg'],
+        title: 'Upsilon',
+        key: '',
+        keywords: ''
+    },
+    g_phi: {
+        cover: ['ent_sign_g_phi.svg'],
+        title: 'Phi',
+        key: '',
+        keywords: ''
+    },
+    g_chi: {
+        cover: ['ent_sign_g_chi.svg'],
+        title: 'Chi',
+        key: '',
+        keywords: ''
+    },
+    g_psi: {
+        cover: ['ent_sign_g_psi.svg'],
+        title: 'Psi',
+        key: '',
+        keywords: ''
+    },
+    g_omega: {
+        cover: ['ent_sign_g_omega.svg'],
+        title: 'Omega',
+        key: '',
+        keywords: ''
+    }
 }
