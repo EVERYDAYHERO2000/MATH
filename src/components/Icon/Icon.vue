@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import {color} from '../../fn/propsType/propsType.js';
+    import { color } from '../../fn/propsType/propsType.js';
 
     import { VueComponent as IconAdd } from './assets/icon_add_24.svg';
     import { VueComponent as IconClose } from './assets/icon_close_24.svg';
@@ -38,8 +38,8 @@
             color: color()
         },
         computed: {
-            classColor: function(){
-                return `icon_color-${this.color}`
+            classColor: function () {
+                return `icon_color_${this.color}`
             }
         },
         components: {
@@ -66,40 +66,61 @@
         transform-origin: center;
 
         svg {
-            rect, path, circle {
-            
-            } 
+            rect,
+            path,
+            circle {}
         }
 
-        &_color-black {
-            rect, path, circle {
-                fill: $color-black;
+        &_color {
+            &_black {
+                rect,
+                path,
+                circle {
+                    fill: $color-black;
+                }
+            }
+
+            &_primary {
+                rect,
+                path,
+                circle {
+                    fill: $color-primary;
+                }
+            }
+
+            &_active {
+                rect,
+                path,
+                circle {
+                    fill: $color-active;
+                }
+            }
+
+            &_content {
+                rect,
+                path,
+                circle {
+                    fill: $color-content;
+                }
+            }
+
+            &_danger {
+                rect,
+                path,
+                circle {
+                    fill: $color-danger;
+                }
+            }
+
+            &_success {
+                rect,
+                path,
+                circle {
+                    fill: $color-success;
+                }
             }
         }
-        &_color-primary {
-            rect, path, circle {
-                fill: $color-primary;
-            }
-        }
-        &_color-active {
-            rect, path, circle {
-                fill: $color-active;
-            }
-        }
-        &_color-content {
-            rect, path, circle {
-                fill: $color-content;
-            }
-        }
-        &_color-danger {
-            rect, path, circle {
-                fill: $color-danger;
-            }
-        }
-        &_color-success {
-            rect, path, circle {
-                fill: $color-success;
-            }
-        }
+
+
     }
 </style>
