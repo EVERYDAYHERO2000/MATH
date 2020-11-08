@@ -1,6 +1,5 @@
 
-let DTM;
-(function (global) {
+export default (function (global) {
     'use strict';
 
     var util = newUtil();
@@ -16,7 +15,7 @@ let DTM;
         cacheBust: false
     };
 
-    var domtoimage = DTM = {
+    var domtoimage = {
         toSvg: toSvg,
         toPng: toPng,
         toJpeg: toJpeg,
@@ -768,6 +767,7 @@ let DTM;
             }
         }
     }
-})(this);
 
-export default DTM;
+    return domtoimage;
+
+})(this);
