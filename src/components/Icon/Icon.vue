@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import {color} from '../../fn/propsType/propsType.js';
+
     import { VueComponent as IconAdd } from './assets/icon_add_24.svg';
     import { VueComponent as IconClose } from './assets/icon_close_24.svg';
     import { VueComponent as IconConsole } from './assets/icon_console_24.svg';
@@ -33,10 +35,7 @@
             name: {
                 type: String
             },
-            color: {
-                type: String,
-                default: 'black'
-            }
+            color: color()
         },
         computed: {
             classColor: function(){

@@ -2,7 +2,7 @@
     <button 
         class="button-icon" 
         v-ripple="'rgba(255, 255, 255, 0.35)'"
-        v-bind:class="{'button-icon_pressed' : pressed}"
+        v-bind:class="[{'button-icon_pressed' : pressed}, classSize]"
         v-bind:title="title">
         <Icon v-bind:name="icon" v-bind:color="iconColor" />
     </button>
@@ -10,6 +10,7 @@
 
 <script>
     import Icon from '../Icon/Icon.vue';
+    import {size, color} from '../../fn/propsType/propsType.js';
 
     export default {
         name: 'ButtonIcon',
@@ -26,14 +27,15 @@
             pressed: {
                 type: Boolean
             },
-            color: {
-                rype: String,
-                default: 'primary'
-            }
+            color: color('primary'),
+            size: size('m')
         },
         computed: {
             iconColor: function(){
                 return (this.pressed) ? 'black' : this.color;
+            },
+            classSize: function(){
+                return `button-icon_size_${this.size}`;
             }
         }
     }    
@@ -46,13 +48,29 @@
         display: inline-flex;
         padding: $grid-1;
         border-radius: $grid-1;
-        background: rgba(0, 0, 0, 0);
+        background: rgba($color-black, 0);
         transition: background-color .2s;
         border: none;
-        min-width: 40px;
-        max-width: 40px;
-        min-height: 40px;
-        max-height: 40px;
+
+        &_size {
+            &_s {
+                min-width: 24px;
+                max-width: 24px;
+                min-height: 24px;
+                max-height: 24px;
+            }
+
+            &_m {
+                min-width: 40px;
+                max-width: 40px;
+                min-height: 40px;
+                max-height: 40px;
+            }
+
+            &_l {
+
+            }
+        }
     }
 
     .button-icon_pressed {
