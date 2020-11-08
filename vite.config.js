@@ -7,5 +7,5 @@ module.exports = {
     assetsDir: 'bin',
     plugins: [
         svgPlugin(),
-    ],
+    ]
 }
