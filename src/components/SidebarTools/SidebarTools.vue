@@ -1,17 +1,21 @@
 <template>
-    <div  
-        v-bind:class="{ 'sidebar-tools_visible': isVisible }" 
-        class="sidebar-tools">
-        <div class="sidebar-tools__header">
+    
+    <Sidebar 
+        class="sidebar-tools"
+        v-bind:visible="isVisible"
+        attachment="right">
+
+        <template v-slot:header>
             <ButtonIcon 
                 v-on:click="toggleVisible" 
                 icon="search" 
                 title="Elements" />    
             <InputSearch 
                 v-on:updateSearch="searchValue = $event"
-                v-bind:value="searchValue" />    
-        </div>
-        <div class="sidebar-tools__body">
+                v-bind:value="searchValue" />  
+        </template>
+
+        <template v-slot:body>
             <SidebarToolsEntities 
                 v-on:updateScroll="scroll = $event"
                 v-on:changeTab="activeTab = $event" 
@@ -19,11 +23,14 @@
                 v-bind:activeTab="activeTab"
                 v-bind:searchValue="searchValue"
                 v-if="isVisible" />
-        </div>
-    </div>
+        </template>
+
+    </Sidebar>
+
 </template>
 
 <script>
+    import Sidebar from '../Sidebar/Sidebar.vue';
     import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
     import SidebarToolsEntities from './__Entities.vue';
     import InputSearch from '../InputSearch/InputSearch.vue';
@@ -31,6 +38,7 @@
     export default {
         name: 'SidebarTools',
         components: {
+            Sidebar,
             ButtonIcon,
             SidebarToolsEntities,
             InputSearch
@@ -40,7 +48,7 @@
                 isVisible: false,
                 activeTab: 'math',
                 searchValue: '',
-                scroll: 100
+                scroll: 0
             }    
         },
         props: {
@@ -58,43 +66,10 @@
     @import '../../css/main.scss';
 
     .sidebar-tools {
-        pointer-events: all;
-        position: absolute;
-        height: 100%;
-        width: 280px;
-        right: 0;
-        background-color: rgba($color-white, 0);
-        transform: translateX(224px);
-        transition: all .3s ease-in-out;
-        box-shadow: 0 0 0 1px rgba($color-black, 0);
-        display: flex;
-        flex-direction: column;
-    }
-    .sidebar-tools_visible {
-        transform: translateX(0px);
-        transition: all .2s .05s ease-in-out;
-        background-color: rgba($color-white, 1);
-        box-shadow: 0 0 0 1px rgba($color-black, 0.03);
-
-        .sidebar-tools__header {
-            border-bottom: $border-sidebar-tools;
-        }
-    }
-    .sidebar-tools__header {
-        padding: $grid-1;
-        border-bottom: none;
-        box-sizing: border-box;
-        display: flex;
-        min-height: 57px;
-
         .input-search {
             flex-grow: 1;
             margin-left: $grid-1;
         }
     }
 
-    .sidebar-tools__body {
-        flex-grow: 1;
-        height: calc(100% - 50px);
-    }
 </style>
