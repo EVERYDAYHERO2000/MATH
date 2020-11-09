@@ -29,12 +29,6 @@ export default (function (global) {
             options: {}
         }
     };
-    /*
-    if (typeof module !== 'undefined')
-        module.exports = domtoimage;
-    else
-        global.domtoimage = domtoimage;
-    */
 
     /**
      * @param {Node} node - The DOM Node object to render

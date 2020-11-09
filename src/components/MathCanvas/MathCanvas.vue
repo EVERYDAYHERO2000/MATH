@@ -14,7 +14,7 @@
 
 <script>
     import MathCanvasPivot from './__pivot.vue';
-    import Enities from './__entities.js';
+    import Enities from './entities.js';
     import domtoimage from '../../fn/domToImage/domToImage.js';
 
 
