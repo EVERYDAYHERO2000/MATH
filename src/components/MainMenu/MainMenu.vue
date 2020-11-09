@@ -6,10 +6,15 @@
             class="main-menu__backdrop" />
         <div class="main-menu__header">
             <Logo />
-            <ButtonIcon v-on:click="toggleVisible" icon="menu" title="Main Menu" />
+            <ButtonIcon 
+                v-on:click="toggleVisible" 
+                icon="menu" 
+                title="Main Menu" />
         </div>
         <div class="main-menu__body">
-            <button v-on:click="exportToPng">Export as png</button>
+            <button 
+                class="main-menu__item"
+                v-on:click="exportToPng">Export as png</button>
         </div>
     </div>
 </template>
@@ -61,6 +66,23 @@
         flex-direction: column;
     }
 
+    .main-menu__item {
+        border: none;
+        background-color: rgba($color-black, 0);
+        display: block;
+        font-size: 16px;
+        color: $color-primary;
+        padding: $grid-2 $grid-3;
+        box-sizing: border-box;
+        font-weight: 600;
+        width: 100%;
+        text-align: left;
+
+        &:hover {
+            background-color: rgba($color-black, 0.05);
+        }
+    }
+
     .main-menu_visible {
         transform: translateX(0px);
         transition: all .2s .05s ease-in-out;
@@ -85,6 +107,9 @@
     .main-menu__body {
         flex-grow: 1;
         height: calc(100% - 50px);
+        width: 100%;
+        padding-top: $grid-3;
+        box-sizing: border-box;
     }
 
     .main-menu__backdrop {
