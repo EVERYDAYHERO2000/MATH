@@ -110,7 +110,7 @@
         background-color: rgba($color-white, 1);
         box-shadow: 0 0 0 1px rgba($color-black, 0.03);
 
-        .sidebar-panel__header {
+        .sidebar__header {
             border-bottom: $border-sidebar-tools;
         }
     }
