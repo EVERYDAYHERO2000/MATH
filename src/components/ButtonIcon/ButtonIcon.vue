@@ -44,6 +44,9 @@
 <style lang="scss">
     @import '../../css/main.scss';
 
+    $size-s: $grid-3;
+    $size-m: $grid-5;
+
     .button-icon {
         display: inline-flex;
         padding: $grid-1;
@@ -54,17 +57,17 @@
 
         &_size {
             &_s {
-                min-width: 24px;
-                max-width: 24px;
-                min-height: 24px;
-                max-height: 24px;
+                min-width: $size-s;
+                max-width: $size-s;
+                min-height: $size-s;
+                max-height: $size-s;
             }
 
             &_m {
-                min-width: 40px;
-                max-width: 40px;
-                min-height: 40px;
-                max-height: 40px;
+                min-width: $size-m;
+                max-width: $size-m;
+                min-height: $size-m;
+                max-height: $size-m;
             }
 
             &_l {

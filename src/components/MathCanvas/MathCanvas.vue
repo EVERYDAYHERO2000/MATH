@@ -17,7 +17,6 @@
     import Enities from './entities.js';
     import domtoimage from '../../fn/domToImage/domToImage.js';
 
-
     export default {
         name: 'MathCanvas',
         components: {
@@ -40,15 +39,14 @@
                 this.value = evt;
             },
             renderToPng: function () {
-
-                domtoimage.toPng(this.$refs.canvas)
+                domtoimage
+                    .toPng(this.$refs.canvas)
                     .then(function (dataUrl) {
-                        var link = document.createElement('a');
+                        let link = document.createElement('a');
                         link.download = 'my-image-name.png';
                         link.href = dataUrl;
                         link.click();
                     });
-
             }
         }
     }
