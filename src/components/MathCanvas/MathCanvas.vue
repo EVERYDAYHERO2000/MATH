@@ -1,6 +1,6 @@
 <template>
     <div class="math-canvas">
-        <MathCanvasPivot v-on:click="renderToPng">
+        <MathCanvasPivot>
             <div ref="canvas">
                 y = f(x) = 2a + 3x π
 
@@ -31,7 +31,7 @@
         data: function () {
             return {
                 entity: 'entityEmpty',
-                value: null
+                value: null,
             }
         },
         methods: {

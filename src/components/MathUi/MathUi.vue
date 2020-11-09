@@ -1,7 +1,7 @@
 <template>
     <div class="math-ui">
         <SidebarTools />
-        <MainMenu />
+        <MainMenu v-on:exportToPng="exportToPng" />
     </div>
 </template>
 
@@ -16,6 +16,11 @@
             MainMenu
         },
         props: {
+        },
+        methods: {
+            exportToPng: function(){
+                this.$emit('exportToPng',true)
+            }
         }
     }    
 </script>

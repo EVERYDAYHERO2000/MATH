@@ -9,7 +9,7 @@
             <ButtonIcon v-on:click="toggleVisible" icon="menu" title="Main Menu" />
         </div>
         <div class="main-menu__body">
-
+            <button v-on:click="exportToPng">Export as png</button>
         </div>
     </div>
 </template>
@@ -34,6 +34,9 @@
         methods: {
             toggleVisible: function () {
                 this.isVisible = !this.isVisible;
+            },
+            exportToPng: function() {
+                this.$emit('exportToPng',true)
             }
         }
     }    

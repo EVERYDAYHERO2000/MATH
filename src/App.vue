@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <MathCanvas />
-    <MathUi />
+    <MathCanvas ref="canvas" />
+    <MathUi v-on:exportToPng="exportToPng" />
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   components: {
     MathCanvas,
     MathUi,
+  },
+  methods: {
+      exportToPng: function(){
+        this.$refs.canvas.renderToPng()
+      }
   }
 }
 </script>
