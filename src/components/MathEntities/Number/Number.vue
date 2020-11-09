@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="atom" v-on:keyup="setValue" ref="input" contenteditable>{{value || ''}}</span>
+    <span class="atom" v-on:keydown="setValue" ref="input" contenteditable>{{value || ''}}</span>
     <span>Number {{value}}</span>
   </div>
 </template>

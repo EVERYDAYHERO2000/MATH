@@ -1,0 +1,56 @@
+[
+    {
+        "type" : "number",
+        "value" : 22,
+        "focus" : false,
+        "id" : 1
+    },
+    {
+        "type" : "plus",
+        "focus" : false,
+        "id" : 2
+    },
+    {
+        "type" : "number",
+        "value" : 24,
+        "focus" : false,
+        "id" : 3
+    },
+    {
+        "type" : "multiplication",
+        "focus" : false,
+        "id" : 4
+    },
+    {
+        "type" : "fraction",
+        "focus" : false,
+        "id" : 5,
+        "numerator" : [
+            {
+                "type" : "number",
+                "value" : 2,
+                "focus" : false,
+                "id" : 6
+            },
+            {
+                "type" : "minus",
+                "focus" : false,
+                "id" : 7
+            },
+            {
+                "type" : "number",
+                "value" : -3,
+                "focus" : true,
+                "id" : 8
+            }
+        ],
+        "denominator" : [
+            {
+                "type" : "number",
+                "value" : 3,
+                "focus" : true,
+                "id" : 9
+            }
+        ]
+    }
+]
