@@ -1,5 +1,5 @@
 <template>
-
+    <div class="entity-subtraction">−</div>
 </template>
 
 <script>
@@ -13,5 +13,11 @@
 <style lang="scss">
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
+
+    .entity-subtraction {
+        display: inline-block;
+        padding: 0 $grid-1;
+        box-sizing: border-box;
+    }
 
 </style>

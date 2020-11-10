@@ -1,5 +1,5 @@
 <template>
-
+    <div class="entity-addition">+</div>
 </template>
 
 <script>
@@ -14,4 +14,9 @@
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
 
+    .entity-addition {
+        display: inline-block;
+        padding: 0 $grid-1;
+        box-sizing: border-box;
+    }
 </style>

@@ -2,15 +2,7 @@
     <div class="math-canvas">
         <MathCanvasPivot>
             <div ref="canvas">
-                y = f(x) = 2a + 3x π
-
-                
-
-                <component :is="entity" v-bind:val="value" v-on:isempty="entity='entityEmpty'"
-                    v-on:isnumber="onIsNumber">
-                </component>
-
-
+                <MathEnities v-bind:value="value" />
             </div>
         </MathCanvasPivot>
     </div>
@@ -18,30 +10,35 @@
 
 <script>
     import MathCanvasPivot from './__pivot.vue';
-    import Enities from './entities.js';
+    import MathEnities from '../MathEntities/MathEntities.vue';
     import domtoimage from '../../fn/domToImage/domToImage.js';
+
+    import test from './test.js';
 
     export default {
         name: 'MathCanvas',
         components: {
             MathCanvasPivot,
-            ...Enities
-        },
-        created: function () {
-            console.log('Refs parent', this.$refs);
-            // this.focus();
+            MathEnities
         },
         data: function () {
             return {
-                entity: 'entityEmpty',
-                value: null,
+                keyboard: {
+                    key: null,
+                    charCode: null
+                },
+                value: test
             }
         },
+        created: function(){
+            document.addEventListener('keypress', this.keypress)
+        },
         methods: {
-            onIsNumber: function (evt) {
-                
-                this.entity = 'entityNumber';
-                this.value = evt;
+            keypress: function (event) {
+                if (event.target.classList.contains('entity')) {
+                    this.keyboard.key = event.key;
+                    this.keyboard.charCode = event.charCode;
+                }
             },
             renderToPng: function () {
                 domtoimage
