@@ -63,6 +63,7 @@ export default {
     EntityPerMile,
     EntityPhi,
     EntityPi,
+    EntityE,
     EntityPlusMinus,
     EntityRadical,
     EntitySec,

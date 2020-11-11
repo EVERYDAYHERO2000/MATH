@@ -36,8 +36,7 @@ export default [
                         ],
                         denominator: [
                             {
-                                type: 'number',
-                                value: 2
+                                type: 'e',
                             }
                         ]
                     }
@@ -134,7 +133,7 @@ export default [
                 type: 'subtraction'   
             },
             {
-                type: 'pi'
+                type: 'e'
             }
         ]
     }
