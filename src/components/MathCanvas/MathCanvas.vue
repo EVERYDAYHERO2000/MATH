@@ -9,8 +9,8 @@
 </template>
 
 <script>
+    import { defineAsyncComponent } from "vue";
     import MathCanvasPivot from './__pivot.vue';
-    import MathEnities from '../MathEntities/MathEntities.vue';
     import domtoimage from '../../fn/domToImage/domToImage.js';
 
     import test from './test.js';
@@ -19,13 +19,14 @@
         name: 'MathCanvas',
         components: {
             MathCanvasPivot,
-            MathEnities
+            MathEnities: defineAsyncComponent(() => import('../MathEntities/MathEntities.vue'))
         },
         data: function () {
             return {
                 keyboard: {
                     key: null,
-                    charCode: null
+                    charCode: null,
+                    boo: ''
                 },
                 value: test
             }

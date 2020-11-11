@@ -2,7 +2,7 @@
     <div class="math-entities">
         <template v-for="(item, index) in items">
 
-            <template v-if="entityType(item.type, ['fraction'])" >
+            <template v-if="isFraction(item.type)" >
                 <component 
                     :key="index"
                     :is="entityName(item.type)" 
@@ -48,10 +48,15 @@
                 let isType = false;
 
                 for (let t in test) {
-                    isType = (type == test[t]);  
+                    if (type == test[t]){
+                        isType = true;
+                        break;
+                    }  
                 }
-
                 return isType;
+            },
+            isFraction : function(type) {
+                return this.entityType(type, ['fraction', 'fractionMixed']);
             }
         }
     }    

@@ -1,5 +1,5 @@
 <template>
-    <div class="entity-subtraction">−</div>
+    <div class="entity-inline entity-subtraction">−</div>
 </template>
 
 <script>

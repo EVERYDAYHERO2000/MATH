@@ -1,5 +1,5 @@
 <template>
-    <div class="entity-addition">+</div>
+    <div class="entity-inline entity-addition">+</div>
 </template>
 
 <script>

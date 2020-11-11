@@ -1,5 +1,5 @@
 <template>
-  <div class="entity-number">
+  <div class="entity-inline entity-number">
       {{value}}
   </div>
 </template>
@@ -20,6 +20,7 @@
   .entity-number {
     display: inline-block;
     box-sizing: border-box;
+    letter-spacing: 1px;
   }
 
 </style>
