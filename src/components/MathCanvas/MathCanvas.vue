@@ -1,7 +1,7 @@
 <template>
     <div class="math-canvas">
         <MathCanvasPivot>
-            <div ref="canvas">
+            <div style="padding: 120px 60px;" ref="canvas">
                 <MathEnities v-bind:expression="expression" />
             </div>
         </MathCanvasPivot>

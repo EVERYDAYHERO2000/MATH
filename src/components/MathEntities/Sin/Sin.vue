@@ -1,5 +1,7 @@
 <template>
-    <div class="entity-inline entity-sin">sin(<MathEnities v-bind:expression="expression" />)</div>
+    <div class="entity-inline entity-sin">
+        sin<EntityParentheses v-bind:expression="expression" />
+    </div>
 </template>
 
 <script>
@@ -11,7 +13,7 @@
             expression: Object
         },
         components: {
-            MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue'))
+            EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue'))
         }     
     }    
 </script>
@@ -21,7 +23,8 @@
     @import '../MathEntities.scss';
 
     .entity-sin {
-
+        display: inline-flex;
+        align-items: center;
     }
 
 </style>

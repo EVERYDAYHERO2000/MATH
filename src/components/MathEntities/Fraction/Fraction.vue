@@ -21,7 +21,7 @@
         name: 'EntityFraction',
         props: {
             numerator: Object,
-            denominator: Object,
+            denominator: Object
         },
         data: function(){
             return {
@@ -56,7 +56,7 @@
         position: relative;
         box-sizing: border-box;
         padding: 0 $grid-1;
-        max-height: 25px;
+        max-height: 35px;
         display: flex;
         align-items: flex-end;
 
@@ -65,7 +65,7 @@
         }
 
         .entity-fraction {
-            padding: 15px 0;
+            padding: 5px 0;
         }
         
     }
@@ -75,7 +75,7 @@
         position: relative;
         box-sizing: border-box;
         padding: 0 $grid-1;
-        max-height: 25px;
+        max-height: 35px;
         display: flex;
         align-items: flex-start;
         
@@ -84,7 +84,7 @@
         }
 
         .entity-fraction {
-            padding: 15px 0;
+            padding: 5px 0;
         }
         
     }

@@ -14,18 +14,52 @@ export default [
         type: 'subtraction'
     },
     {
-        type: 'fraction',
-        numerator: [
+        type: 'parentheses',
+        expression: [
             {
                 type: 'fraction',
                 numerator: [
                     {
-                        type: 'number',
-                        value: 24
-                    },
-                    {
-                        type: 'subtraction'
-                    },
+                        type: 'fraction',
+                        numerator: [
+                            {
+                                type: 'number',
+                                value: 24
+                            },
+                            {
+                                type: 'subtraction'
+                            },
+                            {
+                                type: 'fraction',
+                                numerator: [
+                                    {
+                                        type: 'number',
+                                        value: 1
+                                    }
+                                ],
+                                denominator: [
+                                    {
+                                        type: 'e',
+                                    }
+                                ]
+                            }
+                        ],
+                        denominator: [
+                            {
+                                type: 'number',
+                                value: 1
+                            },
+                            {
+                                type: 'addition'
+                            },
+                            {
+                                type: 'number',
+                                value: 2245
+                            }
+                        ]
+                    }
+                ],
+                denominator: [
                     {
                         type: 'fraction',
                         numerator: [
@@ -36,54 +70,25 @@ export default [
                         ],
                         denominator: [
                             {
-                                type: 'e',
+                                type: 'number',
+                                value: 2
                             }
                         ]
-                    }
-                ],
-                denominator: [
-                    {
-                        type: 'number',
-                        value: 1
                     },
                     {
                         type: 'addition'
                     },
                     {
                         type: 'number',
-                        value: 2245
-                    }
-                ]
-            }
-        ],
-        denominator: [
-            {
-                type: 'fraction',
-                numerator: [
-                    {
-                        type: 'number',
-                        value: 1
-                    }
-                ],
-                denominator: [
-                    {
-                        type: 'number',
                         value: 2
+                    },
+                    {
+                        type: 'subtraction'
+                    },
+                    {
+                        type: 'pi'
                     }
                 ]
-            },
-            {
-                type: 'addition'
-            },
-            {
-                type: 'number',
-                value: 2
-            },
-            {
-                type: 'subtraction'
-            },
-            {
-                type: 'pi'
             }
         ]
     },
@@ -134,6 +139,25 @@ export default [
             },
             {
                 type: 'e'
+            }
+        ]
+    },
+    {
+        type: 'multiplication'
+    },
+    {
+        type: 'fractionMixed',
+        value: 2,
+        numerator: [
+            {
+                type: 'number',
+                value: 3
+            }
+        ],
+        denominator: [
+            {
+                type: 'number',
+                value: 4
             }
         ]
     }

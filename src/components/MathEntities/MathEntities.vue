@@ -6,11 +6,19 @@
                 <component 
                     :key="index"
                     :is="entityName(item.type)" 
+                    v-bind:value="item.value || null"
                     v-bind:numerator="item.numerator" 
                     v-bind:denominator="item.denominator" />
             </template>
 
             <template v-else-if="isFn(item.type)" >
+                <component 
+                    :key="index"
+                    :is="entityName(item.type)" 
+                    v-bind:expression="item.expression" />
+            </template>
+
+            <template v-else-if="isParentheses(item.type)" >
                 <component 
                     :key="index"
                     :is="entityName(item.type)" 
@@ -67,6 +75,9 @@
             },
             isFn : function(type) {
                 return this.entityType(type, ['cos', 'sin']);
+            },
+            isParentheses : function(type) {
+                return this.entityType(type, ['parentheses']);
             }
         }
     }    
@@ -79,6 +90,7 @@
     .math-entities {
         display: inline-flex;
         align-items: center;
+        white-space: nowrap;
     }
 
 </style>

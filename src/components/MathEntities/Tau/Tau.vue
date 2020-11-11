@@ -1,5 +1,5 @@
 <template>
-
+    <div class="entity-inline entity-tau">τ</div>
 </template>
 
 <script>
@@ -14,4 +14,7 @@
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
 
+    .entity-tau {
+        
+    }
 </style>
