@@ -1,13 +1,14 @@
 <template>
     <div class="entity-radical">
         <div class="entity-radical__left">
-            {{index}}
+            <EntityNumber v-bind:value="index" />
+            <div class="entity-radical__hr" />
         </div>
         <div class="entity-radical__center">
-            <Line preserveAspectRatio="none" viewBox="0 0 5 5" />
+            <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
         </div>
         <div class="entity-radical__right">
-            <Line preserveAspectRatio="none" viewBox="0 0 5 5" />
+            <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
         </div>
         <div class="entity-radical__expression">
             <div class="entity-radical__hr" />
@@ -28,6 +29,7 @@
             index: Number
         },
         components: {
+            EntityNumber: defineAsyncComponent(() => import('../Number/Number.vue')),
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
             Line
         }
@@ -37,6 +39,8 @@
 <style lang="scss">
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
+
+    $height-hr: 3px;
 
     .entity-radical {
         display: flex;
@@ -48,6 +52,11 @@
     .entity-radical__left,
     .entity-radical__center,
     .entity-radical__right {
+        height: auto;
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+
         & > svg {
             vector-effect: non-scaling-stroke;
 
@@ -58,11 +67,34 @@
         }
     }
 
+    .entity-radical__hr {
+        height: $height-hr;
+        width: 100%;
+    }    
+
     .entity-radical__left {
         font-size: 16px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
+        text-align: center;
+        align-items: flex-end;
+        box-sizing: border-box;
+        padding-bottom: calc(#{$grid-3} - #{$height-hr});
+        margin-left: -$grid-1;
+
+        .entity-radical__hr {
+            margin-top: -$height-hr;
+            background-color: $color-entity;
+            transform-origin: right top;
+            transform: rotate(-10deg);
+            width: $grid-1;
+        }
+
+        .entity-number {
+            margin: 0 $height-hr;
+            transform: translate($grid-1, calc( #{-$height-hr} / 2 ));
+        }
     }
 
     .entity-radical__center {
@@ -71,18 +103,18 @@
         justify-content: flex-end;
 
         svg {
-            height: 40%;
+            height: $grid-3;
             width: $grid-1;
 
             path {
-                stroke-width: 3px;
+                stroke-width: $height-hr;
             }
 
         }
     }
 
     .entity-radical__right {
-        margin-top: -3px;
+        margin-top: -$height-hr;
 
         svg {
             height: 100%;
@@ -99,13 +131,11 @@
     .entity-radical__expression {
 
         & > .math-entities {
-            padding: 0 $grid-1;
+            margin: $grid-0 $grid-1 $grid-0 0;
         }
 
         .entity-radical__hr {
-            height: 3px;
-            width: 100%;
-            margin-top: -3px;
+            margin-top: -$height-hr;
             background-color: $color-entity;
         }
     }

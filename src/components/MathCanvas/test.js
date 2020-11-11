@@ -175,7 +175,7 @@ export default [
         expression: [
             {
                 type: 'number',
-                value: 1
+                value: 1488
             },
             {
                 type: 'addition'
@@ -185,7 +185,19 @@ export default [
                 numerator: [
                     {
                         type: 'number',
-                        value: 1
+                        value: 78
+                    },
+                    {
+                        type: 'addition'
+                    },
+                    {
+                        type: 'cos',
+                        expression: [
+                            {
+                                type: 'number',
+                                value: 56
+                            }
+                        ]
                     }
                 ],
                 denominator: [
@@ -196,5 +208,18 @@ export default [
                 ]
             }
         ]
-    }
+    },
+    {
+        type: 'subtraction'
+    },
+    {
+        type: 'radical',
+        index: 9,
+        expression: [
+            {
+                type: 'number',
+                value: 24
+            }
+        ]
+    },
 ] 
