@@ -165,5 +165,36 @@ export default [
                 value: 4
             }
         ]
+    },
+    {
+        type: 'subtraction'
+    },
+    {
+        type: 'radical',
+        index: 3,
+        expression: [
+            {
+                type: 'number',
+                value: 1
+            },
+            {
+                type: 'addition'
+            },
+            {
+                type: 'fraction',
+                numerator: [
+                    {
+                        type: 'number',
+                        value: 1
+                    }
+                ],
+                denominator: [
+                    {
+                        type: 'number',
+                        value: 2
+                    }
+                ]
+            }
+        ]
     }
 ] 

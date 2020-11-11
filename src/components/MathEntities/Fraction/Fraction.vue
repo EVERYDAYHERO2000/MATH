@@ -91,7 +91,7 @@
 
     .entity-fraction__hr {
         height: 3px;
-        background-color: $color-content;
+        background-color: $color-entity;
         width: 100%;
     }
 

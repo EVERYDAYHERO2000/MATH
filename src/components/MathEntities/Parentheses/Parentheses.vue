@@ -109,6 +109,10 @@
         height: 100%;
         display: block;
         position: absolute;
+
+        path {
+            fill: $color-entity;
+        }
     }
 
     .entity-parentheses_inline {

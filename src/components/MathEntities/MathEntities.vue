@@ -24,6 +24,14 @@
                     :is="entityName(item.type)" 
                     v-bind:expression="item.expression" />
             </template>
+
+            <template v-else-if="isRadical(item.type)" >
+                <component 
+                    :key="index"
+                    :is="entityName(item.type)"
+                    v-bind:index="item.index" 
+                    v-bind:expression="item.expression" />
+            </template>
             
             <template v-else >
                 <component 
@@ -78,6 +86,9 @@
             },
             isParentheses : function(type) {
                 return this.entityType(type, ['parentheses']);
+            },
+            isRadical : function(type) {
+                return this.entityType(type, ['radical']);
             }
         }
     }    
@@ -91,6 +102,7 @@
         display: inline-flex;
         align-items: center;
         white-space: nowrap;
+        color: $color-entity;
     }
 
 </style>
