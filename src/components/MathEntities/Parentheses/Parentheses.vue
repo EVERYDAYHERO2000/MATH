@@ -3,22 +3,48 @@
 
         <template v-if="isFractionInside">
             <div class="entity-parentheses__left">
-                <ParenthesesLeftTop preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__left-top" />
-                <ParenthesesLeftCenter preserveAspectRatio="none" viewBox="0 0 8 3" class="entity-parentheses__left-center" />
-                <ParenthesesLeftBottom preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__left-bottom" />
+                <div class="entity-parentheses__left-top">
+                    <ParenthesesLeftTop 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+                <div class="entity-parentheses__left-center">      
+                    <ParenthesesLeftCenter 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 3" />
+                    <span>(</span>    
+                </div> 
+                <div class="entity-parentheses__left-bottom">   
+                    <ParenthesesLeftBottom 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>    
             </div>
 
                 <MathEnities class="entity-parentheses__center" v-bind:expression="expression" />
     
             <div class="entity-parentheses__right">
-                <ParenthesesRightTop preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__right-top" />
-                <ParenthesesRightCenter preserveAspectRatio="none" viewBox="0 0 8 3" class="entity-parentheses__right-center" />
-                <ParenthesesRightBottom preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__right-bottom" />
+                <div class="entity-parentheses__right-top">
+                    <ParenthesesRightTop 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+                <div class="entity-parentheses__right-center">   
+                    <ParenthesesRightCenter 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 3" />
+                    <span>)</span>    
+                </div>
+                <div class="entity-parentheses__right-bottom">  
+                    <ParenthesesRightBottom 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>    
             </div>
         </template>
 
         <template v-else>
-            (<MathEnities class="entity-parentheses__center" v-bind:expression="expression" />)
+            <span>(</span><MathEnities class="entity-parentheses__center" v-bind:expression="expression" /><span>)</span>
         </template>
 
     </div>
@@ -79,6 +105,12 @@
         display: inline-flex;
     }
 
+    .entity-parentheses svg {
+        height: 100%;
+        display: block;
+        position: absolute;
+    }
+
     .entity-parentheses_inline {
         align-items: center;
     }
@@ -92,6 +124,10 @@
     .entity-parentheses__left-center,
     .entity-parentheses__right-center {
         flex-grow: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: transparent;
     }
 
     .entity-parentheses__left-top,
@@ -99,10 +135,17 @@
     .entity-parentheses__right-top,
     .entity-parentheses__right-bottom {
         height: $grid-3;
+        position: relative;
     }
 
     .entity-parentheses__center {
         margin: $grid-2 $grid-1;
     }
+
+    .entity-parentheses_inline {
+        .entity-parentheses__center {
+            margin: 0;    
+        }    
+    }    
 
 </style>

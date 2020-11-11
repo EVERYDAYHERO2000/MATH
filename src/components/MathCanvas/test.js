@@ -79,14 +79,19 @@ export default [
                         type: 'addition'
                     },
                     {
-                        type: 'number',
-                        value: 2
-                    },
-                    {
-                        type: 'subtraction'
-                    },
-                    {
-                        type: 'pi'
+                        type: 'parentheses',
+                        expression: [
+                            {
+                                type: 'number',
+                                value: 2
+                            },
+                            {
+                                type: 'subtraction'
+                            },
+                            {
+                                type: 'pi'
+                            }
+                        ]
                     }
                 ]
             }
