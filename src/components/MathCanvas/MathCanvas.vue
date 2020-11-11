@@ -2,7 +2,7 @@
     <div class="math-canvas">
         <MathCanvasPivot>
             <div ref="canvas">
-                <MathEnities v-bind:value="value" />
+                <MathEnities v-bind:expression="expression" />
             </div>
         </MathCanvasPivot>
     </div>
@@ -28,7 +28,7 @@
                     charCode: null,
                     boo: ''
                 },
-                value: test
+                expression: test
             }
         },
         created: function(){

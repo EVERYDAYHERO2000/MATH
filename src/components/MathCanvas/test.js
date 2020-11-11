@@ -79,6 +79,12 @@ export default [
             {
                 type: 'number',
                 value: 2
+            },
+            {
+                type: 'subtraction'
+            },
+            {
+                type: 'pi'
             }
         ]
     },
@@ -113,5 +119,23 @@ export default [
     {
         type: 'number',
         value: 2
+    },
+    {
+        type: 'subtraction'
+    },
+    {
+        type: 'sin',
+        expression: [
+            {
+                type: 'number',
+                value: 4
+            },
+            {
+                type: 'subtraction'   
+            },
+            {
+                type: 'pi'
+            }
+        ]
     }
 ] 

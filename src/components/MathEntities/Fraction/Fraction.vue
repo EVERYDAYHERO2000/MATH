@@ -1,24 +1,21 @@
 <template>
     <div class="entity-fraction">
         
-        
-               
             <div ref="numerator" class="entity-fraction__numerator">
-                <MathEnities v-bind:value="num" />
+                <MathEnities v-bind:expression="num" />
             </div>
 
             <div class="entity-fraction__hr" />
 
             <div ref="denominator" class="entity-fraction__denominator">
-                <MathEnities v-bind:value="den" />
+                <MathEnities v-bind:expression="den" />
             </div>
 
-        
     </div>
 </template>
 
 <script>
-    import { defineAsyncComponent } from "vue";
+    import { defineAsyncComponent, resolveComponent } from "vue";
 
     export default {
         name: 'EntityFraction',
@@ -33,11 +30,7 @@
             }
         },
         mounted: function(){
-            setTimeout(() => {
-                console.log(this.$refs.numerator, this.$refs.numerator.offsetHeight, this.$refs.denominator.offsetHeight)
-            }, 100);
-            
-            
+
         },
         components: {
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue'))

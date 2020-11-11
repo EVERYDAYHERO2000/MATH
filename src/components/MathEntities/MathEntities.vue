@@ -9,6 +9,13 @@
                     v-bind:numerator="item.numerator" 
                     v-bind:denominator="item.denominator" />
             </template>
+
+            <template v-else-if="isFn(item.type)" >
+                <component 
+                    :key="index"
+                    :is="entityName(item.type)" 
+                    v-bind:expression="item.expression" />
+            </template>
             
             <template v-else >
                 <component 
@@ -27,7 +34,7 @@
     export default {
         name: 'MathEntities',
         props: {
-            value: Object
+            expression: Object
         },
         components: {
             ...Enities
@@ -37,7 +44,7 @@
         },
         data: function () {
             return {
-                items: this.value
+                items: this.expression
             }
         },
         methods: {
@@ -57,6 +64,9 @@
             },
             isFraction : function(type) {
                 return this.entityType(type, ['fraction', 'fractionMixed']);
+            },
+            isFn : function(type) {
+                return this.entityType(type, ['cos', 'sin']);
             }
         }
     }    

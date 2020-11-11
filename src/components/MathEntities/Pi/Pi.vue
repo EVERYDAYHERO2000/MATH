@@ -1,5 +1,5 @@
 <template>
-
+    <div class="entity-inline entity-pi">π</div>
 </template>
 
 <script>
@@ -13,4 +13,8 @@
 <style lang="scss">
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
+
+    .entity-pi {
+        
+    }
 </style>
