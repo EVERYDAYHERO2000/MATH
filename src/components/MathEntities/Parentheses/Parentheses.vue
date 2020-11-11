@@ -8,10 +8,8 @@
                 <ParenthesesLeftBottom preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__left-bottom" />
             </div>
 
-            
                 <MathEnities class="entity-parentheses__center" v-bind:expression="expression" />
-        
-
+    
             <div class="entity-parentheses__right">
                 <ParenthesesRightTop preserveAspectRatio="none" viewBox="0 0 8 16" class="entity-parentheses__right-top" />
                 <ParenthesesRightCenter preserveAspectRatio="none" viewBox="0 0 8 3" class="entity-parentheses__right-center" />
