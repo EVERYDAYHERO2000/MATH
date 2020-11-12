@@ -3,7 +3,7 @@
     <div class="entity-fraction__top">
       <span class="entity-fraction__base">&zwj;</span>
       <div ref="numerator" class="entity-fraction__numerator">
-        <MathEnities v-bind:expression="num" />
+        <MathEntities v-bind:expression="numerator" />
       </div>
     </div>
 
@@ -12,7 +12,7 @@
     </div>
 
     <div ref="denominator" class="entity-fraction__denominator">
-      <MathEnities v-bind:expression="den" />
+      <MathEntities v-bind:expression="denominator" />
     </div>
   </div>
 </template>
@@ -26,15 +26,9 @@ export default {
     numerator: Object,
     denominator: Object,
   },
-  data: function () {
-    return {
-      num: this.numerator,
-      den: this.denominator,
-    };
-  },
   mounted: function () {},
   components: {
-    MathEnities: defineAsyncComponent(() =>
+    MathEntities: defineAsyncComponent(() =>
       import("../../MathEntities/MathEntities.vue")
     ),
     EntityString: defineAsyncComponent(() => import("../String/String.vue")),
@@ -95,7 +89,7 @@ export default {
   }
 
   .entity-fraction {
-    padding: 5px 0 0 0;
+    padding: 5px 0;
   }
 }
 

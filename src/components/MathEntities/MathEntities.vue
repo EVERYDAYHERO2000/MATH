@@ -33,6 +33,14 @@
                     v-bind:expression="item.expression" />
             </template>
 
+            <template v-else-if="isExponent(item.type)" >
+                <component
+                    :key="index"
+                    :is="entityName(item.type)"
+                    v-bind:base="item.base"
+                    v-bind:exponent="item.exponent" />
+            </template>
+
             <template v-else >
                 <component
                     :key="index"
@@ -89,6 +97,9 @@
             },
             isRadical : function(type) {
                 return this.entityType(type, ['radical']);
+            },
+            isExponent : function(type) {
+                return this.entityType(type, ['exponent']);
             }
         }
     }

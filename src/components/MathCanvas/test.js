@@ -130,15 +130,48 @@ export default [
     type: "multiplication",
   },
   {
-    type: "number",
-    value: -54,
+      type: 'exponent',
+      base: [
+        {
+            type: 'number',
+            value: 54
+        }
+      ],
+      exponent: [
+        {
+            type: 'fraction',
+            numerator: [
+                {
+                    type: 'number',
+                    value: 1
+                }
+            ],
+            denominator: [
+                {
+                    type: 'number',
+                    value: 2
+                }
+            ]
+        }
+      ]
   },
   {
     type: "division",
   },
   {
-    type: "number",
-    value: 2,
+    type: "exponent",
+    base: [
+        {
+            type: 'number',
+            value: 2
+        }
+    ],
+    exponent: [
+        {
+            type: 'number',
+            value: 5
+        }
+    ]
   },
   {
     type: "subtraction",
@@ -177,9 +210,20 @@ export default [
     value: 2,
     numerator: [
       {
-        type: "number",
-        value: 3,
-      },
+          type: 'exponent',
+          base: [
+              {
+                  type: 'number',
+                  value: 3  
+              }
+          ],
+          exponent: [
+              {
+                  type: 'number',
+                  value: 2
+              }
+          ]
+      }
     ],
     denominator: [
       {
