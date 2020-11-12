@@ -1,5 +1,6 @@
 <template>
     <div class="entity-radical">
+        <span class="entity-radical__base">&nbsp;</span>
         <div class="entity-radical__left">
             <MathEnities v-bind:expression="index" />
             <div class="entity-radical__hr" />
@@ -34,7 +35,7 @@
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
             Line
         }
-    }    
+    }
 </script>
 
 <style lang="scss">
@@ -48,6 +49,10 @@
         padding-top: $grid-1;
         padding-bottom: $grid-1;
 
+    }
+
+    .entity-radical__base {
+      align-self: center;
     }
 
     .entity-radical__left,
@@ -72,7 +77,7 @@
     .entity-radical__hr {
         height: $height-hr;
         width: 100%;
-    }    
+    }
 
     .entity-radical__left {
         font-size: 16px;

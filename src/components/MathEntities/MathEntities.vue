@@ -3,43 +3,43 @@
         <template v-for="(item, index) in items">
 
             <template v-if="isFraction(item.type)" >
-                <component 
+                <component
                     :key="index"
-                    :is="entityName(item.type)" 
+                    :is="entityName(item.type)"
                     v-bind:value="item.value || null"
-                    v-bind:numerator="item.numerator" 
+                    v-bind:numerator="item.numerator"
                     v-bind:denominator="item.denominator" />
             </template>
 
             <template v-else-if="isFn(item.type)" >
-                <component 
+                <component
                     :key="index"
-                    :is="entityName(item.type)" 
+                    :is="entityName(item.type)"
                     v-bind:expression="item.expression" />
             </template>
 
             <template v-else-if="isParentheses(item.type)" >
-                <component 
+                <component
                     :key="index"
-                    :is="entityName(item.type)" 
+                    :is="entityName(item.type)"
                     v-bind:expression="item.expression" />
             </template>
 
             <template v-else-if="isRadical(item.type)" >
-                <component 
+                <component
                     :key="index"
                     :is="entityName(item.type)"
-                    v-bind:index="item.index" 
+                    v-bind:index="item.index"
                     v-bind:expression="item.expression" />
             </template>
-            
+
             <template v-else >
-                <component 
+                <component
                     :key="index"
-                    :is="entityName(item.type)" 
+                    :is="entityName(item.type)"
                     v-bind:value="item.value" />
-            </template>    
-        
+            </template>
+
         </template>
     </div>
 </template>
@@ -56,7 +56,7 @@
             ...Enities
         },
         mounted: function(){
-            
+
         },
         data: function () {
             return {
@@ -74,7 +74,7 @@
                     if (type == test[t]){
                         isType = true;
                         break;
-                    }  
+                    }
                 }
                 return isType;
             },
@@ -91,7 +91,7 @@
                 return this.entityType(type, ['radical']);
             }
         }
-    }    
+    }
 </script>
 
 <style lang="scss">
@@ -100,7 +100,7 @@
 
     .math-entities {
         display: inline-flex;
-        align-items: center;
+        align-items: baseline;
         white-space: nowrap;
         color: $color-entity;
     }
