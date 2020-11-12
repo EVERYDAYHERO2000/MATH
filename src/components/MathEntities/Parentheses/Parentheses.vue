@@ -12,7 +12,7 @@
                     <ParenthesesLeftCenter 
                         preserveAspectRatio="none" 
                         viewBox="0 0 8 3" />
-                    <EntityString class="entity-invisible" value="(" />   
+                    <EntityString class="entity-invisible" value="(" />
                 </div> 
                 <div class="entity-parentheses__left-bottom">   
                     <ParenthesesLeftBottom 
@@ -33,7 +33,7 @@
                     <ParenthesesRightCenter 
                         preserveAspectRatio="none" 
                         viewBox="0 0 8 3" />
-                    <EntityString class="entity-invisible" value=")" />    
+                    <EntityString class="entity-invisible" value=")" />
                 </div>
                 <div class="entity-parentheses__right-bottom">  
                     <ParenthesesRightBottom 
@@ -126,6 +126,10 @@
     .entity-parentheses__right {
         display: flex;
         flex-direction: column;
+    }
+
+    .entity-parentheses__right {
+        transform: translateX(-$grid-1);
     }
 
     .entity-parentheses__left-center,

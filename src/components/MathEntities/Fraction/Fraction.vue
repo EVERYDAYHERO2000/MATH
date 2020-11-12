@@ -1,7 +1,7 @@
 <template>
   <div class="entity-fraction">
     <div class="entity-fraction__top">
-      <span class="entity-fraction__base">&nbsp;</span>
+      <span class="entity-fraction__base">&zwj;</span>
       <div ref="numerator" class="entity-fraction__numerator">
         <MathEnities v-bind:expression="num" />
       </div>
@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import "../../../css/main.scss";
 @import "../MathEntities.scss";
 
@@ -101,8 +102,10 @@ export default {
   height: 3px;
   background-color: $color-entity;
   width: 100%;
+  text-align: right;
 
   .entity-invisible {
+    margin: -8px;
     font-size: 16px;
   }
 }
