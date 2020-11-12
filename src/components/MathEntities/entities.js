@@ -32,6 +32,7 @@ import EntitySec from '../MathEntities/Sec/Sec.vue';
 import EntitySin from '../MathEntities/Sin/Sin.vue';
 import EntitySubtraction from '../MathEntities/Subtraction/Subtraction.vue';
 import EntitySystemAnd from '../MathEntities/SystemAnd/SystemAnd.vue';
+import EntityString from '../MathEntities/String/String.vue';
 import EntityTan from '../MathEntities/Tan/Tan.vue';
 import EntityTau from '../MathEntities/Tau/Tau.vue';
 
@@ -70,6 +71,7 @@ export default {
     EntitySin,
     EntitySubtraction,
     EntitySystemAnd,
+    EntityString,
     EntityTan,
     EntityTau
 }

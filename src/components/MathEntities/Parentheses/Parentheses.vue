@@ -12,7 +12,7 @@
                     <ParenthesesLeftCenter 
                         preserveAspectRatio="none" 
                         viewBox="0 0 8 3" />
-                    <span>(</span>    
+                    <EntityString class="entity-invisible" value="(" />   
                 </div> 
                 <div class="entity-parentheses__left-bottom">   
                     <ParenthesesLeftBottom 
@@ -33,7 +33,7 @@
                     <ParenthesesRightCenter 
                         preserveAspectRatio="none" 
                         viewBox="0 0 8 3" />
-                    <span>)</span>    
+                    <EntityString class="entity-invisible" value=")" />    
                 </div>
                 <div class="entity-parentheses__right-bottom">  
                     <ParenthesesRightBottom 
@@ -44,7 +44,9 @@
         </template>
 
         <template v-else>
-            <span>(</span><MathEnities class="entity-parentheses__center" v-bind:expression="expression" /><span>)</span>
+            <EntityString value="(" />
+            <MathEnities class="entity-parentheses__center" v-bind:expression="expression" />
+            <EntityString value=")" />
         </template>
 
     </div>
@@ -87,6 +89,7 @@
         },
         components: {
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
             ParenthesesLeftTop,
             ParenthesesLeftCenter,
             ParenthesesLeftBottom,
@@ -131,7 +134,6 @@
         position: relative;
         display: flex;
         align-items: center;
-        color: transparent;
     }
 
     .entity-parentheses__left-top,

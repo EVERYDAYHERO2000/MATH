@@ -6,7 +6,7 @@
         </div>
         <div class="entity-radical__center">
             <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
-            <span>√</span>
+            <EntityString class="entity-invisible" value="√" />
         </div>
         <div class="entity-radical__right">
             <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
@@ -31,6 +31,7 @@
         },
         components: {
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
             Line
         }
     }    
@@ -115,9 +116,7 @@
 
         }
 
-        span {
-            position: absolute;
-            color: transparent;
+        .entity-invisible {
             font-size: 16px;
         }
     }

@@ -1,11 +1,16 @@
 <template>
-    <div class="entity-inline entity-phi">φ</div>
+    <EntityString class="entity-inline entity-phi" value="φ" />
 </template>
 
 <script>
+    import { defineAsyncComponent, resolveComponent } from "vue";
+
     export default {
         name: 'EntityPhi',
         props: {
+        },
+        components: {
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }    
     }    
 </script>

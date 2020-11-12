@@ -5,7 +5,9 @@
                 <MathEnities v-bind:expression="num" />
             </div>
 
-            <div class="entity-fraction__hr" />
+            <div class="entity-fraction__hr">
+                <EntityString class="entity-invisible" value="/" />
+            </div>
 
             <div ref="denominator" class="entity-fraction__denominator">
                 <MathEnities v-bind:expression="den" />
@@ -33,7 +35,8 @@
 
         },
         components: {
-            MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue'))
+            MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
+            EntityString: defineAsyncComponent(() => import('../String/String.vue'))
         }    
     }    
 </script>
@@ -93,6 +96,11 @@
         height: 3px;
         background-color: $color-entity;
         width: 100%;
+
+        .entity-invisible {
+
+            font-size: 16px;
+        }
     }
 
     
