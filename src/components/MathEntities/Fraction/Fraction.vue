@@ -62,6 +62,7 @@ export default {
 
 .entity-fraction__base {
   margin-bottom: -22px;
+  user-select: none;
 }
 
 .entity-fraction__numerator {
@@ -94,7 +95,7 @@ export default {
   }
 
   .entity-fraction {
-    padding: 5px 0;
+    padding: 5px 0 0 0;
   }
 }
 

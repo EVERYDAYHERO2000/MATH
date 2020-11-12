@@ -61,6 +61,7 @@
 
     .entity-radical__base {
       align-self: center;
+      user-select: none;
     }
 
     .entity-radical__left,

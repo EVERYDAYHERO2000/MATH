@@ -1,11 +1,16 @@
 <template>
-    <div class="entity-inline entity-gamma">γ</div>
+    <div class="entity-inline entity-gamma">
+        <EntityString value="γ" />
+    </div>
 </template>
 
 <script>
     export default {
         name: 'EntityGamma',
         props: {
+        },
+        components: {
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }    
     }    
 </script>

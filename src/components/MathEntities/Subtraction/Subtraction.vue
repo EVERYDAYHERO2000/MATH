@@ -1,12 +1,19 @@
 <template>
-    <div class="entity-inline entity-subtraction">−</div>
+    <div class="entity-inline entity-subtraction">
+        <EntityString value="−" />
+    </div>
 </template>
 
 <script>
+    import { defineAsyncComponent, resolveComponent } from "vue";
+
     export default {
         name: 'EntitySubtraction',
         props: {
-        }    
+        },
+        components: {
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
+        }     
     }    
 </script>
 

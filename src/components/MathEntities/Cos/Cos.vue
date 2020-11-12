@@ -1,6 +1,7 @@
 <template>
     <div class="entity-inline entity-cos">
-        cos<EntityParentheses v-bind:expression="expression" />
+        <EntityString value="cos" />
+        <EntityParentheses v-bind:expression="expression" />
     </div>
 </template>
 
@@ -13,7 +14,8 @@
             expression: Object
         },
         components: {
-            EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue'))
+            EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue')),
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }     
     }    
 </script>

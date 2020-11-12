@@ -110,6 +110,10 @@
         align-items: baseline;
     }
 
+    .entity-parentheses__base {
+        user-select: none;
+    }
+
     .entity-parentheses svg {
         height: 100%;
         display: block;
@@ -152,7 +156,7 @@
     }
 
     .entity-parentheses__center {
-        margin: $grid-2 $grid-1;
+        margin: 0 $grid-1;
     }
 
     .entity-parentheses_inline {
