@@ -16,7 +16,7 @@
 
     .entity-division {
         display: inline-block;
-        padding: 0 $grid-1;
+        padding: 0 .3em;
         box-sizing: border-box;
     }    
 

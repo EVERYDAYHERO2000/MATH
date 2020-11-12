@@ -1,7 +1,7 @@
 <template>
     <div class="entity-radical">
         <div class="entity-radical__left">
-            <EntityNumber v-bind:value="index" />
+            <MathEnities v-bind:expression="index" />
             <div class="entity-radical__hr" />
         </div>
         <div class="entity-radical__center">
@@ -27,10 +27,9 @@
         name: 'EntityRadical',
         props: {
             expression: Object,
-            index: Number
+            index: Object
         },
         components: {
-            EntityNumber: defineAsyncComponent(() => import('../Number/Number.vue')),
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
             Line
         }
@@ -83,7 +82,7 @@
         align-items: flex-end;
         box-sizing: border-box;
         padding-bottom: calc(#{$grid-3} - #{$height-hr});
-        margin-left: -$grid-1;
+        margin-left: -$grid-0;
 
         .entity-radical__hr {
             margin-top: -$height-hr;
@@ -93,9 +92,8 @@
             width: $grid-1;
         }
 
-        .entity-number {
-            margin: 0 $height-hr;
-            transform: translate($grid-1, calc( #{-$height-hr} / 2 ));
+        & > .math-entities {
+            margin: 0px -6px 3px 12px;
         }
     }
 
@@ -120,6 +118,7 @@
         span {
             position: absolute;
             color: transparent;
+            font-size: 16px;
         }
     }
 

@@ -21,6 +21,11 @@
     display: inline-block;
     box-sizing: border-box;
     letter-spacing: 1px;
+
+    &:hover {
+      color: red;
+      transition: color .2s;
+    }
   }
 
 </style>

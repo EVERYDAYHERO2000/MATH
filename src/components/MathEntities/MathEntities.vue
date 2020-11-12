@@ -60,7 +60,7 @@
         },
         data: function () {
             return {
-                items: this.expression
+                items: this.expression || []
             }
         },
         methods: {

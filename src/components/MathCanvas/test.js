@@ -137,7 +137,10 @@ export default [
         expression: [
             {
                 type: 'radical',
-                index: 4,
+                index: [{
+                    type: 'number',
+                    value: 4
+                }],
                 expression: [
                     {
                         type: 'number',
@@ -177,7 +180,10 @@ export default [
     },
     {
         type: 'radical',
-        index: 3,
+        index: [{
+            type: 'number',
+            value: 3
+        }],
         expression: [
             {
                 type: 'number',
@@ -220,7 +226,15 @@ export default [
     },
     {
         type: 'radical',
-        index: 9,
+        index: [{
+            type: 'number',
+            value: 9
+        },{
+            type: 'multiplication'
+        },{
+            type: 'number',
+            value: 2
+        }],
         expression: [
             {
                 type: 'radical',
