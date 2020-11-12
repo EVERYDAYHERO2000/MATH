@@ -136,8 +136,14 @@ export default [
         type: 'sin',
         expression: [
             {
-                type: 'number',
-                value: 4
+                type: 'radical',
+                index: 4,
+                expression: [
+                    {
+                        type: 'number',
+                        value: 205
+                    }
+                ]
             },
             {
                 type: 'subtraction'   
@@ -217,8 +223,13 @@ export default [
         index: 9,
         expression: [
             {
-                type: 'number',
-                value: 24
+                type: 'radical',
+                expression: [
+                    {
+                        type: 'number',
+                        value: 42
+                    }
+                ]
             }
         ]
     },

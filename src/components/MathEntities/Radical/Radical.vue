@@ -6,6 +6,7 @@
         </div>
         <div class="entity-radical__center">
             <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
+            <span>√</span>
         </div>
         <div class="entity-radical__right">
             <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
@@ -56,6 +57,7 @@
         display:flex;
         flex-direction: column;
         align-items: stretch;
+        position: relative;
 
         & > svg {
             vector-effect: non-scaling-stroke;
@@ -101,24 +103,34 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        width: $grid-1;
 
         svg {
             height: $grid-3;
             width: $grid-1;
+            min-height: $grid-3;
+            min-width: $grid-1;
 
             path {
                 stroke-width: $height-hr;
             }
 
         }
+
+        span {
+            position: absolute;
+            color: transparent;
+        }
     }
 
     .entity-radical__right {
         margin-top: -$height-hr;
+        width: $grid-2;
 
         svg {
             height: 100%;
             width: $grid-2;
+            min-width: $grid-2;
             transform: scaleX(-1);
 
             path {
