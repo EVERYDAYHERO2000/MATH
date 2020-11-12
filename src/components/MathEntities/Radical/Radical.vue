@@ -5,11 +5,19 @@
             <div class="entity-radical__hr" />
         </div>
         <div class="entity-radical__center">
-            <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
-            <EntityString class="entity-invisible" value="√" />
+            <Line 
+                vector-effect="non-scaling-stroke" 
+                preserveAspectRatio="none" 
+                viewBox="0 0 5 5" />
+            <EntityString 
+                class="entity-invisible" 
+                value="√" />
         </div>
         <div class="entity-radical__right">
-            <Line vector-effect="non-scaling-stroke" preserveAspectRatio="none" viewBox="0 0 5 5" />
+            <Line 
+                ector-effect="non-scaling-stroke" 
+                preserveAspectRatio="none" 
+                viewBox="0 0 5 5" />
         </div>
         <div class="entity-radical__expression">
             <div class="entity-radical__hr" />
