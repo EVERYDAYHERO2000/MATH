@@ -1,5 +1,7 @@
 <template>
-    <EntityString class="entity-inline entity-phi" value="φ" />
+    <div class="entity-inline entity-phi">
+        <EntityString value="φ" />
+    </div>
 </template>
 
 <script>

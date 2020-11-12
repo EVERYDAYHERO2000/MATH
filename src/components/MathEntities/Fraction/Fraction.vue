@@ -96,9 +96,10 @@
         height: 3px;
         background-color: $color-entity;
         width: 100%;
+        text-align: right;
 
         .entity-invisible {
-
+            margin: -8px;
             font-size: 16px;
         }
     }
