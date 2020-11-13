@@ -2,7 +2,7 @@
     <div class="entity-radical">
         <span class="entity-radical__base">&zwj;</span>
         <div class="entity-radical__left">
-            <MathEnities v-bind:expression="index" />
+            <MathEnities v-bind:into="into.index" />
             <div class="entity-radical__hr" />
         </div>
         <div class="entity-radical__center">
@@ -22,7 +22,7 @@
         </div>
         <div class="entity-radical__expression">
             <div class="entity-radical__hr" />
-            <MathEnities v-bind:expression="expression" />
+            <MathEnities v-bind:into="into.expression" />
         </div>
     </div>
 </template>
@@ -35,8 +35,7 @@
     export default {
         name: 'EntityRadical',
         props: {
-            expression: Object,
-            index: Object
+            into: Object
         },
         components: {
             MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),

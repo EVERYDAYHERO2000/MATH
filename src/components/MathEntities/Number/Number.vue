@@ -1,6 +1,6 @@
 <template>
   <div class="entity-inline entity-number">
-      {{value}}
+      {{into.value}}
   </div>
 </template>
 
@@ -8,11 +8,15 @@
     export default {
         name: 'EntityNumber',
         props: {
-          value: Number
+          into: Object
+        },
+        mounted: function(){
+          this.calc(true);
         },
         methods: {
-          calc: function(){
-            return this.value
+          calc: function(emit){
+            if (emit) this.$emit('calc', this.into.value);
+            return this.into.value
           }
         }
     }

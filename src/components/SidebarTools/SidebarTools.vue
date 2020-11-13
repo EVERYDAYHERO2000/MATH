@@ -54,6 +54,9 @@
         props: {
             
         },
+        mounted: function(){
+            
+        },  
         methods: {
             toggleVisible: function() {
                 this.isVisible = !this.isVisible;

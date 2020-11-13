@@ -1,7 +1,11 @@
 <template>
     <div class="entity-fraction-mixed">
-        <EntityNumber v-bind:value="value" />
-        <EntityFraction v-bind:numerator="numerator" v-bind:denominator="denominator" />
+        <EntityNumber 
+            v-on:calc="integerValue = $event" 
+            v-bind:into="into.integer" />
+        <EntityFraction 
+            v-on:calc="this.fractionValue = $event"
+            v-bind:into="into" />
     </div>
 </template>
 
@@ -11,13 +15,24 @@
     export default {
         name: 'EntityFractionMixed',
         props: {
-            value: Number,
-            numerator: Object,
-            denominator: Object,
+            into: Object
+        },
+        data: function(){
+            return {
+                integerValue: [],
+                fractionValue : []
+            }
         },
         components: {
             EntityNumber: defineAsyncComponent(() => import('../Number/Number.vue')),
             EntityFraction: defineAsyncComponent(() => import('../Fraction/Fraction.vue'))
+        },
+        methods: {
+            calc: function(emit) {
+                let result = (this.fractionValue) ? this.integerValue + this.fractionValue : this.integerValue;
+                if (emit) this.$emit('calc', result);
+                return result;
+            }
         }    
     }    
 </script>

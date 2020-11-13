@@ -1,7 +1,7 @@
 <template>
     <div class="entity-inline entity-csc">
         <EntityString value="csc" />
-        <EntityParentheses v-bind:expression="expression" />
+        <EntityParentheses v-bind:into="into" />
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         name: 'EntityCsc',
         props: {
-            expression: Object
+            into: Object
         },
         components: {
             EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue')),

@@ -13,7 +13,17 @@
         },
         components: {
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
-        }    
+        },
+        mounted: function(){
+            this.calc(true);
+        },
+        methods: {
+            calc: function(emit) {
+                let result = 1.618033988749894;
+                if (emit) this.$emit('calc', result);
+                return result;
+            }
+        }      
     }    
 </script>
 

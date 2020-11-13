@@ -28,7 +28,7 @@
 
             <MathEnities 
                 class="entity-parentheses__center" 
-                v-bind:expression="expression" />
+                v-bind:into="into.expression" />
 
             <div class="entity-parentheses__right">
                 <div class="entity-parentheses__right-top">
@@ -56,7 +56,7 @@
             <EntityString value="(" />
             <MathEnities 
                 class="entity-parentheses__center" 
-                v-bind:expression="expression" />
+                v-bind:into="into.expression" />
             <EntityString value=")" />
         </template>
 
@@ -76,14 +76,14 @@
     export default {
         name: 'EntityParentheses',
         props: {
-            expression: Object
+            into: Object
         },
         computed: {
             isFractionInside: function () {
 
                 function testExpression(expression) {
                     let level = 0;
-
+                    
                     for (let e of expression) {
                         if (e.type == 'fraction') {
                             level += testExpression(e.numerator);
@@ -95,7 +95,7 @@
                     return level;
                 }
 
-                return (testExpression(this.expression) > 1);
+                return (testExpression(this.into.expression) > 1);
             }
         },
         components: {

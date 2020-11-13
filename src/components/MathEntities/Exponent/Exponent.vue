@@ -3,11 +3,11 @@
         
         <MathEntities 
             class="entity-exponent__base" 
-            v-bind:expression="base" />
+            v-bind:into="into.base" />
         <EntityString class="entity-invisible" value="^" />
         <MathEntities 
             class="entity-exponent__exponent" 
-            v-bind:expression="exponent" />
+            v-bind:into="into.exponent" />
     </div>
 </template>
 
@@ -17,8 +17,7 @@
     export default {
         name: 'EntityExponent',
         props: {
-            base: Object,
-            exponent: Object
+            into: Object
         },
         components: {
             MathEntities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),

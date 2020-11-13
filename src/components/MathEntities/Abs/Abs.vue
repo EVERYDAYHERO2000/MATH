@@ -13,7 +13,7 @@
 
             <MathEnities 
                 class="entity-abs__center" 
-                v-bind:expression="expression" />
+                v-bind:into="into" />
 
             <div class="entity-abs__right">
                 <EntityString 
@@ -26,7 +26,7 @@
             <EntityString value="|" />
             <MathEnities 
                 class="entity-abs__center" 
-                v-bind:expression="expression" />
+                v-bind:into="into" />
             <EntityString value="|" />
         </template>
 
@@ -39,7 +39,7 @@
     export default {
         name: 'Entityabs',
         props: {
-            expression: Object
+            into: Object
         },
         computed: {
             isFractionInside: function () {
@@ -58,7 +58,7 @@
                     return level;
                 }
 
-                return (testExpression(this.expression) > 1);
+                return (testExpression(this.into.expression) > 1);
             }
         },
         components: {

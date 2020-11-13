@@ -207,7 +207,10 @@ const data = [
   },
   {
     type: "fractionMixed",
-    value: 2,
+    integer: {
+        type: 'number',
+        value: 2
+    },
     numerator: [
       {
           type: 'exponent',
@@ -333,6 +336,6 @@ export default (function(data) {
     }
 
     setId(data);
-    
+
     return data
 })(data)

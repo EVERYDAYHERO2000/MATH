@@ -2,7 +2,7 @@
     <div class="math-canvas">
         <MathCanvasPivot>
             <div style="padding: 120px 60px;" ref="canvas">
-                <MathEnities v-bind:expression="expression" />
+                <MathEnities v-bind:into="expression" />
             </div>
         </MathCanvasPivot>
     </div>
