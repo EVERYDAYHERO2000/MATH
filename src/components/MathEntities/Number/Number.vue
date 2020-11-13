@@ -9,6 +9,11 @@
         name: 'EntityNumber',
         props: {
           value: Number
+        },
+        methods: {
+          calc: function(){
+            return this.value
+          }
         }
     }
 </script>

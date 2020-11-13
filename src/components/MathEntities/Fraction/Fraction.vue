@@ -33,6 +33,11 @@ export default {
     ),
     EntityString: defineAsyncComponent(() => import("../String/String.vue")),
   },
+  methods: {
+      calc: function(){
+          
+      }
+  }
 };
 </script>
 

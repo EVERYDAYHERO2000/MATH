@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     type: "number",
     value: 2,
@@ -311,3 +311,28 @@ export default [
     ],
   },
 ];
+
+export default (function(data) {
+    
+    let counter = 1;
+
+    const setId = function(arr) {
+
+        for (let i in arr) {
+            arr[i].id = counter;
+            counter++;
+
+            if (arr[i].expression) setId(arr[i].expression);
+            if (arr[i].base) setId(arr[i].base);
+            if (arr[i].exponent) setId(arr[i].exponent);
+            if (arr[i].name == 'radical' && arr[i].index) setId(arr[i].index);
+            if (arr[i].numerator) setId(arr[i].numerator);
+            if (arr[i].denominator) setId(arr[i].denominator);
+        }
+
+    }
+
+    setId(data);
+    
+    return data
+})(data)

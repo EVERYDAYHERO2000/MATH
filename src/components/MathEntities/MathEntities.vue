@@ -4,7 +4,8 @@
 
             <template v-if="isFraction(item.type)" >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:value="item.value || null"
                     v-bind:numerator="item.numerator"
@@ -13,21 +14,24 @@
 
             <template v-else-if="isFn(item.type)" >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:expression="item.expression" />
             </template>
 
             <template v-else-if="isParentheses(item.type)" >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:expression="item.expression" />
             </template>
 
             <template v-else-if="isRadical(item.type)" >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:index="item.index"
                     v-bind:expression="item.expression" />
@@ -35,7 +39,8 @@
 
             <template v-else-if="isExponent(item.type)" >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:base="item.base"
                     v-bind:exponent="item.exponent" />
@@ -43,7 +48,8 @@
 
             <template v-else >
                 <component
-                    :key="index"
+                    :key="item.id"
+                    v-bind:data-id="item.id"
                     :is="entityName(item.type)"
                     v-bind:value="item.value" />
             </template>
@@ -93,7 +99,7 @@
                 return this.entityType(type, ['cos', 'sin']);
             },
             isParentheses : function(type) {
-                return this.entityType(type, ['parentheses']);
+                return this.entityType(type, ['parentheses', 'abs']);
             },
             isRadical : function(type) {
                 return this.entityType(type, ['radical']);
