@@ -8,6 +8,12 @@
     export default {
         name: 'EntityGamma',
         props: {
+            into: Object
+        },
+        data: function(){
+          return {
+            out: this.into
+          }
         },
         components: {
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
@@ -17,8 +23,8 @@
         },
         methods: {
             calc: function(emit) {
-                let result = 0.577215664901532;
-                if (emit) this.$emit('calc', result);
+                let result = this.out.value = 0.577215664901532;
+                if (emit) this.$emit('calc', this.out);
                 return result;
             }
         }      

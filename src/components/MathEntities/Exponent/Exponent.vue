@@ -19,6 +19,11 @@
         props: {
             into: Object
         },
+        data: function(){
+          return {
+            out: this.into
+          }
+        },
         components: {
             MathEntities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
             EntityString: defineAsyncComponent(() => import('../String/String.vue'))

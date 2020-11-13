@@ -1,6 +1,6 @@
 <template>
-    <div class="entity-inline entity-e">
-        <EntityString value="e" />
+    <div class="entity-inline entity-pi">
+        <EntityString value="π" />
     </div>
 </template>
 
@@ -8,8 +8,14 @@
     import { defineAsyncComponent, resolveComponent } from "vue";
 
     export default {
-        name: 'EntityE',
+        name: 'EntityPi',
         props: {
+            into: Object
+        },
+        data: function(){
+          return {
+            out: this.into
+          }
         },
         components: {
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
@@ -19,8 +25,8 @@
         },
         methods: {
             calc: function(emit) {
-                let result = 2.718281828459045;
-                if (emit) this.$emit('calc', result);
+                let result = this.out.value = 3.141592653589793;
+                if (emit) this.$emit('calc', this.out);
                 return result;
             }
         }    
@@ -31,8 +37,7 @@
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
 
-    .entity-e {
-        font-style: italic;
-    }
+    .entity-pi {
 
+    }
 </style>

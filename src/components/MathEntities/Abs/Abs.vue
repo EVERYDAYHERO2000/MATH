@@ -13,7 +13,7 @@
 
             <MathEnities 
                 class="entity-abs__center" 
-                v-bind:into="into" />
+                v-bind:into="into.expression" />
 
             <div class="entity-abs__right">
                 <EntityString 
@@ -26,7 +26,7 @@
             <EntityString value="|" />
             <MathEnities 
                 class="entity-abs__center" 
-                v-bind:into="into" />
+                v-bind:into="into.expression" />
             <EntityString value="|" />
         </template>
 

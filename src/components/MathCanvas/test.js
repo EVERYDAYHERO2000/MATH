@@ -39,7 +39,7 @@ const data = [
                 ],
                 denominator: [
                   {
-                    type: "e",
+                    type: "constE",
                   },
                 ],
               },
@@ -100,7 +100,7 @@ const data = [
                 type: "subtraction",
               },
               {
-                type: "pi",
+                type: "constPi",
               },
             ],
           },
@@ -198,7 +198,7 @@ const data = [
         type: "subtraction",
       },
       {
-        type: "e",
+        type: "constE",
       },
     ],
   },

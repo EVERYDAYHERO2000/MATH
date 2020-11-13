@@ -6,10 +6,16 @@
 
 <script>
     import { defineAsyncComponent, resolveComponent } from "vue";
-    
+
     export default {
         name: 'EntityAddition',
         props: {
+            into: Object
+        },
+        data: function(){
+          return {
+            out: this.into
+          }
         },
         components: {
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),

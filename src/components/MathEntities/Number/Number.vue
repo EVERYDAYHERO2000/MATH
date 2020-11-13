@@ -10,13 +10,18 @@
         props: {
           into: Object
         },
+        data: function(){
+          return {
+            out: this.into
+          }
+        },
         mounted: function(){
           this.calc(true);
         },
         methods: {
           calc: function(emit){
-            if (emit) this.$emit('calc', this.into.value);
-            return this.into.value
+            if (emit) this.$emit('calc', this.out);
+            return this.out
           }
         }
     }

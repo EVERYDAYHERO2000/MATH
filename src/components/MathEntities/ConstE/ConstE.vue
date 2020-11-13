@@ -1,6 +1,6 @@
 <template>
-    <div class="entity-inline entity-tau">
-        <EntityString value="τ" />
+    <div class="entity-inline entity-e">
+        <EntityString value="e" />
     </div>
 </template>
 
@@ -8,8 +8,14 @@
     import { defineAsyncComponent, resolveComponent } from "vue";
 
     export default {
-        name: 'EntityTau',
+        name: 'EntityE',
         props: {
+            into: Object
+        },
+        data: function(){
+          return {
+            out: this.into
+          }
         },
         components: {
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
@@ -19,11 +25,11 @@
         },
         methods: {
             calc: function(emit) {
-                let result = 6.283185307179586;
-                if (emit) this.$emit('calc', result);
+                let result = this.out.value = 2.718281828459045;
+                if (emit) this.$emit('calc', this.out);
                 return result;
             }
-        }     
+        }    
     }    
 </script>
 
@@ -31,7 +37,8 @@
     @import '../../../css/main.scss';
     @import '../MathEntities.scss';
 
-    .entity-tau {
-        
+    .entity-e {
+        font-style: italic;
     }
+
 </style>
