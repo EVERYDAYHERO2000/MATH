@@ -1,11 +1,18 @@
 <template>
-    <div class="entity-inline entity-multiplication">·</div>
+    <div class="entity-inline entity-multiplication">
+        <EntityString value="·" />
+    </div>
 </template>
 
 <script>
+    import { defineAsyncComponent, resolveComponent } from "vue";
+
     export default {
         name: 'EntityMultiplication',
         props: {
+        },
+        components: {
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }    
     }    
 </script>

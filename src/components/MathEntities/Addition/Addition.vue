@@ -1,11 +1,18 @@
 <template>
-    <div class="entity-inline entity-addition">+</div>
+    <div class="entity-inline entity-addition">
+        <EntityString value="+"/>
+    </div>
 </template>
 
 <script>
+    import { defineAsyncComponent, resolveComponent } from "vue";
+    
     export default {
         name: 'EntityAddition',
         props: {
+        },
+        components: {
+            EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }    
     }    
 </script>

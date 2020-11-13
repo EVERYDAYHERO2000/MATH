@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     type: "number",
     value: 2,
@@ -130,15 +130,48 @@ export default [
     type: "multiplication",
   },
   {
-    type: "number",
-    value: -54,
+      type: 'exponent',
+      base: [
+        {
+            type: 'number',
+            value: 54
+        }
+      ],
+      exponent: [
+        {
+            type: 'fraction',
+            numerator: [
+                {
+                    type: 'number',
+                    value: 1
+                }
+            ],
+            denominator: [
+                {
+                    type: 'number',
+                    value: 2
+                }
+            ]
+        }
+      ]
   },
   {
     type: "division",
   },
   {
-    type: "number",
-    value: 2,
+    type: "exponent",
+    base: [
+        {
+            type: 'number',
+            value: 2
+        }
+    ],
+    exponent: [
+        {
+            type: 'number',
+            value: 5
+        }
+    ]
   },
   {
     type: "subtraction",
@@ -174,12 +207,26 @@ export default [
   },
   {
     type: "fractionMixed",
-    value: 2,
+    integer: {
+        type: 'number',
+        value: 2
+    },
     numerator: [
       {
-        type: "number",
-        value: 3,
-      },
+          type: 'exponent',
+          base: [
+              {
+                  type: 'number',
+                  value: 3  
+              }
+          ],
+          exponent: [
+              {
+                  type: 'number',
+                  value: 2
+              }
+          ]
+      }
     ],
     denominator: [
       {
@@ -267,3 +314,28 @@ export default [
     ],
   },
 ];
+
+export default (function(data) {
+    
+    let counter = 1;
+
+    const setId = function(arr) {
+
+        for (let i in arr) {
+            arr[i].id = counter;
+            counter++;
+
+            if (arr[i].expression) setId(arr[i].expression);
+            if (arr[i].base) setId(arr[i].base);
+            if (arr[i].exponent) setId(arr[i].exponent);
+            if (arr[i].name == 'radical' && arr[i].index) setId(arr[i].index);
+            if (arr[i].numerator) setId(arr[i].numerator);
+            if (arr[i].denominator) setId(arr[i].denominator);
+        }
+
+    }
+
+    setId(data);
+
+    return data
+})(data)

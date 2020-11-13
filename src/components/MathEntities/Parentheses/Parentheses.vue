@@ -1,52 +1,62 @@
 <template>
-    <div class="entity-parentheses" v-bind:class="{'entity-parentheses_inline' : !isFractionInside}">
+    <div 
+        class="entity-parentheses" 
+        v-bind:class="{'entity-parentheses_inline' : !isFractionInside}">
 
         <template v-if="isFractionInside">
-          <span class="entity-parentheses__base">&zwj;</span>
-          <div class="entity-parentheses__left">
-              <div class="entity-parentheses__left-top">
-                  <ParenthesesLeftTop
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 16" />
-              </div>
-              <div class="entity-parentheses__left-center">
-                  <ParenthesesLeftCenter
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 3" />
-                  <EntityString class="entity-invisible" value="(" />
-              </div>
-              <div class="entity-parentheses__left-bottom">
-                  <ParenthesesLeftBottom
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 16" />
-              </div>
-          </div>
+            <span class="entity-parentheses__base">&zwj;</span>
+            <div class="entity-parentheses__left">
+                <div class="entity-parentheses__left-top">
+                    <ParenthesesLeftTop 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+                <div class="entity-parentheses__left-center">
+                    <ParenthesesLeftCenter 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 3" />
+                    <EntityString 
+                        class="entity-invisible" 
+                        value="(" />
+                </div>
+                <div class="entity-parentheses__left-bottom">
+                    <ParenthesesLeftBottom 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+            </div>
 
-              <MathEnities class="entity-parentheses__center" v-bind:expression="expression" />
+            <MathEnities 
+                class="entity-parentheses__center" 
+                v-bind:into="into.expression" />
 
-          <div class="entity-parentheses__right">
-              <div class="entity-parentheses__right-top">
-                  <ParenthesesRightTop
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 16" />
-              </div>
-              <div class="entity-parentheses__right-center">
-                  <ParenthesesRightCenter
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 3" />
-                  <EntityString class="entity-invisible" value=")" />
-              </div>
-              <div class="entity-parentheses__right-bottom">
-                  <ParenthesesRightBottom
-                      preserveAspectRatio="none"
-                      viewBox="0 0 8 16" />
-              </div>
-          </div>
+            <div class="entity-parentheses__right">
+                <div class="entity-parentheses__right-top">
+                    <ParenthesesRightTop 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+                <div class="entity-parentheses__right-center">
+                    <ParenthesesRightCenter 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 3" />
+                    <EntityString 
+                        class="entity-invisible" 
+                        value=")" />
+                </div>
+                <div class="entity-parentheses__right-bottom">
+                    <ParenthesesRightBottom 
+                        preserveAspectRatio="none" 
+                        viewBox="0 0 8 16" />
+                </div>
+            </div>
         </template>
 
         <template v-else>
             <EntityString value="(" />
-            <MathEnities class="entity-parentheses__center" v-bind:expression="expression" />
+            <MathEnities 
+                class="entity-parentheses__center" 
+                v-bind:into="into.expression" />
             <EntityString value=")" />
         </template>
 
@@ -66,14 +76,14 @@
     export default {
         name: 'EntityParentheses',
         props: {
-            expression: Object
+            into: Object
         },
         computed: {
-            isFractionInside: function(){
+            isFractionInside: function () {
 
                 function testExpression(expression) {
                     let level = 0;
-
+                    
                     for (let e of expression) {
                         if (e.type == 'fraction') {
                             level += testExpression(e.numerator);
@@ -85,7 +95,7 @@
                     return level;
                 }
 
-                return (testExpression(this.expression) > 1);
+                return (testExpression(this.into.expression) > 1);
             }
         },
         components: {
@@ -108,6 +118,10 @@
     .entity-parentheses {
         display: inline-flex;
         align-items: baseline;
+    }
+
+    .entity-parentheses__base {
+        user-select: none;
     }
 
     .entity-parentheses svg {
@@ -152,7 +166,7 @@
     }
 
     .entity-parentheses__center {
-        margin: $grid-2 $grid-1;
+        margin: 0 $grid-1;
     }
 
     .entity-parentheses_inline {
@@ -160,5 +174,4 @@
             margin: 0;
         }
     }
-
 </style>
