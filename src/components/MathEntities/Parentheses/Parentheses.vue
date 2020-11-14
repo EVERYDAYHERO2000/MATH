@@ -78,24 +78,23 @@
         props: {
             into: Object
         },
+        created: function(){
+            
+        },
         computed: {
             isFractionInside: function () {
 
                 function testExpression(expression) {
                     let level = 0;
                     
-                    for (let e of expression) {
-                        if (e.type == 'fraction') {
-                            level += testExpression(e.numerator);
-                            level += testExpression(e.denominator);
-                            level++;
-                            break;
-                        }
+                    if (expression.type == 'fraction') {
+                        level++;
                     }
+                    
                     return level;
                 }
 
-                return (testExpression(this.into.expression) > 1);
+                return testExpression(this.into.expression);
             }
         },
         components: {

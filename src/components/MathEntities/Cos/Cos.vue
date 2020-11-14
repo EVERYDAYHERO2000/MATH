@@ -1,7 +1,7 @@
 <template>
     <div class="entity-inline entity-cos">
         <EntityString value="cos" />
-        <EntityParentheses v-bind:into="into" />
+        <MathEntities v-bind:into="into" />
     </div>
 </template>
 
@@ -14,7 +14,7 @@
             into: Object
         },
         components: {
-            EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue')),
+            MathEnities: defineAsyncComponent(() => import('../../MathEntities/MathEntities.vue')),
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }     
     }    

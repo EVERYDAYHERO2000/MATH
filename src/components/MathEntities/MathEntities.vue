@@ -1,15 +1,9 @@
 <template>
     <div class="math-entities">
-        <template v-for="(item, index) in items">
-
-            <component
-                :key="item.id"
-                v-bind:data-id="item.id"
-                :is="entityName(item.type)"
-                v-on:calc=""
-                v-bind:into="item" />
-
-        </template>
+        <component 
+            :is="entityName(into.type)" 
+            v-on:calc=""
+            v-bind:into="into" />
     </div>
 </template>
 
@@ -24,13 +18,16 @@
         components: {
             ...Enities
         },
+        created: function () {
+            
+        },
         data: function () {
             return {
                 items: this.into || []
             }
         },
         methods: {
-            entityName : function(type) {
+            entityName: function (type) {
                 return `Entity${type.charAt(0).toUpperCase() + type.slice(1)}`
             }
         }
@@ -47,5 +44,4 @@
         white-space: nowrap;
         color: $color-entity;
     }
-
 </style>

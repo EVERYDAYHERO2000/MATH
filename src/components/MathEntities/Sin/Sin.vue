@@ -1,7 +1,7 @@
 <template>
     <div class="entity-inline entity-sin">
         <EntityString value="sin" />
-        <EntityParentheses v-bind:into="into" />
+        <MathEntities v-bind:into="into.expression" />
     </div>
 </template>
 
@@ -13,8 +13,11 @@
         props: {
             into: Object
         },
+        created: function(){
+            
+        },
         components: {
-            EntityParentheses: defineAsyncComponent(() => import('../Parentheses/Parentheses.vue')),
+            MathEntities: defineAsyncComponent(() => import('../MathEntities.vue')),
             EntityString: defineAsyncComponent(() => import('../String/String.vue')),
         }     
     }    

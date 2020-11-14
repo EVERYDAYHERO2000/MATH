@@ -24,6 +24,7 @@ import EntityMultiplication from '../MathEntities/Multiplication/Multiplication.
 import EntityParentheses from '../MathEntities/Parentheses/Parentheses.vue';
 import EntityPercent from '../MathEntities/Percent/Percent.vue';
 import EntityProduct from '../MathEntities/Product/Product.vue';
+import EntityProductFactor from '../MathEntities/ProductFactor/ProductFactor.vue';
 import EntityPerMile from '../MathEntities/PerMile/PerMile.vue';
 import EntityPlusMinus from '../MathEntities/PlusMinus/PlusMinus.vue';
 import EntityRadical from '../MathEntities/Radical/Radical.vue';
@@ -34,7 +35,9 @@ import EntitySumTerm from '../MathEntities/SumTerm/SumTerm.vue';
 import EntitySubtraction from '../MathEntities/Subtraction/Subtraction.vue';
 import EntitySystemAnd from '../MathEntities/SystemAnd/SystemAnd.vue';
 import EntityString from '../MathEntities/String/String.vue';
+import EntitySigned from '../MathEntities/Signed/Signed.vue';
 import EntityTan from '../MathEntities/Tan/Tan.vue';
+import EntityConstant from '../MathEntities/Constant/Constant.vue';
 import EntityConstE from '../MathEntities/ConstE/ConstE.vue';
 import EntityConstPhi from '../MathEntities/ConstPhi/ConstPhi.vue';
 import EntityConstPi from '../MathEntities/ConstPi/ConstPi.vue';
@@ -44,6 +47,7 @@ export default {
     EntityEmpty,
     EntityExpression,
     EntityNumber,
+    EntitySigned,
     EntityAbs,
     EntityAddition,
     EntityApproximation,
@@ -67,7 +71,9 @@ export default {
     EntityParentheses,
     EntityPercent,
     EntityProduct,
+    EntityProductFactor,
     EntityPerMile,
+    EntityConstant,
     EntityConstPhi,
     EntityConstPi,
     EntityConstE,
