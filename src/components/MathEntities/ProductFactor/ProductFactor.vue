@@ -1,7 +1,9 @@
 <template>
     <div class="entity-product-factor">
         <component v-if="!firstChild" :is="signEntity" />
-        <MathEnities v-bind:into="into.expression" />
+        <MathEnities 
+            v-on:calc="calc($event, true)"
+            v-bind:into="into.expression" />
     </div>
 </template>
 
@@ -30,8 +32,20 @@
                 return entityName;
             }
         },
+        data: function(){
+            return {
+                out: this.into
+            }
+        },
         created: function(){
             
+        },
+        methods: {
+            calc: function(event, emit){
+                this.out.value = event.value; 
+                if (emit) this.$emit('calc', this.out);
+                return this.out;
+            }
         },
         components: {
             MathEnities: defineAsyncComponent(() => import('../MathEntities.vue')),

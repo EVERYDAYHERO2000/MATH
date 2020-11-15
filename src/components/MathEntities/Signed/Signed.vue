@@ -2,6 +2,7 @@
     <div class="entity-signed">
             <span>{{sign}}</span>
             <EntityNumber 
+                v-on:calc="calc($event, true)"
                 v-bind:into="into.expression" />
     </div>
 </template>
@@ -13,6 +14,11 @@
         name: 'EntitySigned',
         props: {
             into: Object
+        },
+        data: function(){
+            return {
+                out: this.into
+            }    
         },
         computed: {
             sign: function(){
@@ -39,6 +45,13 @@
         },
         components: {
             EntityNumber: defineAsyncComponent(() => import('../Number/Number.vue'))
+        },
+        methods: {
+          calc: function(event, emit){
+            this.out.value = Number(this.sign + event.value)  
+            if (emit) this.$emit('calc', this.out);
+            return this.out
+          }
         }    
     }    
 </script>

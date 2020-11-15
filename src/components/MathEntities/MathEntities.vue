@@ -2,7 +2,7 @@
     <div class="math-entities">
         <component 
             :is="entityName" 
-            v-on:calc=""
+            v-on:calc="calc($event, true)"
             v-bind:into="into" />
     </div>
 </template>
@@ -21,11 +21,23 @@
                 return `Entity${type.charAt(0).toUpperCase() + type.slice(1)}`;
             } 
         },
+        data: function(){
+            return {
+                out : this.into
+            }
+        },
         components: {
             ...Enities
         },
         created: function () {
            
+        },
+        methods: {
+            calc: function(event, emit){
+                this.out.value = event.value;
+                if (emit) this.$emit('calc', this.out);
+                return this.out;
+            }
         }
     }
 </script>

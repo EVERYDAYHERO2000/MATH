@@ -3,6 +3,7 @@
 
         <template v-for="(item, index) in into.factors">
             <EntityProductFactor 
+                v-on:calc="calc($event, true)"
                 v-bind:firstChild="(index == 0)"
                 v-bind:into="item" />
         </template> 
@@ -18,8 +19,23 @@
         props: {
             into: Object
         },
+        data: function(){
+            return {
+                out: this.into
+            }
+        },
         created: function(){
 
+        },
+        methods: {
+            calc: function(event, emit){
+               let expression = '' 
+               for (let factor in this.out.factors) {
+                   console.log(factor, this.out.factors[factor].expression.value)
+               } 
+               if (emit) this.$emit('calc', this.out);
+               return this.out; 
+            }
         },
         components: {
             EntityProductFactor: defineAsyncComponent(() => import('../ProductFactor/ProductFactor.vue'))
