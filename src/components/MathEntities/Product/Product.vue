@@ -3,7 +3,6 @@
 
         <template v-for="(item, index) in into.factors">
             <EntityProductFactor 
-                
                 v-bind:firstChild="(index == 0)"
                 v-bind:into="item" />
         </template> 

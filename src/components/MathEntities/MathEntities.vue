@@ -1,7 +1,7 @@
 <template>
     <div class="math-entities">
         <component 
-            :is="entityName(into.type)" 
+            :is="entityName" 
             v-on:calc=""
             v-bind:into="into" />
     </div>
@@ -15,21 +15,17 @@
         props: {
             into: Object
         },
+        computed: {
+            entityName: function(){
+                let type = this.into.type;
+                return `Entity${type.charAt(0).toUpperCase() + type.slice(1)}`;
+            } 
+        },
         components: {
             ...Enities
         },
         created: function () {
-            
-        },
-        data: function () {
-            return {
-                items: this.into || []
-            }
-        },
-        methods: {
-            entityName: function (type) {
-                return `Entity${type.charAt(0).toUpperCase() + type.slice(1)}`
-            }
+           
         }
     }
 </script>
