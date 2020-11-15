@@ -30,9 +30,7 @@
         methods: {
             calc: function(event, emit){
                let expression = '' 
-               for (let factor in this.out.factors) {
-                   console.log(factor, this.out.factors[factor].expression.value)
-               } 
+               
                if (emit) this.$emit('calc', this.out);
                return this.out; 
             }
