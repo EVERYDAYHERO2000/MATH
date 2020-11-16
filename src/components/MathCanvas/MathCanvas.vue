@@ -1,7 +1,7 @@
 <template>
     <div class="math-canvas">
         <MathCanvasPivot>
-            <div style="padding: 120px 60px;" ref="canvas">
+            <div style="padding: 120px 60px;" v-on:keydown.capture="keydown" ref="canvas">
                 <MathEnities v-bind:into="expression" />
             </div>
         </MathCanvasPivot>
@@ -24,22 +24,29 @@
         data: function () {
             return {
                 keyboard: {
-                    key: null,
+                    keys: [],
                     charCode: null,
                     boo: ''
                 },
                 expression: test
             }
         },
-        created: function(){
-            document.addEventListener('keypress', this.keypress)
-        },
         methods: {
-            keypress: function (event) {
-                if (event.target.classList.contains('entity')) {
-                    this.keyboard.key = event.key;
-                    this.keyboard.charCode = event.charCode;
+            keydown: function (evt) {
+              this.keyboard.keys.push(evt.key);
+              this.keyboard.charCode = evt.charCode;
+              console.log('parent', evt.key);
+
+              if (evt.key.startsWith('Arrow')) {
+                this.$refs.canvas.contentEditable = true;
+              } else {
+                const el = window.getSelection().anchorNode.parentNode;
+
+                if (el.contentEditable) {
+                  this.$refs.canvas.contentEditable = false;
+                  el.focus();
                 }
+              }
             },
             renderToPng: function () {
                 domtoimage

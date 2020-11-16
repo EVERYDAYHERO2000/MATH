@@ -1,6 +1,6 @@
 <template>
-  <div class="entity-inline entity-number">
-      {{into.value}}
+  <div class="entity-inline entity-number" v-on:keydown="setValue" v-on:paste="setValue" contenteditable>
+    {{into.value}}
   </div>
 </template>
 
@@ -10,18 +10,10 @@
         props: {
           into: Object
         },
-        data: function(){
-          return {
-            out: this.into
-          }
-        },
-        mounted: function(){
-          this.calc(true);
-        },
         methods: {
-          calc: function(emit){
-            if (emit) this.$emit('calc', this.out);
-            return this.out
+          setValue: function (evt) {
+            const key = this.$root.$refs.canvas.$data.keyboard.keys.pop();
+            console.log('child', key);
           }
         }
     }

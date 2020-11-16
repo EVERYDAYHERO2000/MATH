@@ -16,7 +16,7 @@
         </div>
         <div class="entity-radical__right">
             <Line
-                ector-effect="non-scaling-stroke"
+                vector-effect="non-scaling-stroke"
                 preserveAspectRatio="none"
                 viewBox="0 0 5 5" />
         </div>

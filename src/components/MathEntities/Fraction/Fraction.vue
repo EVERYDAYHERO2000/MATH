@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <div class="entity-fraction__hr">
+        <div class="entity-fraction__hr" contenteditable>
             <EntityString class="entity-invisible" value="/" />
         </div>
 

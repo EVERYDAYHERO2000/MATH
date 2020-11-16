@@ -1,7 +1,7 @@
 <template>
     <div class="entity-signed">
-            <span>{{sign}}</span>
-            <EntityNumber 
+            <span contenteditable>{{sign}}</span>
+            <EntityNumber
                 v-on:calc="calc($event, true)"
                 v-bind:into="into.expression" />
     </div>
@@ -18,7 +18,7 @@
         data: function(){
             return {
                 out: this.into
-            }    
+            }
         },
         computed: {
             sign: function(){
@@ -31,11 +31,11 @@
                         sign = '';
                         break;
                     case 'plus-minus':
-                        sign = '±'; 
+                        sign = '±';
                         break;
                     case 'minus-plus':
                         sign = '∓';
-                        break;            
+                        break;
                 }
                 return sign;
             }
@@ -48,12 +48,12 @@
         },
         methods: {
           calc: function(event, emit){
-            this.out.value = Number(this.sign + event.value)  
+            this.out.value = Number(this.sign + event.value)
             if (emit) this.$emit('calc', this.out);
             return this.out
           }
-        }    
-    }    
+        }
+    }
 </script>
 
 <style lang="scss">
@@ -61,7 +61,7 @@
     @import '../MathEntities.scss';
 
     .entity-signed {
-        
+
     }
 
 </style>
