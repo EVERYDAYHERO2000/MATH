@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-tan">
-        <EntityString value="tan" />
+        <EntityString v-bind:into="{value:'tan'}" />
         <EntityParentheses v-bind:into="into" />
     </div>
 </template>

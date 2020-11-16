@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-gamma">
-        <EntityString value="γ" />
+        <EntityString v-bind:into="{value:'γ'}" />
     </div>
 </template>
 

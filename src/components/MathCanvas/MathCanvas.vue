@@ -15,6 +15,12 @@
 
     import test from './test.js';
 
+    /*
+    const test = [
+        { type: 'string', value: 'a', id:1}
+    ]
+    */
+
     export default {
         name: 'MathCanvas',
         components: {

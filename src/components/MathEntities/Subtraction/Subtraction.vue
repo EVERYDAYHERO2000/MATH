@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-subtraction">
-        <EntityString value="−" />
+        <EntityString v-bind:into="{value:'−'}" />
     </div>
 </template>
 

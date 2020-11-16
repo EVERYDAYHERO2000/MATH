@@ -4,7 +4,7 @@
         <MathEntities 
             class="entity-exponent__base" 
             v-bind:into="into.base" />
-        <EntityString class="entity-invisible" value="^" />
+        <EntityString class="entity-invisible" v-bind:into="{value:'^'}" />
         <MathEntities 
             class="entity-exponent__exponent" 
             v-bind:into="into.exponent" />

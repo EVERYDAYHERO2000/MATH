@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-cos">
-        <EntityString value="cos" />
+        <EntityString v-bind:into="{value:'cos'}" />
         <EntityParentheses v-bind:into="into" />
     </div>
 </template>

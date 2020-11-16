@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-pi">
-        <EntityString value="π" />
+        <EntityString v-bind:into="{value:'π'}" />
     </div>
 </template>
 

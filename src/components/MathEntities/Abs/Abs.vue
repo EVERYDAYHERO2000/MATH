@@ -8,7 +8,7 @@
             <div class="entity-abs__left">
                 <EntityString 
                         class="entity-invisible" 
-                        value="|" />
+                        v-bind:into="{value:'|'}" />
             </div>
 
             <MathEnities 
@@ -18,16 +18,16 @@
             <div class="entity-abs__right">
                 <EntityString 
                         class="entity-invisible" 
-                        value="|" />
+                        v-bind:into="{value:'|'}" />
             </div>
         </template>
 
         <template v-else>
-            <EntityString value="|" />
+            <EntityString v-bind:into="{value:'|'}" />
             <MathEnities 
                 class="entity-abs__center" 
                 v-bind:into="into.expression" />
-            <EntityString value="|" />
+            <EntityString v-bind:into="{value:'|'}" />
         </template>
 
     </div>

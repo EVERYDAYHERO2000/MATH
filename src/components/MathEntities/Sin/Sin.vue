@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-sin">
-        <EntityString value="sin" />
+        <EntityString v-bind:into="{value:'sin'}" />
         <EntityParentheses v-bind:into="into" />
     </div>
 </template>

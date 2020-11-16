@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-string">
-        {{value}}
+        {{into.value}}
     </div>
   </template>
   
@@ -8,7 +8,7 @@
       export default {
           name: 'EntityString',
           props: {
-            value: String
+            into: Object
           }
       }
   </script>

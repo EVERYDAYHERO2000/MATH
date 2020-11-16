@@ -17,7 +17,7 @@
                         viewBox="0 0 8 3" />
                     <EntityString 
                         class="entity-invisible" 
-                        value="(" />
+                        v-bind:into="{value:'('}" />
                 </div>
                 <div class="entity-parentheses__left-bottom">
                     <ParenthesesLeftBottom 
@@ -42,7 +42,7 @@
                         viewBox="0 0 8 3" />
                     <EntityString 
                         class="entity-invisible" 
-                        value=")" />
+                        v-bind:into="{value:')'}" />
                 </div>
                 <div class="entity-parentheses__right-bottom">
                     <ParenthesesRightBottom 
@@ -53,11 +53,11 @@
         </template>
 
         <template v-else>
-            <EntityString value="(" />
+            <EntityString v-bind:into="{value:'('}" />
             <MathEnities 
                 class="entity-parentheses__center" 
                 v-bind:into="into.expression" />
-            <EntityString value=")" />
+            <EntityString v-bind:into="{value:')'}" />
         </template>
 
     </div>

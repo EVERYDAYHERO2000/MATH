@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-tau">
-        <EntityString value="τ" />
+        <EntityString v-bind:into="{value:'τ'}" />
     </div>
 </template>
 

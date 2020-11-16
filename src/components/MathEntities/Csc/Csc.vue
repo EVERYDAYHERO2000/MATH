@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-csc">
-        <EntityString value="csc" />
+        <EntityString v-bind:into="{value:'csc'}" />
         <EntityParentheses v-bind:into="into" />
     </div>
 </template>

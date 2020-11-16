@@ -8,7 +8,7 @@
         </div>
 
         <div class="entity-fraction__hr">
-            <EntityString class="entity-invisible" value="/" />
+            <EntityString class="entity-invisible" v-bind:into="{value:'/'}" />
         </div>
 
         <div ref="denominator" class="entity-fraction__denominator">

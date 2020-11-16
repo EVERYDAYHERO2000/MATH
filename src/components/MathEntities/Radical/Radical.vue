@@ -12,7 +12,7 @@
                 viewBox="0 0 5 5" />
             <EntityString
                 class="entity-invisible"
-                value="√" />
+                v-bind:into="{value:'√'}" />
         </div>
         <div class="entity-radical__right">
             <Line

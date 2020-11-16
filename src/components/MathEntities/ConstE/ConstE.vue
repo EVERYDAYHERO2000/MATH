@@ -1,6 +1,6 @@
 <template>
     <div class="entity-inline entity-e">
-        <EntityString value="e" />
+        <EntityString v-bind:into="{value:'e'}" />
     </div>
 </template>
 
