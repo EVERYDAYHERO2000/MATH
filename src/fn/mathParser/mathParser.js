@@ -14,7 +14,7 @@ const mathParser = function (exp, options) {
 
   if (options.latex) {
     exp = exp
-    .replace(/\\frac{([^}]+)}{([^}]+)}/g, "($1)/($2)") // fractions
+    .replace(/\\frac{([^}]+)}{([^}]+)}/g, "frac($1,$2)") // fractions
     .replace(/\\left\(/g, "(") // open parenthesis
     .replace(/\\right\)/g, ")") // close parenthesis
     .replace(/[^\(](floor|ceil|(sin|cos|tan|sec|csc|cot)h?)\(([^\(\)]+)\)[^\)]/g, "($&)") // functions
@@ -72,18 +72,27 @@ const mathParser = function (exp, options) {
         result.type = 'cos';
         result.expression = getExpression('args');
 
+      } else if (exp.fn.name == 'frac') {
+        result.type = 'fraction';
+        result.numerator = getExpression(0);
+        result.denominator = getExpression(1);
+
       }
 
     //numbers  
     } else if (exp.type == 'ConstantNode') {    
-
       result.value = exp.value;
       result.type = 'number';
       
     //vars and const  
     } else if (exp.type == 'SymbolNode') {
+      if (math[exp.name]) {
+        result.type = 'constant';
+        result.value = math[exp.name];
+      } else {
+        result.type = 'variable';
+      }
       result.name = exp.name;
-      result.type = 'variable';
 
     //parenthesis  
     } else if (exp.type == 'ParenthesisNode') {
@@ -100,10 +109,10 @@ const mathParser = function (exp, options) {
             result.push(parse(token));
           }
         } else {
-            result.push(exp[key])
+            result.push(parse(exp[key]));
         } 
       } else if (typeof key == 'number') {
-        result.push(exp.args[key]);
+        result = parse(exp.args[key]);
       }
       return result;
     } 
@@ -113,7 +122,10 @@ const mathParser = function (exp, options) {
 
   result = parse(node);
 
-  return result
+  return {
+    expression: exp,
+    result: result
+  }  
 }
 
 export default mathParser
