@@ -26,7 +26,7 @@
     border: none;
     color: $color-white;
     font-size: 16px;
-    transition: background .2s;
+    transition: all .2s;
     box-shadow: inset 0 0 0 1px rgba($color-black, 0.1);
 
     &:focus {
@@ -41,6 +41,8 @@
   .button_disabled {
     pointer-events: none;
     opacity: .3;
+    filter:grayscale(1);
+    transition: all .2s;
   }
 
 </style>

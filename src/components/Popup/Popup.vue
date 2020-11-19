@@ -9,7 +9,7 @@
         <ButtonIcon 
           icon="close" 
           title="Close" 
-          color="black"
+          color="content"
           size="s"
           v-on:click="close" />
       </div>
@@ -92,7 +92,7 @@
     flex-direction: column;
     pointer-events: all;
     overflow: hidden;
-    border-radius: $grid-2;
+    border-radius: $grid-0;
     opacity: 0;
     transition: opacity .2s;
   }
@@ -127,6 +127,7 @@
     font-weight: 500;
     user-select: none;
     box-sizing: border-box;
+    color: $color-content;
   }
 
   .popup__window-body {
