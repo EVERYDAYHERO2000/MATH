@@ -1,15 +1,18 @@
 <template>
-  <Popup title="Import Math Expression">
+  <Popup ref="popup" title="Import Math Expression">
+
     <template v-slot:body>
       <Textarea 
-        v-on:change="change"
-        v-bind:value="expression" 
+        v-on:changeValue="checkExpression"
         v-bind:autofocus="true"
         placeholder="Math Expression" />  
     </template>
 
     <template v-slot:footer>
-      <Button title="Import" />
+      <Button 
+        v-on:click="submitImport" 
+        title="Import" 
+        v-bind:disabled="!validExpression" />
     </template>
 
   </Popup>
@@ -20,20 +23,32 @@
   import Button from '../Button/Button.vue';
   import Textarea from '../Textarea/Textarea.vue';
 
+  import mathParser from '../../fn/mathParser/mathParser.js'
+
   export default {
     name: 'MathPopupImportExpression',
     props: {
     },
     data: function(){
       return {
-        expression: null
+        expression: null,
+        validExpression: false
       }
     },
     methods: {
-      change: function(evt){
-        this.expression = evt;
+      checkExpression: function(evt){
+        this.expression = evt.trim();
+        if (this.expression && this.expression.length) {
+          this.validExpression = true;
+        } else {
+          this.validExpression = false;
+        }
       },
       submitImport: function(){
+        const testParser = mathParser(this.expression, {latex:true});
+        console.log(testParser)
+        this.$refs.popup.close();
+
         this.$emit('submitImport', this.expression);
         this.quit();
       },

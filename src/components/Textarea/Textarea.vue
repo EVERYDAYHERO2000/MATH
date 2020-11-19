@@ -22,7 +22,7 @@
     },
     methods: {
       change: function(evt){
-        this.$emit('change', this.$refs.textarea.value);
+        this.$emit('changeValue', this.$refs.textarea.value);
       }
     }
   }    

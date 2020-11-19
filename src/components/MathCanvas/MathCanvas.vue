@@ -14,12 +14,6 @@
   import domtoimage from '../../fn/domToImage/domToImage.js';
 
   import test from './test.js';
-  /*
-  import mathParser from '../../fn/mathParser/mathParser.js'
-
-  const testParser = mathParser('e^x+\\frac{2+5-1}{3}x+4sin\\left(x+2\\right)', {latex:true});
-  console.log('e^x+\\frac{2}{3}x-4sin\\left(x+2\\right)', testParser)
-  */
 
   export default {
     name: 'MathCanvas',

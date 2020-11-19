@@ -5,7 +5,7 @@ const math = create(all, config)
 
 const mathParser = function (exp, options) {
 
-  exp = exp.replace(/\s/g,'');
+  exp = (exp) ? exp.replace(/\s/g,'') : '';
   options = options || {
     latex: false
   };

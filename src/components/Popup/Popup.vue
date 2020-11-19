@@ -1,5 +1,8 @@
 <template>
-  <div class="popup" v-on:click.self="close" >
+  <div 
+    class="popup" 
+    v-bind:class="{'popup_visible' : isVisible, 'popup_hide' : hideAnim}"
+    v-on:click.self="close" >
     <div class="popup__window">
       <div class="popup__window-header">
         <div class="popup__window-title">{{title}}</div>
@@ -27,10 +30,6 @@
   export default {
     name: 'Popup',
     props: {
-      visible: {
-        type: Boolean,
-        default: true
-      },
       backdrop: {
         type: Boolean,
         default: false
@@ -40,12 +39,27 @@
         default: false
       }
     },
+    data: function(){
+      return {
+        isVisible: false,
+        hideAnim: false
+      }
+    },
+    mounted: function(){
+      this.switchVisible();
+    },
     components: {
       ButtonIcon
     },
     methods: {
       close: function() {
-        this.$emit('close', true);
+        this.hideAnim = true;
+        setTimeout(function(e){
+          e.$emit('close', true);
+        },300, this);
+      },
+      switchVisible: function(){
+        this.isVisible = !this.isVisible;
       }
     }
   }    
@@ -67,8 +81,8 @@
     z-index: 1000;
     pointer-events: all;
     background-color: rgba(0, 0, 0, 0);
-    animation: backdrop-show 2s .2s ease forwards;
   }
+
 
   .popup__window {
     background-color: $color-white;
@@ -80,7 +94,24 @@
     overflow: hidden;
     border-radius: $grid-2;
     opacity: 0;
-    animation: popup-show .2s .2s ease-in-out forwards;
+    transition: opacity .2s;
+  }
+
+  .popup_visible {
+    animation: backdrop-show 2s .2s ease forwards;
+
+    .popup__window {
+      animation: popup-show .2s .2s ease-in-out forwards;
+    }
+  }
+
+  .popup_hide {
+    animation: backdrop-hide .1s ease forwards;
+
+    .popup__window {
+      animation: popup-hide .1s ease-in-out forwards;
+    }
+
   }
 
   .popup__window-header {
@@ -119,6 +150,15 @@
     }
   }
 
+  @keyframes backdrop-hide {
+    0% {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
   @keyframes popup-show {
     0% {
       opacity: 0;
@@ -127,6 +167,17 @@
     100% {
       opacity: 1;
       transform: translateY(0px);
+    }
+  }
+
+  @keyframes popup-hide {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
     }
   }
 </style>

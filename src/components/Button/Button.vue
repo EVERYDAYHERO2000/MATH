@@ -1,7 +1,8 @@
 <template>
   <button 
     class="button" 
-    v-ripple="'rgba(0, 0, 0, 0.05)'"
+    v-bind:class="{'button_disabled' : disabled}"
+    v-ripple="'rgba(255, 255, 255, 0.05)'"
     v-bind:title="title">{{title}}</button>
 </template>
 
@@ -9,7 +10,8 @@
   export default {
     name: 'Button',
     props: {
-      title: String
+      title: String,
+      disabled: Boolean
     }
   }    
 </script>
@@ -24,10 +26,21 @@
     border: none;
     color: $color-white;
     font-size: 16px;
+    transition: background .2s;
+    box-shadow: inset 0 0 0 1px rgba($color-black, 0.1);
 
     &:focus {
       outline: none;
     }
+    &:hover {
+      background: lighten($color-primary,5%);
+      transition: background .2s;
+    }
+  }
+
+  .button_disabled {
+    pointer-events: none;
+    opacity: .3;
   }
 
 </style>
