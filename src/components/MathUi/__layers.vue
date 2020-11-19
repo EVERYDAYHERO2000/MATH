@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import MathPopupImportExpression from '../MathPopupImportExpression/MathPopupImportExpression.vue';
+  import MathPopupImportExpression from '/@components/MathPopupImportExpression/MathPopupImportExpression.vue';
 
   export default {
     name: 'MathUiLayers',

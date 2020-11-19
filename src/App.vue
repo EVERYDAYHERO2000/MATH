@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import MathCanvas from './components/MathCanvas/MathCanvas.vue';
-import MathUi from './components/MathUi/MathUi.vue';
+import MathCanvas from '/@components/MathCanvas/MathCanvas.vue';
+import MathUi from '/@components/MathUi/MathUi.vue';
 
 export default {
   name: 'App',

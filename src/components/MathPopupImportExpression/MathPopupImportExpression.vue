@@ -19,11 +19,11 @@
 </template>
 
 <script>
-  import Popup from '../Popup/Popup.vue';
-  import Button from '../Button/Button.vue';
-  import Textarea from '../Textarea/Textarea.vue';
+  import Popup from '/@components/Popup/Popup.vue';
+  import Button from '/@components/Button/Button.vue';
+  import Textarea from '/@components/Textarea/Textarea.vue';
 
-  import mathParser from '../../fn/mathParser/mathParser.js'
+  import mathParser from '/@fn/mathParser/mathParser.js'
 
   export default {
     name: 'MathPopupImportExpression',

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
+  import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
 
   export default {
     name: 'Input',
