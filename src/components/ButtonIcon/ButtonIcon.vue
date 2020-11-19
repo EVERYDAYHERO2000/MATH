@@ -49,7 +49,6 @@
 
     .button-icon {
         display: inline-flex;
-        padding: $grid-1;
         border-radius: $grid-1;
         background: rgba($color-black, 0);
         transition: background-color .2s;
@@ -57,6 +56,7 @@
 
         &_size {
             &_s {
+                padding: 0;
                 min-width: $size-s;
                 max-width: $size-s;
                 min-height: $size-s;
@@ -64,6 +64,7 @@
             }
 
             &_m {
+                padding: $grid-1;
                 min-width: $size-m;
                 max-width: $size-m;
                 min-height: $size-m;

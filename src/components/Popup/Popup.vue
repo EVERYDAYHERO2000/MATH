@@ -7,6 +7,7 @@
           icon="close" 
           title="Close" 
           color="black"
+          size="s"
           v-on:click="close" />
       </div>
       <div class="popup__window-body">
@@ -53,7 +54,8 @@
 <style lang="scss">
   @import '../../css/main.scss';
 
-  $padding: $grid-2;
+  $padding-vertical: $grid-3;
+  $padding-horisontal: $grid-0;
 
   .popup {
     width: 100%;
@@ -83,25 +85,27 @@
 
   .popup__window-header {
     box-sizing: border-box;
-    padding: $padding $padding 0 $padding;
+    padding: $grid-2 $grid-2 0 $padding-vertical;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
 
   .popup__window-title {
     font-weight: 500;
     user-select: none;
+    box-sizing: border-box;
   }
 
   .popup__window-body {
     box-sizing: border-box;
-    padding: $padding;
+    padding: $grid-2 $padding-vertical $padding-horisontal $padding-vertical;
   }
 
   .popup__window-footer {
     box-sizing: border-box;
-    padding: 0 $padding $padding $padding;
+    padding: $padding-horisontal $padding-vertical $padding-vertical $padding-vertical;
     display: flex;
     justify-content: flex-end;
   }
@@ -111,7 +115,7 @@
       background-color: rgba(0, 0, 0, 0);
     }
     100% {
-      background-color: rgba(0, 0, 0, 0.15);
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 

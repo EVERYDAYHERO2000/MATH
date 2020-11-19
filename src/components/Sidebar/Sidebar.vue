@@ -73,7 +73,7 @@
         content: '';
         display: block;
         width: 100vw;
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.1);
         content: "";
         position: absolute;
         height: 100vh;
