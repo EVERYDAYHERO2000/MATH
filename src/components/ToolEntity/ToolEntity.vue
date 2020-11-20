@@ -1,7 +1,7 @@
 <template>
-  <div v-ripple="'rgba(0, 0, 0, 0.02)'" class="math-tools-entity" v-bind:class="[classCover]">
-    <span class="math-tools-entity__title">{{ title }}</span>
-    <span class="math-tools-entity__code">{{ code }}</span>
+  <div v-ripple="'rgba(0, 0, 0, 0.02)'" class="tool-entity" v-bind:class="[classCover]">
+    <span class="tool-entity__title">{{ title }}</span>
+    <span class="tool-entity__code">{{ code }}</span>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import entities from './entities.js';
 
 export default {
-  name: 'MathToolsEntity',
+  name: 'ToolEntity',
   props: {
     name: {
       type: String,
@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     classCover: function () {
-      return this.name ? `math-tools-entity_cover_${this.name.replace('_', '-')}` : '';
+      return this.name ? `tool-entity_cover_${this.name.replace('_', '-')}` : '';
     },
     title: function () {
       return this.name ? entities[this.name].title : '';
@@ -33,7 +33,7 @@ export default {
 <style lang="scss">
 @import '../../css/main.scss';
 
-.math-tools-entity {
+.tool-entity {
   height: 64px;
   box-sizing: border-box;
   padding: 12px $grid-2;
@@ -47,7 +47,7 @@ export default {
   background-repeat: no-repeat;
 }
 
-.math-tools-entity_cover {
+.tool-entity_cover {
   &_abs {
     background-image: url('assets/ent_abs.svg');
   }
@@ -285,16 +285,16 @@ export default {
   }
 }
 
-.math-tools-entity:hover {
+.tool-entity:hover {
   background-color: rgba($color-black, 0.01);
 }
 
-.math-tools-entity__title {
+.tool-entity__title {
   font-size: 12px;
   color: rgba($color-black, 0.5);
 }
 
-.math-tools-entity__code {
+.tool-entity__code {
   font-size: 12px;
   color: $color-primary;
 }

@@ -5,7 +5,7 @@
     v-ripple="'rgba(255, 255, 255, 0.05)'"
     v-bind:title="title"
   >
-    {{ title }}
+    {{ label }}
   </button>
 </template>
 
@@ -16,6 +16,7 @@ export default {
   name: 'Button',
   props: {
     title: String,
+    label: String,
     disabled: Boolean,
     color: color('primary'),
     size: size('m'),

@@ -11,7 +11,7 @@
     <template v-slot:footer>
       <Button 
         v-on:click="submitImport" 
-        title="Import" 
+        label="Import" 
         v-bind:disabled="!validExpression" />
     </template>
 

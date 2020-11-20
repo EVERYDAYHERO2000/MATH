@@ -6,7 +6,7 @@
     </template>
 
     <template v-slot:body>
-      <SidebarToolsEntities
+      <EntitiesPanel
         v-on:updateScroll="scroll = $event"
         v-on:changeTab="activeTab = $event"
         v-bind:scrollTop="scroll"
@@ -21,7 +21,7 @@
 <script>
 import Sidebar from '/@components/Sidebar/Sidebar.vue';
 import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
-import SidebarToolsEntities from './Entities/Entities.vue';
+import EntitiesPanel from './EntitiesPanel/EntitiesPanel.vue';
 import InputSearch from '/@components/InputSearch/InputSearch.vue';
 
 export default {
@@ -29,7 +29,7 @@ export default {
   components: {
     Sidebar,
     ButtonIcon,
-    SidebarToolsEntities,
+    EntitiesPanel,
     InputSearch,
   },
   data: function () {

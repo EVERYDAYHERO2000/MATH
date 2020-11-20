@@ -151,8 +151,8 @@
 
 <script>
 import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
-import MathToolsEntity from '/@components/MathToolsEntity/MathToolsEntity.vue';
-import MathEntities from '/@components/MathToolsEntity/entities.js';
+import MathToolsEntity from '/@components/ToolEntity/ToolEntity.vue';
+import MathEntities from '/@components/ToolEntity/entities.js';
 
 export default {
   name: 'SidebarToolsEntities',
