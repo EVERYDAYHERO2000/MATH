@@ -34,7 +34,7 @@
     }
     &:hover {
       background: lighten($color-primary,5%);
-      transition: background .2s;
+      transition: background-color .2s;
     }
   }
 

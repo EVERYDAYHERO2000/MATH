@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import MathPopupImportExpression from '/@components/MathPopupImportExpression/MathPopupImportExpression.vue';
+  import MathPopupImportExpression from './PopupImportExpression/PopupImportExpression.vue';
 
   export default {
     name: 'MathUiLayers',
@@ -26,7 +26,7 @@
 </script>
 
 <style lang="scss">
-  @import '../../css/main.scss';
+  @import '../../../css/main.scss';
 
   .math-ui__layers {
     width: 100%;

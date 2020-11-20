@@ -13,9 +13,9 @@
 </template>
 
 <script>
-  import SidebarTools from '/@components/SidebarTools/SidebarTools.vue';
-  import MathUiLayers from './__layers.vue';
-  import MainMenu from '/@components/MainMenu/MainMenu.vue';
+  import SidebarTools from './SidebarTools/SidebarTools.vue';
+  import MathUiLayers from './Layers/Layers.vue';
+  import MainMenu from './MainMenu/MainMenu.vue';
 
   export default {
     name: 'MathUi',

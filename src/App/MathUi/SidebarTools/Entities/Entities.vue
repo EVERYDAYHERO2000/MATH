@@ -158,9 +158,9 @@
 </template>
 
 <script>
-    import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
-    import MathToolsEntity from '../MathToolsEntity/MathToolsEntity.vue';
-    import MathEntities from '../MathToolsEntity/entities.js';
+    import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
+    import MathToolsEntity from '/@components/MathToolsEntity/MathToolsEntity.vue';
+    import MathEntities from '/@components/MathToolsEntity/entities.js';
 
     export default {
         name: 'SidebarToolsEntities',
@@ -209,7 +209,7 @@
 </script>
 
 <style lang="scss">
-    @import '../../css/main.scss';
+    @import '../../../../css/main.scss';
     
     .sidebar-tools__entities {
         display: flex;

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import { color } from '../../fn/propsType/propsType.js';
+    import { color } from '/@fn/propsType/propsType.js';
     import svg from './svg.js';
 
     export default {

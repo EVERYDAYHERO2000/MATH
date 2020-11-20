@@ -79,7 +79,7 @@
 </script>
 
 <style lang="scss">
-    @import '../../css/main.scss';
+    @import '../../../css/main.scss';
 
     .math-canvas__pivot {
         width: 10000px;

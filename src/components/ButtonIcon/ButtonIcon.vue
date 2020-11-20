@@ -11,7 +11,7 @@
 
 <script>
 import Icon from '../Icon/Icon.vue';
-import { size, color } from '../../fn/propsType/propsType.js';
+import { size, color } from '/@fn/propsType/propsType.js';
 
 export default {
   name: 'ButtonIcon',

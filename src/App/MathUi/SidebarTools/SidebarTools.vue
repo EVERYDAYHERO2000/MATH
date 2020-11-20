@@ -30,10 +30,10 @@
 </template>
 
 <script>
-    import Sidebar from '../Sidebar/Sidebar.vue';
-    import ButtonIcon from '../ButtonIcon/ButtonIcon.vue';
-    import SidebarToolsEntities from './__Entities.vue';
-    import InputSearch from '../InputSearch/InputSearch.vue';
+    import Sidebar from '/@components/Sidebar/Sidebar.vue';
+    import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
+    import SidebarToolsEntities from './Entities/Entities.vue';
+    import InputSearch from '/@components/InputSearch/InputSearch.vue';
 
     export default {
         name: 'SidebarTools',
@@ -66,7 +66,7 @@
 </script>
 
 <style lang="scss">
-    @import '../../css/main.scss';
+    @import '../../../css/main.scss';
 
     .sidebar-tools {
         .input-search {

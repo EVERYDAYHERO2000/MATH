@@ -6,8 +6,9 @@
 </template>
 
 <script>
-import MathCanvas from '/@components/MathCanvas/MathCanvas.vue';
-import MathUi from '/@components/MathUi/MathUi.vue';
+import MathCanvas from '/@app/MathCanvas/MathCanvas.vue';
+import MathUi from '/@app/MathUi/MathUi.vue';
+import '/@css/main.scss';
 
 export default {
   name: 'App',
@@ -24,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import './css/main.scss';
+@import './css/main.scss';
 
   .app {
     width: 100%;
