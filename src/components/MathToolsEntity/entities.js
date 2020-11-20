@@ -1,357 +1,357 @@
 export default {
-    abs: {
-        cover: ['ent_abs.svg'],
-        title: 'Absolute value',
-        key: '|',
-        keywords: 'absolute value |'
-    },
-    addition: {
-        cover: ['ent_addition.svg'],
-        title: 'Addition',
-        key: '+',
-        keywords: '+ plus addition'
-    },
-    subtraction: {
-        cover: ['ent_subtraction.svg'],
-        title: 'Subtraction',
-        key: '-',
-        keywords: '- minus subtraction'
-    },
-    approximation: {
-        cover: ['ent_approximation.svg'],
-        title: 'Approximation',
-        key: '',
-        keywords: '~ approximation'
-    },
-    cos: {
-        cover: ['ent_cos.svg'],
-        title: 'Cosine',
-        key: 'cos',
-        keywords: 'cosine'
-    },
-    cot: {
-        cover: ['ent_cot.svg'],
-        title: 'Cotangent',
-        key: 'cot',
-        keywords: 'cotangent'
-    },
-    csc: {
-        cover: ['ent_csc.svg'],
-        title: 'Cosecant',
-        key: 'csc',
-        keywords: 'cosecant csc'
-    },
-    division: {
-        cover: ['ent_division_default.svg','ent_division_option.svg'],
-        title: 'Division',
-        key: ':',
-        keywords: ': ÷ / division'
-    },
-    equality: {
-        cover: ['ent_equality.svg'],
-        title: 'Equality',
-        key: '=',
-        keywords: '= equality'
-    },
-    exponent: {
-        cover: ['ent_exponent.svg'],
-        title: 'Exponent',
-        key: '^',
-        keywords: '^ exponent'
-    },
-    fraction: {
-        cover: ['ent_fraction_1.svg'],
-        title: 'Fraction',
-        key: '/',
-        keywords: '/ fraction'
-    },
-    fraction_mixed: {
-        cover: ['ent_fraction_2.svg'],
-        title: 'Mixed Number',
-        key: '',
-        keywords: '/ mixed number fraction'
-    },
-    inequality: {
-        cover: ['ent_inequality.svg'],
-        title: 'Inequality',
-        key: '!=',
-        keywords: '!= inequality'
-    },
-    inequality_less: {
-        cover: ['ent_less-than-or-equal-to.svg'],
-        title: 'Less than or equal to',
-        key: '<=',
-        keywords: '<= less than or equal to'
-    },
-    inequality_great: {
-        cover: ['ent_greater-than-or-equal-to.svg'],
-        title: 'Greater than or equal to',
-        key: '>=',
-        keywords: '>= greater than or equal to'
-    },
-    less: {
-        cover: ['ent_less-than.svg'],
-        title: 'Less than',
-        key: '<',
-        keywords: '< less than'
-    },
-    great: {
-        cover: ['ent_greater-than.svg'],
-        title: 'Greater than',
-        key: '>',
-        keywords: '> greater than'
-    },
-    system_and: {
-        cover: ['ent_group.svg'],
-        title: 'System',
-        key: '',
-        keywords: '{} system'
-    },
-    integral: {
-        cover: ['ent_integral.svg'],
-        title: 'Integral',
-        key: '',
-        keywords: 'integral'
-    },
-    log: {
-        cover: ['ent_log.svg'],
-        title: 'Logarithm',
-        key: 'log',
-        keywords: 'logarithm'
-    },
-    mod: {
-        cover: ['ent_mod.svg'],
-        title: 'Mod',
-        key: 'mod',
-        keywords: 'mod'
-    },
-    multiplication: {
-        cover: ['ent_multiplication_default.svg', 'ent_multiplication_option.svg'],
-        title: 'Multiplication',
-        key: '*',
-        keywords: '* multiplication'
-    },
-    parentheses: {
-        cover: ['ent_parentheses_default.svg', 'ent_parentheses_option.svg'],
-        title: 'Calculate inside first',
-        key: '(',
-        keywords: '()[] calculate inside first'
-    },
-    per_mile: {
-        cover: ['ent_per-mille.svg'],
-        title: 'Per-mille',
-        key: '',
-        keywords: 'per-mille'
-    },
-    percent: {
-        cover: ['ent_percent.svg'],
-        title: 'Percent',
-        key: '%',
-        keywords: '% percent'
-    },
-    plus_minus: {
-        cover: ['ent_plus-minus.svg'],
-        title: 'Both plus and minus',
-        key: '',
-        keywords: 'both plus and minus'
-    },
-    radical: {
-        cover: ['ent_radical.svg'],
-        title: 'Radical',
-        key: '',
-        keywords: 'radical'
-    },
-    sec: {
-        cover: ['ent_sec.svg'],
-        title: 'Secant',
-        key: 'sec',
-        keywords: 'secant'
-    },
-    sin: {
-        cover: ['ent_sin.svg'],
-        title: 'Sine',
-        key: 'sin',
-        keywords: 'sine'
-    },
-    tan: {
-        cover: ['ent_tan.svg'],
-        title: 'Tangent',
-        key: 'tan',
-        keywords: 'tangent'
-    },
-    pi: {
-        cover: ['ent_pi.svg'],
-        title: 'Pi 3.141592653589793',
-        key: '',
-        keywords: 'constant pi 3.14159'
-    },
-    tau: {
-        cover: ['ent_tau.svg'],
-        title: 'Tau 6.283185307179586',
-        key: '',
-        keywords: 'constant tau 6.2831'
-    },
-    phi: {
-        cover: ['ent_phi.svg'],
-        title: 'Phi 1.618033988749894',
-        key: '',
-        keywords: 'constant phi 1.6180'
-    },
-    gamma: {
-        cover: ['ent_gamma.svg'],
-        title: 'Gamma 0.577215664901532',
-        key: '',
-        keywords: 'constant gamma 0.57721'
-    },
-    e: {
-        cover: ['ent_e.svg'],
-        title: 'Euler`s number 2.71828182',
-        key: '',
-        keywords: 'constant eular`s number 2.7182'
-    },
+  abs: {
+    cover: ['ent_abs.svg'],
+    title: 'Absolute value',
+    key: '|',
+    keywords: 'absolute value |',
+  },
+  addition: {
+    cover: ['ent_addition.svg'],
+    title: 'Addition',
+    key: '+',
+    keywords: '+ plus addition',
+  },
+  subtraction: {
+    cover: ['ent_subtraction.svg'],
+    title: 'Subtraction',
+    key: '-',
+    keywords: '- minus subtraction',
+  },
+  approximation: {
+    cover: ['ent_approximation.svg'],
+    title: 'Approximation',
+    key: '',
+    keywords: '~ approximation',
+  },
+  cos: {
+    cover: ['ent_cos.svg'],
+    title: 'Cosine',
+    key: 'cos',
+    keywords: 'cosine',
+  },
+  cot: {
+    cover: ['ent_cot.svg'],
+    title: 'Cotangent',
+    key: 'cot',
+    keywords: 'cotangent',
+  },
+  csc: {
+    cover: ['ent_csc.svg'],
+    title: 'Cosecant',
+    key: 'csc',
+    keywords: 'cosecant csc',
+  },
+  division: {
+    cover: ['ent_division_default.svg', 'ent_division_option.svg'],
+    title: 'Division',
+    key: ':',
+    keywords: ': ÷ / division',
+  },
+  equality: {
+    cover: ['ent_equality.svg'],
+    title: 'Equality',
+    key: '=',
+    keywords: '= equality',
+  },
+  exponent: {
+    cover: ['ent_exponent.svg'],
+    title: 'Exponent',
+    key: '^',
+    keywords: '^ exponent',
+  },
+  fraction: {
+    cover: ['ent_fraction_1.svg'],
+    title: 'Fraction',
+    key: '/',
+    keywords: '/ fraction',
+  },
+  fraction_mixed: {
+    cover: ['ent_fraction_2.svg'],
+    title: 'Mixed Number',
+    key: '',
+    keywords: '/ mixed number fraction',
+  },
+  inequality: {
+    cover: ['ent_inequality.svg'],
+    title: 'Inequality',
+    key: '!=',
+    keywords: '!= inequality',
+  },
+  inequality_less: {
+    cover: ['ent_less-than-or-equal-to.svg'],
+    title: 'Less than or equal to',
+    key: '<=',
+    keywords: '<= less than or equal to',
+  },
+  inequality_great: {
+    cover: ['ent_greater-than-or-equal-to.svg'],
+    title: 'Greater than or equal to',
+    key: '>=',
+    keywords: '>= greater than or equal to',
+  },
+  less: {
+    cover: ['ent_less-than.svg'],
+    title: 'Less than',
+    key: '<',
+    keywords: '< less than',
+  },
+  great: {
+    cover: ['ent_greater-than.svg'],
+    title: 'Greater than',
+    key: '>',
+    keywords: '> greater than',
+  },
+  system_and: {
+    cover: ['ent_group.svg'],
+    title: 'System',
+    key: '',
+    keywords: '{} system',
+  },
+  integral: {
+    cover: ['ent_integral.svg'],
+    title: 'Integral',
+    key: '',
+    keywords: 'integral',
+  },
+  log: {
+    cover: ['ent_log.svg'],
+    title: 'Logarithm',
+    key: 'log',
+    keywords: 'logarithm',
+  },
+  mod: {
+    cover: ['ent_mod.svg'],
+    title: 'Mod',
+    key: 'mod',
+    keywords: 'mod',
+  },
+  multiplication: {
+    cover: ['ent_multiplication_default.svg', 'ent_multiplication_option.svg'],
+    title: 'Multiplication',
+    key: '*',
+    keywords: '* multiplication',
+  },
+  parentheses: {
+    cover: ['ent_parentheses_default.svg', 'ent_parentheses_option.svg'],
+    title: 'Calculate inside first',
+    key: '(',
+    keywords: '()[] calculate inside first',
+  },
+  per_mile: {
+    cover: ['ent_per-mille.svg'],
+    title: 'Per-mille',
+    key: '',
+    keywords: 'per-mille',
+  },
+  percent: {
+    cover: ['ent_percent.svg'],
+    title: 'Percent',
+    key: '%',
+    keywords: '% percent',
+  },
+  plus_minus: {
+    cover: ['ent_plus-minus.svg'],
+    title: 'Both plus and minus',
+    key: '',
+    keywords: 'both plus and minus',
+  },
+  radical: {
+    cover: ['ent_radical.svg'],
+    title: 'Radical',
+    key: '',
+    keywords: 'radical',
+  },
+  sec: {
+    cover: ['ent_sec.svg'],
+    title: 'Secant',
+    key: 'sec',
+    keywords: 'secant',
+  },
+  sin: {
+    cover: ['ent_sin.svg'],
+    title: 'Sine',
+    key: 'sin',
+    keywords: 'sine',
+  },
+  tan: {
+    cover: ['ent_tan.svg'],
+    title: 'Tangent',
+    key: 'tan',
+    keywords: 'tangent',
+  },
+  pi: {
+    cover: ['ent_pi.svg'],
+    title: 'Pi 3.141592653589793',
+    key: '',
+    keywords: 'constant pi 3.14159',
+  },
+  tau: {
+    cover: ['ent_tau.svg'],
+    title: 'Tau 6.283185307179586',
+    key: '',
+    keywords: 'constant tau 6.2831',
+  },
+  phi: {
+    cover: ['ent_phi.svg'],
+    title: 'Phi 1.618033988749894',
+    key: '',
+    keywords: 'constant phi 1.6180',
+  },
+  gamma: {
+    cover: ['ent_gamma.svg'],
+    title: 'Gamma 0.577215664901532',
+    key: '',
+    keywords: 'constant gamma 0.57721',
+  },
+  e: {
+    cover: ['ent_e.svg'],
+    title: 'Euler`s number 2.71828182',
+    key: '',
+    keywords: 'constant eular`s number 2.7182',
+  },
 
-    g_alpha: {
-        cover: ['ent_sign_g_alpha.svg'],
-        title: 'Alpha',
-        key: '',
-        keywords: ''
-    },
-    g_beta: {
-        cover: ['ent_sign_g_beta.svg'],
-        title: 'Beta',
-        key: '',
-        keywords: ''
-    },
-    g_gamma: {
-        cover: ['ent_sign_g_gamma.svg'],
-        title: 'Gamma',
-        key: '',
-        keywords: ''
-    },
-    g_delta: {
-        cover: ['ent_sign_g_delta.svg'],
-        title: 'Delta',
-        key: '',
-        keywords: ''
-    },
-    g_epsilon: {
-        cover: ['ent_sign_g_epsilon.svg'],
-        title: 'Epsilon',
-        key: '',
-        keywords: ''
-    },
-    g_zeta: {
-        cover: ['ent_sign_g_zeta.svg'],
-        title: 'Zeta',
-        key: '',
-        keywords: ''
-    },
-    g_eta: {
-        cover: ['ent_sign_g_eta.svg'],
-        title: 'Eta',
-        key: '',
-        keywords: ''
-    },
-    g_theta: {
-        cover: ['ent_sign_g_theta.svg'],
-        title: 'Theta',
-        key: '',
-        keywords: ''
-    },
-    g_iota: {
-        cover: ['ent_sign_g_iota.svg'],
-        title: 'Iota',
-        key: '',
-        keywords: ''
-    },
-    g_kappa: {
-        cover: ['ent_sign_g_kappa.svg'],
-        title: 'Kappa',
-        key: '',
-        keywords: ''
-    },
-    g_lambda: {
-        cover: ['ent_sign_g_lambda.svg'],
-        title: 'Lambda',
-        key: '',
-        keywords: ''
-    },
-    g_mu: {
-        cover: ['ent_sign_g_mu.svg'],
-        title: 'Mu',
-        key: '',
-        keywords: ''
-    },
-    g_nu: {
-        cover: ['ent_sign_g_nu.svg'],
-        title: 'Nu',
-        key: '',
-        keywords: ''
-    },
-    g_xi: {
-        cover: ['ent_sign_g_xi.svg'],
-        title: 'Xi',
-        key: '',
-        keywords: ''
-    },
-    g_omicron: {
-        cover: ['ent_sign_g_omicron.svg'],
-        title: 'Omicron',
-        key: '',
-        keywords: ''
-    },
-    g_pi: {
-        cover: ['ent_sign_g_pi.svg'],
-        title: 'Pi',
-        key: '',
-        keywords: ''
-    },
-    g_rho: {
-        cover: ['ent_sign_g_rho.svg'],
-        title: 'Rho',
-        key: '',
-        keywords: ''
-    },
-    g_sigma: {
-        cover: ['ent_sign_g_sigma.svg'],
-        title: 'Sigma',
-        key: '',
-        keywords: ''
-    },
-    g_tau: {
-        cover: ['ent_sign_g_tau.svg'],
-        title: 'Tau',
-        key: '',
-        keywords: ''
-    },
-    g_upsilon: {
-        cover: ['ent_sign_upsilon.svg'],
-        title: 'Upsilon',
-        key: '',
-        keywords: ''
-    },
-    g_phi: {
-        cover: ['ent_sign_g_phi.svg'],
-        title: 'Phi',
-        key: '',
-        keywords: ''
-    },
-    g_chi: {
-        cover: ['ent_sign_g_chi.svg'],
-        title: 'Chi',
-        key: '',
-        keywords: ''
-    },
-    g_psi: {
-        cover: ['ent_sign_g_psi.svg'],
-        title: 'Psi',
-        key: '',
-        keywords: ''
-    },
-    g_omega: {
-        cover: ['ent_sign_g_omega.svg'],
-        title: 'Omega',
-        key: '',
-        keywords: ''
-    }
-}
+  g_alpha: {
+    cover: ['ent_sign_g_alpha.svg'],
+    title: 'Alpha',
+    key: '',
+    keywords: '',
+  },
+  g_beta: {
+    cover: ['ent_sign_g_beta.svg'],
+    title: 'Beta',
+    key: '',
+    keywords: '',
+  },
+  g_gamma: {
+    cover: ['ent_sign_g_gamma.svg'],
+    title: 'Gamma',
+    key: '',
+    keywords: '',
+  },
+  g_delta: {
+    cover: ['ent_sign_g_delta.svg'],
+    title: 'Delta',
+    key: '',
+    keywords: '',
+  },
+  g_epsilon: {
+    cover: ['ent_sign_g_epsilon.svg'],
+    title: 'Epsilon',
+    key: '',
+    keywords: '',
+  },
+  g_zeta: {
+    cover: ['ent_sign_g_zeta.svg'],
+    title: 'Zeta',
+    key: '',
+    keywords: '',
+  },
+  g_eta: {
+    cover: ['ent_sign_g_eta.svg'],
+    title: 'Eta',
+    key: '',
+    keywords: '',
+  },
+  g_theta: {
+    cover: ['ent_sign_g_theta.svg'],
+    title: 'Theta',
+    key: '',
+    keywords: '',
+  },
+  g_iota: {
+    cover: ['ent_sign_g_iota.svg'],
+    title: 'Iota',
+    key: '',
+    keywords: '',
+  },
+  g_kappa: {
+    cover: ['ent_sign_g_kappa.svg'],
+    title: 'Kappa',
+    key: '',
+    keywords: '',
+  },
+  g_lambda: {
+    cover: ['ent_sign_g_lambda.svg'],
+    title: 'Lambda',
+    key: '',
+    keywords: '',
+  },
+  g_mu: {
+    cover: ['ent_sign_g_mu.svg'],
+    title: 'Mu',
+    key: '',
+    keywords: '',
+  },
+  g_nu: {
+    cover: ['ent_sign_g_nu.svg'],
+    title: 'Nu',
+    key: '',
+    keywords: '',
+  },
+  g_xi: {
+    cover: ['ent_sign_g_xi.svg'],
+    title: 'Xi',
+    key: '',
+    keywords: '',
+  },
+  g_omicron: {
+    cover: ['ent_sign_g_omicron.svg'],
+    title: 'Omicron',
+    key: '',
+    keywords: '',
+  },
+  g_pi: {
+    cover: ['ent_sign_g_pi.svg'],
+    title: 'Pi',
+    key: '',
+    keywords: '',
+  },
+  g_rho: {
+    cover: ['ent_sign_g_rho.svg'],
+    title: 'Rho',
+    key: '',
+    keywords: '',
+  },
+  g_sigma: {
+    cover: ['ent_sign_g_sigma.svg'],
+    title: 'Sigma',
+    key: '',
+    keywords: '',
+  },
+  g_tau: {
+    cover: ['ent_sign_g_tau.svg'],
+    title: 'Tau',
+    key: '',
+    keywords: '',
+  },
+  g_upsilon: {
+    cover: ['ent_sign_upsilon.svg'],
+    title: 'Upsilon',
+    key: '',
+    keywords: '',
+  },
+  g_phi: {
+    cover: ['ent_sign_g_phi.svg'],
+    title: 'Phi',
+    key: '',
+    keywords: '',
+  },
+  g_chi: {
+    cover: ['ent_sign_g_chi.svg'],
+    title: 'Chi',
+    key: '',
+    keywords: '',
+  },
+  g_psi: {
+    cover: ['ent_sign_g_psi.svg'],
+    title: 'Psi',
+    key: '',
+    keywords: '',
+  },
+  g_omega: {
+    cover: ['ent_sign_g_omega.svg'],
+    title: 'Omega',
+    key: '',
+    keywords: '',
+  },
+};

@@ -11,15 +11,15 @@ import { VueComponent as IconVariable } from './assets/icon_var_24.svg';
 import { VueComponent as IconTrigonometry } from './assets/icon_trigonometry_24.svg';
 
 export default {
-    IconAdd,
-    IconClose,
-    IconConsole,
-    IconLayers,
-    IconMenu,
-    IconRemove,
-    IconMath,
-    IconConstant,
-    IconSearch,
-    IconVariable,
-    IconTrigonometry
-}
+  IconAdd,
+  IconClose,
+  IconConsole,
+  IconLayers,
+  IconMenu,
+  IconRemove,
+  IconMath,
+  IconConstant,
+  IconSearch,
+  IconVariable,
+  IconTrigonometry,
+};

@@ -26,7 +26,7 @@
   import mathParser from '/@fn/mathParser/mathParser.js'
 
   export default {
-    name: 'MathPopupImportExpression',
+    name: 'PopupImportExpression',
     props: {
     },
     data: function(){

@@ -5,9 +5,9 @@ export default {
       type: 'term',
       action: 'plus',
       expression: {
-        type: 'number', 
-        value: 2
-      }
+        type: 'number',
+        value: 2,
+      },
     },
     {
       type: 'term',
@@ -18,26 +18,26 @@ export default {
           type: 'fraction',
           numerator: {
             type: 'number',
-            value: 1
+            value: 1,
           },
           denominator: {
             type: 'signed',
             sign: 'minus',
             expression: {
               type: 'number',
-              value: 2
-            }
-          }
-        }
-      }
+              value: 2,
+            },
+          },
+        },
+      },
     },
     {
       type: 'term',
       action: 'plus', //'minus', 'plus-minus', 'minus-plus'
       expression: {
         type: 'number',
-        value: 1
-      }
+        value: 1,
+      },
     },
     {
       type: 'term',
@@ -52,7 +52,7 @@ export default {
               type: 'fraction',
               numerator: {
                 type: 'number',
-                value: 1
+                value: 1,
               },
               denominator: {
                 type: 'signed',
@@ -60,10 +60,10 @@ export default {
                 expression: {
                   type: 'number',
                   sign: 'minus',
-                  value: 2
-                }
-              }
-            }
+                  value: 2,
+                },
+              },
+            },
           },
           {
             type: 'factor',
@@ -73,20 +73,20 @@ export default {
               sign: 'minus', //'plus', 'plus-minus', 'minus-plus'
               expression: {
                 type: 'number',
-                value: 54
-              }
-            }
+                value: 54,
+              },
+            },
           },
           {
             type: 'factor',
             action: 'divide',
             expression: {
               type: 'number',
-              value: 2
-            }
-          }
-        ]
-      }
+              value: 2,
+            },
+          },
+        ],
+      },
     },
     {
       type: 'term',
@@ -111,26 +111,26 @@ export default {
                         type: 'radical',
                         index: {
                           type: 'number',
-                          value: 4
+                          value: 4,
                         },
                         expression: {
                           type: 'number',
-                          value: 205
-                        }
-                      }
+                          value: 205,
+                        },
+                      },
                     },
                     {
                       type: 'term',
                       action: 'minus',
                       expression: {
                         type: 'constant',
-                        name: 'euler'
-                      }
-                    }
-                  ]
-                }
-              }
-            }
+                        name: 'euler',
+                      },
+                    },
+                  ],
+                },
+              },
+            },
           },
           {
             type: 'factor',
@@ -138,21 +138,21 @@ export default {
             expression: {
               type: 'fractionMixed',
               integer: {
-                type: "number",
+                type: 'number',
                 value: 2,
               },
               numerator: {
-                type: "number",
+                type: 'number',
                 value: 3,
               },
               denominator: {
-                type: "number",
+                type: 'number',
                 value: 4,
               },
-            }
-          }
-        ]
-      }
-    }
-  ]
+            },
+          },
+        ],
+      },
+    },
+  ],
 };

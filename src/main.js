@@ -4,7 +4,6 @@ import Ripple from './fn/ripple-effect/ripple-effect';
 
 import './css/main.scss';
 
-const application = createApp(App); 
+const application = createApp(App);
 application.directive('ripple', Ripple);
 application.mount('#app');
-
