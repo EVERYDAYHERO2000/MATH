@@ -1,44 +1,20 @@
 <template>
-  <div>
-    <span class="atom" v-on:keyup="setValue" ref="input" contenteditable>{{value || ''}}</span>
-    <span>Number {{value}}</span>
+  <div class="entity-inline entity-number" v-on:keydown="setValue" v-on:paste="setValue" contenteditable>
+    {{into.value}}
   </div>
 </template>
 
 <script>
     export default {
         name: 'EntityNumber',
-        mounted: function () {
-          this.focus();
-        },
         props: {
-          val: Number
+          into: Object
         },
-        data: function () {
-            return {
-                value: Number(this.val)
-            }
-        },
-        methods:  {
-            focus: function (pos) {
-              var el = this.$refs.input;
-              var range = document.createRange();
-              var sel = window.getSelection();
-
-              range.setStart(el, String(this.value).length);
-              range.collapse(true);
-
-              sel.removeAllRanges();
-              sel.addRange(range);
-            },
-            setValue: function (evt) {
-
-              if (evt.target.innerText.length == 0) {
-                this.$emit('isempty');
-              }
-
-              this.value = Number(evt.target.innerText);
-            }
+        methods: {
+          setValue: function (evt) {
+            const key = this.$root.$refs.canvas.$data.keyboard.keys.pop();
+            console.log('child', key);
+          }
         }
     }
 </script>
@@ -47,14 +23,15 @@
   @import '../../../css/main.scss';
   @import '../MathEntities.scss';
 
-  .atom {
-    padding: 10px;
-    border: 1px solid green;
+  .entity-number {
+    display: inline-block;
+    box-sizing: border-box;
+    letter-spacing: 1px;
 
-    &::after {
-      content: "";
-      display: inline-block;
-      width: 0.1em;
+    &:hover {
+      color: red;
+      transition: color .2s;
     }
   }
+
 </style>

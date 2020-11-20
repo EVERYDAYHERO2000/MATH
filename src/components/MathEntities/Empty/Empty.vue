@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="atom" v-on:keyup="setValue" ref="input" contenteditable></span>
+    <span class="atom" v-on:keydown="setValue" ref="input" contenteditable></span>
     <span>Empty</span>
   </div>
 </template>
@@ -16,7 +16,8 @@
               this.$refs.input.focus();
             },
             setValue: function (evt) {
-              if (this.$refs.input.innerText.length && !Number(evt.key).isNaN) {
+              if (!Number(evt.key).isNaN) {
+                
                 this.$emit('isnumber', Number(evt.key));
               }
             }
