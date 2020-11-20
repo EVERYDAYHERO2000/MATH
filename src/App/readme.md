@@ -1,3 +1,6 @@
+Структура приложения
+
+```
 App
 |
 |__ MathCanvas
@@ -12,4 +15,4 @@ App
         |__ MainMenu
         |__ SidebarTools
         |__ Layers
-        
+```
