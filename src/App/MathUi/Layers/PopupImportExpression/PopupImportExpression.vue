@@ -47,10 +47,10 @@
       submitImport: function(){
         const testParser = mathParser(this.expression, {latex:true});
         console.log(testParser)
-        this.$refs.popup.close();
+        //this.$refs.popup.close();
 
         this.$emit('submitImport', this.expression);
-        this.quit();
+        //this.quit();
       },
       quit: function(){
         this.$emit('quit', true);

@@ -48,6 +48,11 @@ export default {
 
   &:hover {
     transition: background-color 0.2s;
+
+    @include media('<=phone') {
+      transition: none;
+      background-color: transparent;
+    }  
   }
 
   &_size {

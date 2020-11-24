@@ -81,6 +81,10 @@ $size-m: $grid-5;
   fill: $color-content;
   background-color: rgba($color-black, 0.05);
   pointer-events: none;
+
+  &.button-icon:hover {
+    background-color: rgba($color-black, 0.05);
+  }
 }
 
 .button-icon:focus {
@@ -89,5 +93,10 @@ $size-m: $grid-5;
 
 .button-icon:hover {
   background-color: rgba($color-black, 0.1);
+
+  @include media('<=phone') {
+    transition: none;
+    background-color: transparent;
+  }
 }
 </style>

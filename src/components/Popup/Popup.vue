@@ -80,6 +80,10 @@ $padding-horisontal: $grid-0;
   z-index: 1000;
   pointer-events: all;
   background-color: rgba(0, 0, 0, 0);
+
+  @include media("<=phone") {
+    align-items: flex-end;
+  }  
 }
 
 .popup__window {
@@ -93,6 +97,11 @@ $padding-horisontal: $grid-0;
   border-radius: $grid-0;
   opacity: 0;
   transition: opacity 0.2s;
+
+  @include media("<=phone") {
+    border-radius: $grid-2 $grid-2 0 0;
+    padding-bottom: $grid-5;
+  }  
 }
 
 .popup_visible {

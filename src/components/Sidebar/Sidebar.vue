@@ -1,6 +1,10 @@
 <template>
   <div v-bind:class="[{ sidebar_visible: visible }, classAttachment]" class="sidebar">
-    <div v-if="visible && backdrop" v-on:click="clickOutside" class="sidebar__backdrop"></div>
+    <div
+      v-if="visible"
+      v-on:click="clickOutside"
+      v-bind:class="['sidebar__backdrop', { sidebar__backdrop_desktop: backdrop }]"
+    ></div>
     <div class="sidebar__header">
       <slot name="header"> </slot>
     </div>
@@ -43,50 +47,85 @@ export default {
 <style lang="scss">
 @import '../../css/main.scss';
 
-$panel-width: 280px;
+$panel-width-desktop: 280px;
+$panel-width-mobile: 80vw;
+$panel-width-hidden: $grid-7;
 
 .sidebar {
   pointer-events: all;
   position: absolute;
   height: 100%;
-  width: $panel-width;
   background-color: rgba($color-white, 0);
-  transform: translateX(224px);
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 0 1px rgba($color-black, 0);
   display: flex;
   flex-direction: column;
+  z-index: 999;
+
+  width: $panel-width-desktop;
+
+  @include media('<=phone') {
+    width: $panel-width-mobile;
+  }
 }
 
 .sidebar__backdrop {
-  content: '';
   display: block;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.1);
-  content: '';
   position: absolute;
   height: 100vh;
-  z-index: -1;
   opacity: 0;
   animation: animate-backdrop 0.2s ease-in-out 0.1s forwards;
+  z-index: 10000;
+
+
+  @include media('<=phone') {
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: all;
+  }  
+
+  @include media(">phone") {
+    pointer-events: none;
+  }  
+}
+
+.sidebar__backdrop_desktop {
+  background-color: rgba(0, 0, 0, 0.1);
+  pointer-events: all;
 }
 
 .sidebar_attachment {
   &_left {
     left: 0;
-    transform: translateX(-224px);
+    transform: translateX(-$panel-width-desktop + $panel-width-hidden);
+
+    @include media('<=phone') {
+      transform: translateX(calc(-#{$panel-width-mobile} + #{$panel-width-hidden}));
+    }
 
     .sidebar__backdrop {
-      left: $panel-width;
+      left: $panel-width-desktop;
+
+      @include media('<=phone') {
+        left: $panel-width-mobile;
+      }
     }
   }
 
   &_right {
     right: 0;
-    transform: translateX(224px);
+    transform: translateX($panel-width-desktop - $panel-width-hidden);
+
+    @include media('<=phone') {
+      transform: translateX(calc(#{$panel-width-mobile} - #{$panel-width-hidden}));
+    }
 
     .sidebar__backdrop {
-      right: $panel-width;
+      right: $panel-width-desktop;
+
+      @include media('<=phone') {
+        right: $panel-width-mobile;
+      }
     }
   }
 }
@@ -96,6 +135,7 @@ $panel-width: 280px;
   transition: all 0.2s 0.05s ease-in-out;
   background-color: rgba($color-white, 1);
   box-shadow: 0 0 0 1px rgba($color-black, 0.03);
+  z-index: 1000;
 
   .sidebar__header {
     border-bottom: $border-sidebar-tools;
@@ -107,13 +147,13 @@ $panel-width: 280px;
   border-bottom: none;
   box-sizing: border-box;
   display: flex;
-  min-height: 57px;
+  min-height: $grid-7;
   justify-content: space-between;
 }
 
 .sidebar__body {
   flex-grow: 1;
-  height: calc(100% - 50px);
+  height: calc(100% - #{$grid-7});
 }
 
 @keyframes animate-backdrop {
