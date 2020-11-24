@@ -71,6 +71,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   &::selection {
     background-color: rgba($color-primary, 0.6);
