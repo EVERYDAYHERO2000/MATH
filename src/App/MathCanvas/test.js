@@ -5,7 +5,7 @@ export default {
       type: 'term',
       action: 'plus',
       expression: {
-        type: 'number', 
+        type: 'number',
         value: 2
       }
     },

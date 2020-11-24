@@ -1,10 +1,10 @@
 <template>
     <div class="sidebar-tools__entities">
-        
-        <div 
+
+        <div
             v-if="currentTab == 'math' && !searchValue"
-            v-on:scroll="getScrollPosition" 
-            ref="list" 
+            v-on:scroll="getScrollPosition"
+            ref="list"
             class="sidebar-tools__entities-list">
 
             <MathToolsEntity name="addition" />
@@ -31,20 +31,20 @@
 
             <MathToolsEntity name="fraction" />
             <MathToolsEntity name="fraction_mixed" />
-            
+
             <MathToolsEntity name="abs" />
             <MathToolsEntity name="log" />
             <MathToolsEntity name="mod" />
-            
+
             <MathToolsEntity name="system_and" />
             <MathToolsEntity name="integral" />
-            
+
         </div>
 
-        <div 
+        <div
             v-else-if="currentTab == 'trigonometry' && !searchValue"
-            v-on:scroll="getScrollPosition" 
-            ref="list" 
+            v-on:scroll="getScrollPosition"
+            ref="list"
             class="sidebar-tools__entities-list">
 
             <MathToolsEntity name="cos" />
@@ -59,12 +59,12 @@
             <MathToolsEntity name="pi" />
             <MathToolsEntity name="tau" />
 
-        </div> 
+        </div>
 
-        <div 
+        <div
             v-else-if="currentTab == 'constant' && !searchValue"
-            v-on:scroll="getScrollPosition" 
-            ref="list" 
+            v-on:scroll="getScrollPosition"
+            ref="list"
             class="sidebar-tools__entities-list">
 
             <MathToolsEntity name="pi" />
@@ -72,12 +72,12 @@
             <MathToolsEntity name="phi" />
             <MathToolsEntity name="e" />
 
-        </div> 
+        </div>
 
-        <div 
+        <div
             v-else-if="currentTab == 'variable' && !searchValue"
-            v-on:scroll="getScrollPosition" 
-            ref="list" 
+            v-on:scroll="getScrollPosition"
+            ref="list"
             class="sidebar-tools__entities-list">
 
             <MathToolsEntity name="g_alpha" />
@@ -105,52 +105,52 @@
             <MathToolsEntity name="g_psi" />
             <MathToolsEntity name="g_omega" />
 
-        </div>    
-        
-        <div 
+        </div>
+
+        <div
             v-else-if="searchValue"
             class="sidebar-tools__entities-list">
-            <div v-for="(eValue, eName) in MathEntities">
-                <MathToolsEntity 
+            <div v-for="(eValue, eName) in MathEntity">
+                <MathToolsEntity
                     v-if="isFind(eValue.keywords, searchValue)"
                     v-bind:name="eName" />
             </div>
-            
+
         </div>
 
-        <div 
+        <div
             v-if="!searchValue"
             class="sidebar-tools__entities-menu">
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon 
-                    icon="math" 
-                    title="Math" 
-                    ref="buttonMath" 
-                    v-bind:pressed="currentTab == 'math'" 
+                <ButtonIcon
+                    icon="math"
+                    title="Math"
+                    ref="buttonMath"
+                    v-bind:pressed="currentTab == 'math'"
                     v-on:click="setActiveTab('math')" />
             </div>
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon 
-                    icon="trigonometry" 
-                    title="Trigonometry" 
-                    ref="buttonConstant" 
-                    v-bind:pressed="currentTab == 'trigonometry'" 
+                <ButtonIcon
+                    icon="trigonometry"
+                    title="Trigonometry"
+                    ref="buttonConstant"
+                    v-bind:pressed="currentTab == 'trigonometry'"
                     v-on:click="setActiveTab('trigonometry')" />
             </div>
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon 
-                    icon="constant" 
-                    title="Constant" 
-                    ref="buttonConstant" 
-                    v-bind:pressed="currentTab == 'constant'" 
+                <ButtonIcon
+                    icon="constant"
+                    title="Constant"
+                    ref="buttonConstant"
+                    v-bind:pressed="currentTab == 'constant'"
                     v-on:click="setActiveTab('constant')" />
             </div>
             <div class="sidebar-tools__menu-item">
-                <ButtonIcon 
-                    icon="variable" 
-                    title="Variable" 
-                    ref="buttonConstant" 
-                    v-bind:pressed="currentTab == 'variable'" 
+                <ButtonIcon
+                    icon="variable"
+                    title="Variable"
+                    ref="buttonConstant"
+                    v-bind:pressed="currentTab == 'variable'"
                     v-on:click="setActiveTab('variable')" />
             </div>
         </div>
@@ -160,7 +160,7 @@
 <script>
     import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
     import MathToolsEntity from '/@components/MathToolsEntity/MathToolsEntity.vue';
-    import MathEntities from '/@components/MathToolsEntity/entities.js';
+    import MathEntity from '/@components/MathToolsEntity/entities.js';
 
     export default {
         name: 'SidebarToolsEntities',
@@ -179,7 +179,7 @@
         data: function(){
             return {
                 currentTab: null,
-                MathEntities: MathEntities   
+                MathEntity: MathEntity
             }
         },
         mounted: function () {
@@ -188,7 +188,7 @@
             setTimeout(() => {
                 this.setScrollPosition();
             }, 100);
-            
+
         },
         methods: {
             setScrollPosition: function(){
@@ -204,13 +204,13 @@
             isFind: function(entryStr, str){
                 return (entryStr) ? entryStr.toLowerCase().includes(str.toLowerCase()) : '';
             }
-        }    
-    }    
+        }
+    }
 </script>
 
 <style lang="scss">
     @import '../../../../css/main.scss';
-    
+
     .sidebar-tools__entities {
         display: flex;
         height: 100%;
