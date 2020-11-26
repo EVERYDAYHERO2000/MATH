@@ -1,12 +1,17 @@
 <template>
-  <Sidebar class="sidebar-tools" v-bind:visible="isVisible" attachment="right">
+  <Sidebar
+    class="sidebar-tools"
+    v-on:clickOutside="toggleVisible"
+    v-bind:visible="isVisible"
+    attachment="right"
+  >
     <template v-slot:header>
       <ButtonIcon v-on:click="toggleVisible" icon="search" title="Elements" />
       <InputSearch v-on:updateSearch="searchValue = $event" v-bind:value="searchValue" />
     </template>
 
     <template v-slot:body>
-      <SidebarToolsEntities
+      <EntitiesPanel
         v-on:updateScroll="scroll = $event"
         v-on:changeTab="activeTab = $event"
         v-bind:scrollTop="scroll"
@@ -21,7 +26,7 @@
 <script>
 import Sidebar from '/@components/Sidebar/Sidebar.vue';
 import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
-import SidebarToolsEntities from './Entities/Entities.vue';
+import EntitiesPanel from './EntitiesPanel/EntitiesPanel.vue';
 import InputSearch from '/@components/InputSearch/InputSearch.vue';
 
 export default {
@@ -29,7 +34,7 @@ export default {
   components: {
     Sidebar,
     ButtonIcon,
-    SidebarToolsEntities,
+    EntitiesPanel,
     InputSearch,
   },
   data: function () {
@@ -41,8 +46,38 @@ export default {
     };
   },
   props: {},
-  mounted: function () {},
+  watch: {
+    isVisible: function () {
+      this.saveValue('isVisible');
+    },
+    activeTab: function () {
+      this.saveValue('activeTab');
+    },
+    searchValue: function () {
+      this.saveValue('searchValue');
+    },
+    scroll: function () {
+      this.saveValue('scroll');
+    },
+  },
+  created: function () {
+    let ls = localStorage.SidebarTools;
+    if (ls) {
+      let lsData = JSON.parse(ls);
+      this.activeTab = lsData.activeTab;
+      this.isVisible = lsData.isVisible;
+      this.searchValue = lsData.searchValue;
+      this.scroll = lsData.scroll;
+    } else {
+      localStorage.setItem('SidebarTools', JSON.stringify(this.$data));
+    }
+  },
   methods: {
+    saveValue: function (dataKey) {
+      let ls = JSON.parse(localStorage.SidebarTools);
+      ls[dataKey] = this[dataKey];
+      localStorage.SidebarTools = JSON.stringify(ls);
+    },
     toggleVisible: function () {
       this.isVisible = !this.isVisible;
     },

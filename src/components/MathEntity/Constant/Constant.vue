@@ -52,7 +52,6 @@
         display: inline-flex;
         align-items: baseline;
         white-space: nowrap;
-        color: $color-entity;
 
 
     }

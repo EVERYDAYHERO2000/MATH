@@ -11,7 +11,7 @@
     <template v-slot:footer>
       <Button 
         v-on:click="submitImport" 
-        title="Import" 
+        label="Import" 
         v-bind:disabled="!validExpression" />
     </template>
 
@@ -26,7 +26,7 @@
   import mathParser from '/@fn/mathParser/mathParser.js'
 
   export default {
-    name: 'MathPopupImportExpression',
+    name: 'PopupImportExpression',
     props: {
     },
     data: function(){
@@ -47,10 +47,10 @@
       submitImport: function(){
         const testParser = mathParser(this.expression, {latex:true});
         console.log(testParser)
-        this.$refs.popup.close();
+        //this.$refs.popup.close();
 
         this.$emit('submitImport', this.expression);
-        this.quit();
+        //this.quit();
       },
       quit: function(){
         this.$emit('quit', true);

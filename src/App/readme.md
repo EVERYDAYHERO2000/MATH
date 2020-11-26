@@ -1,3 +1,5 @@
+Структура приложения
+
 ```
 App
 |
@@ -13,4 +15,4 @@ App
         |__ MainMenu
         |__ SidebarTools
         |__ Layers
-```        
+```

@@ -51,9 +51,16 @@ $size-m: $grid-5;
 .button-icon {
   display: inline-flex;
   border-radius: $grid-1;
-  background: rgba($color-black, 0);
   transition: background-color 0.2s;
   border: none;
+
+  .app_theme_light & {
+    background: rgba($color-background-invert_theme-light, 0);
+  } 
+  
+  .app_theme_dark & {
+    background: rgba($color-background-invert_theme-dark, 0);
+  } 
 
   &_size {
     &_s {
@@ -78,9 +85,27 @@ $size-m: $grid-5;
 }
 
 .button-icon_pressed {
-  fill: $color-content;
-  background-color: rgba($color-black, 0.05);
   pointer-events: none;
+
+  .app_theme_light & {
+    fill: $color-content_theme-light;
+    background-color: rgba($color-background-invert_theme-light, 0.05);
+  }
+  
+  .app_theme_dark & {
+    fill: $color-content_theme-dark;
+    background-color: rgba($color-background-invert_theme-dark, 0.05);
+  }
+
+  &.button-icon:hover {
+    .app_theme_light & {
+      background-color: rgba($color-background-invert_theme-light, 0.05);
+    }
+    
+    .app_theme_dark & {
+      background-color: rgba($color-background-invert_theme-dark, 0.05);
+    }
+  }
 }
 
 .button-icon:focus {
@@ -88,6 +113,17 @@ $size-m: $grid-5;
 }
 
 .button-icon:hover {
-  background-color: rgba($color-black, 0.1);
+  .app_theme_light & {
+    background-color: rgba($color-background-invert_theme-light, 0.1);
+  }
+  
+  .app_theme_dark & {
+    background-color: rgba($color-background-invert_theme-dark, 0.1);
+  }
+
+  @include media('<=phone') {
+    transition: none;
+    background-color: transparent;
+  }
 }
 </style>

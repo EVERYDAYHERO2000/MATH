@@ -68,6 +68,13 @@ export default {
   display: inline-flex;
   align-items: baseline;
   white-space: nowrap;
-  color: $color-entity;
+  
+  .app_theme_light & {
+    color: $color-content_theme-light;
+  }
+
+  .app_theme_dark & {
+    color: $color-content_theme-dark;
+  }
 }
 </style>

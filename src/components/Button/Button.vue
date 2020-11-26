@@ -1,48 +1,220 @@
 <template>
-  <button 
-    class="button" 
-    v-bind:class="{'button_disabled' : disabled}"
+  <button
+    class="button"
+    v-bind:class="[{ button_disabled: disabled }, classSize, classColor]"
     v-ripple="'rgba(255, 255, 255, 0.05)'"
-    v-bind:title="title">{{title}}</button>
+    v-bind:title="title"
+  >
+    {{ label }}
+  </button>
 </template>
 
 <script>
-  export default {
-    name: 'Button',
-    props: {
-      title: String,
-      disabled: Boolean
-    }
-  }    
+import { size, color } from '/@fn/propsType/propsType.js';
+
+export default {
+  name: 'Button',
+  props: {
+    title: String,
+    label: String,
+    disabled: Boolean,
+    color: color('primary'),
+    size: size('m'),
+  },
+  computed: {
+    classColor: function () {
+      return `button_color_${this.color}`;
+    },
+    classSize: function () {
+      return `button_size_${this.size}`;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-  @import '../../css/main.scss';
+@import '../../css/main.scss';
 
-  .button {
-    padding: $grid-1 $grid-2;
-    border-radius: $grid-1;
-    background: $color-primary;
-    border: none;
-    color: $color-white;
-    font-size: 16px;
-    transition: all .2s;
-    box-shadow: inset 0 0 0 1px rgba($color-black, 0.1);
+.button {
+  border-radius: $grid-1;
+  border: none;
+  font-size: 16px;
+  transition: all 0.2s;
 
-    &:focus {
-      outline: none;
+  .app_theme_light & {
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-light, 0.1);
+  }
+  
+  .app_theme_dark & {
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-dark, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transition: background-color 0.2s;
+
+    @include media('<=phone') {
+      transition: none;
+      background-color: transparent;
+    }  
+  }
+
+  &_size {
+    &_s {
+      padding: 0;
     }
-    &:hover {
-      background: lighten($color-primary,5%);
-      transition: background-color .2s;
+
+    &_m {
+      padding: $grid-1 $grid-2;
+    }
+
+    &_l {
+      padding: $grid-2 $grid-3;
     }
   }
 
-  .button_disabled {
-    pointer-events: none;
-    opacity: .3;
-    filter:grayscale(1);
-    transition: all .2s;
-  }
+  &_color {
+    &_black {
+      .app_theme_light & {
+        background-color: $color-background-invert_theme-light;
+        color: $color-content-invert_theme-light;
+      }
 
+      .app_theme_dark & {
+        background-color: $color-background-invert_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-background-invert_theme-light, 5%);
+        }  
+
+        .app_theme_dark & {
+          background: lighten($color-background-invert_theme-dark, 5%);
+        }  
+      }
+    }
+
+    &_primary {
+      .app_theme_light & {
+        background-color: $color-primary_theme-light;
+        color: $color-content-invert_theme-light;
+      } 
+      
+      .app_theme_dark & {
+        background-color: $color-primary_theme-dark;
+        color: $color-content-invert_theme-dark;
+      } 
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-primary_theme-light, 5%);
+        } 
+        
+        .app_theme_dark & {
+          background: lighten($color-primary_theme-dark, 5%);
+        } 
+      }
+    }
+
+    &_active {
+      .app_theme_light & {
+        background-color: $color-active_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-active_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-active_theme-light, 5%);
+        }  
+
+        .app_theme_dark & {
+          background: lighten($color-active_theme-dark, 5%);
+        }  
+      }
+    }
+
+    &_content {
+      .app_theme_light & {
+        background-color: $color-content_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-content_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-content_theme-light, 5%);
+        }
+        
+        .app_theme_dark & {
+          background: lighten($color-content_theme-dark, 5%);
+        }
+      }
+    }
+
+    &_danger {
+      .app_theme_light & {
+        background-color: $color-danger_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+      
+      .app_theme_dark & {
+        background-color: $color-danger_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-danger_theme-light, 5%);
+        } 
+        
+        .app_theme_dark & {
+          background: lighten($color-danger_theme-dark, 5%);
+        } 
+      }
+    }
+
+    &_success {
+      .app_theme_light & {
+        background-color: $color-success_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+      
+      .app_theme_dark & {
+        background-color: $color-success_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
+
+      &:hover {
+        .app_theme_light & {
+          background: lighten($color-success_theme-light, 5%);
+        }
+        
+        .app_theme_dark & {
+          background: lighten($color-success_theme-dark, 5%);
+        }
+      }
+    }
+  }
+}
+
+.button_disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  filter: grayscale(1);
+  transition: all 0.2s;
+}
 </style>

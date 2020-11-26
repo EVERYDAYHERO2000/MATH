@@ -1,4 +1,4 @@
-import { create, all } from 'mathjs';
+import { create, all} from 'mathjs';
 
 const config = {};
 const math = create(all, config);
@@ -31,11 +31,11 @@ const mathParser = function (exp, options) {
     if (exp.type == 'OperatorNode') {
       if (exp.fn == 'add') {
         result.type = 'sum';
-        result.terms = getExpression('args');
+        result.terms = getExpression('args', result.type);
         result.action = 'plus';
       } else if (exp.fn == 'subtract') {
         result.type = 'sum';
-        result.terms = getExpression('args');
+        result.terms = getExpression('args', result.type);
         result.action = 'minus';
       } else if (exp.fn == 'multiply') {
         result.type = 'product';
@@ -89,10 +89,12 @@ const mathParser = function (exp, options) {
       result.expression = getExpression('content');
     }
 
-    function getExpression(key) {
+    function getExpression(key, prevToken) {
       let result = [];
+      prevToken = prevToken || null;
       if (typeof key == 'string') {
         if (Array.isArray(exp[key])) {
+          
           for (let token of exp[key]) {
             result.push(parse(token));
           }
@@ -108,7 +110,24 @@ const mathParser = function (exp, options) {
     return result;
   }
 
+  function flat(exp) {
+    
+    if (exp.type == 'sum') {
+      exp.terms[1].action = exp.action;
+
+      for (let t in exp.terms) {
+        exp.terms[t].action = exp.action;
+      }
+      
+    }
+    return exp;
+  }
+
   result = parse(node);
+
+  console.log(flat(result))
+
+  //console.log(node);
 
   return {
     expression: exp,

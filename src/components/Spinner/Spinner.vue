@@ -1,15 +1,10 @@
-<template>
-
-</template>
+<template> </template>
 
 <script>
-    export default {
-        name: 'Spinner',
-        props: {
-        }    
-    }    
+export default {
+  name: 'Spinner',
+  props: {},
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
