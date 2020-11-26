@@ -18,8 +18,11 @@ export default {
   },
   data: function(){
     return {
-      theme: 'dark'
+      theme: null
     }
+  },
+  mounted: function(){
+    this.theme = localStorage.theme || 'light'; 
   },
   methods: {
       exportToPng: function(){

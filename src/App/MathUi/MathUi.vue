@@ -4,7 +4,8 @@
       <SidebarTools />
       <MainMenu 
         v-on:exportToPng="exportToPng"
-        v-on:importExpression="importExpression" />
+        v-on:importExpression="importExpression"
+        v-on:appSettings="appSettings" />
     </div>
     <MathUiLayers 
       v-bind:name="popup.name"
@@ -39,6 +40,9 @@
         this.$emit('exportToPng', true)
       },
       importExpression: function(evt) {
+        this.popup.name = evt;
+      },
+      appSettings: function(evt) {
         this.popup.name = evt;
       },
       closePopup: function() {

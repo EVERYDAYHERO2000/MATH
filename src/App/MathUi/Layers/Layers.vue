@@ -8,6 +8,7 @@
 
 <script>
   import MathPopupImportExpression from './PopupImportExpression/PopupImportExpression.vue';
+  import MathPopupAppSettings from './PopupAppSettings/PopupAppSettings.vue';
 
   export default {
     name: 'MathUiLayers',
@@ -15,7 +16,8 @@
       name: String,
     }, 
     components: {
-      MathPopupImportExpression
+      MathPopupImportExpression,
+      MathPopupAppSettings,
     },
     methods: {
       close: function() {

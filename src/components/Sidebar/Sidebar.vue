@@ -173,7 +173,7 @@ $panel-width-hidden: $grid-7;
   
   .app_theme_dark & {
     background-color: rgba($color-background_theme-dark, 1);
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0.03);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0.08);
   }
 }
 

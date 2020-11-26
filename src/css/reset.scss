@@ -5,3 +5,5 @@ body {
   overflow: hidden;
   overscroll-behavior-x: none;
 }
+
+textarea, select, input, button, label { outline: none; }

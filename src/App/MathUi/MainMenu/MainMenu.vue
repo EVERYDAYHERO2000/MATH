@@ -22,6 +22,13 @@
       >
         Import Expression
       </button>
+      <button
+        v-ripple="'rgba(0, 0, 0, 0.02)'"
+        class="main-menu__item"
+        v-on:click="appSettings"
+      >
+        App Settings
+      </button>
     </template>
   </Sidebar>
 </template>
@@ -55,6 +62,10 @@ export default {
     importExpression: function () {
       this.toggleVisible();
       this.$emit('importExpression', 'MathPopupImportExpression');
+    },
+    appSettings: function () {
+      this.toggleVisible();
+      this.$emit('appSettings', 'MathPopupAppSettings');
     },
   },
 };
