@@ -111,66 +111,72 @@
 </script>
 
 <style lang="scss">
-    @import '../../../css/main.scss';
-    @import '../MathEntity.scss';
+@import '../../../css/main.scss';
+@import '../MathEntity.scss';
 
-    .entity-parentheses {
-        display: inline-flex;
-        align-items: baseline;
+.entity-parentheses {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.entity-parentheses__base {
+  user-select: none;
+}
+
+.entity-parentheses svg {
+  height: 100%;
+  display: block;
+  position: absolute;
+
+  path {
+    .app_theme_light & {
+      fill: $color-content_theme-light;
     }
 
-    .entity-parentheses__base {
-        user-select: none;
+    .app_theme_dark & {
+      fill: $color-content_theme-dark;
     }
+  }
+}
 
-    .entity-parentheses svg {
-        height: 100%;
-        display: block;
-        position: absolute;
+.entity-parentheses_inline {
+  align-items: center;
+}
 
-        path {
-            fill: $color-entity;
-        }
-    }
+.entity-parentheses__left,
+.entity-parentheses__right {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
 
-    .entity-parentheses_inline {
-        align-items: center;
-    }
+.entity-parentheses__right {
+  transform: translateX(-$grid-1);
+}
 
-    .entity-parentheses__left,
-    .entity-parentheses__right {
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-    }
+.entity-parentheses__left-center,
+.entity-parentheses__right-center {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-    .entity-parentheses__right {
-        transform: translateX(-$grid-1);
-    }
+.entity-parentheses__left-top,
+.entity-parentheses__left-bottom,
+.entity-parentheses__right-top,
+.entity-parentheses__right-bottom {
+  height: $grid-3;
+  position: relative;
+}
 
-    .entity-parentheses__left-center,
-    .entity-parentheses__right-center {
-        flex-grow: 1;
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
+.entity-parentheses__center {
+  margin: 0 $grid-1;
+}
 
-    .entity-parentheses__left-top,
-    .entity-parentheses__left-bottom,
-    .entity-parentheses__right-top,
-    .entity-parentheses__right-bottom {
-        height: $grid-3;
-        position: relative;
-    }
-
-    .entity-parentheses__center {
-        margin: 0 $grid-1;
-    }
-
-    .entity-parentheses_inline {
-        .entity-parentheses__center {
-            margin: 0;
-        }
-    }
+.entity-parentheses_inline {
+  .entity-parentheses__center {
+    margin: 0;
+  }
+}
 </style>
