@@ -79,7 +79,14 @@ $padding-horisontal: $grid-0;
   position: absolute;
   z-index: 1000;
   pointer-events: all;
-  background-color: rgba(0, 0, 0, 0);
+
+  .app_theme_light & {
+    background-color: rgba($color-background-invert_theme-light, 0);
+  }
+  
+  .app_theme_dark & {
+    background-color: rgba($color-background-invert_theme-dark, 0);
+  }
 
   @include media("<=phone") {
     align-items: flex-end;
@@ -87,9 +94,8 @@ $padding-horisontal: $grid-0;
 }
 
 .popup__window {
-  background-color: $color-white;
   width: 550px;
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 45px rgba($color-black, 0.12);
   display: flex;
   flex-direction: column;
   pointer-events: all;
@@ -97,6 +103,14 @@ $padding-horisontal: $grid-0;
   border-radius: $grid-0;
   opacity: 0;
   transition: opacity 0.2s;
+
+  .app_theme_light & {
+    background-color: $color-background_theme-light;
+  } 
+  
+  .app_theme_dark & {
+    background-color: $color-background_theme-dark;
+  } 
 
   @include media("<=phone") {
     border-radius: $grid-2 $grid-2 0 0;
@@ -132,7 +146,14 @@ $padding-horisontal: $grid-0;
   font-weight: 500;
   user-select: none;
   box-sizing: border-box;
-  color: $color-content;
+
+  .app_theme_light & {
+    color: $color-content_theme-light;
+  }
+  
+  .app_theme_dark & {
+    color: $color-content_theme-dark;
+  }
 }
 
 .popup__window-body {
@@ -149,19 +170,19 @@ $padding-horisontal: $grid-0;
 
 @keyframes backdrop-show {
   0% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba($color-black, 0);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba($color-black, 0.1);
   }
 }
 
 @keyframes backdrop-hide {
   0% {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba($color-black, 0.1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba($color-black, 0);
   }
 }
 

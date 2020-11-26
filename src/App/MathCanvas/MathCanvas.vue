@@ -74,7 +74,13 @@ export default {
   overflow: hidden;
 
   &::selection {
-    background-color: rgba($color-primary, 0.6);
+    .app_theme_light & {
+      background-color: rgba($color-primary_theme-light, 0.6);
+    }
+    
+    .app_theme_dark & {
+      background-color: rgba($color-primary_theme-dark, 0.6);
+    }
   }
 }
 </style>

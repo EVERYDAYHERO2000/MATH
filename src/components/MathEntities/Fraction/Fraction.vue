@@ -112,13 +112,20 @@
 
     .entity-fraction__hr {
         height: 3px;
-        background-color: $color-entity;
         width: 100%;
         text-align: right;
 
         .entity-invisible {
             margin: -8px;
             font-size: 16px;
+        }
+
+        .app_theme_light & {
+            background-color: $color-content_theme-light;
+        }
+
+        .app_theme_dark & {
+            background-color: $color-content_theme-dark;
         }
     }
 </style>

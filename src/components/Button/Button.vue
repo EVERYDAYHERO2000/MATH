@@ -40,7 +40,14 @@ export default {
   border: none;
   font-size: 16px;
   transition: all 0.2s;
-  box-shadow: inset 0 0 0 1px rgba($color-black, 0.1);
+
+  .app_theme_light & {
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-light, 0.1);
+  }
+  
+  .app_theme_dark & {
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-dark, 0.1);
+  }
 
   &:focus {
     outline: none;
@@ -71,56 +78,134 @@ export default {
 
   &_color {
     &_black {
-      background-color: $color-black;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-background-invert_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-background-invert_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
 
       &:hover {
-        background: lighten($color-black, 5%);
+        .app_theme_light & {
+          background: lighten($color-background-invert_theme-light, 5%);
+        }  
+
+        .app_theme_dark & {
+          background: lighten($color-background-invert_theme-dark, 5%);
+        }  
       }
     }
 
     &_primary {
-      background-color: $color-primary;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-primary_theme-light;
+        color: $color-content-invert_theme-light;
+      } 
+      
+      .app_theme_dark & {
+        background-color: $color-primary_theme-dark;
+        color: $color-content-invert_theme-dark;
+      } 
 
       &:hover {
-        background: lighten($color-primary, 5%);
+        .app_theme_light & {
+          background: lighten($color-primary_theme-light, 5%);
+        } 
+        
+        .app_theme_dark & {
+          background: lighten($color-primary_theme-dark, 5%);
+        } 
       }
     }
 
     &_active {
-      background-color: $color-active;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-active_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-active_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
 
       &:hover {
-        background: lighten($color-active, 5%);
+        .app_theme_light & {
+          background: lighten($color-active_theme-light, 5%);
+        }  
+
+        .app_theme_dark & {
+          background: lighten($color-active_theme-dark, 5%);
+        }  
       }
     }
 
     &_content {
-      background-color: $color-content;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-content_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-content_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
 
       &:hover {
-        background: lighten($color-content, 5%);
+        .app_theme_light & {
+          background: lighten($color-content_theme-light, 5%);
+        }
+        
+        .app_theme_dark & {
+          background: lighten($color-content_theme-dark, 5%);
+        }
       }
     }
 
     &_danger {
-      background-color: $color-danger;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-danger_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+      
+      .app_theme_dark & {
+        background-color: $color-danger_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
 
       &:hover {
-        background: lighten($color-danger, 5%);
+        .app_theme_light & {
+          background: lighten($color-danger_theme-light, 5%);
+        } 
+        
+        .app_theme_dark & {
+          background: lighten($color-danger_theme-dark, 5%);
+        } 
       }
     }
 
     &_success {
-      background-color: $color-success;
-      color: $color-white;
+      .app_theme_light & {
+        background-color: $color-success_theme-light;
+        color: $color-content-invert_theme-light;
+      }
+      
+      .app_theme_dark & {
+        background-color: $color-success_theme-dark;
+        color: $color-content-invert_theme-dark;
+      }
 
       &:hover {
-        background: lighten($color-success, 5%);
+        .app_theme_light & {
+          background: lighten($color-success_theme-light, 5%);
+        }
+        
+        .app_theme_dark & {
+          background: lighten($color-success_theme-dark, 5%);
+        }
       }
     }
   }

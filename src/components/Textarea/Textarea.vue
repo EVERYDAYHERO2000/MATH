@@ -37,20 +37,39 @@ export default {
     border-radius: $grid-1;
     width: 100%;
     height: 100px;
-    background: $color-light;
-    border: solid 1px rgba(0, 0, 0, 0.03);
     padding: $grid-1;
     font-family: $font-family-sans-serif;
     font-size: 16px;
     transition: border 0.2s;
 
+    .app_theme_light & {
+      background: $color-background-tint_theme-light;
+      border: solid 1px rgba($color-content_theme-light, 0.03);
+    } 
+    
+    .app_theme_dark & {
+      background: $color-background-tint_theme-dark;
+      border: solid 1px rgba($color-content_theme-dark, 0.03);
+    } 
+
     &:focus {
       outline: none;
-      border: solid 1px $color-primary;
       transition: border 0.2s;
+
+      .app_theme_light & {
+        border: solid 1px $color-primary_theme-light;
+      } 
+      .app_theme_dark & {
+        border: solid 1px $color-primary_theme-dark;
+      }  
     }
     &::placeholder {
-      color: rgba(0, 0, 0, 0.3);
+      .app_theme_light & {
+        color: rgba($color-content_theme-light, 0.3);
+      } 
+      .app_theme_dark & {
+        color: rgba($color-content_theme-dark, 0.3);
+      }  
     }
   }
 }

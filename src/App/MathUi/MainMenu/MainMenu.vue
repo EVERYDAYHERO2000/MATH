@@ -68,10 +68,10 @@ export default {
 
 .main-menu__item {
   border: none;
-  background-color: rgba($color-black, 0);
+  background-color: rgba($color-background-invert_theme-light, 0);
   display: block;
   font-size: 16px;
-  color: $color-primary;
+  color: $color-primary_theme-light;
   padding: $grid-2 $grid-3;
   box-sizing: border-box;
   font-weight: 600;
@@ -79,7 +79,7 @@ export default {
   text-align: left;
 
   &:hover {
-    background-color: rgba($color-black, 0.02);
+    background-color: rgba($color-background-invert_theme-light, 0.02);
   }
 
   &:focus {

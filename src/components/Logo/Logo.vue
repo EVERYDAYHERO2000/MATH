@@ -18,4 +18,24 @@ export default {
 
 <style lang="scss">
 @import '../../css/main.scss';
+
+.logo {
+  .logo__text {
+    .app_theme_light & {
+      fill: rgba($color-content_theme-light, 1);
+    }
+    .app_theme_dark & {
+      fill: rgba($color-content_theme-dark, 1);
+    }
+  }
+
+  .logo__cursor {
+    .app_theme_light & {
+      fill: rgba($color-primary_theme-light, 1);
+    }
+    .app_theme_dark & {
+      fill: rgba($color-primary_theme-dark, 1);
+    }
+  }
+} 
 </style>

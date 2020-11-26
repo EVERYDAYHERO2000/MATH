@@ -49,7 +49,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-black;
+        .app_theme_light & {
+          fill: $color-background-invert_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-background-invert_theme-dark;
+        }
       }
     }
 
@@ -57,7 +63,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-primary;
+        .app_theme_light & {
+          fill: $color-primary_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-primary_theme-dark;
+        }
       }
     }
 
@@ -65,7 +77,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-active;
+        .app_theme_light & {
+          fill: $color-active_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-active_theme-dark;
+        }
       }
     }
 
@@ -73,7 +91,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-content;
+        .app_theme_light & {
+          fill: $color-content_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-content_theme-dark;
+        }
       }
     }
 
@@ -81,7 +105,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-danger;
+        .app_theme_light & {
+          fill: $color-danger_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-danger_theme-dark;
+        }
       }
     }
 
@@ -89,7 +119,13 @@ export default {
       rect,
       path,
       circle {
-        fill: $color-success;
+        .app_theme_light & {
+          fill: $color-success_theme-light;
+        }
+        
+        .app_theme_dark & {
+          fill: $color-success_theme-dark;
+        }
       }
     }
   }

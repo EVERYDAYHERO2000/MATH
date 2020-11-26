@@ -37,265 +37,588 @@ export default {
   height: 64px;
   box-sizing: border-box;
   padding: 12px $grid-2;
-  color: $color-content;
-  border-bottom: $border-sidebar-tools;
   user-select: none;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
   background-repeat: no-repeat;
+
+  .app_theme_light & {
+    color: $color-content_theme-light;
+    border-bottom: solid 1px rgba($color-background-invert_theme-light, 0.08);
+  }
+
+  .app_theme_dark & {
+    color: $color-content_theme-dark;
+    border-bottom: solid 1px rgba($color-black, 0.3);
+  }
 }
 
 .tool-entity_cover {
   &_abs {
-    background-image: url('assets/ent_abs.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_abs_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_abs_theme-dark.svg');
+    }
   }
 
   &_addition {
-    background-image: url('assets/ent_addition.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_addition_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_addition_theme-dark.svg');
+    }
   }
 
   &_subtraction {
-    background-image: url('assets/ent_subtraction.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_subtraction_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_subtraction_theme-dark.svg');
+    }
   }
 
   &_approximation {
-    background-image: url('assets/ent_approximation.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_approximation_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_approximation_theme-dark.svg');
+    }
   }
 
   &_cos {
-    background-image: url('assets/ent_cos.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_cos_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_cos_theme-dark.svg');
+    }
   }
 
   &_cot {
-    background-image: url('assets/ent_cot.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_cot_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_cot_theme-dark.svg');
+    }
   }
 
   &_csc {
-    background-image: url('assets/ent_csc.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_csc_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_csc_theme-dark.svg');
+    }
   }
 
   &_division {
-    background-image: url('assets/ent_division_default.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_division_default_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_division_default_theme-dark.svg');
+    }
   }
 
   &_equality {
-    background-image: url('assets/ent_equality.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_equality_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_equality_theme-dark.svg');
+    }
   }
 
   &_exponent {
-    background-image: url('assets/ent_exponent.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_exponent_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_exponent_theme-dark.svg');
+    }
   }
 
   &_fraction {
-    background-image: url('assets/ent_fraction_1.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_fraction_1_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_fraction_1_theme-dark.svg');
+    }
   }
 
   &_fraction-mixed {
-    background-image: url('assets/ent_fraction_2.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_fraction_2_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_fraction_2_theme-dark.svg');
+    }
   }
 
   &_inequality {
-    background-image: url('assets/ent_inequality.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_inequality_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_inequality_theme-dark.svg');
+    }
   }
 
   &_inequality-less {
-    background-image: url('assets/ent_less-than-or-equal-to.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_less-than-or-equal-to_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_less-than-or-equal-to_theme-dark.svg');
+    }
   }
 
   &_inequality-great {
-    background-image: url('assets/ent_greater-than-or-equal-to.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_greater-than-or-equal-to_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_greater-than-or-equal-to_theme-dark.svg');
+    }
   }
 
   &_less {
-    background-image: url('assets/ent_less-than.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_less-than_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_less-than_theme-dark.svg');
+    }
   }
 
   &_great {
-    background-image: url('assets/ent_greater-than.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_greater-than_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_greater-than_theme-dark.svg');
+    }
   }
 
   &_system-and {
-    background-image: url('assets/ent_group.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_group_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_group_theme-dark.svg');
+    }
   }
 
   &_integral {
-    background-image: url('assets/ent_integral.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_integral_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_integral_theme-dark.svg');
+    }
   }
 
   &_log {
-    background-image: url('assets/ent_log.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_log_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_log_theme-dark.svg');
+    }
   }
 
   &_mod {
-    background-image: url('assets/ent_mod.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_mod_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_mod_theme-dark.svg');
+    }
   }
 
   &_multiplication {
-    background-image: url('assets/ent_multiplication_default.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_multiplication_default_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_multiplication_default_theme-dark.svg');
+    }
   }
 
   &_parentheses {
-    background-image: url('assets/ent_parentheses_default.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_parentheses_default_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_parentheses_default_theme-dark.svg');
+    }
   }
 
   &_per-mile {
-    background-image: url('assets/ent_per-mille.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_per-mille_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_per-mille_theme-dark.svg');
+    }
   }
 
   &_percent {
-    background-image: url('assets/ent_percent.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_percent_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_percent_theme-dark.svg');
+    }
   }
 
   &_plus-minus {
-    background-image: url('assets/ent_plus-minus.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_plus-minus_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_plus-minus_theme-dark.svg');
+    }
   }
 
   &_radical {
-    background-image: url('assets/ent_radical.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_radical_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_radical_theme-dark.svg');
+    }
   }
 
   &_sec {
-    background-image: url('assets/ent_sec.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sec_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sec_theme-dark.svg');
+    }
   }
 
   &_sin {
-    background-image: url('assets/ent_sin.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sin_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sin_theme-dark.svg');
+    }
   }
 
   &_tan {
-    background-image: url('assets/ent_tan.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_tan_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_tan_theme-dark.svg');
+    }
   }
 
   &_pi {
-    background-image: url('assets/ent_pi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_pi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_pi_theme-dark.svg');
+    }
   }
 
   &_tau {
-    background-image: url('assets/ent_tau.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_tau_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_tau_theme-dark.svg');
+    }
   }
 
   &_phi {
-    background-image: url('assets/ent_phi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_phi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_phi_theme-dark.svg');
+    }
   }
 
   &_gamma {
-    background-image: url('assets/ent_gamma.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_gamma_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_gamma_theme-dark.svg');
+    }
   }
 
   &_e {
-    background-image: url('assets/ent_e.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_e_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_e_theme-dark.svg');
+    }
   }
 
   &_g-alpha {
-    background-image: url('assets/ent_sign-g-alpha.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-alpha_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-alpha_theme-dark.svg');
+    }
   }
 
   &_g-beta {
-    background-image: url('assets/ent_sign-g-beta.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-beta_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-beta_theme-dark.svg');
+    }
   }
 
   &_g-gamma {
-    background-image: url('assets/ent_sign-g-gamma.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-gamma_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-gamma_theme-dark.svg');
+    }
   }
 
   &_g-delta {
-    background-image: url('assets/ent_sign-g-delta.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-delta_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-delta_theme-dark.svg');
+    }
   }
 
   &_g-epsilon {
-    background-image: url('assets/ent_sign-g-epsilon.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-epsilon_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-epsilon_theme-dark.svg');
+    }
   }
 
   &_g-zeta {
-    background-image: url('assets/ent_sign-g-zeta.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-zeta_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-zeta_theme-dark.svg');
+    }
   }
 
   &_g-eta {
-    background-image: url('assets/ent_sign-g-eta.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-eta_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-eta_theme-dark.svg');
+    }
   }
 
   &_g-theta {
-    background-image: url('assets/ent_sign-g-theta.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-theta_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-theta_theme-dark.svg');
+    }
   }
 
   &_g-iota {
-    background-image: url('assets/ent_sign-g-iota.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-iota_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-iota_theme-dark.svg');
+    }
   }
 
   &_g-kappa {
-    background-image: url('assets/ent_sign-g-kappa.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-kappa_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-kappa_theme-dark.svg');
+    }
   }
 
   &_g-lambda {
-    background-image: url('assets/ent_sign-g-lambda.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-lambda_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-lambda_theme-dark.svg');
+    }
   }
 
   &_g-mu {
-    background-image: url('assets/ent_sign-g-mu.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-mu_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-mu_theme-dark.svg');
+    }
   }
 
   &_g-nu {
-    background-image: url('assets/ent_sign-g-nu.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-nu_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-nu_theme-dark.svg');
+    }
   }
 
   &_g-xi {
-    background-image: url('assets/ent_sign-g-xi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-xi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-xi_theme-dark.svg');
+    }
   }
 
   &_g-omicron {
-    background-image: url('assets/ent_sign-g-omicron.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-omicron_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-omicron_theme-dark.svg');
+    }
   }
 
   &_g-pi {
-    background-image: url('assets/ent_sign-g-pi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-pi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-pi_theme-dark.svg');
+    }
   }
 
   &_g-rho {
-    background-image: url('assets/ent_sign-g-rho.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-rho_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-rho_theme-dark.svg');
+    }
   }
 
   &_g-sigma {
-    background-image: url('assets/ent_sign-g-sigma.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-sigma_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-sigma_theme-dark.svg');
+    }
   }
 
   &_g-tau {
-    background-image: url('assets/ent_sign-g-tau.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-tau_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-tau_theme-dark.svg');
+    }
   }
 
   &_g-upsilon {
-    background-image: url('assets/ent_sign-g-upsilon.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-upsilon_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-upsilon_theme-dark.svg');
+    }
   }
 
   &_g-phi {
-    background-image: url('assets/ent_sign-g-phi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-phi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-phi_theme-dark.svg');
+    }
   }
 
   &_g-chi {
-    background-image: url('assets/ent_sign-g-chi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-chi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-chi_theme-dark.svg');
+    }
   }
 
   &_g-psi {
-    background-image: url('assets/ent_sign-g-psi.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-psi_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-psi_theme-dark.svg');
+    }
   }
 
   &_g-omega {
-    background-image: url('assets/ent_sign-g-omega.svg');
+    .app_theme_light & {
+      background-image: url('assets/ent_sign-g-omega_theme-light.svg');
+    }
+    .app_theme_dark & {
+      background-image: url('assets/ent_sign-g-omega_theme-dark.svg');
+    }
   }
 }
 
 .tool-entity:hover {
-  background-color: rgba($color-black, 0.01);
+  .app_theme_light & {
+    background-color: rgba($color-background-invert_theme-light, 0.01);
+  }
+
+  .app_theme_dark & {
+    background-color: rgba($color-background-invert_theme-dark, 0.01);
+  }
 }
 
 .tool-entity__title {
   font-size: 12px;
-  color: rgba($color-black, 0.5);
+
+  .app_theme_light & {
+    color: rgba($color-background-invert_theme-light, 0.5);
+  }
+
+  .app_theme_dark & {
+    color: rgba($color-background-invert_theme-dark, 0.5);
+  }
 }
 
 .tool-entity__code {
   font-size: 12px;
-  color: $color-primary;
+
+  .app_theme_light & {
+    color: $color-primary_theme-light;
+  }
+
+  .app_theme_dark & {
+    color: $color-primary_theme-dark;
+  }
 }
 </style>

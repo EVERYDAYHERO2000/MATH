@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div v-bind:class="['app', `app_theme_${theme}`]">
     <MathCanvas ref="canvas" />
     <MathUi v-on:exportToPng="exportToPng" />
   </div>
@@ -16,6 +16,11 @@ export default {
     MathCanvas,
     MathUi,
   },
+  data: function(){
+    return {
+      theme: 'dark'
+    }
+  },
   methods: {
       exportToPng: function(){
         this.$refs.canvas.renderToPng()
@@ -30,7 +35,14 @@ export default {
   .app {
     width: 100%;
     height: 100vh;
-    background-color: $color-light;
+  }
+
+  .app_theme_light {
+    background-color: $color-background-tint_theme-light;
+  }
+
+  .app_theme_dark {
+    background-color: $color-background-tint_theme-dark;
   }
 
 </style>

@@ -55,14 +55,21 @@ $panel-width-hidden: $grid-7;
   pointer-events: all;
   position: absolute;
   height: 100%;
-  background-color: rgba($color-white, 0);
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 0 1px rgba($color-black, 0);
   display: flex;
   flex-direction: column;
   z-index: 999;
-
   width: $panel-width-desktop;
+
+  .app_theme_light & {
+    background-color: rgba($color-background_theme-light, 0);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0);
+  }
+
+  .app_theme_dark & {
+    background-color: rgba($color-background_theme-dark, 0);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0);
+  }  
 
   @include media('<=phone') {
     width: $panel-width-mobile;
@@ -80,8 +87,15 @@ $panel-width-hidden: $grid-7;
 
 
   @include media('<=phone') {
-    background-color: rgba(0, 0, 0, 0.1);
     pointer-events: all;
+
+    .app_theme_light & {
+      background-color: rgba($color-background-invert_theme-light, 0.1);
+    }
+
+    .app_theme_dark & {
+      background-color: rgba($color-black, 0.3);
+    }
   }  
 
   @include media(">phone") {
@@ -90,8 +104,15 @@ $panel-width-hidden: $grid-7;
 }
 
 .sidebar__backdrop_desktop {
-  background-color: rgba(0, 0, 0, 0.1);
   pointer-events: all;
+
+  .app_theme_light & {
+    background-color: rgba($color-background-invert_theme-light, 0.1);
+  } 
+  
+  .app_theme_dark & {
+    background-color: rgba($color-black, 0.3);
+  }
 }
 
 .sidebar_attachment {
@@ -133,12 +154,26 @@ $panel-width-hidden: $grid-7;
 .sidebar_visible {
   transform: translateX(0px);
   transition: all 0.2s 0.05s ease-in-out;
-  background-color: rgba($color-white, 1);
-  box-shadow: 0 0 0 1px rgba($color-black, 0.03);
   z-index: 1000;
 
   .sidebar__header {
-    border-bottom: $border-sidebar-tools;
+    .app_theme_light & {
+      border-bottom: solid 1px rgba($color-background-invert_theme-light,0.08);
+    }
+    
+    .app_theme_dark & {
+      border-bottom: solid 1px rgba($color-black,0.3);
+    }
+  }
+
+  .app_theme_light & {
+    background-color: rgba($color-background_theme-light, 1);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.03);
+  }
+  
+  .app_theme_dark & {
+    background-color: rgba($color-background_theme-dark, 1);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0.03);
   }
 }
 
@@ -148,6 +183,7 @@ $panel-width-hidden: $grid-7;
   box-sizing: border-box;
   display: flex;
   min-height: $grid-7;
+  max-height: $grid-7;
   justify-content: space-between;
 }
 
