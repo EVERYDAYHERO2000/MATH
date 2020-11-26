@@ -83,7 +83,7 @@ export default {
   overflow: hidden;
 
   .app_theme_light & {
-    background-color: rgba($color-black,0.5);
+    background-color: rgba($color-black,0.3);
   }
 
   .app_theme_dark & {
