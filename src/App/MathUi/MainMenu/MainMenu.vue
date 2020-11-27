@@ -79,18 +79,32 @@ export default {
 
 .main-menu__item {
   border: none;
-  background-color: rgba($color-background-invert_theme-light, 0);
   display: block;
   font-size: 16px;
-  color: $color-primary_theme-light;
   padding: $grid-2 $grid-3;
   box-sizing: border-box;
   font-weight: 600;
   width: 100%;
   text-align: left;
 
+  .app_theme_light & {
+    color: $color-primary_theme-light;
+    background-color: rgba($color-background-invert_theme-light, 0);
+  }
+  
+  .app_theme_dark & {
+    color: $color-content_theme-dark;
+    background-color: rgba($color-background-invert_theme-dark, 0);
+  }  
+
   &:hover {
-    background-color: rgba($color-background-invert_theme-light, 0.02);
+    .app_theme_light & {
+      background-color: rgba($color-background-invert_theme-light, 0.02);
+    }
+    
+    .app_theme_light & {
+      background-color: rgba($color-background-invert_theme-dark, 0.02);
+    }  
   }
 
   &:focus {
