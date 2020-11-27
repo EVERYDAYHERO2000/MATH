@@ -40,10 +40,9 @@ export default {
   height: $grid-4;
   border-radius: $grid-4;
   -webkit-tap-highlight-color: transparent;
-  overflow: hidden;
 
   .app_theme_light & {
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.03);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.15);
   }
   .app_theme_dark & {
     box-shadow: 0 0 0 1px rgba($color-black, 0.2);
@@ -78,12 +77,11 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: $grid-4;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.2s;
   overflow: hidden;
 
   .app_theme_light & {
-    background-color: rgba($color-black,0.3);
+    background-color: rgba($color-black,0.1);
   }
 
   .app_theme_dark & {
@@ -104,8 +102,8 @@ export default {
   left: $grid-0;
   bottom: $grid-0;
   border-radius: 50%;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.2s;
+  box-shadow: 0 0 0 1px rgba($color-black, 0.05), 0 2px 3px rgba($color-black, 0.1);
 
   .app_theme_light & {
     background-color: $color-background_theme-light;
@@ -117,11 +115,16 @@ export default {
 }
 
 .switcher__checkbox:checked + .switcher__slider {
-  background-color: #2196f3;
+  .app_theme_light & {
+    background-color: $color-primary_theme-light;
+  } 
+  .app_theme_dark & {
+    background-color: $color-primary_theme-dark;
+  }  
 }
 
 .switcher__checkbox:focus + .switcher__slider {
-  box-shadow: 0 0 1px #2196f3;
+  
 }
 
 .switcher__checkbox:checked + .switcher__slider:before {

@@ -55,7 +55,7 @@ $panel-width-hidden: $grid-7;
   pointer-events: all;
   position: absolute;
   height: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   z-index: 999;
@@ -153,7 +153,7 @@ $panel-width-hidden: $grid-7;
 
 .sidebar_visible {
   transform: translateX(0px);
-  transition: all 0.2s 0.05s ease-in-out;
+  transition: transform 0.2s 0.05s ease-in-out;
   z-index: 1000;
 
   .sidebar__header {
@@ -173,7 +173,7 @@ $panel-width-hidden: $grid-7;
   
   .app_theme_dark & {
     background-color: rgba($color-background_theme-dark, 1);
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0.08);
+    box-shadow: 0 0 0 1px rgba($color-black, 0.2);
   }
 }
 
