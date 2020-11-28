@@ -16,8 +16,5 @@ module.exports = {
   },
   plugins: [
     svgPlugin(),
-  ],
-  optimizeDeps: {
-    allowNodeBuiltins: ['mobile-device-detect'],
-  },
+  ]
 }
