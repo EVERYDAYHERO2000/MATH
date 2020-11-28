@@ -5,7 +5,7 @@
       type="text"
       v-model="searchValue"
       v-on:input="update"
-      placeholder="Element name"
+      v-bind:placeholder="D('Element name')"
     />
     <ButtonIcon
       class="input-search__clear-button"

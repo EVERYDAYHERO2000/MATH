@@ -6,14 +6,14 @@
     attachment="right"
   >
     <template v-slot:header>
-      <ButtonIcon v-on:click="toggleVisible" icon="search" title="Elements" />
+      <ButtonIcon v-on:click="toggleVisible" icon="search" v-bind:title="D('Elements')" />
       <InputSearch v-on:updateSearch="searchValue = $event" v-bind:value="searchValue" />
     </template>
 
     <template v-slot:body>
       <EntitiesPanel
         v-on:updateScroll="scroll = $event"
-        v-on:changeTab="activeTab = $event"
+        v-on:changeTab="changeTab"
         v-bind:scrollTop="scroll"
         v-bind:activeTab="activeTab"
         v-bind:searchValue="searchValue"
@@ -81,6 +81,9 @@ export default {
     toggleVisible: function () {
       this.isVisible = !this.isVisible;
     },
+    changeTab: function(evt) {
+      this.activeTab = evt;
+    }
   },
 };
 </script>

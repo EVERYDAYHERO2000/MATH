@@ -112,7 +112,7 @@
       <div class="sidebar-tools__menu-item">
         <ButtonIcon
           icon="math"
-          title="Math"
+          v-bind:title="D('Math')"
           ref="buttonMath"
           v-bind:pressed="currentTab == 'math'"
           v-on:click="setActiveTab('math')"
@@ -121,7 +121,7 @@
       <div class="sidebar-tools__menu-item">
         <ButtonIcon
           icon="trigonometry"
-          title="Trigonometry"
+          v-bind:title="D('Trigonometry')"
           ref="buttonConstant"
           v-bind:pressed="currentTab == 'trigonometry'"
           v-on:click="setActiveTab('trigonometry')"
@@ -130,7 +130,7 @@
       <div class="sidebar-tools__menu-item">
         <ButtonIcon
           icon="constant"
-          title="Constant"
+          v-bind:title="D('Constant')"
           ref="buttonConstant"
           v-bind:pressed="currentTab == 'constant'"
           v-on:click="setActiveTab('constant')"
@@ -139,7 +139,7 @@
       <div class="sidebar-tools__menu-item">
         <ButtonIcon
           icon="variable"
-          title="Variable"
+          v-bind:title="D('Variable')"
           ref="buttonConstant"
           v-bind:pressed="currentTab == 'variable'"
           v-on:click="setActiveTab('variable')"

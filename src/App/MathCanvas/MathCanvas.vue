@@ -50,6 +50,7 @@ export default {
       }
     },
     renderToPng: function () {
+      const _this = this;
       domtoimage.toPng(this.$refs.canvas).then(function (dataUrl) {
         let link = document.createElement('a');
         link.download = 'my-image-name.png';
@@ -83,5 +84,7 @@ export default {
       background-color: rgba($color-primary_theme-dark, 0.6);
     }
   }
+
+
 }
 </style>

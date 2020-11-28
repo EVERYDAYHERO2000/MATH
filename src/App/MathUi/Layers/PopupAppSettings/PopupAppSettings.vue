@@ -1,7 +1,7 @@
 <template>
-  <Popup ref="popup" title="App Settings">
+  <Popup ref="popup" v-bind:title="D('App Settings')">
     <template v-slot:body>
-      <FormField label="Dark UI theme">
+      <FormField v-bind:label="D('Dark UI theme')">
         <switcher v-bind:check="theme == 'dark'" v-on:toggle="toggleTheme" />
       </FormField>
     </template>

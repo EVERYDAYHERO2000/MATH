@@ -8,32 +8,33 @@
   >
     <template v-slot:header>
       <Logo />
-      <ButtonIcon v-on:click="toggleVisible" icon="menu" title="Main Menu" />
+      <ButtonIcon v-on:click="toggleVisible" icon="menu" v-bind:title="D('Main Menu')" />
     </template>
 
     <template v-slot:body>
       <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="exportToPng">
-        Export as png
+        {{D('Export as png')}}
       </button>
       <button
         v-ripple="'rgba(0, 0, 0, 0.02)'"
         class="main-menu__item"
         v-on:click="importExpression"
       >
-        Import Expression
+        {{D('Import Expression')}}
       </button>
       <button
         v-ripple="'rgba(0, 0, 0, 0.02)'"
         class="main-menu__item"
         v-on:click="appSettings"
       >
-        App Settings
+        {{D('App Settings')}}
       </button>
     </template>
   </Sidebar>
 </template>
 
 <script>
+
 import Sidebar from '/@components/Sidebar/Sidebar.vue';
 import ButtonIcon from '/@components/ButtonIcon/ButtonIcon.vue';
 import Logo from '/@components/Logo/Logo.vue';
