@@ -136,6 +136,10 @@
     .app_theme_dark & {
       fill: $color-content_theme-dark;
     }
+
+    .theme_export & {
+      fill: $color-content_theme-light!important;
+    }  
   }
 }
 

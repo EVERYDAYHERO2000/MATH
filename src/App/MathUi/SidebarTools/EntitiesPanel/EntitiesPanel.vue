@@ -196,6 +196,7 @@ export default {
       return entryStr ? entryStr.toLowerCase().includes(str.toLowerCase()) : '';
     },
   },
+  emits: ['changeTab', 'updateScroll']
 };
 </script>
 

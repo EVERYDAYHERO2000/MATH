@@ -53,6 +53,7 @@ export default {
     color: $color-content_theme-dark;
     border-bottom: solid 1px rgba($color-black, 0.3);
   }
+  
 }
 
 .tool-entity_cover {

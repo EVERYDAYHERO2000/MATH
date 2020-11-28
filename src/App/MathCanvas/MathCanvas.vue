@@ -51,7 +51,9 @@ export default {
     },
     renderToPng: function () {
       const _this = this;
+      _this.$refs.canvas.classList.add('theme_export');
       domtoimage.toPng(this.$refs.canvas).then(function (dataUrl) {
+        _this.$refs.canvas.classList.remove('theme_export');
         let link = document.createElement('a');
         link.download = 'my-image-name.png';
         link.href = dataUrl;

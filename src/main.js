@@ -15,6 +15,4 @@ application.mixin({
 application.directive('ripple', Ripple);
 application.mount('#app');
 
-console.log(application);
-
 window.browser = Browser;

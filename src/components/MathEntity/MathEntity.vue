@@ -76,5 +76,9 @@ export default {
   .app_theme_dark & {
     color: $color-content_theme-dark;
   }
+
+  .theme_export & {
+    color: $color-content_theme-light!important;
+  }
 }
 </style>
