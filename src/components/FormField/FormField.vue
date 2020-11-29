@@ -25,13 +25,6 @@ export default {
   padding: $grid-1 0;
   user-select: none;
 
-  .app_theme_light & {
-    color: $color-content_theme-light;
-  }
-  .app_theme_dark & {
-    color: $color-content_theme-dark;
-  }
-
   &__label,
   &__control {
     flex-basis: 50%;
@@ -40,6 +33,13 @@ export default {
   &__label {
     display: flex;
     justify-content: flex-start;
+
+    .app_theme_light & {
+      color: rgba($color-content_theme-light,0.65);
+    }
+    .app_theme_dark & {
+      color: rgba($color-content_theme-dark,0.65);
+    }
   }
 
   &__control {
