@@ -1,17 +1,17 @@
 <template>
-  <Popup ref="popup" title="Import Math Expression">
+  <Popup ref="popup" v-bind:title="D('Import Math Expression')">
 
     <template v-slot:body>
       <Textarea 
         v-on:changeValue="checkExpression"
         v-bind:autofocus="true"
-        placeholder="Math Expression" />  
+        v-bind:placeholder="D('Math Expression')" />  
     </template>
 
     <template v-slot:footer>
       <Button 
         v-on:click="submitImport" 
-        label="Import" 
+        v-bind:label="D('Import')" 
         v-bind:disabled="!validExpression" />
     </template>
 
@@ -60,7 +60,8 @@
       Popup,
       Button,
       Textarea
-    }
+    },
+    emits: ['quit', 'submitImport']
   }    
 </script>
 

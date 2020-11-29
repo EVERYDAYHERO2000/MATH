@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue';
 import MathCanvasPivot from './Pivot/Pivot.vue';
 import domtoimage from '/@fn/domToImage/domToImage.js';
+import MathEntity from '/@components/MathEntity/MathEntity.vue';
 
 import test from './test.js';
 
@@ -19,7 +19,7 @@ export default {
   name: 'MathCanvas',
   components: {
     MathCanvasPivot,
-    MathEntity: defineAsyncComponent(() => import('/@components/MathEntity/MathEntity.vue')),
+    MathEntity: window.MathEntity
   },
   data: function () {
     return {
@@ -50,7 +50,10 @@ export default {
       }
     },
     renderToPng: function () {
+      const _this = this;
+      _this.$refs.canvas.classList.add('theme_export');
       domtoimage.toPng(this.$refs.canvas).then(function (dataUrl) {
+        _this.$refs.canvas.classList.remove('theme_export');
         let link = document.createElement('a');
         link.download = 'my-image-name.png';
         link.href = dataUrl;
@@ -73,6 +76,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  touch-action: auto; 
 
   &::selection {
     .app_theme_light & {
@@ -83,5 +87,11 @@ export default {
       background-color: rgba($color-primary_theme-dark, 0.6);
     }
   }
+
+  @include media("<=phone") {
+    touch-action: manipulation;
+    overflow: auto;
+  } 
+
 }
 </style>

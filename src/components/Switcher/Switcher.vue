@@ -19,14 +19,13 @@ export default {
       type: Boolean,
     },
   },
-  mounted: function(){
-
-  },
+  mounted: function () {},
   methods: {
     toggleSwitch: function (evt) {
       this.$emit('toggle', evt.target.checked);
     },
   },
+  emits: ['toggle'],
 };
 </script>
 
@@ -40,91 +39,90 @@ export default {
   height: $grid-4;
   border-radius: $grid-4;
   -webkit-tap-highlight-color: transparent;
-  overflow: hidden;
 
   .app_theme_light & {
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.03);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.15);
   }
   .app_theme_dark & {
     box-shadow: 0 0 0 1px rgba($color-black, 0.2);
   }
-}
 
-.switcher:focus {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.switcher__checkbox {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
-  -webkit-tap-highlight-color: transparent;
-  overflow: hidden;
-}
-
-.switcher__checkbox:focus {
-  outline: none;
-}
-
-.switcher__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: $grid-4;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  overflow: hidden;
-
-  .app_theme_light & {
-    background-color: rgba($color-black,0.3);
+  &:focus {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .app_theme_dark & {
-    background-color: $color-background-tint_theme-dark;
-  }
-}
+  &__checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
 
-.switcher__slider:focus {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.switcher__slider:before {
-  position: absolute;
-  content: '';
-  height: $grid-3;
-  width: $grid-3;
-  left: $grid-0;
-  bottom: $grid-0;
-  border-radius: 50%;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-
-  .app_theme_light & {
-    background-color: $color-background_theme-light;
+    &:focus {
+      outline: none;
+    }
   }
 
-  .app_theme_dark & {
-    background-color: $color-content-invert_theme-dark;
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $grid-4;
+    transition: 0.2s;
+    overflow: hidden;
+
+    .app_theme_light & {
+      background-color: rgba($color-black, 0.1);
+    }
+
+    .app_theme_dark & {
+      background-color: $color-background-tint_theme-dark;
+    }
+
+    &:focus {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: $grid-3;
+      width: $grid-3;
+      left: $grid-0;
+      bottom: $grid-0;
+      border-radius: 50%;
+      transition: 0.2s;
+      box-shadow: 0 0 0 1px rgba($color-black, 0.05), 0 2px 3px rgba($color-black, 0.1);
+
+      .app_theme_light & {
+        background-color: $color-background_theme-light;
+      }
+
+      .app_theme_dark & {
+        background-color: $color-content-invert_theme-dark;
+      }
+    }
   }
-}
 
-.switcher__checkbox:checked + .switcher__slider {
-  background-color: #2196f3;
-}
+  &__checkbox:checked + &__slider {
+    .app_theme_light & {
+      background-color: $color-primary_theme-light;
+    }
+    .app_theme_dark & {
+      background-color: $color-primary_theme-dark;
+    }
+  }
 
-.switcher__checkbox:focus + .switcher__slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-.switcher__checkbox:checked + .switcher__slider:before {
-  transform: translateX($grid-4);
+  &__checkbox:checked + &__slider:before {
+    transform: translateX($grid-4);
+  }
 }
 </style>

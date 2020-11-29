@@ -127,5 +127,9 @@
         .app_theme_dark & {
             background-color: $color-content_theme-dark;
         }
+
+        .theme_export & {
+            background-color: $color-content_theme-light!important;
+        }    
     }
 </style>

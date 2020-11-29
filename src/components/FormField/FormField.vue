@@ -30,20 +30,21 @@ export default {
   }
   .app_theme_dark & {
     color: $color-content_theme-dark;
-  }  
-}
+  }
 
-.form-field__label, .form-field__control {
-  flex-basis: 50%;
-}
+  &__label,
+  &__control {
+    flex-basis: 50%;
+  }
 
-.form-field__label {
-  display: flex;
-  justify-content: flex-start;
-}
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-.form-field__control {
-  display: flex;
-  justify-content: flex-end;
+  &__control {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 </style>

@@ -23,7 +23,8 @@
       close: function() {
         this.$emit('close', null);
       }
-    }
+    },
+    emits: ['close']
   }    
 </script>
 

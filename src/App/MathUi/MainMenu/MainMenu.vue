@@ -8,26 +8,22 @@
   >
     <template v-slot:header>
       <Logo />
-      <ButtonIcon v-on:click="toggleVisible" icon="menu" title="Main Menu" />
+      <ButtonIcon v-on:click="toggleVisible" icon="menu" v-bind:title="D('Main Menu')" />
     </template>
 
     <template v-slot:body>
       <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="exportToPng">
-        Export as png
+        {{ D('Export as png') }}
       </button>
       <button
         v-ripple="'rgba(0, 0, 0, 0.02)'"
         class="main-menu__item"
         v-on:click="importExpression"
       >
-        Import Expression
+        {{ D('Import Expression') }}
       </button>
-      <button
-        v-ripple="'rgba(0, 0, 0, 0.02)'"
-        class="main-menu__item"
-        v-on:click="appSettings"
-      >
-        App Settings
+      <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="appSettings">
+        {{ D('App Settings') }}
       </button>
     </template>
   </Sidebar>
@@ -68,6 +64,7 @@ export default {
       this.$emit('appSettings', 'MathPopupAppSettings');
     },
   },
+  emits: ['exportToPng', 'importExpression', 'appSettings'],
 };
 </script>
 
@@ -75,26 +72,39 @@ export default {
 @import '../../../css/main.scss';
 
 .main-menu {
-}
+  &__item {
+    border: none;
+    display: block;
+    font-size: 16px;
+    padding: $grid-2 $grid-3;
+    box-sizing: border-box;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
 
-.main-menu__item {
-  border: none;
-  background-color: rgba($color-background-invert_theme-light, 0);
-  display: block;
-  font-size: 16px;
-  color: $color-primary_theme-light;
-  padding: $grid-2 $grid-3;
-  box-sizing: border-box;
-  font-weight: 600;
-  width: 100%;
-  text-align: left;
+    .app_theme_light & {
+      color: $color-primary_theme-light;
+      background-color: rgba($color-background-invert_theme-light, 0);
+    }
 
-  &:hover {
-    background-color: rgba($color-background-invert_theme-light, 0.02);
-  }
+    .app_theme_dark & {
+      color: $color-content_theme-dark;
+      background-color: rgba($color-background-invert_theme-dark, 0);
+    }
 
-  &:focus {
-    outline: none;
+    &:hover {
+      .app_theme_light & {
+        background-color: rgba($color-background-invert_theme-light, 0.02);
+      }
+
+      .app_theme_light & {
+        background-color: rgba($color-background-invert_theme-dark, 0.02);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 </style>
