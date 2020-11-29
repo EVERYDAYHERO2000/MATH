@@ -254,7 +254,7 @@ const dictionary = function (key) {
 
   isComponent(this, addI18n);
 
-  return content[key][lang];
+  return (content[key][lang]) ? content[key][lang] : content[key]['eng'];
 };
 
 const isComponent = function(current, callback) {

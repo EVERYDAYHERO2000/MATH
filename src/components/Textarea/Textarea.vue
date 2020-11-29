@@ -49,6 +49,7 @@ export default {
     font-family: $font-family-sans-serif;
     font-size: 16px;
     transition: border 0.2s;
+    display: block;
 
     .app_theme_light & {
       background: $color-background-tint_theme-light;

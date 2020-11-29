@@ -4,7 +4,7 @@
       :is="entityName"
       v-on:rebuild="rebuild"
       v-on:calc="calc($event, true)"
-      v-bind:into="out"
+      v-bind:into="into"
     />
   </div>
 </template>
@@ -26,7 +26,7 @@ const component =  {
   },
   data: function () {
     return {
-      out: this.into,
+      out: this.into, 
     };
   },
   components: {

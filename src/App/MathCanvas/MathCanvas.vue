@@ -13,7 +13,7 @@ import MathCanvasPivot from './Pivot/Pivot.vue';
 import domtoimage from '/@fn/domToImage/domToImage.js';
 import MathEntity from '/@components/MathEntity/MathEntity.vue';
 
-import test from './test2.js';
+import test from './test.js';
 
 export default {
   name: 'MathCanvas',
