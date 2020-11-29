@@ -94,11 +94,11 @@ export default {
 
     &:hover {
       .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-light, 0.02);
+        background-color: rgba($color-background-invert_theme-light, 0.03);
       }
 
-      .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-dark, 0.02);
+      .app_theme_dark & {
+        background-color: rgba($color-background-invert_theme-dark, 0.03);
       }
     }
 

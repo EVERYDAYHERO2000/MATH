@@ -1,7 +1,6 @@
 <template>
-  <div class="textarea">
+  <div class="textarea" v-ripple>
     <textarea
-      v-ripple
       class="textarea__input"
       ref="textarea"
       v-on:input="change"
@@ -37,14 +36,16 @@ export default {
 
 .textarea {
   width: 100%;
+  border-radius: $grid-1;  
+  box-sizing: border-box;  
 
   &__input {
     box-sizing: border-box;
     resize: none;
-    border-radius: $grid-1;
     width: 100%;
     height: 100px;
     padding: $grid-1;
+    border-radius: $grid-1;  
     font-family: $font-family-sans-serif;
     font-size: 16px;
     transition: border 0.2s;
