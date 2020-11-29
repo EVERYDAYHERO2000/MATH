@@ -196,38 +196,43 @@ export default {
       return entryStr ? entryStr.toLowerCase().includes(str.toLowerCase()) : '';
     },
   },
-  emits: ['changeTab', 'updateScroll']
+  emits: ['changeTab', 'updateScroll'],
 };
 </script>
 
 <style lang="scss">
 @import '../../../../css/main.scss';
 
-.sidebar-tools__entities {
-  display: flex;
-  height: 100%;
-}
-.sidebar-tools__entities-list {
-  flex-grow: 1;
-  overflow: auto;
-  padding-bottom: $grid-4;
-}
-.sidebar-tools__entities-menu {
-  flex-basis: 52px;
+.sidebar-tools {
+  &__entities {
+    display: flex;
+    height: 100%;
+  }
 
-  .app_theme_light & {
-    border-left: solid 1px rgba($color-background-invert_theme-light,0.08);
+  &__entities-list {
+    flex-grow: 1;
+    overflow: auto;
+    padding-bottom: $grid-4;
   }
-  
-  .app_theme_dark & {
-    border-left: solid 1px rgba($color-black,0.3);
+
+  &__entities-menu {
+    flex-basis: 52px;
+
+    .app_theme_light & {
+      border-left: solid 1px rgba($color-background-invert_theme-light, 0.08);
+    }
+
+    .app_theme_dark & {
+      border-left: solid 1px rgba($color-black, 0.3);
+    }
   }
-}
-.sidebar-tools__menu-item {
-  height: 52px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  &__menu-item {
+    height: 52px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>

@@ -40,14 +40,17 @@ export default {
   .app {
     width: 100%;
     height: 100vh;
-  }
+    touch-action: none;
 
-  .app_theme_light {
-    background-color: $color-background-tint_theme-light;
-  }
+    &_theme {
+      &_light {
+        background-color: $color-background-tint_theme-light;
+      }
 
-  .app_theme_dark {
-    background-color: $color-background-tint_theme-dark;
+      &_dark {
+        background-color: $color-background-tint_theme-dark;
+      }
+    }
   }
 
 </style>

@@ -20,7 +20,7 @@ export default {
 @import '../../css/main.scss';
 
 .logo {
-  .logo__text {
+  &__text {
     .app_theme_light & {
       fill: rgba($color-content_theme-light, 1);
     }
@@ -29,7 +29,7 @@ export default {
     }
   }
 
-  .logo__cursor {
+  &__cursor {
     .app_theme_light & {
       fill: rgba($color-primary_theme-light, 1);
     }

@@ -76,6 +76,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  touch-action: auto; 
 
   &::selection {
     .app_theme_light & {
@@ -87,6 +88,10 @@ export default {
     }
   }
 
+  @include media("<=phone") {
+    touch-action: manipulation;
+    overflow: auto;
+  } 
 
 }
 </style>

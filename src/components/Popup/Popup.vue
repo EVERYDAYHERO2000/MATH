@@ -1,7 +1,7 @@
 <template>
   <div
     class="popup"
-    v-bind:class="{ popup_visible: isVisible, popup_hide: hideAnim }"
+    v-bind:class="{ 'popup_visibility_visible': isVisible, 'popup_visibility_hide': hideAnim }"
     v-on:click.self="close"
   >
     <div class="popup__window">
@@ -61,7 +61,7 @@ export default {
       this.isVisible = !this.isVisible;
     },
   },
-  emits: ['close']
+  emits: ['close'],
 };
 </script>
 
@@ -84,89 +84,91 @@ $padding-horisontal: $grid-0;
   .app_theme_light & {
     background-color: rgba($color-background-invert_theme-light, 0);
   }
-  
+
   .app_theme_dark & {
     background-color: rgba($color-background-invert_theme-dark, 0);
   }
 
-  @include media("<=phone") {
+  @include media('<=phone') {
     align-items: flex-end;
-  }  
-}
-
-.popup__window {
-  width: 550px;
-  box-shadow: 0 0 45px rgba($color-black, 0.12);
-  display: flex;
-  flex-direction: column;
-  pointer-events: all;
-  //overflow: hidden;
-  border-radius: $grid-0;
-  opacity: 0;
-  transition: opacity 0.2s;
-
-  .app_theme_light & {
-    background-color: $color-background_theme-light;
-  } 
-  
-  .app_theme_dark & {
-    background-color: $color-background_theme-dark;
-  } 
-
-  @include media("<=phone") {
-    border-radius: $grid-2 $grid-2 0 0;
-    padding-bottom: $grid-5;
-  }  
-}
-
-.popup_visible {
-  animation: backdrop-show 2s 0.2s ease forwards;
-
-  .popup__window {
-    animation: popup-show 0.2s 0.2s ease-in-out forwards;
   }
-}
 
-.popup_hide {
-  animation: backdrop-hide 0.1s ease forwards;
+  &__window {
+    width: 550px;
+    box-shadow: 0 0 45px rgba($color-black, 0.12);
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+    //overflow: hidden;
+    border-radius: $grid-0;
+    opacity: 0;
+    transition: opacity 0.2s;
 
-  .popup__window {
-    animation: popup-hide 0.1s ease-in-out forwards;
+    .app_theme_light & {
+      background-color: $color-background_theme-light;
+    }
+
+    .app_theme_dark & {
+      background-color: $color-background_theme-dark;
+    }
+
+    @include media('<=phone') {
+      border-radius: $grid-2 $grid-2 0 0;
+      padding-bottom: $grid-5;
+    }
   }
-}
 
-.popup__window-header {
-  box-sizing: border-box;
-  padding: $grid-2 $grid-2 0 $padding-vertical;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &_visibility {
+    &_visible {
+      animation: backdrop-show 2s 0.2s ease forwards;
 
-.popup__window-title {
-  font-weight: 500;
-  user-select: none;
-  box-sizing: border-box;
+      .popup__window {
+        animation: popup-show 0.2s 0.2s ease-in-out forwards;
+      }
+    }
 
-  .app_theme_light & {
-    color: $color-content_theme-light;
+    &_hide {
+      animation: backdrop-hide 0.1s ease forwards;
+
+      .popup__window {
+        animation: popup-hide 0.1s ease-in-out forwards;
+      }
+    }
   }
-  
-  .app_theme_dark & {
-    color: $color-content_theme-dark;
+
+  &__window-header {
+    box-sizing: border-box;
+    padding: $grid-2 $grid-2 0 $padding-vertical;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-}
 
-.popup__window-body {
-  box-sizing: border-box;
-  padding: $grid-2 $padding-vertical $padding-horisontal $padding-vertical;
-}
+  &__window-title {
+    font-weight: 500;
+    user-select: none;
+    box-sizing: border-box;
 
-.popup__window-footer {
-  box-sizing: border-box;
-  padding: $padding-horisontal $padding-vertical $padding-vertical $padding-vertical;
-  display: flex;
-  justify-content: flex-end;
+    .app_theme_light & {
+      color: $color-content_theme-light;
+    }
+
+    .app_theme_dark & {
+      color: $color-content_theme-dark;
+    }
+  }
+
+  &__window-body {
+    box-sizing: border-box;
+    padding: $grid-2 $padding-vertical $padding-horisontal $padding-vertical;
+  }
+
+  &__window-footer {
+    box-sizing: border-box;
+    padding: $padding-horisontal $padding-vertical $padding-vertical $padding-vertical;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 @keyframes backdrop-show {
