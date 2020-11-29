@@ -238,6 +238,11 @@ const content = {
     eng: 'constant',
     ru: 'константа',
     zh: '不變'
+  },
+  'change language': {
+    eng: 'Change language',
+    ru: 'Язык интерфейса',
+    zh: '更改语言'
   }
 
 };
@@ -247,7 +252,22 @@ const dictionary = function (key) {
   const lang = localStorage.lang || 'eng';
   let word = null;
 
+  isComponent(this, addI18n);
+
   return content[key][lang];
 };
+
+const isComponent = function(current, callback) {
+  if (typeof current == 'object') callback(current)
+  return false;
+}
+const addI18n = function(component){
+  if (!component.$data.i18n){
+    if (!window.lang) window.lang = [];
+    window.lang.push(component);
+  }
+
+  component.$data.i18n = true;
+}
 
 export default dictionary;

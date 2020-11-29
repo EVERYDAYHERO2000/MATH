@@ -61,6 +61,7 @@ export default {
       this.isVisible = !this.isVisible;
     },
   },
+  emits: ['close']
 };
 </script>
 
@@ -99,7 +100,7 @@ $padding-horisontal: $grid-0;
   display: flex;
   flex-direction: column;
   pointer-events: all;
-  overflow: hidden;
+  //overflow: hidden;
   border-radius: $grid-0;
   opacity: 0;
   transition: opacity 0.2s;

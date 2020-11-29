@@ -60,7 +60,8 @@
       Popup,
       Button,
       Textarea
-    }
+    },
+    emits: ['quit', 'submitImport']
   }    
 </script>
 

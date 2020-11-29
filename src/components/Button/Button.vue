@@ -69,10 +69,12 @@ export default {
 
     &_m {
       padding: $grid-1 $grid-2;
+      height: $grid-5;
     }
 
     &_l {
       padding: $grid-2 $grid-3;
+      height: $grid-7;
     }
   }
 

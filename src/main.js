@@ -16,3 +16,4 @@ application.directive('ripple', Ripple);
 application.mount('#app');
 
 window.browser = Browser;
+

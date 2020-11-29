@@ -69,6 +69,7 @@ export default {
       this.$emit('appSettings', 'MathPopupAppSettings');
     },
   },
+  emits: ['exportToPng','importExpression','appSettings']
 };
 </script>
 
