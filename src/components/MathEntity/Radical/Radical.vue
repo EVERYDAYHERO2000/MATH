@@ -77,6 +77,10 @@ $height-hr: 3px;
       .app_theme_dark & {
         stroke: $color-content_theme-dark;
       }
+
+      .theme_export & {
+        stroke: $color-content_theme-light!important;
+      }
     }
   }
 }
@@ -109,6 +113,10 @@ $height-hr: 3px;
 
     .app_theme_dark & {
       background-color: $color-content_theme-dark;
+    }
+
+    .theme_export & {
+      background-color: $color-content_theme-light!important;
     }
   }
 
@@ -170,6 +178,10 @@ $height-hr: 3px;
     .app_theme_dark & {
       background-color: $color-content_theme-dark;
     }
+
+    .theme_export & {
+      background-color: $color-content_theme-light!important;
+    }  
   }
 }
 </style>

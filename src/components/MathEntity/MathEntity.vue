@@ -13,7 +13,7 @@
 import parse from '/@fn/mathParser/mathParser.js';
 import Entities from './entities.js';
 
-export default {
+const component =  {
   name: 'MathEntity',
   props: {
     into: Object,
@@ -45,6 +45,10 @@ export default {
     },
   },
 };
+
+window.MathEntity = component;
+
+export default component;
 </script>
 
 <style lang="scss">
@@ -62,6 +66,10 @@ export default {
 
   .app_theme_dark & {
     color: $color-content_theme-dark;
+  }
+
+  .theme_export & {
+    color: $color-content_theme-light!important;
   }
 }
 </style>

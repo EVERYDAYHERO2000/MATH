@@ -1,6 +1,11 @@
 <template>
   <div class="textarea" v-ripple="'rgba(0, 0, 0, 0.01)'">
-    <textarea ref="textarea" v-on:input="change" v-bind:placeholder="placeholder">
+    <textarea
+      class="textarea__input"
+      ref="textarea"
+      v-on:input="change"
+      v-bind:placeholder="placeholder"
+    >
       {{ value }}
     </textarea>
   </div>
@@ -22,6 +27,7 @@ export default {
       this.$emit('changeValue', this.$refs.textarea.value);
     },
   },
+  emits: ['changeValue'],
 };
 </script>
 
@@ -31,7 +37,7 @@ export default {
 .textarea {
   width: 100%;
 
-  textarea {
+  &__input {
     box-sizing: border-box;
     resize: none;
     border-radius: $grid-1;
@@ -45,12 +51,12 @@ export default {
     .app_theme_light & {
       background: $color-background-tint_theme-light;
       border: solid 1px rgba($color-content_theme-light, 0.03);
-    } 
-    
+    }
+
     .app_theme_dark & {
       background: $color-background-tint_theme-dark;
       border: solid 1px rgba($color-content_theme-dark, 0.03);
-    } 
+    }
 
     &:focus {
       outline: none;
@@ -58,18 +64,18 @@ export default {
 
       .app_theme_light & {
         border: solid 1px $color-primary_theme-light;
-      } 
+      }
       .app_theme_dark & {
         border: solid 1px $color-primary_theme-dark;
-      }  
+      }
     }
     &::placeholder {
       .app_theme_light & {
         color: rgba($color-content_theme-light, 0.3);
-      } 
+      }
       .app_theme_dark & {
         color: rgba($color-content_theme-dark, 0.3);
-      }  
+      }
     }
   }
 }

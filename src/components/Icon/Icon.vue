@@ -37,13 +37,6 @@ export default {
   display: inline-flex;
   transform-origin: center;
 
-  svg {
-    rect,
-    path,
-    circle {
-    }
-  }
-
   &_color {
     &_black {
       rect,

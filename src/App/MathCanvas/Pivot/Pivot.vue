@@ -76,13 +76,14 @@ export default {
 <style lang="scss">
 @import '../../../css/main.scss';
 
-.math-canvas__pivot {
-  width: 10000px;
-  height: 10000px;
-}
-
-.math-canvas__frame {
-  transform-origin: center;
-  position: absolute;
+.math-canvas {
+  &__pivot {
+    width: 10000px;
+    height: 10000px;
+  }
+  &__frame {
+    transform-origin: center;
+    position: absolute;
+  }
 }
 </style>

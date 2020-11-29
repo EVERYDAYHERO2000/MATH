@@ -62,5 +62,6 @@
     height: 100%;
     pointer-events: none;
     overflow: hidden;
+    touch-action: none;
   }
 </style>

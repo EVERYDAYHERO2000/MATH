@@ -5,7 +5,7 @@
       type="text"
       v-model="searchValue"
       v-on:input="update"
-      placeholder="Element name"
+      v-bind:placeholder="D('Element name')"
     />
     <ButtonIcon
       class="input-search__clear-button"
@@ -45,6 +45,7 @@ export default {
   components: {
     ButtonIcon,
   },
+  emits: ['updateSearch'],
 };
 </script>
 
@@ -56,45 +57,46 @@ export default {
   position: relative;
   border-radius: $grid-1;
   overflow: hidden;
-}
 
-.input-search__input {
-  border: none;
-  font-size: 16px;
-  display: block;
-  width: 100%;
-  padding-right: 40px;
-  padding-left: $grid-1;
-  box-sizing: border-box;
-  font-family: $font-family-sans-serif;
+  &__input {
+    border: none;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding-right: 40px;
+    padding-left: $grid-1;
+    box-sizing: border-box;
+    font-family: $font-family-sans-serif;
 
-  .app_theme_light & {
-    background: rgba($color-background_theme-light, 1);
-    color: rgba($color-content_theme-light, 1);
-  }
-
-  .app_theme_dark & {
-    background: rgba($color-background-tint_theme-dark, 1);
-    color: rgba($color-content_theme-dark, 1);
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &::placeholder {
     .app_theme_light & {
-      color: rgba($color-content_theme-light, 0.3);
+      background: rgba($color-background_theme-light, 1);
+      color: rgba($color-content_theme-light, 1);
     }
-    
+
     .app_theme_dark & {
-      color: rgba($color-content_theme-dark, 0.3);
+      background: rgba($color-background-tint_theme-dark, 1);
+      color: rgba($color-content_theme-dark, 1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      .app_theme_light & {
+        color: rgba($color-content_theme-light, 0.3);
+      }
+
+      .app_theme_dark & {
+        color: rgba($color-content_theme-dark, 0.3);
+      }
     }
   }
-}
 
-.input-search__clear-button {
-  position: absolute;
-  right: 0;
+  &__clear-button {
+    position: absolute;
+    right: 0;
+  }
+
 }
 </style>
