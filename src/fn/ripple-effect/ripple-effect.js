@@ -103,7 +103,7 @@ var Ripple = {
 
         // Timeout set to get a smooth removal of the ripple
         setTimeout(function () {
-          rippleContainer.parentNode.removeChild(rippleContainer);
+          if (rippleContainer.parentNode) rippleContainer.parentNode.removeChild(rippleContainer);
         }, 850);
 
         el.removeEventListener('mouseup', clearRipple, false);
