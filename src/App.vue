@@ -8,12 +8,14 @@
 <script>
 import MathCanvas from '/@app/MathCanvas/MathCanvas.vue';
 import MathUi from '/@app/MathUi/MathUi.vue';
+import MathEntity from '/@components/MathEntity/MathEntity.vue';
 import '/@css/main.scss';
 
 export default {
   name: 'App',
   components: {
     MathCanvas,
+    MathEntity,
     MathUi,
   },
   data: function(){

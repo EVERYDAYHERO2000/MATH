@@ -45,6 +45,7 @@ export default {
   components: {
     ButtonIcon,
   },
+  emits: ['updateSearch']
 };
 </script>
 

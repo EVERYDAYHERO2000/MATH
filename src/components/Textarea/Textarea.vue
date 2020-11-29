@@ -22,6 +22,7 @@ export default {
       this.$emit('changeValue', this.$refs.textarea.value);
     },
   },
+  emits: ['changeValue']
 };
 </script>
 

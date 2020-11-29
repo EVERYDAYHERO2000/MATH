@@ -27,6 +27,7 @@ export default {
       this.$emit('toggle', evt.target.checked);
     },
   },
+  emits: ['toggle']
 };
 </script>
 

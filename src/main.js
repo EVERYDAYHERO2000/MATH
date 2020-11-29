@@ -3,8 +3,9 @@ import App from './App.vue';
 import Ripple from './fn/ripple-effect/ripple-effect';
 import Browser from 'mobile-device-detect';
 import D from '/@fn/dictionary/dictionary.js';
-
 import './css/main.scss';
+
+window.browser = Browser;
 
 const application = createApp(App);
 application.mixin({
@@ -15,5 +16,5 @@ application.mixin({
 application.directive('ripple', Ripple);
 application.mount('#app');
 
-window.browser = Browser;
+
 

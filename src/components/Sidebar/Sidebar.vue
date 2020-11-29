@@ -41,6 +41,7 @@ export default {
       this.$emit('clickOutside', true);
     },
   },
+  emits: ['clickOutside']
 };
 </script>
 

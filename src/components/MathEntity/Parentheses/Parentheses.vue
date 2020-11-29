@@ -64,7 +64,7 @@
 </template>
 
 <script>
-    import { defineAsyncComponent, resolveComponent } from "vue";
+    import { defineAsyncComponent } from "vue";
 
     import { VueComponent as ParenthesesLeftTop } from './assets/parentheses_left_top.svg';
     import { VueComponent as ParenthesesLeftCenter } from './assets/parentheses_left_center.svg';

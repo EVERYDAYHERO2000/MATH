@@ -12,7 +12,7 @@
 <script>
 import Entities from './entities.js';
 
-export default {
+const component =  {
   name: 'MathEntity',
   props: {
     into: Object,
@@ -58,6 +58,10 @@ export default {
     },
   },
 };
+
+window.MathEntity = component;
+
+export default component;
 </script>
 
 <style lang="scss">

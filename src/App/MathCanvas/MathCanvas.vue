@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue';
 import MathCanvasPivot from './Pivot/Pivot.vue';
 import domtoimage from '/@fn/domToImage/domToImage.js';
+import MathEntity from '/@components/MathEntity/MathEntity.vue';
 
 import test from './test.js';
 
@@ -19,7 +19,7 @@ export default {
   name: 'MathCanvas',
   components: {
     MathCanvasPivot,
-    MathEntity: defineAsyncComponent(() => import('/@components/MathEntity/MathEntity.vue')),
+    MathEntity: window.MathEntity
   },
   data: function () {
     return {
