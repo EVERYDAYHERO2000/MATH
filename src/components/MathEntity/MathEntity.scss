@@ -1,12 +1,13 @@
 $color-entity: rgb(28, 28, 28);
 
-.entity-inline {
-
+.entity-atom {
+  display: inline-block;
+  box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .entity-invisible {
-    position: absolute;
-    color: transparent;
+  position: absolute;
+  color: transparent;
+  pointer-events: none;
 }
-
-

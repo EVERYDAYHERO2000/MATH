@@ -1,6 +1,6 @@
 <template>
   <div
-    class="entity-inline entity-atom entity-empty"
+    class="entity-atom entity-empty"
     ref="input"
     v-on:keyup="setValue"
     contenteditable
@@ -49,6 +49,7 @@ export default {
 
 .entity-empty {
   min-width: 5px;
+  min-height: 1em;
   outline: 1px solid red;
 }
 </style>
