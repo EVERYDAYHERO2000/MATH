@@ -1,5 +1,5 @@
 <template>
-  <div class="entity-inline entity-number entity-atom" v-on:keyup="setValue" contenteditable>
+  <div class="entity-atom entity-number" v-on:keyup="setValue" contenteditable>
     {{ into.value }}
   </div>
 </template>
@@ -18,12 +18,13 @@ export default {
   methods: {
     setValue: function (evt) {
       // TODO:
+      // Focus on mount
+      // Other digits on mount
       // Cut
       // Paste
       // Backspace al leftmost
       // Delete at rightmost
 
-      console.log('up', evt.key);
 
       let key = this.$root.$refs.canvas.$data.keyboard.keys.shift();
 
@@ -41,7 +42,7 @@ export default {
           },
         };
 
-        if (!Number(value)) {
+        if (isNaN(Number(value)) || !value.trim().length) {
           this.$emit('rebuild', data);
         }
       }
@@ -53,12 +54,6 @@ export default {
 <style lang="scss">
 @import '../../../css/main.scss';
 @import '../MathEntity.scss';
-
-.entity-atom {
-  display: inline-block;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-}
 
 .entity-number {
   color: darkred;

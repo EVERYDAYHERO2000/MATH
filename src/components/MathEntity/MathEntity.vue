@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import parse from '/@fn/mathParser/mathParser.js';
 import Entities from './entities.js';
 
 const component =  {
@@ -39,22 +40,8 @@ const component =  {
       return this.out;
     },
     rebuild: function (evt) {
-      if (evt.into.hasOwnProperty('value')) {
-        if (!evt.into.value) {
-          this.out = {
-            type: 'empty'
-          };
-        } else {
-          const val = evt.into.value;
-
-          if (val.match(/\d*/)) {
-            this.out = {
-              type: 'number',
-              value: val
-            };
-          }
-        }
-      }
+      const obj = parse(evt.into.value);
+      this.out = obj.result;
     },
   },
 };
@@ -72,7 +59,7 @@ export default component;
   display: inline-flex;
   align-items: baseline;
   white-space: nowrap;
-  
+
   .app_theme_light & {
     color: $color-content_theme-light;
   }

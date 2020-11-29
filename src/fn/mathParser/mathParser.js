@@ -1,15 +1,14 @@
-import { create, all} from 'mathjs';
+import { create, all } from 'mathjs';
 
 const config = {};
 const math = create(all, config);
 
 const mathParser = function (exp, options) {
-  exp = exp ? exp.replace(/\s/g, '') : '';
+  exp = exp ? exp.trim() : '';
+
   options = options || {
     latex: false,
   };
-
-  let result = null;
 
   if (options.latex) {
     exp = exp
@@ -22,21 +21,61 @@ const mathParser = function (exp, options) {
       .replace(/([0-9])([A-Za-z])/g, '$1*$2');
   }
 
-  const node = math.parse(exp);
+  const node = getNode(exp);
+
+  function getNode(exp) {
+    let parsed;
+
+    try {
+      parsed = math.parse(exp);
+    } catch (e) {
+      if (Number(e.char)) {
+        const newExp = exp.slice(0,e.char - 1) + 'empty' + exp.slice(e.char - 1);
+        console.log('newExp', newExp);
+        parsed = getNode(newExp);
+      }
+    } finally {
+      return parsed;
+    }
+  }
+
+  function getTerms(exp) {
+    const terms = parse(exp);
+    if (terms.type === 'sum') {
+      return terms.terms;
+    }
+    return [
+      {
+        type: 'term',
+        action: 'plus',
+        expression: terms,
+      },
+    ];
+  }
 
   function parse(exp) {
     let result = {};
+
+    console.log(exp);
 
     //operators
     if (exp.type == 'OperatorNode') {
       if (exp.fn == 'add') {
         result.type = 'sum';
-        result.terms = getExpression('args', result.type);
-        result.action = 'plus';
+        result.terms = getTerms(exp.args[0]);
+        result.terms.push({
+          type: 'term',
+          action: 'plus',
+          expression: parse(exp.args[1]),
+        });
       } else if (exp.fn == 'subtract') {
         result.type = 'sum';
-        result.terms = getExpression('args', result.type);
-        result.action = 'minus';
+        result.terms = getTerms(exp.args[0]);
+        result.terms.push({
+          type: 'term',
+          action: 'minus',
+          expression: parse(exp.args[1]),
+        });
       } else if (exp.fn == 'multiply') {
         result.type = 'product';
         result.factors = getExpression('args');
@@ -68,20 +107,27 @@ const mathParser = function (exp, options) {
         result.denominator = getExpression(1);
       }
 
-      //numbers
+      //empty, numbers
     } else if (exp.type == 'ConstantNode') {
-      result.value = exp.value;
-      result.type = 'number';
+      if (isNaN(Number(exp.value))) {
+        result.type = 'empty';
+      } else {
+        result.type = 'number';
+        result.value = exp.value;
+      }
 
       //vars and const
     } else if (exp.type == 'SymbolNode') {
       if (math[exp.name]) {
         result.type = 'constant';
         result.value = math[exp.name];
+        result.name = exp.name;
+      } else if (exp.name === 'empty') {
+        result.type = 'empty';
       } else {
         result.type = 'variable';
+        result.name = exp.name;
       }
-      result.name = exp.name;
 
       //parenthesis
     } else if (exp.type == 'ParenthesisNode') {
@@ -94,7 +140,6 @@ const mathParser = function (exp, options) {
       prevToken = prevToken || null;
       if (typeof key == 'string') {
         if (Array.isArray(exp[key])) {
-          
           for (let token of exp[key]) {
             result.push(parse(token));
           }
@@ -111,21 +156,19 @@ const mathParser = function (exp, options) {
   }
 
   function flat(exp) {
-    
     if (exp.type == 'sum') {
       exp.terms[1].action = exp.action;
 
       for (let t in exp.terms) {
         exp.terms[t].action = exp.action;
       }
-      
     }
     return exp;
   }
 
-  result = parse(node);
+  const result = parse(node);
 
-  console.log(flat(result))
+  // console.log(flat(result))
 
   //console.log(node);
 

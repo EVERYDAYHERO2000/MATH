@@ -13,7 +13,7 @@ import MathCanvasPivot from './Pivot/Pivot.vue';
 import domtoimage from '/@fn/domToImage/domToImage.js';
 import MathEntity from '/@components/MathEntity/MathEntity.vue';
 
-import test from './test.js';
+import test from './test2.js';
 
 export default {
   name: 'MathCanvas',
@@ -35,7 +35,7 @@ export default {
         evt.preventDefault();
         return;
       }
-      console.log('down', evt.key);
+      // console.log('down', evt.key);
       if (evt.key.startsWith('Arrow')) {
         this.$refs.canvas.contentEditable = true;
         this.$refs.canvas.focus();
@@ -82,7 +82,7 @@ export default {
     .app_theme_light & {
       background-color: rgba($color-primary_theme-light, 0.6);
     }
-    
+
     .app_theme_dark & {
       background-color: rgba($color-primary_theme-dark, 0.6);
     }
