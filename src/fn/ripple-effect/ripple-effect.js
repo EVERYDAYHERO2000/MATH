@@ -50,7 +50,7 @@ var Ripple = {
       ripple.style.pointerEvents = 'none';
       ripple.style.position = 'relative';
       ripple.style.zIndex = zIndex;
-      ripple.style.backgroundColor = bg;
+      //ripple.style.backgroundColor = bg;
 
       //Styles for rippleContainer
       rippleContainer.style.position = 'absolute';

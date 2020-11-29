@@ -2,7 +2,7 @@
   <button
     class="button"
     v-bind:class="[{ button_disabled: disabled }, classSize, classColor]"
-    v-ripple="'rgba(255, 255, 255, 0.05)'"
+    v-ripple
     v-bind:title="title"
   >
     {{ label }}

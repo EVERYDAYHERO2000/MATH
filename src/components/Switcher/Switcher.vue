@@ -7,7 +7,7 @@
       class="switcher__checkbox"
       type="checkbox"
     />
-    <div v-ripple="'rgba(255, 255, 255, 0.05)'" class="switcher__slider"></div>
+    <div v-ripple class="switcher__slider"></div>
   </label>
 </template>
 

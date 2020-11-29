@@ -48,7 +48,8 @@
       closePopup: function() {
         this.popup.name = null;
       }
-    }
+    },
+    emits: ['exportToPng']
   }    
 </script>
 

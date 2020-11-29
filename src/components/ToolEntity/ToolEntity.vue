@@ -1,5 +1,5 @@
 <template>
-  <div v-ripple="'rgba(0, 0, 0, 0.02)'" class="tool-entity" v-bind:class="[classCover]">
+  <div v-ripple class="tool-entity" v-bind:class="[classCover]">
     <span class="tool-entity__title">{{ title }}</span>
     <span class="tool-entity__code">{{ code }}</span>
   </div>

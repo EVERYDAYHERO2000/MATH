@@ -12,17 +12,17 @@
     </template>
 
     <template v-slot:body>
-      <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="exportToPng">
+      <button v-ripple class="main-menu__item" v-on:click="exportToPng">
         {{ D('Export as png') }}
       </button>
       <button
-        v-ripple="'rgba(0, 0, 0, 0.02)'"
+        v-ripple
         class="main-menu__item"
         v-on:click="importExpression"
       >
         {{ D('Import Expression') }}
       </button>
-      <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="appSettings">
+      <button v-ripple class="main-menu__item" v-on:click="appSettings">
         {{ D('App Settings') }}
       </button>
     </template>

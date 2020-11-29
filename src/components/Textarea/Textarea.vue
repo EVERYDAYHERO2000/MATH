@@ -1,6 +1,7 @@
 <template>
-  <div class="textarea" v-ripple="'rgba(0, 0, 0, 0.01)'">
+  <div class="textarea">
     <textarea
+      v-ripple
       class="textarea__input"
       ref="textarea"
       v-on:input="change"

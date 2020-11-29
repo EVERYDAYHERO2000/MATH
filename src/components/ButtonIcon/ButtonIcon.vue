@@ -1,7 +1,7 @@
 <template>
   <button
     class="button-icon"
-    v-ripple="'rgba(255, 255, 255, 0.35)'"
+    v-ripple
     v-bind:class="[{ 'button-icon_pressed': pressed }, classSize]"
     v-bind:title="title"
   >

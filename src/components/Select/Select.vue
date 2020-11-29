@@ -2,6 +2,7 @@
   <div class="select" :tabindex="tabindex" v-on:blur="open = false" v-bind:class="classSize">
     <div
       class="select__selected"
+      v-ripple
       :class="{ select__selected_open: open }"
       v-on:click="open = !open"
     >

@@ -1,5 +1,5 @@
 <template>
-  <div class="input-search" v-ripple="'rgba(0, 0, 0, 0.03)'">
+  <div class="input-search" v-ripple>
     <input
       class="input-search__input"
       type="text"
