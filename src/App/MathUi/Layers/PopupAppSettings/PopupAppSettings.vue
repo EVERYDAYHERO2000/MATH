@@ -8,6 +8,24 @@
           v-on:input="updateLang"
         />
       </FormField>
+      <FormField v-bind:label="D('Multiplication sign')">
+        <Select
+          v-bind:options="[['cross','×'], ['dot','·']]"
+          v-bind:default="'dot'"
+        />
+      </FormField>
+      <FormField v-bind:label="D('Division sign')">
+        <Select
+          v-bind:options="[['colon',':'],['division','÷']]"
+          v-bind:default="'colon'"
+        />
+      </FormField>
+      <FormField v-bind:label="D('Decimal separator')">
+        <Select
+          v-bind:options="[['point','.'], ['comma',',']]"
+          v-bind:default="'point'"
+        />
+      </FormField>
       <FormField v-bind:label="D('Dark UI theme')">
         <Switcher v-bind:check="theme == 'dark'" v-on:toggle="toggleTheme" />
       </FormField>

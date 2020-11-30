@@ -54,7 +54,7 @@ export default {
 
   .app_theme_dark & {
     color: $color-content_theme-dark;
-    border-bottom: solid 1px rgba($color-black, 0.3);
+    border-bottom: solid 1px rgba($color-black, 0.5);
   }
 
   &_cover {

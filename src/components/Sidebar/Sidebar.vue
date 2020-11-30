@@ -178,7 +178,7 @@ $panel-width-hidden: $grid-7;
 
       .app_theme_dark & {
         background-color: rgba($color-background_theme-dark, 1);
-        box-shadow: 0 0 0 1px rgba($color-black, 0.2);
+        box-shadow: 0 0 0 1px rgba($color-black, 0.5);
       }
     }
   }
@@ -189,7 +189,7 @@ $panel-width-hidden: $grid-7;
     }
 
     .app_theme_dark & {
-      border-bottom: solid 1px rgba($color-black, 0.3);
+      border-bottom: solid 1px rgba($color-black, 0.5);
     }
   }
 }

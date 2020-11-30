@@ -223,7 +223,7 @@ export default {
     }
 
     .app_theme_dark & {
-      border-left: solid 1px rgba($color-black, 0.3);
+      border-left: solid 1px rgba($color-black, 0.5);
     }
   }
 

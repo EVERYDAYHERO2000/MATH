@@ -95,7 +95,6 @@ $padding-horisontal: $grid-0;
 
   &__window {
     width: 550px;
-    box-shadow: 0 0 45px rgba($color-black, 0.12);
     display: flex;
     flex-direction: column;
     pointer-events: all;
@@ -107,15 +106,18 @@ $padding-horisontal: $grid-0;
 
     .app_theme_light & {
       background-color: $color-background_theme-light;
+      box-shadow: 0 0 45px rgba($color-black, 0.12);
     }
 
     .app_theme_dark & {
       background-color: $color-background_theme-dark;
+      box-shadow: 0 0 45px rgba($color-black, 0.5);
     }
 
     @include media('<=phone') {
       border-radius: $grid-2 $grid-2 0 0;
       padding-bottom: $grid-5;
+      margin-bottom: 0;
     }
   }
 

@@ -243,8 +243,22 @@ const content = {
     eng: 'Change language',
     ru: 'Язык интерфейса',
     zh: '更改语言'
+  },
+  'multiplication sign': {
+    eng: 'Multiplication sign',
+    ru: 'Знак умножения',
+    zh: '乘法符號'
+  },
+  'division sign': {
+    eng: 'Division sign',
+    ru: 'Знак деления',
+    zh: '分區標誌'
+  },
+  'decimal separator': {
+    eng: 'Decimal separator',
+    ru: 'Десятичный разделитель',
+    zh: '小数点分隔符'
   }
-
 };
 
 const dictionary = function (key) {
@@ -254,7 +268,16 @@ const dictionary = function (key) {
 
   isComponent(this, addI18n);
 
-  return (content[key][lang]) ? content[key][lang] : content[key]['eng'];
+  if (content[key]) {
+    if (content[key][lang]) {
+      word = content[key][lang];
+    } else {
+      word = content[key]['eng']
+    }
+  } else {
+    word = key;
+  }
+  return word;
 };
 
 const isComponent = function(current, callback) {
