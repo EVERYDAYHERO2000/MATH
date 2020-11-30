@@ -103,6 +103,7 @@ $padding-horisontal: $grid-0;
     border-radius: $grid-0;
     opacity: 0;
     transition: opacity 0.2s;
+    margin: $grid-7 0;
 
     .app_theme_light & {
       background-color: $color-background_theme-light;
@@ -123,7 +124,7 @@ $padding-horisontal: $grid-0;
       animation: backdrop-show 2s 0.2s ease forwards;
 
       .popup__window {
-        animation: popup-show 0.2s 0.2s ease-in-out forwards;
+        animation: popup-show_desktop 0.2s 0.2s ease-in-out forwards;
       }
     }
 
@@ -131,7 +132,7 @@ $padding-horisontal: $grid-0;
       animation: backdrop-hide 0.1s ease forwards;
 
       .popup__window {
-        animation: popup-hide 0.1s ease-in-out forwards;
+        animation: popup-hide_desktop 0.1s ease-in-out forwards;
       }
     }
   }
@@ -160,7 +161,7 @@ $padding-horisontal: $grid-0;
 
   &__window-body {
     box-sizing: border-box;
-    padding: $grid-2 $padding-vertical $padding-horisontal $padding-vertical;
+    padding: $grid-2 $padding-vertical $grid-2 $padding-vertical;
   }
 
   &__window-footer {
@@ -189,7 +190,7 @@ $padding-horisontal: $grid-0;
   }
 }
 
-@keyframes popup-show {
+@keyframes popup-show_desktop {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -200,7 +201,7 @@ $padding-horisontal: $grid-0;
   }
 }
 
-@keyframes popup-hide {
+@keyframes popup-hide_desktop {
   0% {
     opacity: 1;
     transform: translateY(0px);
