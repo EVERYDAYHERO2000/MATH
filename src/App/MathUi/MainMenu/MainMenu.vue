@@ -75,7 +75,7 @@ export default {
   &__item {
     border: none;
     display: block;
-    font-size: 16px;
+    font-size: $font-size_m;
     padding: $grid-2 $grid-3;
     box-sizing: border-box;
     font-weight: 600;

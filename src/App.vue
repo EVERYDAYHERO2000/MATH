@@ -41,6 +41,7 @@ export default {
     width: 100%;
     height: 100vh;
     touch-action: none;
+    font-size: $font-size_m;
 
     &_theme {
       &_light {

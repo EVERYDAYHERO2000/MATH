@@ -76,7 +76,8 @@ export default {
   width: 100%;
   text-align: left;
   outline: none;
-  font-size: 16px;
+  font-size: $font-size_m;
+  -webkit-tap-highlight-color: transparent;
 
   &_size_s &__selected {
     padding: 0;
@@ -92,13 +93,14 @@ export default {
 
   &__selected {
     border-radius: $grid-1;
-    padding-left: 1em;
+    padding-left: $grid-1;
     cursor: pointer;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 
     .app_theme_light & {
       box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-light, 0.1);

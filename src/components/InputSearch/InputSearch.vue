@@ -60,7 +60,7 @@ export default {
 
   &__input {
     border: none;
-    font-size: 16px;
+    font-size: $font-size_m;
     display: block;
     width: 100%;
     padding-right: 40px;

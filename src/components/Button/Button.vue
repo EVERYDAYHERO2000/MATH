@@ -38,7 +38,7 @@ export default {
 .button {
   border-radius: $grid-1;
   border: none;
-  font-size: 16px;
+  font-size: $font-size_m;
   transition: all 0.2s;
 
   .app_theme_light & {

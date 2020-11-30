@@ -47,7 +47,7 @@ export default {
     padding: $grid-1;
     border-radius: $grid-1;  
     font-family: $font-family-sans-serif;
-    font-size: 16px;
+    font-size: $font-size_m;
     transition: border 0.2s;
     display: block;
 

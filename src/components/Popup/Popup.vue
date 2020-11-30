@@ -111,7 +111,7 @@ $padding-horisontal: $grid-0;
 
     .app_theme_dark & {
       background-color: $color-background_theme-dark;
-      box-shadow: 0 0 45px rgba($color-black, 0.5);
+      box-shadow: 0 0 45px rgba($color-black, 0.5), 0 0 0 1px rgba($color-black, 0.5);
     }
 
     @include media('<=phone') {
@@ -123,18 +123,36 @@ $padding-horisontal: $grid-0;
 
   &_visibility {
     &_visible {
-      animation: backdrop-show 2s 0.2s ease forwards;
+      .app_theme_light & {
+        animation: backdrop-show_theme_light 2s 0.2s ease forwards;
+      }
+      .app_theme_dark & {
+        animation: backdrop-show_theme_dark 2s 0.2s ease forwards;
+      }
 
       .popup__window {
         animation: popup-show_desktop 0.2s 0.2s ease-in-out forwards;
+
+        @include media('<=phone') {
+          animation: popup-show_mobile 0.2s 0.2s ease-in-out forwards;
+        }  
       }
     }
 
     &_hide {
-      animation: backdrop-hide 0.1s ease forwards;
+      .app_theme_light & {
+        animation: backdrop-hide_theme_light 0.1s ease forwards;
+      }  
+      .app_theme_dark & {
+        animation: backdrop-hide_theme_dark 0.1s ease forwards;
+      }  
 
       .popup__window {
         animation: popup-hide_desktop 0.1s ease-in-out forwards;
+
+        @include media('<=phone') {
+          animation: popup-hide_mobile 0.1s ease-in-out forwards;
+        }
       }
     }
   }
@@ -174,7 +192,7 @@ $padding-horisontal: $grid-0;
   }
 }
 
-@keyframes backdrop-show {
+@keyframes backdrop-show_theme_light {
   0% {
     background-color: rgba($color-black, 0);
   }
@@ -183,9 +201,27 @@ $padding-horisontal: $grid-0;
   }
 }
 
-@keyframes backdrop-hide {
+@keyframes backdrop-hide_theme_light {
   0% {
     background-color: rgba($color-black, 0.1);
+  }
+  100% {
+    background-color: rgba($color-black, 0);
+  }
+}
+
+@keyframes backdrop-show_theme_dark {
+  0% {
+    background-color: rgba($color-black, 0);
+  }
+  100% {
+    background-color: rgba($color-black, 0.6);
+  }
+}
+
+@keyframes backdrop-hide_theme_dark {
+  0% {
+    background-color: rgba($color-black, 0.6);
   }
   100% {
     background-color: rgba($color-black, 0);
@@ -211,6 +247,28 @@ $padding-horisontal: $grid-0;
   100% {
     opacity: 0;
     transform: translateY(-50px);
+  }
+}
+
+@keyframes popup-show_mobile {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes popup-hide_mobile {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80px);
   }
 }
 </style>

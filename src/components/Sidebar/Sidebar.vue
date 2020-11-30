@@ -93,7 +93,7 @@ $panel-width-hidden: $grid-7;
       }
 
       .app_theme_dark & {
-        background-color: rgba($color-black, 0.3);
+        background-color: rgba($color-black, 0.5);
       }
     }
 

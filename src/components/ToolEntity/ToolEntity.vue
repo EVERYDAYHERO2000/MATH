@@ -601,7 +601,7 @@ export default {
   }
 
   &__title {
-    font-size: 12px;
+    font-size: $font-size_s;
 
     .app_theme_light & {
       color: rgba($color-background-invert_theme-light, 0.5);
@@ -613,7 +613,7 @@ export default {
   }
 
   &__code {
-    font-size: 12px;
+    font-size: $font-size_s;
 
     .app_theme_light & {
       color: $color-primary_theme-light;
