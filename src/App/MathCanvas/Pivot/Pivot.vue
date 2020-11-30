@@ -9,6 +9,10 @@
     <div ref="frame" class="math-canvas__frame">
       <slot> </slot>
     </div>
+    <div ref="marker_top" class="math-canvas__marker math-canvas__marker_top" />
+    <div ref="marker_bottom" class="math-canvas__marker math-canvas__marker_bottom" />
+    <div ref="marker_left" class="math-canvas__marker math-canvas__marker_left" />
+    <div ref="marker_right" class="math-canvas__marker math-canvas__marker_right" />
   </div>
 </template>
 
@@ -84,6 +88,39 @@ export default {
   &__frame {
     transform-origin: center;
     position: absolute;
+    padding: 200px;
+  }
+
+  &__marker {
+    position: fixed;
+    display: block;
+    pointer-events: none;
+    touch-action: none;
+
+    .app_theme_light & {
+      background-color: rgba($color-primary_theme_light, 1);
+    }
+
+    .app_theme_dark & {
+      background-color: rgba($color-primary_theme_dark, 1);
+    }
+
+    &_top {
+      height: 1px;
+      top: 0;
+    }
+    &_bottom {
+      height: 1px;
+      bottom: 0;
+    }
+    &_left {
+      width: 1px;
+      left: 0;
+    }
+    &_right {
+      width: 1px;
+      right: 0;
+    }
   }
 }
 </style>

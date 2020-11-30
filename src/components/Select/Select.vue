@@ -9,7 +9,13 @@
       {{ selected[1] }}
     </div>
     <div class="select__items" :class="{ select__items_hide: !open }">
-      <div class="select__item" v-for="(option, i) of options" :key="i" v-on:click="select(option)">
+      <div
+        class="select__item"
+        v-ripple
+        v-for="(option, i) of options"
+        :key="i"
+        v-on:click="select(option)"
+      >
         {{ option[1] }}
       </div>
     </div>
@@ -150,16 +156,18 @@ export default {
     right: 0;
     z-index: 1;
     padding: $grid-1 0;
-    box-shadow: 0 3px 10px rgba($color-black, 0.3);
     transform: translateY($grid-1);
 
     .app_theme_light & {
       background: rgba($color-background_theme_light, 1);
+      box-shadow: 0 3px 10px rgba($color-black, 0.3), 0 2px 20px rgba($color-black, 0.2);
       color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      background: rgba($color-background-tint_theme_dark, 1);
+      background: rgba($color-background_theme_dark, 1);
+      box-shadow: 0 3px 10px rgba($color-black, 0.8), 0 2px 20px rgba($color-black, 0.2),
+        0 0 0 1px rgba($color-black, 0.5);
       color: rgba($color-content_theme_dark, 1);
     }
 
@@ -177,7 +185,7 @@ export default {
   }
 
   &__item {
-    padding-left: 1em;
+    padding-left: $grid-1;
     user-select: none;
 
     .select_size_s & {
@@ -192,11 +200,11 @@ export default {
 
     &:hover {
       .app_theme_light & {
-        background: rgba($color-primary_theme_light, 1);
+        background: rgba($color-background-invert_theme_light, 0.03);
       }
 
       .app_theme_dark & {
-        background: rgba($color-primary_theme_dark, 1);
+        background: rgba($color-background-invert_theme_dark, 0.03);
       }
     }
   }

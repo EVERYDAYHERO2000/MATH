@@ -80,7 +80,7 @@ $panel-width-hidden: $grid-7;
     display: block;
     width: 100vw;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     opacity: 0;
     animation: animate-backdrop 0.2s ease-in-out 0.1s forwards;
     z-index: 10000;

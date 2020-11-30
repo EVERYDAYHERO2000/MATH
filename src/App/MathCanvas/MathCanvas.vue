@@ -1,7 +1,7 @@
 <template>
   <div class="math-canvas">
     <MathCanvasPivot>
-      <div style="padding: 120px 60px;" v-on:keydown.capture="keydown" ref="canvas">
+      <div v-on:keydown.capture="keydown" ref="canvas">
         <MathEntity v-bind:into="expression" />
       </div>
     </MathCanvasPivot>
@@ -70,7 +70,6 @@ export default {
 .math-canvas {
   font-family: $font-family-sans;
   font-size: 32px;
-  padding: 100px;
   box-sizing: border-box;
   position: absolute;
   width: 100%;
