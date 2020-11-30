@@ -22,8 +22,24 @@ export default {
 .form-field {
   display: flex;
   align-items: center;
-  padding: $grid-1 0;
+  padding: calc(#{$grid-1} + #{$grid-0}) 0;
   user-select: none;
+
+  .app_theme_light & {
+    border-bottom: 1px solid rgba($color-content_theme-light, 0.05);
+  }
+  .app_theme_dark & {
+    border-bottom: 1px solid rgba($color-content_theme-dark, 0.05);
+  }
+
+  &:last-child {
+    .app_theme_light & {
+      border-bottom: none;
+    }
+    .app_theme_dark & {
+      border-bottom: none;
+    }
+  }
 
   &__label,
   &__control {
@@ -35,10 +51,10 @@ export default {
     justify-content: flex-start;
 
     .app_theme_light & {
-      color: rgba($color-content_theme-light,0.65);
+      color: rgba($color-content_theme-light, 0.65);
     }
     .app_theme_dark & {
-      color: rgba($color-content_theme-dark,0.65);
+      color: rgba($color-content_theme-dark, 0.65);
     }
   }
 
