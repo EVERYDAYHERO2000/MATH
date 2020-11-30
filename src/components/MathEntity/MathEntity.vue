@@ -61,15 +61,15 @@ export default component;
   white-space: nowrap;
 
   .app_theme_light & {
-    color: $color-content_theme-light;
+    color: $color-entity_theme_light;
   }
 
   .app_theme_dark & {
-    color: $color-content_theme-dark;
+    color: $color-entity_theme_dark;
   }
 
   .theme_export & {
-    color: $color-content_theme-light!important;
+    color: $color-entity_theme_light!important;
   }
 }
 </style>

@@ -26,10 +26,10 @@ export default {
   user-select: none;
 
   .app_theme_light & {
-    border-bottom: 1px solid rgba($color-content_theme-light, 0.05);
+    border-bottom: 1px solid rgba($color-content_theme-light, 0.08);
   }
   .app_theme_dark & {
-    border-bottom: 1px solid rgba($color-content_theme-dark, 0.05);
+    border-bottom: 1px solid rgba($color-black, 0.3);
   }
 
   &:last-child {

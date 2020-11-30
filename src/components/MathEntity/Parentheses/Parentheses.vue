@@ -130,15 +130,15 @@
 
   path {
     .app_theme_light & {
-      fill: $color-content_theme-light;
+      fill: $color-entity_theme_light;
     }
 
     .app_theme_dark & {
-      fill: $color-content_theme-dark;
+      fill: $color-entity_theme_dark;
     }
 
     .theme_export & {
-      fill: $color-content_theme-light!important;
+      fill: $color-entity_theme_light!important;
     }  
   }
 }

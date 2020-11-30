@@ -68,18 +68,17 @@ $height-hr: 3px;
 
     path {
       vector-effect: non-scaling-stroke;
-      stroke: $color-entity;
 
       .app_theme_light & {
-        stroke: $color-content_theme-light;
+        stroke: $color-entity_theme_light;
       }
 
       .app_theme_dark & {
-        stroke: $color-content_theme-dark;
+        stroke: $color-entity_theme_dark;
       }
 
       .theme_export & {
-        stroke: $color-content_theme-light!important;
+        stroke: $color-entity_theme_light!important;
       }
     }
   }
@@ -108,15 +107,15 @@ $height-hr: 3px;
     width: $grid-1;
 
     .app_theme_light & {
-      background-color: $color-content_theme-light;
+      background-color: $color-entity_theme_light;
     }
 
     .app_theme_dark & {
-      background-color: $color-content_theme-dark;
+      background-color: $color-entity_theme_dark;
     }
 
     .theme_export & {
-      background-color: $color-content_theme-light!important;
+      background-color: $color-entity_theme_light!important;
     }
   }
 
@@ -172,15 +171,15 @@ $height-hr: 3px;
     margin-top: -$height-hr;
 
     .app_theme_light & {
-      background-color: $color-content_theme-light;
+      background-color: $color-entity_theme_light;
     }
 
     .app_theme_dark & {
-      background-color: $color-content_theme-dark;
+      background-color: $color-entity_theme_dark;
     }
 
     .theme_export & {
-      background-color: $color-content_theme-light!important;
+      background-color: $color-entity_theme_light!important;
     }  
   }
 }
