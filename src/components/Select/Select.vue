@@ -94,7 +94,6 @@ export default {
   &__selected {
     border-radius: $grid-1;
     padding-left: $grid-1;
-    cursor: pointer;
     user-select: none;
     display: flex;
     align-items: center;
@@ -103,24 +102,24 @@ export default {
     -webkit-tap-highlight-color: transparent;
 
     .app_theme_light & {
-      box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-light, 0.1);
-      background: rgba($color-background-tint_theme-light, 1);
-      color: rgba($color-content_theme-light, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1);
+      background: rgba($color-background-tint_theme_light, 1);
+      color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-dark, 0.1);
-      background: rgba($color-background-tint_theme-dark, 1);
-      color: rgba($color-content_theme-dark, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03);
+      background: rgba($color-background-tint_theme_dark, 1);
+      color: rgba($color-content_theme_dark, 1);
     }
 
     &_open {
       .app_theme_light & {
-        background: rgba($color-background-invert_theme-light, 0.05);
+        background: rgba($color-background-invert_theme_light, 0.05);
       }
 
       .app_theme_dark & {
-        background: rgba($color-background-invert_theme-dark, 0.05);
+        background: rgba($color-background-invert_theme_dark, 0.05);
       }
     }
 
@@ -134,11 +133,11 @@ export default {
       border-color: #fff transparent transparent transparent;
 
       .app_theme_light & {
-        border-color: rgba($color-content_theme-light, 1) transparent transparent transparent;
+        border-color: rgba($color-content_theme_light, 1) transparent transparent transparent;
       }
 
       .app_theme_dark & {
-        border-color: rgba($color-content_theme-dark, 1) transparent transparent transparent;
+        border-color: rgba($color-content_theme_dark, 1) transparent transparent transparent;
       }
     }
   }
@@ -155,13 +154,13 @@ export default {
     transform: translateY($grid-1);
 
     .app_theme_light & {
-      background: rgba($color-background_theme-light, 1);
-      color: rgba($color-content_theme-light, 1);
+      background: rgba($color-background_theme_light, 1);
+      color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      background: rgba($color-background-tint_theme-dark, 1);
-      color: rgba($color-content_theme-dark, 1);
+      background: rgba($color-background-tint_theme_dark, 1);
+      color: rgba($color-content_theme_dark, 1);
     }
 
     &:before {
@@ -179,7 +178,6 @@ export default {
 
   &__item {
     padding-left: 1em;
-    cursor: pointer;
     user-select: none;
 
     .select_size_s & {
@@ -194,11 +192,11 @@ export default {
 
     &:hover {
       .app_theme_light & {
-        background: rgba($color-primary_theme-light, 1);
+        background: rgba($color-primary_theme_light, 1);
       }
 
       .app_theme_dark & {
-        background: rgba($color-primary_theme-dark, 1);
+        background: rgba($color-primary_theme_dark, 1);
       }
     }
   }

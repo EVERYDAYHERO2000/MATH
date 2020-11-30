@@ -45,11 +45,11 @@ export default {
 
     &_theme {
       &_light {
-        background-color: $color-background-tint_theme-light;
+        background-color: $color-background-tint_theme_light;
       }
 
       &_dark {
-        background-color: $color-background-tint_theme-dark;
+        background-color: $color-background-tint_theme_dark;
       }
     }
   }

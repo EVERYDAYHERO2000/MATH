@@ -80,11 +80,11 @@ export default {
 
   &::selection {
     .app_theme_light & {
-      background-color: rgba($color-primary_theme-light, 0.6);
+      background-color: rgba($color-primary_theme_light, 0.6);
     }
 
     .app_theme_dark & {
-      background-color: rgba($color-primary_theme-dark, 0.6);
+      background-color: rgba($color-primary_theme_dark, 0.6);
     }
   }
 

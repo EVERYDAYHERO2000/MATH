@@ -26,7 +26,7 @@ export default {
   user-select: none;
 
   .app_theme_light & {
-    border-bottom: solid 1px rgba($color-content_theme-light, 0.08);
+    border-bottom: solid 1px rgba($color-content_theme_light, 0.08);
   }
   .app_theme_dark & {
     border-bottom: solid 1px rgba($color-black, 0.5);
@@ -51,10 +51,10 @@ export default {
     justify-content: flex-start;
 
     .app_theme_light & {
-      color: rgba($color-content_theme-light, 0.65);
+      color: rgba($color-content_theme_light, 0.65);
     }
     .app_theme_dark & {
-      color: rgba($color-content_theme-dark, 0.65);
+      color: rgba($color-content_theme_dark, 0.65);
     }
   }
 

@@ -219,7 +219,7 @@ export default {
     flex-basis: 52px;
 
     .app_theme_light & {
-      border-left: solid 1px rgba($color-background-invert_theme-light, 0.08);
+      border-left: solid 1px rgba($color-background-invert_theme_light, 0.08);
     }
 
     .app_theme_dark & {

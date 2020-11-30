@@ -82,11 +82,11 @@ $padding-horisontal: $grid-0;
   pointer-events: all;
 
   .app_theme_light & {
-    background-color: rgba($color-background-invert_theme-light, 0);
+    background-color: rgba($color-background-invert_theme_light, 0);
   }
 
   .app_theme_dark & {
-    background-color: rgba($color-background-invert_theme-dark, 0);
+    background-color: rgba($color-background-invert_theme_dark, 0);
   }
 
   @include media('<=phone') {
@@ -105,12 +105,12 @@ $padding-horisontal: $grid-0;
     margin: $grid-7 0;
 
     .app_theme_light & {
-      background-color: $color-background_theme-light;
+      background-color: $color-background_theme_light;
       box-shadow: 0 0 45px rgba($color-black, 0.12);
     }
 
     .app_theme_dark & {
-      background-color: $color-background_theme-dark;
+      background-color: $color-background_theme_dark;
       box-shadow: 0 0 45px rgba($color-black, 0.5), 0 0 0 1px rgba($color-black, 0.5);
     }
 
@@ -171,11 +171,11 @@ $padding-horisontal: $grid-0;
     box-sizing: border-box;
 
     .app_theme_light & {
-      color: $color-content_theme-light;
+      color: $color-content_theme_light;
     }
 
     .app_theme_dark & {
-      color: $color-content_theme-dark;
+      color: $color-content_theme_dark;
     }
   }
 

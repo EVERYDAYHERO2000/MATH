@@ -69,13 +69,13 @@ export default {
     font-family: $font-family-sans-serif;
 
     .app_theme_light & {
-      background: rgba($color-background_theme-light, 1);
-      color: rgba($color-content_theme-light, 1);
+      background: rgba($color-background_theme_light, 1);
+      color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      background: rgba($color-background-tint_theme-dark, 1);
-      color: rgba($color-content_theme-dark, 1);
+      background: rgba($color-background-tint_theme_dark, 1);
+      color: rgba($color-content_theme_dark, 1);
     }
 
     &:focus {
@@ -84,11 +84,11 @@ export default {
 
     &::placeholder {
       .app_theme_light & {
-        color: rgba($color-content_theme-light, 0.3);
+        color: rgba($color-content_theme_light, 0.3);
       }
 
       .app_theme_dark & {
-        color: rgba($color-content_theme-dark, 0.3);
+        color: rgba($color-content_theme_dark, 0.3);
       }
     }
   }

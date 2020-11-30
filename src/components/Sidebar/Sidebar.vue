@@ -63,13 +63,13 @@ $panel-width-hidden: $grid-7;
   width: $panel-width-desktop;
 
   .app_theme_light & {
-    background-color: rgba($color-background_theme-light, 0);
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0);
+    background-color: rgba($color-background_theme_light, 0);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0);
   }
 
   .app_theme_dark & {
-    background-color: rgba($color-background_theme-dark, 0);
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-dark, 0);
+    background-color: rgba($color-background_theme_dark, 0);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme_dark, 0);
   }
 
   @include media('<=phone') {
@@ -89,7 +89,7 @@ $panel-width-hidden: $grid-7;
       pointer-events: all;
 
       .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-light, 0.1);
+        background-color: rgba($color-background-invert_theme_light, 0.1);
       }
 
       .app_theme_dark & {
@@ -105,7 +105,7 @@ $panel-width-hidden: $grid-7;
       pointer-events: all;
 
       .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-light, 0.1);
+        background-color: rgba($color-background-invert_theme_light, 0.1);
       }
 
       .app_theme_dark & {
@@ -172,12 +172,12 @@ $panel-width-hidden: $grid-7;
       z-index: 1000;
 
       .app_theme_light & {
-        background-color: rgba($color-background_theme-light, 1);
-        box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.03);
+        background-color: rgba($color-background_theme_light, 1);
+        box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0.03);
       }
 
       .app_theme_dark & {
-        background-color: rgba($color-background_theme-dark, 1);
+        background-color: rgba($color-background_theme_dark, 1);
         box-shadow: 0 0 0 1px rgba($color-black, 0.5);
       }
     }
@@ -185,7 +185,7 @@ $panel-width-hidden: $grid-7;
 
   &_visibility_visible &__header {
     .app_theme_light & {
-      border-bottom: solid 1px rgba($color-background-invert_theme-light, 0.08);
+      border-bottom: solid 1px rgba($color-background-invert_theme_light, 0.08);
     }
 
     .app_theme_dark & {

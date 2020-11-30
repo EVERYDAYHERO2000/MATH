@@ -83,22 +83,22 @@ export default {
     text-align: left;
 
     .app_theme_light & {
-      color: $color-primary_theme-light;
-      background-color: rgba($color-background-invert_theme-light, 0);
+      color: $color-primary_theme_light;
+      background-color: rgba($color-background-invert_theme_light, 0);
     }
 
     .app_theme_dark & {
-      color: $color-content_theme-dark;
-      background-color: rgba($color-background-invert_theme-dark, 0);
+      color: $color-content_theme_dark;
+      background-color: rgba($color-background-invert_theme_dark, 0);
     }
 
     &:hover {
       .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-light, 0.03);
+        background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 
       .app_theme_dark & {
-        background-color: rgba($color-background-invert_theme-dark, 0.03);
+        background-color: rgba($color-background-invert_theme_dark, 0.03);
       }
     }
 
