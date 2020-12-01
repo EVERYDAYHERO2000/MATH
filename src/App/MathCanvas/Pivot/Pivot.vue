@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import renderMarkers from './markers.js';
+
 export default {
   name: 'MathCanvasPivot',
   props: {},
@@ -78,107 +80,7 @@ export default {
     onGestureend: function (event) {
       event.preventDefault();
     },
-    renderMarkers: function () {
-      let markerTop = this.$refs.marker_top,
-        markerBottom = this.$refs.marker_bottom,
-        markerLeft = this.$refs.marker_left,
-        markerRight = this.$refs.marker_right,
-        frame = this.$refs.frame,
-        frameRect = this.$refs.frame.getBoundingClientRect(),
-        windowHeight = window.innerHeight,
-        windowWidth = window.innerWidth,
-        padding = 200,
-        markerWidth = 3;
-
-      if (frameRect.top < 0) {
-
-        if (frameRect.left + frameRect.width > 0) {
-          markerTop.style.width = (frameRect.width) ? frameRect.width + 'px' : 80 + 'px' ;
-          markerTop.style.left = frameRect.left + 'px';
-          markerTop.style.right = 'auto'; 
-        } else {
-          markerTop.style.width = markerWidth * 2 +'px';
-          markerTop.style.left = 0;
-          markerTop.style.right = 'auto';  
-        }
-
-        if (frameRect.left > windowWidth) {
-          markerTop.style.width = markerWidth * 2 + 'px';
-          markerTop.style.left = 'auto';
-          markerTop.style.right = 0; 
-        }          
-
-      } else {
-        markerTop.style.width = 0;
-        markerTop.style.left = 0;
-      }
-
-      if (frameRect.bottom > windowHeight) {
-        if (frameRect.left + frameRect.width > 0) {
-          markerBottom.style.width = (frameRect.width > 80) ? frameRect.width + 'px' : 80 + 'px';
-          markerBottom.style.left = frameRect.left + 'px';
-          markerBottom.style.right = 'auto'; 
-        } else {
-          markerBottom.style.width = markerWidth * 2 +'px';
-          markerBottom.style.left = 0;
-          markerBottom.style.right = 'auto';  
-        }
-
-        if (frameRect.left > windowWidth) {
-          markerBottom.style.width = markerWidth * 2 + 'px';
-          markerBottom.style.left = 'auto';
-          markerBottom.style.right = 0; 
-        }
-      } else {
-        markerBottom.style.width = 0;
-        markerBottom.style.left = 0;
-      }
-
-      if (frameRect.left < 0) {
-        if (frameRect.top + frameRect.height > 0) {
-          markerLeft.style.height = (frameRect.height > 80) ? frameRect.height + 'px' : 80 + 'px';
-          markerLeft.style.top = frameRect.top + 'px';
-          markerLeft.style.bottom = 'auto';
-        } else {
-          markerLeft.style.height = markerWidth * 2 + 'px';
-          markerLeft.style.top = 0;
-          markerLeft.style.bottom = 'auto';
-
-        }
-
-        if (frameRect.top > windowHeight) {
-          markerLeft.style.height = markerWidth * 2 + 'px';
-          markerLeft.style.top = 'auto';
-          markerLeft.style.bottom = 0;
-        }
-
-      } else {
-        markerLeft.style.height = 0;
-        markerLeft.style.top = 0;
-      }
-
-      if (frameRect.right > windowWidth) {
-        if (frameRect.top + frameRect.height > 0) {
-          markerRight.style.height = (frameRect.height) ? frameRect.height + 'px' : 80 + 'px';
-          markerRight.style.top = frameRect.top + 'px';
-          markerRight.style.bottom = 'auto';
-        } else {
-          markerRight.style.height = markerWidth * 2 + 'px';
-          markerRight.style.top = 0;
-          markerRight.style.bottom = 'auto';
-
-        }
-
-        if (frameRect.top > windowHeight) {
-          markerRight.style.height = markerWidth * 2 + 'px';
-          markerRight.style.top = 'auto';
-          markerRight.style.bottom = 0;
-        }
-      } else {
-        markerRight.style.height = 0;
-        markerRight.style.top = 0;
-      }
-    },
+    renderMarkers: renderMarkers,
   },
 };
 </script>
