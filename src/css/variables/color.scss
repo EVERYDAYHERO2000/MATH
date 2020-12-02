@@ -1,30 +1,30 @@
 $color-white: #fff;
-$color-black: #000;
+$color-black: rgb(26, 22, 16);
 $color-light: rgba(250, 250, 250,1);
-$color-content: rgba(0,0,0,0.8);
+$color-content: rgba($color-black,0.8);
 $color-primary: rgba(64, 128, 198,1);
 $color-active: rgba(57, 184, 255,1);
 $color-danger: rgba(255, 84, 73,1);
 $color-success: rgba(158, 236, 97,1); 
 
 //light theme
-$color-background_theme-light: $color-white;
-$color-background-tint_theme-light: $color-light;
-$color-background-invert_theme-light: $color-black;
-$color-content_theme-light: $color-content;
-$color-content-invert_theme-light: $color-white;
-$color-primary_theme-light: $color-primary;
-$color-active_theme-light: $color-active;
-$color-danger_theme-light: $color-danger;
-$color-success_theme-light: $color-success;
+$color-background_theme_light: $color-white;
+$color-background-tint_theme_light: $color-light;
+$color-background-invert_theme_light: $color-black;
+$color-content_theme_light: $color-content;
+$color-content-invert_theme_light: $color-white;
+$color-primary_theme_light: $color-primary;
+$color-active_theme_light: $color-active;
+$color-danger_theme_light: $color-danger;
+$color-success_theme_light: $color-success;
 
 //dark theme
-$color-background_theme-dark: #252526;
-$color-background-tint_theme-dark: #1E1E1E;
-$color-background-invert_theme-dark: #fafafa;
-$color-content_theme-dark: rgba(255,255,255,0.8);
-$color-content-invert_theme-dark: $color-white;
-$color-primary_theme-dark: rgba(57, 184, 255,1);
-$color-active_theme-dark: $color-active;
-$color-danger_theme-dark: $color-danger;
-$color-success_theme-dark: $color-success;
+$color-background_theme_dark: #252526;
+$color-background-tint_theme_dark: #1E1E1E;
+$color-background-invert_theme_dark: #fafafa;
+$color-content_theme_dark: rgba($color-white,0.8);
+$color-content-invert_theme_dark: $color-white;
+$color-primary_theme_dark: rgba(57, 184, 255,1);
+$color-active_theme_dark: $color-active;
+$color-danger_theme_dark: $color-danger;
+$color-success_theme_dark: $color-success;

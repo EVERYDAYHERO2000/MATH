@@ -1,5 +1,5 @@
 <template>
-  <div class="textarea" v-ripple="'rgba(0, 0, 0, 0.01)'">
+  <div class="textarea" v-ripple>
     <textarea
       class="textarea__input"
       ref="textarea"
@@ -36,26 +36,31 @@ export default {
 
 .textarea {
   width: 100%;
+  border-radius: $grid-1;  
+  box-sizing: border-box;  
 
   &__input {
     box-sizing: border-box;
     resize: none;
-    border-radius: $grid-1;
     width: 100%;
     height: 100px;
     padding: $grid-1;
+    border-radius: $grid-1;  
     font-family: $font-family-sans-serif;
-    font-size: 16px;
+    font-size: $font-size_m;
     transition: border 0.2s;
+    display: block;
 
     .app_theme_light & {
-      background: $color-background-tint_theme-light;
-      border: solid 1px rgba($color-content_theme-light, 0.03);
+      background: $color-background-tint_theme_light;
+      border: solid 1px rgba($color-content_theme_light, 0.03);
+      color: $color-content_theme_light;
     }
 
     .app_theme_dark & {
-      background: $color-background-tint_theme-dark;
-      border: solid 1px rgba($color-content_theme-dark, 0.03);
+      background: $color-background-tint_theme_dark;
+      border: solid 1px rgba($color-content_theme_dark, 0.03);
+      color: $color-content_theme_dark;
     }
 
     &:focus {
@@ -63,18 +68,18 @@ export default {
       transition: border 0.2s;
 
       .app_theme_light & {
-        border: solid 1px $color-primary_theme-light;
+        border: solid 1px $color-primary_theme_light;
       }
       .app_theme_dark & {
-        border: solid 1px $color-primary_theme-dark;
+        border: solid 1px $color-primary_theme_dark;
       }
     }
     &::placeholder {
       .app_theme_light & {
-        color: rgba($color-content_theme-light, 0.3);
+        color: rgba($color-content_theme_light, 0.3);
       }
       .app_theme_dark & {
-        color: rgba($color-content_theme-dark, 0.3);
+        color: rgba($color-content_theme_dark, 0.3);
       }
     }
   }

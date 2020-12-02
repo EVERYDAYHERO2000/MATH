@@ -9,10 +9,16 @@
     <div ref="frame" class="math-canvas__frame">
       <slot> </slot>
     </div>
+    <div ref="marker_top" class="math-canvas__marker math-canvas__marker_top" />
+    <div ref="marker_bottom" class="math-canvas__marker math-canvas__marker_bottom" />
+    <div ref="marker_left" class="math-canvas__marker math-canvas__marker_left" />
+    <div ref="marker_right" class="math-canvas__marker math-canvas__marker_right" />
   </div>
 </template>
 
 <script>
+import renderMarkers from './markers.js';
+
 export default {
   name: 'MathCanvasPivot',
   props: {},
@@ -28,6 +34,9 @@ export default {
       startY: null,
     };
   },
+  mounted: function () {
+    this.renderMarkers();
+  },
   methods: {
     render: function () {
       window.requestAnimationFrame(() => {
@@ -35,6 +44,8 @@ export default {
           this.rotation
         }deg) scale(${this.scale > 0 ? this.scale : 0})`;
         this.$refs.frame.style.transform = val;
+
+        this.renderMarkers();
       });
     },
     onWheel: function (event) {
@@ -69,6 +80,7 @@ export default {
     onGestureend: function (event) {
       event.preventDefault();
     },
+    renderMarkers: renderMarkers,
   },
 };
 </script>
@@ -76,14 +88,57 @@ export default {
 <style lang="scss">
 @import '../../../css/main.scss';
 
+$width-marker: 3px;
+
 .math-canvas {
   &__pivot {
     width: 10000px;
     height: 10000px;
+    box-sizing: border-box;
+    padding: 200px;
   }
   &__frame {
     transform-origin: center;
     position: absolute;
+    padding: $grid-3;
+    box-sizing: border-box;
+  }
+
+  &__marker {
+    position: fixed;
+    display: block;
+    pointer-events: none;
+    touch-action: none;
+    z-index: 10000;
+
+    @include media('<=phone') {
+      z-index: 500;
+    }  
+
+    .app_theme_light & {
+      background-color: rgba($color-primary_theme_light, 1);
+    }
+
+    .app_theme_dark & {
+      background-color: rgba($color-primary_theme_dark, 1);
+    }
+
+    &_top {
+      height: $width-marker;
+      top: 0;
+    }
+    &_bottom {
+      height: $width-marker;
+      bottom: 0;
+    }
+    &_left {
+      width: $width-marker;
+      left: 0;
+    }
+    &_right {
+      width: $width-marker;
+      right: 0;
+    }
   }
 }
 </style>

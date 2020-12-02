@@ -50,7 +50,7 @@ var Ripple = {
       ripple.style.pointerEvents = 'none';
       ripple.style.position = 'relative';
       ripple.style.zIndex = zIndex;
-      ripple.style.backgroundColor = bg;
+      //ripple.style.backgroundColor = bg;
 
       //Styles for rippleContainer
       rippleContainer.style.position = 'absolute';
@@ -103,7 +103,7 @@ var Ripple = {
 
         // Timeout set to get a smooth removal of the ripple
         setTimeout(function () {
-          rippleContainer.parentNode.removeChild(rippleContainer);
+          if (rippleContainer.parentNode) rippleContainer.parentNode.removeChild(rippleContainer);
         }, 850);
 
         el.removeEventListener('mouseup', clearRipple, false);

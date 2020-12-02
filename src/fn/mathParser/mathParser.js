@@ -155,22 +155,9 @@ const mathParser = function (exp, options) {
     return result;
   }
 
-  function flat(exp) {
-    if (exp.type == 'sum') {
-      exp.terms[1].action = exp.action;
-
-      for (let t in exp.terms) {
-        exp.terms[t].action = exp.action;
-      }
-    }
-    return exp;
-  }
 
   const result = parse(node);
 
-  // console.log(flat(result))
-
-  //console.log(node);
 
   return {
     expression: exp,

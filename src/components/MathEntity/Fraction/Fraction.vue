@@ -121,15 +121,15 @@
         }
 
         .app_theme_light & {
-            background-color: $color-content_theme-light;
+            background-color: $color-entity_theme_light;
         }
 
         .app_theme_dark & {
-            background-color: $color-content_theme-dark;
+            background-color: $color-entity_theme_dark;
         }
 
         .theme_export & {
-            background-color: $color-content_theme-light!important;
+            background-color: $color-entity_theme_light!important;
         }    
     }
 </style>

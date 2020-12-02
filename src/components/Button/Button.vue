@@ -2,7 +2,7 @@
   <button
     class="button"
     v-bind:class="[{ button_disabled: disabled }, classSize, classColor]"
-    v-ripple="'rgba(255, 255, 255, 0.05)'"
+    v-ripple
     v-bind:title="title"
   >
     {{ label }}
@@ -38,15 +38,15 @@ export default {
 .button {
   border-radius: $grid-1;
   border: none;
-  font-size: 16px;
+  font-size: $font-size_m;
   transition: all 0.2s;
 
   .app_theme_light & {
-    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-light, 0.1);
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme_light, 0.1);
   }
 
   .app_theme_dark & {
-    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme-dark, 0.1);
+    box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme_dark, 0.1);
   }
 
   &:focus {
@@ -81,132 +81,132 @@ export default {
   &_color {
     &_black {
       .app_theme_light & {
-        background-color: $color-background-invert_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-background-invert_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-background-invert_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-background-invert_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-background-invert_theme-light, 5%);
+          background: lighten($color-background-invert_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-background-invert_theme-dark, 5%);
+          background: lighten($color-background-invert_theme_dark, 5%);
         }
       }
     }
 
     &_primary {
       .app_theme_light & {
-        background-color: $color-primary_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-primary_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-primary_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-primary_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-primary_theme-light, 5%);
+          background: lighten($color-primary_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-primary_theme-dark, 5%);
+          background: lighten($color-primary_theme_dark, 5%);
         }
       }
     }
 
     &_active {
       .app_theme_light & {
-        background-color: $color-active_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-active_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-active_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-active_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-active_theme-light, 5%);
+          background: lighten($color-active_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-active_theme-dark, 5%);
+          background: lighten($color-active_theme_dark, 5%);
         }
       }
     }
 
     &_content {
       .app_theme_light & {
-        background-color: $color-content_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-content_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-content_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-content_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-content_theme-light, 5%);
+          background: lighten($color-content_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-content_theme-dark, 5%);
+          background: lighten($color-content_theme_dark, 5%);
         }
       }
     }
 
     &_danger {
       .app_theme_light & {
-        background-color: $color-danger_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-danger_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-danger_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-danger_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-danger_theme-light, 5%);
+          background: lighten($color-danger_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-danger_theme-dark, 5%);
+          background: lighten($color-danger_theme_dark, 5%);
         }
       }
     }
 
     &_success {
       .app_theme_light & {
-        background-color: $color-success_theme-light;
-        color: $color-content-invert_theme-light;
+        background-color: $color-success_theme_light;
+        color: $color-content-invert_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-success_theme-dark;
-        color: $color-content-invert_theme-dark;
+        background-color: $color-success_theme_dark;
+        color: $color-content-invert_theme_dark;
       }
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-success_theme-light, 5%);
+          background: lighten($color-success_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-success_theme-dark, 5%);
+          background: lighten($color-success_theme_dark, 5%);
         }
       }
     }

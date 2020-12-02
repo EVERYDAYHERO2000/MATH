@@ -1,5 +1,6 @@
 @import './variables/color.scss';
-@import './variables/sizes.scss';
+@import './variables/grid.scss';
+@import './variables/font-size.scss';
 
 $border-width-s: 1px;
 $border-width-m: 2px;
@@ -7,5 +8,7 @@ $border-width-l: 3px;
 
 $font-family-sans-serif: 'Roboto', sans-serif;
 $font-family-sans: 'Source Serif Pro', serif;
+
+
 
 

@@ -7,7 +7,7 @@
       class="switcher__checkbox"
       type="checkbox"
     />
-    <div v-ripple="'rgba(255, 255, 255, 0.05)'" class="switcher__slider"></div>
+    <div v-ripple class="switcher__slider"></div>
   </label>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   -webkit-tap-highlight-color: transparent;
 
   .app_theme_light & {
-    box-shadow: 0 0 0 1px rgba($color-background-invert_theme-light, 0.15);
+    box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0.15);
   }
   .app_theme_dark & {
     box-shadow: 0 0 0 1px rgba($color-black, 0.2);
@@ -83,7 +83,7 @@ export default {
     }
 
     .app_theme_dark & {
-      background-color: $color-background-tint_theme-dark;
+      background-color: $color-background-tint_theme_dark;
     }
 
     &:focus {
@@ -103,21 +103,21 @@ export default {
       box-shadow: 0 0 0 1px rgba($color-black, 0.05), 0 2px 3px rgba($color-black, 0.1);
 
       .app_theme_light & {
-        background-color: $color-background_theme-light;
+        background-color: $color-background_theme_light;
       }
 
       .app_theme_dark & {
-        background-color: $color-content-invert_theme-dark;
+        background-color: $color-content-invert_theme_dark;
       }
     }
   }
 
   &__checkbox:checked + &__slider {
     .app_theme_light & {
-      background-color: $color-primary_theme-light;
+      background-color: $color-primary_theme_light;
     }
     .app_theme_dark & {
-      background-color: $color-primary_theme-dark;
+      background-color: $color-primary_theme_dark;
     }
   }
 

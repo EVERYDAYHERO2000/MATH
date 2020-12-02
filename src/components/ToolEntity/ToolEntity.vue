@@ -1,5 +1,5 @@
 <template>
-  <div v-ripple="'rgba(0, 0, 0, 0.02)'" class="tool-entity" v-bind:class="[classCover]">
+  <div v-ripple class="tool-entity" v-bind:class="[classCover]">
     <span class="tool-entity__title">{{ title }}</span>
     <span class="tool-entity__code">{{ code }}</span>
   </div>
@@ -54,7 +54,7 @@ export default {
 
   .app_theme_dark & {
     color: $color-content_theme-dark;
-    border-bottom: solid 1px rgba($color-black, 0.3);
+    border-bottom: solid 1px rgba($color-black, 0.5);
   }
 
   &_cover {
@@ -601,7 +601,7 @@ export default {
   }
 
   &__title {
-    font-size: 12px;
+    font-size: $font-size_s;
 
     .app_theme_light & {
       color: rgba($color-background-invert_theme-light, 0.5);
@@ -613,7 +613,7 @@ export default {
   }
 
   &__code {
-    font-size: 12px;
+    font-size: $font-size_s;
 
     .app_theme_light & {
       color: $color-primary_theme-light;

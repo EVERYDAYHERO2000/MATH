@@ -1,7 +1,7 @@
 <template>
   <div class="math-canvas">
     <MathCanvasPivot>
-      <div style="padding: 120px 60px;" v-on:keydown.capture="keydown" ref="canvas">
+      <div v-on:keydown.capture="keydown" ref="canvas">
         <MathEntity v-bind:into="expression" />
       </div>
     </MathCanvasPivot>
@@ -13,7 +13,7 @@ import MathCanvasPivot from './Pivot/Pivot.vue';
 import domtoimage from '/@fn/domToImage/domToImage.js';
 import MathEntity from '/@components/MathEntity/MathEntity.vue';
 
-import test from './test2.js';
+import test from './test.js';
 
 export default {
   name: 'MathCanvas',
@@ -70,7 +70,6 @@ export default {
 .math-canvas {
   font-family: $font-family-sans;
   font-size: 32px;
-  padding: 100px;
   box-sizing: border-box;
   position: absolute;
   width: 100%;
@@ -80,11 +79,11 @@ export default {
 
   &::selection {
     .app_theme_light & {
-      background-color: rgba($color-primary_theme-light, 0.6);
+      background-color: rgba($color-primary_theme_light, 0.6);
     }
 
     .app_theme_dark & {
-      background-color: rgba($color-primary_theme-dark, 0.6);
+      background-color: rgba($color-primary_theme_dark, 0.6);
     }
   }
 

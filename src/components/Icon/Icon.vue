@@ -43,11 +43,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-background-invert_theme-light;
+          fill: $color-background-invert_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-background-invert_theme-dark;
+          fill: $color-background-invert_theme_dark;
         }
       }
     }
@@ -57,11 +57,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-primary_theme-light;
+          fill: $color-primary_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-primary_theme-dark;
+          fill: $color-primary_theme_dark;
         }
       }
     }
@@ -71,11 +71,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-active_theme-light;
+          fill: $color-active_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-active_theme-dark;
+          fill: $color-active_theme_dark;
         }
       }
     }
@@ -85,11 +85,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-content_theme-light;
+          fill: $color-content_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-content_theme-dark;
+          fill: $color-content_theme_dark;
         }
       }
     }
@@ -99,11 +99,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-danger_theme-light;
+          fill: $color-danger_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-danger_theme-dark;
+          fill: $color-danger_theme_dark;
         }
       }
     }
@@ -113,11 +113,11 @@ export default {
       path,
       circle {
         .app_theme_light & {
-          fill: $color-success_theme-light;
+          fill: $color-success_theme_light;
         }
         
         .app_theme_dark & {
-          fill: $color-success_theme-dark;
+          fill: $color-success_theme_dark;
         }
       }
     }

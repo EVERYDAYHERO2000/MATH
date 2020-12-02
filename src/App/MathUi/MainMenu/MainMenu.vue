@@ -12,17 +12,17 @@
     </template>
 
     <template v-slot:body>
-      <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="exportToPng">
+      <button v-ripple class="main-menu__item" v-on:click="exportToPng">
         {{ D('Export as png') }}
       </button>
       <button
-        v-ripple="'rgba(0, 0, 0, 0.02)'"
+        v-ripple
         class="main-menu__item"
         v-on:click="importExpression"
       >
         {{ D('Import Expression') }}
       </button>
-      <button v-ripple="'rgba(0, 0, 0, 0.02)'" class="main-menu__item" v-on:click="appSettings">
+      <button v-ripple class="main-menu__item" v-on:click="appSettings">
         {{ D('App Settings') }}
       </button>
     </template>
@@ -75,7 +75,7 @@ export default {
   &__item {
     border: none;
     display: block;
-    font-size: 16px;
+    font-size: $font-size_m;
     padding: $grid-2 $grid-3;
     box-sizing: border-box;
     font-weight: 600;
@@ -83,22 +83,22 @@ export default {
     text-align: left;
 
     .app_theme_light & {
-      color: $color-primary_theme-light;
-      background-color: rgba($color-background-invert_theme-light, 0);
+      color: $color-primary_theme_light;
+      background-color: rgba($color-background-invert_theme_light, 0);
     }
 
     .app_theme_dark & {
-      color: $color-content_theme-dark;
-      background-color: rgba($color-background-invert_theme-dark, 0);
+      color: $color-content_theme_dark;
+      background-color: rgba($color-background-invert_theme_dark, 0);
     }
 
     &:hover {
       .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-light, 0.02);
+        background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 
-      .app_theme_light & {
-        background-color: rgba($color-background-invert_theme-dark, 0.02);
+      .app_theme_dark & {
+        background-color: rgba($color-background-invert_theme_dark, 0.03);
       }
     }
 
