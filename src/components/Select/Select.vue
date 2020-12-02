@@ -23,7 +23,8 @@
           :key="i"
           v-on:click="select(option)"
         >
-          {{ option[1] }}
+          <span>{{ option[1] }}</span>
+          <Icon v-if="option[0] == selected[0]" color="primary" name="check" />
         </div>
       </div>
     </div>
@@ -31,6 +32,7 @@
 </template>
 
 <script>
+import Icon from '/@components/icon/icon.vue';
 import { size } from '/@fn/propsType/propsType.js';
 
 export default {
@@ -51,6 +53,9 @@ export default {
       required: false,
       default: 0,
     },
+  },
+  components: {
+    Icon
   },
   data() {
     return {
@@ -208,7 +213,6 @@ export default {
 
     @include media('<=phone') {
       width: calc(100% - #{$grid-2} * 2);
-      margin: $grid-2;
       padding: $grid-2 0;
     }
 
@@ -237,6 +241,9 @@ export default {
   &__item {
     user-select: none;
     padding: $grid-1 $grid-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include media('<=phone') {
       padding: $grid-2;
