@@ -9,61 +9,57 @@ const renderMarkers = function () {
     markerWidth = 3,
     padding = 80;
 
-  markerTop.style.cssText = markerHorizontal('top');
-  markerBottom.style.cssText = markerHorizontal('bottom');
+  markerTop.style.cssText = setMarker('top');
+  markerBottom.style.cssText = setMarker('bottom');
 
-  markerLeft.style.cssText = markerVertical('left');
-  markerRight.style.cssText = markerVertical('right');
+  markerLeft.style.cssText = setMarker('left');
+  markerRight.style.cssText = setMarker('right');
 
-  function markerHorizontal(direction) {
+  function setMarker(direction) {
     let style = {};
 
-    if (direction == 'top' ? frameRect.top < 0 : frameRect.bottom > windowHeight) {
-      if (frameRect.left + frameRect.width > 0) {
-        style.width = frameRect.width ? px(frameRect.width) : px(padding);
-        style.left = px(frameRect.left);
-        style.right = 'auto';
+    if (direction == 'top' || direction == 'bottom') {
+      if (direction == 'top' ? frameRect.top < 0 : frameRect.bottom > windowHeight) {
+        if (frameRect.left + frameRect.width > 0) {
+          style.width = frameRect.width ? px(frameRect.width) : px(padding);
+          style.left = px(frameRect.left);
+          style.right = 'auto';
+        } else {
+          style.width = px(markerWidth * 2);
+          style.left = px(0);
+          style.right = 'auto';
+        }
+
+        if (frameRect.left > windowWidth) {
+          style.width = px(markerWidth * 2);
+          style.left = 'auto';
+          style.right = px(0);
+        }
       } else {
-        style.width = px(markerWidth * 2);
+        style.width = px(0);
         style.left = px(0);
-        style.right = 'auto';
       }
+    } else if (direction == 'left' || direction == 'right') {
+      if (direction == 'right' ? frameRect.right > windowWidth : frameRect.left < 0) {
+        if (frameRect.top + frameRect.height > 0) {
+          style.height = frameRect.height > padding ? px(frameRect.height) : px(padding);
+          style.top = px(frameRect.top);
+          style.bottom = 'auto';
+        } else {
+          style.height = px(markerWidth * 2);
+          style.top = 0;
+          style.bottom = 'auto';
+        }
 
-      if (frameRect.left > windowWidth) {
-        style.width = px(markerWidth * 2);
-        style.left = 'auto';
-        style.right = px(0);
-      }
-    } else {
-      style.width = px(0);
-      style.left = px(0);
-    }
-
-    return objectToCSS(style);
-  }
-
-  function markerVertical(direction) {
-    let style = {};
-
-    if (direction == 'right' ? frameRect.right > windowWidth : frameRect.left < 0) {
-      if (frameRect.top + frameRect.height > 0) {
-        style.height = frameRect.height > padding ? px(frameRect.height) : px(padding);
-        style.top = px(frameRect.top);
-        style.bottom = 'auto';
+        if (frameRect.top > windowHeight) {
+          style.height = px(markerWidth * 2);
+          style.top = 'auto';
+          style.bottom = px(0);
+        }
       } else {
-        style.height = px(markerWidth * 2);
-        style.top = 0;
-        style.bottom = 'auto';
+        style.height = px(0);
+        style.top = px(0);
       }
-
-      if (frameRect.top > windowHeight) {
-        style.height = px(markerWidth * 2);
-        style.top = 'auto';
-        style.bottom = px(0);
-      }
-    } else {
-      style.height = px(0);
-      style.top = px(0);
     }
 
     return objectToCSS(style);
