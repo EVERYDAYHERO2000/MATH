@@ -82,11 +82,11 @@ $padding-horisontal: $grid-0;
   pointer-events: all;
 
   .app_theme_light & {
-    background-color: rgba($color-background-invert_theme_light, 0);
+    background-color: rgba($color-black, 0);
   }
 
   .app_theme_dark & {
-    background-color: rgba($color-background-invert_theme_dark, 0);
+    background-color: rgba($color-black, 0);
   }
 
   @include media('<=phone') {

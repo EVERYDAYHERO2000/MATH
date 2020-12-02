@@ -8,15 +8,23 @@
     >
       {{ selected[1] }}
     </div>
-    <div class="select__items" :class="{ select__items_hide: !open }">
-      <div
-        class="select__item"
-        v-ripple
-        v-for="(option, i) of options"
-        :key="i"
-        v-on:click="select(option)"
-      >
-        {{ option[1] }}
+    <div
+      class="select__backdrop"
+      v-on:click.self="open = !open"
+      v-bind:class="[
+        open ? 'select__backdrop_visibility_visible' : 'select__backdrop_visibility_hidden',
+      ]"
+    >
+      <div class="select__dropdown">
+        <div
+          class="select__item"
+          v-ripple
+          v-for="(option, i) of options"
+          :key="i"
+          v-on:click="select(option)"
+        >
+          {{ option[1] }}
+        </div>
       </div>
     </div>
   </div>
@@ -147,16 +155,62 @@ export default {
       }
     }
   }
-
-  &__items {
-    border-radius: $grid-1;
-    overflow: hidden;
+  &__backdrop {
     position: absolute;
     left: 0;
     right: 0;
     z-index: 1;
+    width: 100%;
+
+    @include media('<=phone') {
+      position: fixed;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      display: flex;
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      box-sizing: border-box;
+    }
+
+    .app_theme_light & {
+      @include media('<=phone') {
+        background-color: rgba($color-black, 0.1);
+      }
+    }
+
+    .app_theme_dark & {
+      @include media('<=phone') {
+        background-color: rgba($color-black, 0.6);
+      }
+    }
+
+    &_visibility {
+      &_visible {
+        animation: dropdown-show_desktop 0.1s ease-in-out forwards;
+
+      }
+
+      &_hidden {
+        display: none;
+      }
+    }
+  }
+
+  &__dropdown {
+    border-radius: $grid-1;
+    overflow: hidden;
+    position: absolute;
     padding: $grid-1 0;
     transform: translateY($grid-1);
+    width: 100%;
+
+    @include media('<=phone') {
+      width: calc(100% - #{$grid-2} * 2);
+      margin: $grid-2;
+      padding: $grid-2 0;
+    }
 
     .app_theme_light & {
       background: rgba($color-background_theme_light, 1);
@@ -178,24 +232,14 @@ export default {
       position: absolute;
       transform: translateY(-$grid-1);
     }
-
-    &_hide {
-      display: none;
-    }
   }
 
   &__item {
-    padding-left: $grid-1;
     user-select: none;
+    padding: $grid-1 $grid-2;
 
-    .select_size_s & {
-      padding: 0;
-    }
-    .select_size_m & {
-      padding: $grid-1 $grid-2;
-    }
-    .select_size_l & {
-      padding: $grid-2 $grid-2;
+    @include media('<=phone') {
+      padding: $grid-2;
     }
 
     &:hover {
@@ -209,4 +253,16 @@ export default {
     }
   }
 }
+
+@keyframes dropdown-show_desktop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 </style>
