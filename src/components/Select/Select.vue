@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import Icon from '/@components/icon/icon.vue';
+import Icon from '/@components/Icon/Icon.vue';
 import { size } from '/@fn/propsType/propsType.js';
 
 export default {
@@ -55,7 +55,7 @@ export default {
     },
   },
   components: {
-    Icon
+    Icon,
   },
   data() {
     return {
