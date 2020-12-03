@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="['app', `app_theme_${theme}`]">
     <MathCanvas ref="canvas" />
-    <MathUi v-on:exportToPng="exportToPng" />
+    <MathUi />
   </div>
 </template>
 
@@ -30,9 +30,6 @@ export default {
     window.addEventListener('resize', this.setScreenHeight);
   },
   methods: {
-      exportToPng: function(){
-        this.$refs.canvas.renderToPng()
-      },
       setScreenHeight: function(){
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);

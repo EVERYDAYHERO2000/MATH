@@ -8,6 +8,7 @@
 
 <script>
   import MathPopupImportExpression from './PopupImportExpression/PopupImportExpression.vue';
+  import MathPopupExportAsImage from './PopupExportAsImage/PopupExportAsImage.vue';
   import MathPopupAppSettings from './PopupAppSettings/PopupAppSettings.vue';
 
   export default {
@@ -17,6 +18,7 @@
     }, 
     components: {
       MathPopupImportExpression,
+      MathPopupExportAsImage,
       MathPopupAppSettings,
     },
     methods: {

@@ -214,7 +214,7 @@ export default {
 
   &_disabled {
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.2;
     filter: grayscale(1);
     transition: all 0.2s;
   }

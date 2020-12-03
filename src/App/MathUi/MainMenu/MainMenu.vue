@@ -12,15 +12,15 @@
     </template>
 
     <template v-slot:body>
-      <button v-ripple class="main-menu__item" v-on:click="exportToPng">
-        {{ D('Export as png') }}
-      </button>
       <button
         v-ripple
         class="main-menu__item"
         v-on:click="importExpression"
       >
         {{ D('Import Expression') }}
+      </button>
+      <button v-ripple class="main-menu__item" v-on:click="exportAsImage">
+        {{ D('Export as Image') }}
       </button>
       <button v-ripple class="main-menu__item" v-on:click="appSettings">
         {{ D('App Settings') }}
@@ -51,9 +51,10 @@ export default {
     toggleVisible: function () {
       this.isVisible = !this.isVisible;
     },
-    exportToPng: function () {
+    exportAsImage: function () {
       this.toggleVisible();
-      this.$emit('exportToPng', true);
+      this.$emit('exportAsImage', 'MathPopupExportAsImage');
+      //this.$emit('exportToPng', true);
     },
     importExpression: function () {
       this.toggleVisible();
@@ -64,7 +65,7 @@ export default {
       this.$emit('appSettings', 'MathPopupAppSettings');
     },
   },
-  emits: ['exportToPng', 'importExpression', 'appSettings'],
+  emits: ['exportAsImage', 'importExpression', 'appSettings'],
 };
 </script>
 

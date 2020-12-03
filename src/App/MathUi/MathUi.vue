@@ -3,7 +3,7 @@
     <div class="math-ui__panels">
       <SidebarTools />
       <MainMenu 
-        v-on:exportToPng="exportToPng"
+        v-on:exportAsImage="exportAsImage"
         v-on:importExpression="importExpression"
         v-on:appSettings="appSettings" />
     </div>
@@ -36,8 +36,9 @@
       }
     },
     methods: {
-      exportToPng: function () {
-        this.$emit('exportToPng', true)
+      exportAsImage: function (evt) {
+        this.popup.name = evt;
+        //this.$emit('exportAsImage', true)
       },
       importExpression: function(evt) {
         this.popup.name = evt;
@@ -49,7 +50,7 @@
         this.popup.name = null;
       }
     },
-    emits: ['exportToPng']
+    
   }    
 </script>
 

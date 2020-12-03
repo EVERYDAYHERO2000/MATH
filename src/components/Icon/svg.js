@@ -10,11 +10,13 @@ import { VueComponent as IconSearch } from './assets/icon_search_24.svg';
 import { VueComponent as IconVariable } from './assets/icon_var_24.svg';
 import { VueComponent as IconTrigonometry } from './assets/icon_trigonometry_24.svg';
 import { VueComponent as IconCheck } from './assets/icon_check_24.svg';
+import { VueComponent as IconDropdown } from './assets/icon_dropdown_24.svg';
 
 export default {
   IconAdd,
   IconClose,
   IconConsole,
+  IconDropdown,
   IconCheck,
   IconLayers,
   IconMenu,

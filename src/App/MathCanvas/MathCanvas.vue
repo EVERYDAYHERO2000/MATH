@@ -49,16 +49,26 @@ export default {
         }
       }
     },
-    renderToPng: function () {
+    renderToImage: function (format) {
+      format = format || 'png';
       const _this = this;
       _this.$refs.canvas.classList.add('theme_export');
-      domtoimage.toPng(this.$refs.canvas).then(function (dataUrl) {
-        _this.$refs.canvas.classList.remove('theme_export');
-        let link = document.createElement('a');
-        link.download = 'my-image-name.png';
-        link.href = dataUrl;
-        link.click();
-      });
+
+      if ( format == 'png') {
+        domtoimage.toPng(this.$refs.canvas).then(save);
+      } else if (format == 'jpg') {
+        domtoimage.toJpeg(this.$refs.canvas, { quality: 0.95, bgcolor: '#ffffff' }).then(save);
+      } else if (format == 'svg') {
+        domtoimage.toSvg(this.$refs.canvas).then(save);
+      }
+
+      function save(dataUrl){
+          _this.$refs.canvas.classList.remove('theme_export');
+          let link = document.createElement('a');
+          link.download = `my-image-name.${format}`;
+          link.href = dataUrl;
+          link.click();
+      }
     },
   },
 };
