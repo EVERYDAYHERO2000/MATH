@@ -65,7 +65,7 @@ export default {
       function save(dataUrl){
           _this.$refs.canvas.classList.remove('theme_export');
           let link = document.createElement('a');
-          link.download = `my-image-name.${format}`;
+          link.download = `math.${format}`;
           link.href = dataUrl;
           link.click();
       }
