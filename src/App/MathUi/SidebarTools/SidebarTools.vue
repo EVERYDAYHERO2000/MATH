@@ -39,45 +39,28 @@ export default {
   },
   data: function () {
     return {
-      isVisible: false,
-      activeTab: 'math',
-      searchValue: '',
-      scroll: 0,
+      isVisible: localStorage.sidebarIsVisible || false,
+      activeTab: localStorage.sidebarActiveTab || 'math',
+      searchValue: localStorage.sidebarSearchValue || '',
+      scroll: localStorage.sidebarScroll || 0,
     };
   },
   props: {},
   watch: {
     isVisible: function () {
-      this.saveValue('isVisible');
+      localStorage.sidebarIsVisible = this.isVisible;
     },
     activeTab: function () {
-      this.saveValue('activeTab');
+      localStorage.sidebarActiveTab = this.activeTab;
     },
     searchValue: function () {
-      this.saveValue('searchValue');
+      localStorage.sidebarSearchValue = this.searchValue;
     },
     scroll: function () {
-      this.saveValue('scroll');
+      localStorage.sidebarScroll = this.scroll;
     },
-  },
-  created: function () {
-    let ls = localStorage.SidebarTools;
-    if (ls) {
-      let lsData = JSON.parse(ls);
-      this.activeTab = lsData.activeTab;
-      this.isVisible = lsData.isVisible;
-      this.searchValue = lsData.searchValue;
-      this.scroll = lsData.scroll;
-    } else {
-      localStorage.setItem('SidebarTools', JSON.stringify(this.$data));
-    }
   },
   methods: {
-    saveValue: function (dataKey) {
-      let ls = JSON.parse(localStorage.SidebarTools);
-      ls[dataKey] = this[dataKey];
-      localStorage.SidebarTools = JSON.stringify(ls);
-    },
     toggleVisible: function () {
       this.isVisible = !this.isVisible;
     },
