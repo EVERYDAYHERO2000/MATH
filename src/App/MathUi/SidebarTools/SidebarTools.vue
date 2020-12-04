@@ -39,10 +39,10 @@ export default {
   },
   data: function () {
     return {
-      isVisible: localStorage.sidebarIsVisible || false,
+      isVisible: (localStorage.sidebarIsVisible == 'true') || false,
       activeTab: localStorage.sidebarActiveTab || 'math',
       searchValue: localStorage.sidebarSearchValue || '',
-      scroll: localStorage.sidebarScroll || 0,
+      scroll: +localStorage.sidebarScroll || 0,
     };
   },
   props: {},

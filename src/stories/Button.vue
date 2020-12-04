@@ -1,5 +1,7 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button type="button" v-bind:class="classes" v-on:click="onClick" v-bind:style="style">
+    {{ label }}
+  </button>
 </template>
 
 <script>

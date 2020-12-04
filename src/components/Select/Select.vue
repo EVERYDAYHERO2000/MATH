@@ -3,7 +3,7 @@
     <div
       class="select__selected"
       v-ripple
-      :class="{ select__selected_open: open }"
+      v-bind:class="{ select__selected_open: open }"
       v-on:click="open = !open"
     >
       <span class="select__item-title">{{ selected[1] }}</span>
