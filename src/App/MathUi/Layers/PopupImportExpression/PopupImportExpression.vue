@@ -48,9 +48,16 @@
         const testParser = mathParser(this.expression, {latex:true});
     
         this.$emit('submitImport', this.expression);
+
+        console.log(testParser)
         
-        this.$root.$refs.canvas.$data.expression = testParser.result;
-        this.$root.$refs.canvas.$forceUpdate();
+        this.$root.$refs.canvas.$data.expression = {type: 'empty'};
+        const _this = this;
+        setTimeout(function(){
+          _this.$root.$refs.canvas.$data.expression = testParser.result;
+          _this.$root.$refs.canvas.$forceUpdate();
+        },1000);
+        
 
         this.quit();
       },

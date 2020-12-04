@@ -1,7 +1,7 @@
 <template>
     <div class="entity-inline entity-cos">
         <EntityString value="cos" />
-        <MathEntity v-bind:into="into" />
+        <MathEntity v-bind:into="into.expression" />
     </div>
 </template>
 

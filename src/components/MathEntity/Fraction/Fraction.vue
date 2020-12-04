@@ -33,7 +33,7 @@
             }
         },
         mounted: function () {
-            this.calc(true)
+            
         },
         components: {
             MathEntity: defineAsyncComponent(() =>
@@ -42,14 +42,7 @@
             EntityString: defineAsyncComponent(() => import("../String/String.vue")),
         },
         methods: {
-            calc: function (emit) {
-                let result = null;
-                if (this.numeratorValue.value && this.denominatorValue.value) {
-                    result = this.value = this.numeratorValue.value / this.denominatorValue.value;
-                    if (emit) this.$emit('calc', result);
-                }
-                return result;
-            }
+            
         }
     };
 </script>

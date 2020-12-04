@@ -136,15 +136,15 @@ const mathParser = function (exp, options) {
     }
 
     function getExpression(key, prevToken) {
-      let result = [];
+      let result = {};
       prevToken = prevToken || null;
       if (typeof key == 'string') {
         if (Array.isArray(exp[key])) {
           for (let token of exp[key]) {
-            result.push(parse(token));
+            result = parse(token);
           }
         } else {
-          result.push(parse(exp[key]));
+          result = parse(exp[key]);
         }
       } else if (typeof key == 'number') {
         result = parse(exp.args[key]);
