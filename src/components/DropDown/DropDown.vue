@@ -12,7 +12,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .drop-down {
   border-radius: $grid-1;

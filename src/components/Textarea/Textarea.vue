@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .textarea {
   width: 100%;

@@ -43,7 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 $size-s: $grid-3;
 $size-m: $grid-5;

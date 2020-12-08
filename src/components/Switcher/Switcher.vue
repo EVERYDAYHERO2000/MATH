@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .switcher {
   position: relative;

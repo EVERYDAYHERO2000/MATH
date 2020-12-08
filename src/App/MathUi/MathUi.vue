@@ -55,7 +55,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../css/main.scss';
 
   .math-ui {
     font-family: $font-family-sans-serif;

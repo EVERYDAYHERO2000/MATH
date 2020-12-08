@@ -31,7 +31,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .icon {
   display: inline-flex;

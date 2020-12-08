@@ -52,15 +52,14 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../css/main.scss';
 @import '../MathEntity.scss';
 
 .entity-number {
-  color: darkred;
+  //color: darkred;
 
   &:hover {
-    color: red;
-    transition: color 0.2s;
+    //color: red;
+    //transition: color 0.2s;
   }
 }
 </style>

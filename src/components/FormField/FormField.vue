@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .form-field {
   display: flex;

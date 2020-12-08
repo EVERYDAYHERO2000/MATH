@@ -70,7 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../css/main.scss';
 
 .main-menu {
   &__item {

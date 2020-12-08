@@ -16,5 +16,19 @@ module.exports = {
   },
   plugins: [
     svgPlugin(),
-  ]
+  ],
+  cssPreprocessOptions: {
+    scss: {
+      additionalData: function(css,file){
+        let importMain = `@import "./src/css/main.scss";`;
+        let resultCSS = '';
+
+        if (!file.includes('/main.css')) resultCSS += importMain;
+
+        resultCSS += css;
+
+        return resultCSS;
+      },
+    }
+  },  
 }

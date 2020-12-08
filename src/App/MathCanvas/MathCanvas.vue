@@ -75,8 +75,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
-
 .math-canvas {
   font-family: $font-family-sans;
   font-size: 32px;

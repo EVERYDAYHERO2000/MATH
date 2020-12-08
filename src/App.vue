@@ -9,7 +9,6 @@
 import MathCanvas from '/@app/MathCanvas/MathCanvas.vue';
 import MathUi from '/@app/MathUi/MathUi.vue';
 import MathEntity from '/@components/MathEntity/MathEntity.vue';
-import '/@css/main.scss';
 
 export default {
   name: 'App',
@@ -39,9 +38,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import './css/main.scss';
-
-
 .app {
   width: 100%;
   height: 100vh;

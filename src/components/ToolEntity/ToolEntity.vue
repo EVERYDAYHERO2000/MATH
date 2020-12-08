@@ -34,7 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .tool-entity {
   height: 64px;

@@ -31,7 +31,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../../css/main.scss';
 
   .math-ui__layers {
     width: 100%;
