@@ -22,13 +22,13 @@ export default {
   width: 100%;
 
   .app_theme_light & {
-    background: rgba($color-background_theme_light, 1);
+    background-color: rgba($color-background_theme_light, 1);
     color: rgba($color-content_theme_light, 1);
     animation: dropdown-show_desktop_theme_light 0.2s ease-in-out forwards;
   }
 
   .app_theme_dark & {
-    background: rgba($color-background_theme_dark, 1);
+    background-color: rgba($color-background_theme_dark, 1);
     color: rgba($color-content_theme_dark, 1);
     animation: dropdown-show_desktop_theme_dark 0.2s ease-in-out forwards;
   }

@@ -91,13 +91,13 @@ export default {
 </script>
 
 <style lang="scss">
-
 .select {
   position: relative;
   width: 100%;
   text-align: left;
   outline: none;
   font-size: $font-size_m;
+  box-shadow: none;
   -webkit-tap-highlight-color: transparent;
 
   &_size_s &__selected {
@@ -129,24 +129,46 @@ export default {
     -webkit-tap-highlight-color: transparent;
 
     .app_theme_light & {
-      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1);
-      background: rgba($color-background-tint_theme_light, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
+      background-color: rgba($color-background-tint_theme_light, 1);
       color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03);
-      background: rgba($color-background-tint_theme_dark, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 0px rgba($color-primary_theme_dark, 0);
+      background-color: rgba($color-background-tint_theme_dark, 1);
       color: rgba($color-content_theme_dark, 1);
     }
 
     &_open {
       .app_theme_light & {
-        background: rgba($color-background-invert_theme_light, 0.05);
+        background-color: rgba($color-background-invert_theme_light, 0.05);
       }
 
       .app_theme_dark & {
-        background: rgba($color-background-invert_theme_dark, 0.05);
+        background-color: rgba($color-background-invert_theme_dark, 0.05);
+      }
+    }
+  }
+
+  &:focus &__selected {
+    transition: box-shadow .1s .2s;
+
+    .app_theme_light & {
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 3px rgba($color-primary_theme_light, 0.5);
+    }
+    .app_theme_dark & {
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 3px rgba($color-primary_theme_dark, 0.5);
+    }
+
+    &_open {
+      
+      .app_theme_light & {
+        box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
+      }
+
+      .app_theme_dark & {
+        box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 0px rgba($color-primary_theme_dark, 0);
       }
     }
   }
@@ -184,7 +206,6 @@ export default {
 
     &_visibility {
       &_visible {
-        
       }
 
       &_hidden {
@@ -206,14 +227,13 @@ export default {
 
     &:hover {
       .app_theme_light & {
-        background: rgba($color-background-invert_theme_light, 0.03);
+        background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 
       .app_theme_dark & {
-        background: rgba($color-background-invert_theme_dark, 0.03);
+        background-color: rgba($color-background-invert_theme_dark, 0.03);
       }
     }
   }
 }
-
 </style>
