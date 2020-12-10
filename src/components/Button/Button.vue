@@ -9,6 +9,7 @@
   </button>
 </template>
 
+
 <script>
 import { size, color } from '/@fn/propsType/propsType.js';
 
@@ -33,6 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .button {
   border-radius: $grid-1;
   border: none;
