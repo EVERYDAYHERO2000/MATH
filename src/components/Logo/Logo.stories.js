@@ -1,8 +1,8 @@
-import Button from './Button.vue';
+import Logo from './Logo.vue';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/Logo',
+  component: Logo,
   argTypes: {
     backgroundColor: { control: 'color' },
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
@@ -11,13 +11,12 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Button },
-  template: '<button v-bind="$props" />',
+  components: { Logo },
+  template: '<Logo />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: 'Button',
 };
 
 
