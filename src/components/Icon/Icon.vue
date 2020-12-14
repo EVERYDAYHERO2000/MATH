@@ -13,6 +13,7 @@ export default {
   props: {
     name: {
       type: String,
+      default: 'add'
     },
     color: color(),
   },

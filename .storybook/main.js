@@ -11,22 +11,10 @@ module.exports = {
     });
 
     config.module.rules.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: path.resolve('.storybook/svg-loader.js'),
-        },
-      ],
-    });
-
-    config.module.rules.push({
       test: /\.vue$/,
       use: [
         {
-          loader: path.resolve('.storybook/alias-loader.js'),
-          options: {
-            
-          }
+          loader: path.resolve('.storybook/loader.js'),
         },
       ],
     });
