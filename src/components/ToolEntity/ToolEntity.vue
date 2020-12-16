@@ -46,7 +46,7 @@ export default {
   justify-content: space-between;
   background-repeat: no-repeat;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     color: $color-content_theme-light;
     border-bottom: solid 1px rgba($color-background-invert_theme-light, 0.08);
   }
@@ -58,7 +58,7 @@ export default {
 
   &_cover {
     &_abs {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_abs_theme-light.svg');
       }
       .app_theme_dark & {
@@ -67,7 +67,7 @@ export default {
     }
 
     &_addition {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_addition_theme-light.svg');
       }
       .app_theme_dark & {
@@ -76,7 +76,7 @@ export default {
     }
 
     &_subtraction {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_subtraction_theme-light.svg');
       }
       .app_theme_dark & {
@@ -85,7 +85,7 @@ export default {
     }
 
     &_approximation {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_approximation_theme-light.svg');
       }
       .app_theme_dark & {
@@ -94,7 +94,7 @@ export default {
     }
 
     &_cos {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_cos_theme-light.svg');
       }
       .app_theme_dark & {
@@ -103,7 +103,7 @@ export default {
     }
 
     &_cot {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_cot_theme-light.svg');
       }
       .app_theme_dark & {
@@ -112,7 +112,7 @@ export default {
     }
 
     &_csc {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_csc_theme-light.svg');
       }
       .app_theme_dark & {
@@ -121,7 +121,7 @@ export default {
     }
 
     &_division {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_division_default_theme-light.svg');
       }
       .app_theme_dark & {
@@ -130,7 +130,7 @@ export default {
     }
 
     &_equality {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_equality_theme-light.svg');
       }
       .app_theme_dark & {
@@ -139,7 +139,7 @@ export default {
     }
 
     &_exponent {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_exponent_theme-light.svg');
       }
       .app_theme_dark & {
@@ -148,7 +148,7 @@ export default {
     }
 
     &_fraction {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_fraction_1_theme-light.svg');
       }
       .app_theme_dark & {
@@ -157,7 +157,7 @@ export default {
     }
 
     &_fraction-mixed {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_fraction_2_theme-light.svg');
       }
       .app_theme_dark & {
@@ -166,7 +166,7 @@ export default {
     }
 
     &_inequality {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_inequality_theme-light.svg');
       }
       .app_theme_dark & {
@@ -175,7 +175,7 @@ export default {
     }
 
     &_inequality-less {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_less-than-or-equal-to_theme-light.svg');
       }
       .app_theme_dark & {
@@ -184,7 +184,7 @@ export default {
     }
 
     &_inequality-great {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_greater-than-or-equal-to_theme-light.svg');
       }
       .app_theme_dark & {
@@ -193,7 +193,7 @@ export default {
     }
 
     &_less {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_less-than_theme-light.svg');
       }
       .app_theme_dark & {
@@ -202,7 +202,7 @@ export default {
     }
 
     &_great {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_greater-than_theme-light.svg');
       }
       .app_theme_dark & {
@@ -211,7 +211,7 @@ export default {
     }
 
     &_system-and {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_group_theme-light.svg');
       }
       .app_theme_dark & {
@@ -220,7 +220,7 @@ export default {
     }
 
     &_integral {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_integral_theme-light.svg');
       }
       .app_theme_dark & {
@@ -229,7 +229,7 @@ export default {
     }
 
     &_log {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_log_theme-light.svg');
       }
       .app_theme_dark & {
@@ -238,7 +238,7 @@ export default {
     }
 
     &_mod {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_mod_theme-light.svg');
       }
       .app_theme_dark & {
@@ -247,7 +247,7 @@ export default {
     }
 
     &_multiplication {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_multiplication_default_theme-light.svg');
       }
       .app_theme_dark & {
@@ -256,7 +256,7 @@ export default {
     }
 
     &_parentheses {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_parentheses_default_theme-light.svg');
       }
       .app_theme_dark & {
@@ -265,7 +265,7 @@ export default {
     }
 
     &_per-mile {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_per-mille_theme-light.svg');
       }
       .app_theme_dark & {
@@ -274,7 +274,7 @@ export default {
     }
 
     &_percent {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_percent_theme-light.svg');
       }
       .app_theme_dark & {
@@ -283,7 +283,7 @@ export default {
     }
 
     &_plus-minus {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_plus-minus_theme-light.svg');
       }
       .app_theme_dark & {
@@ -292,7 +292,7 @@ export default {
     }
 
     &_radical {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_radical_theme-light.svg');
       }
       .app_theme_dark & {
@@ -301,7 +301,7 @@ export default {
     }
 
     &_sec {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sec_theme-light.svg');
       }
       .app_theme_dark & {
@@ -310,7 +310,7 @@ export default {
     }
 
     &_sin {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sin_theme-light.svg');
       }
       .app_theme_dark & {
@@ -319,7 +319,7 @@ export default {
     }
 
     &_tan {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_tan_theme-light.svg');
       }
       .app_theme_dark & {
@@ -328,7 +328,7 @@ export default {
     }
 
     &_pi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_pi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -337,7 +337,7 @@ export default {
     }
 
     &_tau {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_tau_theme-light.svg');
       }
       .app_theme_dark & {
@@ -346,7 +346,7 @@ export default {
     }
 
     &_phi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_phi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -355,7 +355,7 @@ export default {
     }
 
     &_gamma {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_gamma_theme-light.svg');
       }
       .app_theme_dark & {
@@ -364,7 +364,7 @@ export default {
     }
 
     &_e {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_e_theme-light.svg');
       }
       .app_theme_dark & {
@@ -373,7 +373,7 @@ export default {
     }
 
     &_g-alpha {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-alpha_theme-light.svg');
       }
       .app_theme_dark & {
@@ -382,7 +382,7 @@ export default {
     }
 
     &_g-beta {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-beta_theme-light.svg');
       }
       .app_theme_dark & {
@@ -391,7 +391,7 @@ export default {
     }
 
     &_g-gamma {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-gamma_theme-light.svg');
       }
       .app_theme_dark & {
@@ -400,7 +400,7 @@ export default {
     }
 
     &_g-delta {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-delta_theme-light.svg');
       }
       .app_theme_dark & {
@@ -409,7 +409,7 @@ export default {
     }
 
     &_g-epsilon {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-epsilon_theme-light.svg');
       }
       .app_theme_dark & {
@@ -418,7 +418,7 @@ export default {
     }
 
     &_g-zeta {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-zeta_theme-light.svg');
       }
       .app_theme_dark & {
@@ -427,7 +427,7 @@ export default {
     }
 
     &_g-eta {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-eta_theme-light.svg');
       }
       .app_theme_dark & {
@@ -436,7 +436,7 @@ export default {
     }
 
     &_g-theta {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-theta_theme-light.svg');
       }
       .app_theme_dark & {
@@ -445,7 +445,7 @@ export default {
     }
 
     &_g-iota {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-iota_theme-light.svg');
       }
       .app_theme_dark & {
@@ -454,7 +454,7 @@ export default {
     }
 
     &_g-kappa {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-kappa_theme-light.svg');
       }
       .app_theme_dark & {
@@ -463,7 +463,7 @@ export default {
     }
 
     &_g-lambda {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-lambda_theme-light.svg');
       }
       .app_theme_dark & {
@@ -472,7 +472,7 @@ export default {
     }
 
     &_g-mu {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-mu_theme-light.svg');
       }
       .app_theme_dark & {
@@ -481,7 +481,7 @@ export default {
     }
 
     &_g-nu {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-nu_theme-light.svg');
       }
       .app_theme_dark & {
@@ -490,7 +490,7 @@ export default {
     }
 
     &_g-xi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-xi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -499,7 +499,7 @@ export default {
     }
 
     &_g-omicron {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-omicron_theme-light.svg');
       }
       .app_theme_dark & {
@@ -508,7 +508,7 @@ export default {
     }
 
     &_g-pi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-pi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -517,7 +517,7 @@ export default {
     }
 
     &_g-rho {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-rho_theme-light.svg');
       }
       .app_theme_dark & {
@@ -526,7 +526,7 @@ export default {
     }
 
     &_g-sigma {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-sigma_theme-light.svg');
       }
       .app_theme_dark & {
@@ -535,7 +535,7 @@ export default {
     }
 
     &_g-tau {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-tau_theme-light.svg');
       }
       .app_theme_dark & {
@@ -544,7 +544,7 @@ export default {
     }
 
     &_g-upsilon {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-upsilon_theme-light.svg');
       }
       .app_theme_dark & {
@@ -553,7 +553,7 @@ export default {
     }
 
     &_g-phi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-phi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -562,7 +562,7 @@ export default {
     }
 
     &_g-chi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-chi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -571,7 +571,7 @@ export default {
     }
 
     &_g-psi {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-psi_theme-light.svg');
       }
       .app_theme_dark & {
@@ -580,7 +580,7 @@ export default {
     }
 
     &_g-omega {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-image: url('assets/ent_sign-g-omega_theme-light.svg');
       }
       .app_theme_dark & {
@@ -590,7 +590,7 @@ export default {
   }
 
   &:hover {
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: rgba($color-background-invert_theme-light, 0.01);
     }
 
@@ -602,7 +602,7 @@ export default {
   &__title {
     font-size: $font-size_s;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: rgba($color-background-invert_theme-light, 0.5);
     }
 
@@ -614,7 +614,7 @@ export default {
   &__code {
     font-size: $font-size_s;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: $color-primary_theme-light;
     }
 

@@ -24,7 +24,7 @@ export default {
   padding: calc(#{$grid-1} + #{$grid-0}) 0;
   user-select: none;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     border-bottom: solid 1px rgba($color-content_theme_light, 0.08);
   }
   .app_theme_dark & {
@@ -32,7 +32,7 @@ export default {
   }
 
   &:last-child {
-    .app_theme_light & {
+    .app_theme_light &, & {
       border-bottom: none;
     }
     .app_theme_dark & {
@@ -50,7 +50,7 @@ export default {
     display: flex;
     justify-content: flex-start;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: rgba($color-content_theme_light, 0.65);
     }
     .app_theme_dark & {

@@ -67,7 +67,7 @@ export default {
     box-sizing: border-box;
     font-family: $font-family-sans-serif;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: rgba($color-background_theme_light, 1);
       color: rgba($color-content_theme_light, 1);
     }
@@ -82,7 +82,7 @@ export default {
     }
 
     &::placeholder {
-      .app_theme_light & {
+      .app_theme_light &, & {
         color: rgba($color-content_theme_light, 0.3);
       }
 

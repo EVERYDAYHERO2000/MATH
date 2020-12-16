@@ -39,7 +39,7 @@ export default {
   border-radius: $grid-4;
   -webkit-tap-highlight-color: transparent;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0.15);
   }
   .app_theme_dark & {
@@ -77,7 +77,7 @@ export default {
     transition: 0.2s;
     overflow: hidden;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: rgba($color-black, 0.1);
     }
 
@@ -101,7 +101,7 @@ export default {
       transition: 0.2s;
       box-shadow: 0 0 0 1px rgba($color-black, 0.05), 0 2px 3px rgba($color-black, 0.1);
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-background_theme_light;
       }
 
@@ -112,7 +112,7 @@ export default {
   }
 
   &__checkbox:checked + &__slider {
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: $color-primary_theme_light;
     }
     .app_theme_dark & {

@@ -68,7 +68,7 @@ $height-hr: 3px;
     path {
       vector-effect: non-scaling-stroke;
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         stroke: $color-entity_theme_light;
       }
 
@@ -105,7 +105,7 @@ $height-hr: 3px;
     transform: rotate(-10deg);
     width: $grid-1;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: $color-entity_theme_light;
     }
 
@@ -169,7 +169,7 @@ $height-hr: 3px;
   .entity-radical__hr {
     margin-top: -$height-hr;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: $color-entity_theme_light;
     }
 

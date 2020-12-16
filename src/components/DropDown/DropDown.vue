@@ -21,7 +21,7 @@ export default {
   transform: translateY($grid-1);
   width: 100%;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: rgba($color-background_theme_light, 1);
     color: rgba($color-content_theme_light, 1);
     animation: dropdown-show_desktop_theme_light 0.2s ease-in-out forwards;
@@ -37,7 +37,7 @@ export default {
     width: calc(100% - #{$grid-2} * 2);
     padding: $grid-2 0;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       animation: dropdown-show_mobile_theme_light 0.2s ease-in-out forwards;
     }  
 

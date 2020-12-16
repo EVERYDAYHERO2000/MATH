@@ -128,7 +128,7 @@ export default {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
       background-color: rgba($color-background-tint_theme_light, 1);
       color: rgba($color-content_theme_light, 1);
@@ -141,7 +141,7 @@ export default {
     }
 
     &_open {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.05);
       }
 
@@ -154,7 +154,7 @@ export default {
   &:focus &__selected {
     transition: box-shadow .1s .2s;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 3px rgba($color-primary_theme_light, 0.5);
     }
     .app_theme_dark & {
@@ -163,7 +163,7 @@ export default {
 
     &_open {
       
-      .app_theme_light & {
+      .app_theme_light &, & {
         box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
       }
 
@@ -192,7 +192,7 @@ export default {
       box-sizing: border-box;
     }
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       @include media('<=phone') {
         background-color: rgba($color-black, 0.1);
       }
@@ -226,7 +226,7 @@ export default {
     }
 
     &:hover {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 

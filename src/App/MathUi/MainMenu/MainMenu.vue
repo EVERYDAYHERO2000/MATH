@@ -82,7 +82,7 @@ export default {
     width: 100%;
     text-align: left;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: $color-primary_theme_light;
       background-color: rgba($color-background-invert_theme_light, 0);
     }
@@ -93,7 +93,7 @@ export default {
     }
 
     &:hover {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 

@@ -41,7 +41,7 @@ export default {
   font-size: $font-size_m;
   transition: all 0.2s;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     box-shadow: inset 0 0 0 1px rgba($color-background-invert_theme_light, 0.1);
   }
 
@@ -80,7 +80,7 @@ export default {
 
   &_color {
     &_black {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-background-invert_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -91,7 +91,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-background-invert_theme_light, 5%);
         }
 
@@ -102,7 +102,7 @@ export default {
     }
 
     &_primary {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-primary_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -113,7 +113,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-primary_theme_light, 5%);
         }
 
@@ -124,7 +124,7 @@ export default {
     }
 
     &_active {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-active_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -135,7 +135,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-active_theme_light, 5%);
         }
 
@@ -146,7 +146,7 @@ export default {
     }
 
     &_content {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-content_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -157,7 +157,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-content_theme_light, 5%);
         }
 
@@ -168,7 +168,7 @@ export default {
     }
 
     &_danger {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-danger_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -179,7 +179,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-danger_theme_light, 5%);
         }
 
@@ -190,7 +190,7 @@ export default {
     }
 
     &_success {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: $color-success_theme_light;
         color: $color-content-invert_theme_light;
       }
@@ -201,7 +201,7 @@ export default {
       }
 
       &:hover {
-        .app_theme_light & {
+        .app_theme_light &, & {
           background-color: lighten($color-success_theme_light, 5%);
         }
 
@@ -219,7 +219,7 @@ export default {
     background-color: transparent !important;
     transition: all 0.2s;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: $color-content_theme_light!important;
     }
 

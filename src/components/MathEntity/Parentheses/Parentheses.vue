@@ -128,7 +128,7 @@
   position: absolute;
 
   path {
-    .app_theme_light & {
+    .app_theme_light &, & {
       fill: $color-entity_theme_light;
     }
 

@@ -20,7 +20,7 @@ export default {
 
 .logo {
   &__text {
-    .app_theme_light & {
+    .app_theme_light &, & {
       fill: rgba($color-content_theme_light, 1);
     }
     .app_theme_dark & {
@@ -29,7 +29,7 @@ export default {
   }
 
   &__cursor {
-    .app_theme_light & {
+    .app_theme_light &, & {
       fill: rgba($color-primary_theme_light, 1);
     }
     .app_theme_dark & {

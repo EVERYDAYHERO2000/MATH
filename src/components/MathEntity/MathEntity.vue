@@ -59,7 +59,7 @@ export default component;
   align-items: baseline;
   white-space: nowrap;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     color: $color-entity_theme_light;
   }
 

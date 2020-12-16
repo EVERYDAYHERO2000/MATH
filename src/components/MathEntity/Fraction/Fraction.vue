@@ -112,7 +112,7 @@
             font-size: 16px;
         }
 
-        .app_theme_light & {
+        .app_theme_light &, & {
             background-color: $color-entity_theme_light;
         }
 

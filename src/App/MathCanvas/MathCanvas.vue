@@ -86,7 +86,7 @@ export default {
   touch-action: auto; 
 
   &::selection {
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: rgba($color-primary_theme_light, 0.6);
     }
 

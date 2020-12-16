@@ -53,7 +53,7 @@ $size-m: $grid-5;
   transition: background-color 0.2s;
   border: none;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: rgba($color-background-invert_theme_light, 0);
   }
 
@@ -85,7 +85,7 @@ $size-m: $grid-5;
   &_pressed {
     pointer-events: none;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       fill: $color-content_theme_light;
       background-color: rgba($color-background-invert_theme_light, 0.05);
     }
@@ -96,7 +96,7 @@ $size-m: $grid-5;
     }
 
     &:hover {
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.05);
       }
 
@@ -111,7 +111,7 @@ $size-m: $grid-5;
   }
 
   &:hover {
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: rgba($color-background-invert_theme_light, 0.1);
     }
 

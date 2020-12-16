@@ -80,7 +80,7 @@ $padding-horisontal: $grid-0;
   z-index: 1000;
   pointer-events: all;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: rgba($color-black, 0);
   }
 
@@ -103,7 +103,7 @@ $padding-horisontal: $grid-0;
     transition: opacity 0.2s;
     margin: $grid-7 0;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: $color-background_theme_light;
       box-shadow: 0 10px 45px rgba($color-black, 0.2);
     }
@@ -122,7 +122,7 @@ $padding-horisontal: $grid-0;
 
   &_visibility {
     &_visible {
-      .app_theme_light & {
+      .app_theme_light &, & {
         animation: backdrop-show_theme_light 2s 0.2s ease forwards;
       }
       .app_theme_dark & {
@@ -139,7 +139,7 @@ $padding-horisontal: $grid-0;
     }
 
     &_hide {
-      .app_theme_light & {
+      .app_theme_light &, & {
         animation: backdrop-hide_theme_light 0.1s ease forwards;
       }  
       .app_theme_dark & {
@@ -169,7 +169,7 @@ $padding-horisontal: $grid-0;
     user-select: none;
     box-sizing: border-box;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       color: $color-content_theme_light;
     }
 

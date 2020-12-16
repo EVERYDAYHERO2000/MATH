@@ -51,7 +51,7 @@ export default {
     transition: box-shadow 0.2s;
     display: block;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       background-color: $color-background-tint_theme_light;
       border: solid 1px rgba($color-content_theme_light, 0.03);
       color: $color-content_theme_light;
@@ -67,7 +67,7 @@ export default {
       outline: none;
       transition: box-shadow 0.2s;
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         box-shadow: 0 0 0 3px rgba($color-primary_theme_light,0.5);
       }
       .app_theme_dark & {
@@ -76,7 +76,7 @@ export default {
     }
 
     &::placeholder {
-      .app_theme_light & {
+      .app_theme_light &, & {
         color: rgba($color-content_theme_light, 0.3);
       }
       .app_theme_dark & {

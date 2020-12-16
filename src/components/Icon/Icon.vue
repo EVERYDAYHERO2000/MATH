@@ -42,7 +42,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-background-invert_theme_light;
         }
         
@@ -56,7 +56,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-primary_theme_light;
         }
         
@@ -70,7 +70,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-active_theme_light;
         }
         
@@ -84,7 +84,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-content_theme_light;
         }
         
@@ -98,7 +98,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-danger_theme_light;
         }
         
@@ -112,7 +112,7 @@ export default {
       rect,
       path,
       circle {
-        .app_theme_light & {
+        .app_theme_light &, & {
           fill: $color-success_theme_light;
         }
         

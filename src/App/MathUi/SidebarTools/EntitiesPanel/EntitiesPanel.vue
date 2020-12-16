@@ -217,7 +217,7 @@ export default {
   &__entities-menu {
     flex-basis: 52px;
 
-    .app_theme_light & {
+    .app_theme_light &, & {
       border-left: solid 1px rgba($color-background-invert_theme_light, 0.08);
     }
 

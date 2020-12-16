@@ -78,7 +78,7 @@ export default {
   align-self: stretch;
   width: 2px;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: $color-entity_theme_light;
   }
 

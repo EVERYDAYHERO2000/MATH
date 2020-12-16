@@ -61,7 +61,7 @@ $panel-width-hidden: $grid-7;
   z-index: 999;
   width: $panel-width-desktop;
 
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: rgba($color-background_theme_light, 0);
     box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0);
   }
@@ -87,7 +87,7 @@ $panel-width-hidden: $grid-7;
     @include media('<=phone') {
       pointer-events: all;
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.1);
       }
 
@@ -103,7 +103,7 @@ $panel-width-hidden: $grid-7;
     &_desktop {
       pointer-events: all;
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background-invert_theme_light, 0.1);
       }
 
@@ -170,7 +170,7 @@ $panel-width-hidden: $grid-7;
       transition: transform 0.2s 0.05s ease-in-out;
       z-index: 1000;
 
-      .app_theme_light & {
+      .app_theme_light &, & {
         background-color: rgba($color-background_theme_light, 1);
         box-shadow: 0 0 0 1px rgba($color-background-invert_theme_light, 0.03);
       }
@@ -183,7 +183,7 @@ $panel-width-hidden: $grid-7;
   }
 
   &_visibility_visible &__header {
-    .app_theme_light & {
+    .app_theme_light &, & {
       border-bottom: solid 1px rgba($color-background-invert_theme_light, 0.08);
     }
 

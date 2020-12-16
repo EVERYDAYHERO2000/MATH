@@ -21,7 +21,7 @@
 }
 
 .ripple {
-  .app_theme_light & {
+  .app_theme_light &, & {
     background-color: rgba(0,0,0,.05);
   }
   
