@@ -2,10 +2,11 @@
   "name": "math",
   "version": "0.0.1",
   "scripts": {
+    "install-all": "npm install & npm install @andoshin11/storybook-vue3 -D",
     "dev": "vite",
     "build": "vite build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "dependencies": {
     "es6-promise": "^4.2.8",
@@ -21,6 +22,7 @@
     "@storybook/addon-actions": "^6.0.27",
     "@storybook/addon-essentials": "^6.0.27",
     "@storybook/addon-links": "^6.0.27",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/vue": "^6.0.27",
     "@vue/compiler-sfc": "^3.0.0-rc.1",
     "babel-loader": "^8.1.0",
@@ -32,8 +34,7 @@
     "vite": "^1.0.0-rc.1",
     "vite-plugin-svg": "^0.7.0",
     "vue-loader": "^15.9.4",
-    "vue-svg-loader": "^0.16.0",
-    "vue-template-compiler": "^2.6.12"
+    "vue-loader-v16": "^16.0.0-beta.5.4"
   },
   "main": "index.js",
   "keywords": [],

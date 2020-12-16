@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .form-field {
   display: flex;
@@ -44,6 +43,7 @@ export default {
   &__label,
   &__control {
     flex-basis: 50%;
+    width:50%;
   }
 
   &__label {

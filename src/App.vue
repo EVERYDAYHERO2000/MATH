@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="['app', `app_theme_${theme}`]">
     <MathCanvas ref="canvas" />
-    <MathUi v-on:exportToPng="exportToPng" />
+    <MathUi />
   </div>
 </template>
 
@@ -9,7 +9,6 @@
 import MathCanvas from '/@app/MathCanvas/MathCanvas.vue';
 import MathUi from '/@app/MathUi/MathUi.vue';
 import MathEntity from '/@components/MathEntity/MathEntity.vue';
-import '/@css/main.scss';
 
 export default {
   name: 'App',
@@ -30,9 +29,6 @@ export default {
     window.addEventListener('resize', this.setScreenHeight);
   },
   methods: {
-      exportToPng: function(){
-        this.$refs.canvas.renderToPng()
-      },
       setScreenHeight: function(){
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -42,9 +38,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import './css/main.scss';
-
-
 .app {
   width: 100%;
   height: 100vh;

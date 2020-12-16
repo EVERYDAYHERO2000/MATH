@@ -13,6 +13,7 @@ export default {
   props: {
     name: {
       type: String,
+      default: 'add'
     },
     color: color(),
   },
@@ -31,7 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .icon {
   display: inline-flex;

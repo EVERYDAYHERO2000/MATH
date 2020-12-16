@@ -46,7 +46,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 $panel-width-desktop: 280px;
 $panel-width-mobile: 80vw;

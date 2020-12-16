@@ -44,10 +44,15 @@ const words = {
       ru: 'Математическое выражение',
       zh: '数学表达式',
     },
-    'export as png': {
-      eng: 'Export as png',
-      ru: 'Экспортировать как png',
-      zh: '导出为png',
+    'export as image': {
+      eng: 'Export as Image',
+      ru: 'Экспортировать как картинку',
+      zh: '导出为图像',
+    },
+    'file format': {
+      eng: 'File Format',
+      ru: 'Формат файла',
+      zh: '文件格式'
     },
     'app settings': {
       eng: 'App Settings',

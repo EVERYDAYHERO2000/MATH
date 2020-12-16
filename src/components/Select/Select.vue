@@ -3,10 +3,11 @@
     <div
       class="select__selected"
       v-ripple
-      :class="{ select__selected_open: open }"
+      v-bind:class="{ select__selected_open: open }"
       v-on:click="open = !open"
     >
-      {{ selected[1] }}
+      <span class="select__item-title">{{ selected[1] }}</span>
+      <Icon name="dropdown" />
     </div>
     <div
       class="select__backdrop"
@@ -15,7 +16,7 @@
         open ? 'select__backdrop_visibility_visible' : 'select__backdrop_visibility_hidden',
       ]"
     >
-      <div class="select__dropdown">
+      <DropDown>
         <div
           class="select__item"
           v-ripple
@@ -23,16 +24,17 @@
           :key="i"
           v-on:click="select(option)"
         >
-          <span>{{ option[1] }}</span>
+          <span class="select__item-title">{{ option[1] }}</span>
           <Icon v-if="option[0] == selected[0]" color="primary" name="check" />
         </div>
-      </div>
+      </DropDown>
     </div>
   </div>
 </template>
 
 <script>
 import Icon from '/@components/Icon/Icon.vue';
+import DropDown from '/@components/DropDown/DropDown.vue';
 import { size } from '/@fn/propsType/propsType.js';
 
 export default {
@@ -56,6 +58,7 @@ export default {
   },
   components: {
     Icon,
+    DropDown,
   },
   data() {
     return {
@@ -88,14 +91,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
-
 .select {
   position: relative;
   width: 100%;
   text-align: left;
   outline: none;
   font-size: $font-size_m;
+  box-shadow: none;
   -webkit-tap-highlight-color: transparent;
 
   &_size_s &__selected {
@@ -110,6 +112,12 @@ export default {
     height: $grid-7;
   }
 
+  &__item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   &__selected {
     border-radius: $grid-1;
     padding-left: $grid-1;
@@ -121,45 +129,50 @@ export default {
     -webkit-tap-highlight-color: transparent;
 
     .app_theme_light & {
-      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1);
-      background: rgba($color-background-tint_theme_light, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
+      background-color: rgba($color-background-tint_theme_light, 1);
       color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03);
-      background: rgba($color-background-tint_theme_dark, 1);
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 0px rgba($color-primary_theme_dark, 0);
+      background-color: rgba($color-background-tint_theme_dark, 1);
       color: rgba($color-content_theme_dark, 1);
     }
 
     &_open {
       .app_theme_light & {
-        background: rgba($color-background-invert_theme_light, 0.05);
+        background-color: rgba($color-background-invert_theme_light, 0.05);
       }
 
       .app_theme_dark & {
-        background: rgba($color-background-invert_theme_dark, 0.05);
-      }
-    }
-
-    &:after {
-      display: block;
-      content: '';
-      transform: translate(0px, 3px);
-      width: 0;
-      height: 0;
-      border: 5px solid transparent;
-      border-color: #fff transparent transparent transparent;
-
-      .app_theme_light & {
-        border-color: rgba($color-content_theme_light, 1) transparent transparent transparent;
-      }
-
-      .app_theme_dark & {
-        border-color: rgba($color-content_theme_dark, 1) transparent transparent transparent;
+        background-color: rgba($color-background-invert_theme_dark, 0.05);
       }
     }
   }
+
+  &:focus &__selected {
+    transition: box-shadow .1s .2s;
+
+    .app_theme_light & {
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 3px rgba($color-primary_theme_light, 0.5);
+    }
+    .app_theme_dark & {
+      box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 3px rgba($color-primary_theme_dark, 0.5);
+    }
+
+    &_open {
+      
+      .app_theme_light & {
+        box-shadow: inset 0 0 0 1px rgba($color-content_theme_light, 0.1), 0 0 0 0px rgba($color-primary_theme_light, 0);
+      }
+
+      .app_theme_dark & {
+        box-shadow: inset 0 0 0 1px rgba($color-content_theme_dark, 0.03), 0 0 0 0px rgba($color-primary_theme_dark, 0);
+      }
+    }
+  }
+
   &__backdrop {
     position: absolute;
     left: 0;
@@ -193,48 +206,11 @@ export default {
 
     &_visibility {
       &_visible {
-        animation: dropdown-show_desktop 0.1s ease-in-out forwards;
-
       }
 
       &_hidden {
         display: none;
       }
-    }
-  }
-
-  &__dropdown {
-    border-radius: $grid-1;
-    overflow: hidden;
-    position: absolute;
-    padding: $grid-1 0;
-    transform: translateY($grid-1);
-    width: 100%;
-
-    @include media('<=phone') {
-      width: calc(100% - #{$grid-2} * 2);
-      padding: $grid-2 0;
-    }
-
-    .app_theme_light & {
-      background: rgba($color-background_theme_light, 1);
-      box-shadow: 0 3px 10px rgba($color-black, 0.3), 0 2px 20px rgba($color-black, 0.2);
-      color: rgba($color-content_theme_light, 1);
-    }
-
-    .app_theme_dark & {
-      background: rgba($color-background_theme_dark, 1);
-      box-shadow: 0 3px 10px rgba($color-black, 0.8), 0 2px 20px rgba($color-black, 0.2),
-        0 0 0 1px rgba($color-black, 0.5);
-      color: rgba($color-content_theme_dark, 1);
-    }
-
-    &:before {
-      content: '';
-      height: $grid-1;
-      display: block;
-      position: absolute;
-      transform: translateY(-$grid-1);
     }
   }
 
@@ -251,25 +227,13 @@ export default {
 
     &:hover {
       .app_theme_light & {
-        background: rgba($color-background-invert_theme_light, 0.03);
+        background-color: rgba($color-background-invert_theme_light, 0.03);
       }
 
       .app_theme_dark & {
-        background: rgba($color-background-invert_theme_dark, 0.03);
+        background-color: rgba($color-background-invert_theme_dark, 0.03);
       }
     }
   }
 }
-
-@keyframes dropdown-show_desktop {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
 </style>

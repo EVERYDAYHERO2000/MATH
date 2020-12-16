@@ -43,7 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 $size-s: $grid-3;
 $size-m: $grid-5;
@@ -55,11 +54,11 @@ $size-m: $grid-5;
   border: none;
 
   .app_theme_light & {
-    background: rgba($color-background-invert_theme_light, 0);
+    background-color: rgba($color-background-invert_theme_light, 0);
   }
 
   .app_theme_dark & {
-    background: rgba($color-background-invert_theme_dark, 0);
+    background-color: rgba($color-background-invert_theme_dark, 0);
   }
 
   &_size {

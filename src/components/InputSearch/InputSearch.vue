@@ -50,7 +50,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .input-search {
   display: flex;
@@ -69,12 +68,12 @@ export default {
     font-family: $font-family-sans-serif;
 
     .app_theme_light & {
-      background: rgba($color-background_theme_light, 1);
+      background-color: rgba($color-background_theme_light, 1);
       color: rgba($color-content_theme_light, 1);
     }
 
     .app_theme_dark & {
-      background: rgba($color-background-tint_theme_dark, 1);
+      background-color: rgba($color-background-tint_theme_dark, 1);
       color: rgba($color-content_theme_dark, 1);
     }
 

@@ -1,13 +1,14 @@
 <template>
   <button
     class="button"
-    v-bind:class="[{ button_disabled: disabled }, classSize, classColor]"
+    v-bind:class="[classSize, classColor, { button_disabled: disabled }]"
     v-ripple
     v-bind:title="title"
   >
     {{ label }}
   </button>
 </template>
+
 
 <script>
 import { size, color } from '/@fn/propsType/propsType.js';
@@ -33,7 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 .button {
   border-radius: $grid-1;
@@ -92,11 +92,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-background-invert_theme_light, 5%);
+          background-color: lighten($color-background-invert_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-background-invert_theme_dark, 5%);
+          background-color: lighten($color-background-invert_theme_dark, 5%);
         }
       }
     }
@@ -114,11 +114,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-primary_theme_light, 5%);
+          background-color: lighten($color-primary_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-primary_theme_dark, 5%);
+          background-color: lighten($color-primary_theme_dark, 5%);
         }
       }
     }
@@ -136,11 +136,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-active_theme_light, 5%);
+          background-color: lighten($color-active_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-active_theme_dark, 5%);
+          background-color: lighten($color-active_theme_dark, 5%);
         }
       }
     }
@@ -158,11 +158,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-content_theme_light, 5%);
+          background-color: lighten($color-content_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-content_theme_dark, 5%);
+          background-color: lighten($color-content_theme_dark, 5%);
         }
       }
     }
@@ -180,11 +180,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-danger_theme_light, 5%);
+          background-color: lighten($color-danger_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-danger_theme_dark, 5%);
+          background-color: lighten($color-danger_theme_dark, 5%);
         }
       }
     }
@@ -202,11 +202,11 @@ export default {
 
       &:hover {
         .app_theme_light & {
-          background: lighten($color-success_theme_light, 5%);
+          background-color: lighten($color-success_theme_light, 5%);
         }
 
         .app_theme_dark & {
-          background: lighten($color-success_theme_dark, 5%);
+          background-color: lighten($color-success_theme_dark, 5%);
         }
       }
     }
@@ -215,8 +215,18 @@ export default {
   &_disabled {
     pointer-events: none;
     opacity: 0.3;
-    filter: grayscale(1);
+    box-shadow: none!important;
+    background-color: transparent !important;
     transition: all 0.2s;
+
+    .app_theme_light & {
+      color: $color-content_theme_light!important;
+    }
+
+    .app_theme_dark & {
+      color: $color-content_theme_dark!important;
+    }
+
   }
 }
 </style>

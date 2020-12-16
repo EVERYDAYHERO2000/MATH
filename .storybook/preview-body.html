@@ -1,0 +1,23 @@
+<div id="root" class="app_theme_light"></div>
+<script>
+    parent.document.addEventListener('click', function(e){
+      if (e.target.closest("#dark")) changeBackground('dark');
+      if (e.target.closest("#light")) changeBackground('light');
+      if (e.target.closest("#reset")) changeBackground('light');
+    });
+
+    function changeBackground(theme) {
+      const root = document.getElementById('root');
+
+        if (theme == 'dark') {
+            root.classList.remove('app_theme_light');
+            root.classList.add('app_theme_dark');
+        }
+
+        if (theme == 'light') {
+            root.classList.remove('app_theme_dark');
+            root.classList.add('app_theme_light');
+        }
+
+    }
+</script>

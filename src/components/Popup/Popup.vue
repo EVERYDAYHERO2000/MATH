@@ -66,7 +66,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/main.scss';
 
 $padding-vertical: $grid-3;
 $padding-horisontal: $grid-0;
@@ -106,12 +105,12 @@ $padding-horisontal: $grid-0;
 
     .app_theme_light & {
       background-color: $color-background_theme_light;
-      box-shadow: 0 0 45px rgba($color-black, 0.12);
+      box-shadow: 0 10px 45px rgba($color-black, 0.2);
     }
 
     .app_theme_dark & {
       background-color: $color-background_theme_dark;
-      box-shadow: 0 0 45px rgba($color-black, 0.5), 0 0 0 1px rgba($color-black, 0.5);
+      box-shadow: 0 10px 45px rgba($color-black, 0.5), 0 0 0 1px rgba($color-black, 0.5);
     }
 
     @include media('<=phone') {

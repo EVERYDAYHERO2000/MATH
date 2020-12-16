@@ -42,7 +42,6 @@
 </script>
 
 <style lang="scss">
-    @import '../../../css/main.scss';
     @import '../MathEntity.scss';
 
     .entity-product {

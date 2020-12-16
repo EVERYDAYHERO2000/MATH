@@ -4,7 +4,6 @@ import Ripple from './fn/ripple-effect/ripple-effect';
 
 import Browser from 'mobile-device-detect';
 import D from '/@fn/dictionary/dictionary.js';
-import './css/main.scss';
 
 window.browser = Browser;
 
