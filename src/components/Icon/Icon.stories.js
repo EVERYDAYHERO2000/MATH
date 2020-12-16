@@ -36,7 +36,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Icon },
-  template: '<div class="app_theme_light"><Icon v-bind="$props" /></div>',
+  template: '<Icon v-bind="$props" />',
 });
 
 export const Add = Template.bind({});
