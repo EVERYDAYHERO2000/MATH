@@ -14,7 +14,7 @@ export default {
     title: {
         control: 'text'
     },
-    lable: {
+    label: {
         control: 'text'
     }
   },
