@@ -39,8 +39,8 @@ const Template = (args, { argTypes }) => ({
   template: '<Icon v-bind="$props" />',
 });
 
-export const Add = Template.bind({});
-Add.args = {
+export const Component = Template.bind({});
+Component.args = {
   name: 'add',
   color: 'primary',
 };

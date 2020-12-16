@@ -10,6 +10,6 @@ const Template = (args, { argTypes }) => ({
   template: '<Logo />',
 });
 
-export const Main = Template.bind({});
+export const Component = Template.bind({});
 
 

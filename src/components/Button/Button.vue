@@ -18,7 +18,10 @@ export default {
   props: {
     title: String,
     label: String,
-    disabled: Boolean,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     color: color('primary'),
     size: size('m'),
   },

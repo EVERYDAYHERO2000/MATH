@@ -33,7 +33,16 @@ export default {
     },
     title: {
         control: 'text'
-    }
+    },
+    pressed: {
+      control: 'boolean'
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['s', 'm', 'l'],
+      },
+    },
   },
 };
 
@@ -50,8 +59,8 @@ const Template = (args, { argTypes }) => ({
   template: '<ButtonIcon v-bind="$props" />',
 });
 
-export const Add = Template.bind({});
-Add.args = {
+export const Component = Template.bind({});
+Component.args = {
   icon: 'add',
   color: 'primary',
 };

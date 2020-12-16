@@ -12,19 +12,28 @@ export default {
       },
     },
     title: {
-        control: 'text'
+      control: 'text',
     },
     label: {
-        control: 'text'
-    }
+      control: 'text',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['s', 'm', 'l'],
+      },
+    },
   },
 };
 
 const globalDirectives = {
-    created: function(){
-        this.$.appContext.app.directive('ripple', Ripple);
-    }
-}
+  created: function () {
+    this.$.appContext.app.directive('ripple', Ripple);
+  },
+};
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
@@ -33,8 +42,9 @@ const Template = (args, { argTypes }) => ({
   template: '<Button v-bind="$props" />',
 });
 
-export const component = Template.bind({});
-component.args = {
+export const Component = Template.bind({});
+Component.args = {
   color: 'primary',
-  label: 'Купить'
+  label: 'Купить',
+  size: 'm'
 };
